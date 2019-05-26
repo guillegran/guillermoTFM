@@ -1,0 +1,189 @@
+\documentclass[12pt,a4paper]{book}
+\usepackage[utf8]{inputenc}
+%\usepackage[spanish, es-noquoting]{babel}
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm, mathtools}
+\usepackage{tikz,tikz-cd}
+\usetikzlibrary{arrows, babel}
+\usepackage{url}
+\urlstyle{rm}
+\usepackage[colorlinks=true,linktocpage=true,pagebackref=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{graphicx}
+%\usepackage{tocstyle}
+%\usepackage{tocbibind}
+%\usepackage{mathrsfs}
+\usepackage[scr=boondox]{mathalfa}
+\usepackage{anyfontsize}
+
+%Fuente Palatino:
+%\usepackage[sc]{mathpazo}
+%Fuente Times:
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+%Fuente Libertine:
+%\usepackage{libertine}
+%\usepackage[libertine]{newtxmath}
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lema}{Lemma}
+\newtheorem{corol}[thm]{Corollary}
+\theoremstyle{definition} \newtheorem{defn}[thm]{Definition}
+\theoremstyle{definition} \newtheorem{ejemplo}[thm]{Example}
+\theoremstyle{remark} \newtheorem*{rem}{Remark}
+
+\def\pr{\mathrm{pr}}
+\def\CC{\mathbb{C}}
+\def\gg{\mathfrak{g}}
+\def\ad{\mathrm{ad}}
+\def\ZZ{\mathbb{Z}}
+\def\RR{\mathbb{R}}
+\def\KK{\mathbb{K}}
+\def\SF{\mathbb{S}}
+\def\TT{\mathbb{T}}
+\def\NN{\mathbb{N}}
+\def\HH{\mathbb{H}}
+\def\PP{\mathbb{P}}
+\def\tr{\mathrm{tr}}
+\def\rk{\mathrm{rk}}
+\def\id{\mathbf{1}}
+\def\im{\mathrm{im}\ }
+\def\End{\mathrm{End}}
+\def\Sym{\mathrm{Sym}}
+\def\Spec{\mathrm{Spec}}
+\def\Span{\mathrm{span}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+
+\let\emph\relax
+\DeclareTextFontCommand{\emph}{\it\bfseries}
+
+\DeclarePairedDelimiter\esc{\langle}{\rangle}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+
+%%%        Otro formato para las secciones
+\usepackage{titlesec}
+\usepackage{remreset}
+
+\titleformat{\section}[block]
+{\fontsize{15}{18}\bfseries\filcenter}
+{\S\ \thesection.}
+{1em}
+{}
+
+\makeatletter
+\@removefromreset{section}{chapter}
+\makeatother
+%%%
+
+\title{Higgs bundles twisted by a vector bundle}
+\author{\it Guillermo Gallego Sánchez}
+\date{}
+
+
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter{Vector bundles on Riemann surfaces}
+\section{Topological classification of vector bundles}
+The first step towards the classification of vector bundles on Riemann surfaces is their ``topological'' classification. That is, we want to classify smooth complex vector bundles on Riemann surface up to $C^\infty$ isomorphism. This is indeed pretty easy to do, since the problem can be reduced to the classification of line bundles.
+\begin{thm}
+  If $E$ is a rank $n$ smooth complex vector bundle over a compact Riemann surface $X$ then it is isomorphic to $\det E \oplus (X\times \CC^{n-1})$.
+\end{thm}
+\begin{proof}
+   We will proceed by induction on $n$. Of course, if $E$ is a line bundle, $E\cong \det E$. Now, let $n>1$, suppose that it is true for any vector bundle of rank $n-1$ and let $E$ be a rank $n$ vector bundle.
+   \begin{lema}
+     $E$ has a nowhere vanishing section.
+   \end{lema}
+   \begin{proof}
+     Let $s_0$ be the zero section of $E$ and $S_0=s_0(X)\subset E$. By the transversality theorem [REF: Hirsch], we can densely choose a section $s\in \Gamma(E)$ transversal to $S_0$. Now, if $s$ vanishes at some point $x\in X$, then $s(x)\in S_0$ and, since $s$ is transversal to $S_0$, $$d_xs(T_xX) + T_{s(x)}S_0 = T_{s(x)}E.$$ But $\dim_\RR E=2n+2$, $\dim_\RR S_0 = 2$ and $\dim_\RR d_xs(T_xX) \leq \dim_\RR X = 2$, so, if $n>1$, dimensions do not add up to verify the above equality and therefore we get a contradiction. 
+   \end{proof}
+
+   Let us continue with the proof of the theorem. Since $E$ has a nowhere vanishing section $s$, we can define the line bundle
+   \begin{equation*}
+     L=\bigsqcup_{x\in X} \Span(s(x)),
+   \end{equation*}
+   with 
+   \begin{align*}
+      \pi:L&\longrightarrow X\\ 
+       \lambda s(x) &\longmapsto x.
+     \end{align*}
+     Therefore, we can decompose $E=E'\oplus L$, with $E'$ a rank $n-1$ vector bundle. For example, fixing a metric on $E$, we can define $E'$ to be the orthogonal complement of $L$. But observe now that $L$ is isomorphic to the trivial line bundle: the bundle morphism
+     \begin{align*}
+      X\times \CC  &\longrightarrow L\\ 
+	 (x,\lambda) &\longmapsto \lambda s(x), 
+       \end{align*}
+       is in fact an isomorphism. This can be proven by defining a metric on $L$ and normalizing $s \mapsto s/\norm{s}$. Then we can define the inverse
+     $ y\in L \mapsto (\pi(y), \esc{s(\pi(y)),y})\in X\times \CC$. 
+
+     Thus, we have shown that $E\cong E'\oplus (X\times \CC)$. Now, applying the induction hypothesis, $E'\cong \det E' \oplus (X\times \CC^{n-2})$, so $E\cong \det E' \oplus (X\times \CC^{n-1})$. Finally, via transition functions it can be easily shown that $\det E \cong \det E'$.
+\end{proof}
+
+This last theorem says that vector bundles can be topologically classified by their rank and their determinant, which is a line bundle. Let us proceed then with the classification of line bundles. Recall that all the data of a vector bundle can be recovered by the transition functions $\{g_{\alpha \beta}\in C^\infty(U_\alpha \cap U_\beta , \CC)\}$ defining it, where $\left\{ U_\alpha \right\}$ is an open cover of $X$. These functions verifiy the cocycle condition $$g_{\alpha \beta}=g_{\gamma \beta}\cdot g_{\alpha \gamma}.$$ Also recall that an isomorphism of vector bundles induces a coboundary on the transition functions
+\begin{equation*}
+  \tilde{g}_{\alpha\beta}=f^{-1}_{\delta\beta}\cdot g_{\gamma\delta} \cdot f_{\gamma\alpha}.
+\end{equation*}
+Therefore, topological ($C^\infty$) isomorphism classes of vector bundles are parametrized by the \v{C}ech cohomology group
+\begin{equation*}
+  H^1(X,C^{\infty,*}_X).
+\end{equation*}
+To obtain more information about this cohomology group we are going to introduce a very powerful tool: the first Chern class of a vector bundle.
+
+Recall from Chern-Weil theory [REF:Griffiths-Harris,Wells] that for any complex vector bundle $E$ over $X$ and for any connection $\nabla$ on $E$ with associated curvature form $F$, the $2$-form $\tr F$ is closed and its de Rham cohomology class $[\tr F]\in H_{\mathrm{dR}}^2(X)$ does not depend on the choice of the connection, so it is an invariant of the vector bundle $E$. If we normalize this form to get an integer cohomology class, we define the \emph{first Chern class} of $E$ as the cohomology class:
+\begin{equation*}
+  c_1(E)=\left[ \frac{i}{2\pi} \tr F \right] \in H_{\mathrm{dR}}^2(X).
+\end{equation*}
+We define the \emph{degree} of a vector bundle $E$ as the pairing of $c_1(E)$ with the fundamental class of $X$, that is
+\begin{equation*}
+  \deg E = \int_X\frac{i}{2\pi} \tr F. 
+\end{equation*}
+The next proposition [REF:Wells] summarizes the most important properties about the degree that we are going to use:
+\begin{prop}[Propierties of the degree]
+  Let $E$ and $F$ be complex vector bundles over a compact Riemann surface $X$.
+  \begin{enumerate}
+    \item $\deg(E)$ depends only on the isomorphism class of $E$.
+    \item $\deg(E) \in \mathbb{Z}$.
+    \item $\deg(E\oplus F)=\deg(E)+ \deg(F)$.
+    \item $\deg(E\otimes F)=\rk F \deg E + \rk E \deg F.$
+    \item $\deg E=\deg(\det E) $.
+    \item
+       Let $\delta$ be the connecting homomorphism of the long exact sequence in cohomology induced by the exponential sheaf exact sequence
+      \begin{center}
+	\begin{tikzcd}
+	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X,
+	 \end{tikzcd}
+       \end{center}
+       where $\exp(f)=e^{2\pi if}$.
+      The diagram
+      \begin{center}
+	\begin{tikzcd}
+	  H^1(X,C^{\infty,*}_X)	  \arrow{r}{\delta}\arrow{rd}[anchor=north,rotate=-30]{c_1} & H^2(X,\ZZ) \arrow[hook]{d}\\ 
+	  & H^2_{\mathrm{dR}}(X),
+	 \end{tikzcd}
+       \end{center}
+       is commutative.
+  \end{enumerate}
+\end{prop}
+
+This last property will be crucial in the classification of line bundles. Let us consider again the exponential sheaf exact sequence
+      \begin{center}
+	\begin{tikzcd}
+	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X.
+	 \end{tikzcd}
+       \end{center}
+       The existence of smooth partitions of unity implies that the sheaf $C^\infty_X$ is fine, so $H^1(X,C^\infty_X)=H^2(X,C^\infty_X)=0$. Therefore, the connecting map $\delta:H^1(X,C^{\infty,*}_X)\rightarrow H^2(X,\ZZ)$ is an isomorphism. If we now consider the set of second de Rham cohomology classes with integer coefficients $H^2_{\mathrm{dR}}(X,\ZZ)$, which is just the image of $H^2(X,\ZZ)$ by the inclusion $H^2(X,\ZZ)\hookrightarrow H^2_{\mathrm{dR}}(X)$, we get an isomorphism $c_1:H^1(X,C_X^{\infty,*})\rightarrow H^2_{\mathrm{dR}}(X,\ZZ)$. Now, the isomorphism $H^2_{\mathrm{dR}}(X) \cong \CC$ given by integration on $X$, descends to an isomorphism $H^2_{\mathrm{dR}}(X,\ZZ) \cong \ZZ$.
+    Summarizing, we have the diagram
+       \begin{center}
+	 \begin{tikzcd}
+	   H^1(X,C_X^{\infty,*}) \arrow{r}{c_1} \arrow[bend right]{rr}{\deg}& H^2_{\mathrm{dR}}(X,\ZZ) \arrow{r}{\int_X} & \ZZ.
+	 \end{tikzcd}
+       \end{center}
+       That is, the degree gives an isomorphism between the set isomorphism classes of smooth line bundles and $\ZZ$. This concludes the topological classification of vector bundles, which we can gather in the next theorem
+       \begin{thm}
+	 Smooth complex vector bundles over a compact Riemann surfaces are classified, up to $C^\infty$ isomorphism by their rank and their degree.
+       \end{thm}
+  
+       \section{The problem of classification of holomorphic vector bundles}
+\end{document}
