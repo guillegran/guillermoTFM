@@ -36,25 +36,31 @@
 \theoremstyle{remark} \newtheorem*{rem}{Remark}
 
 \def\pr{\mathrm{pr}}
-\def\CC{\mathbb{C}}
+\def\OO{\mathscr{O}}
+\def\AA{\mathscr{A}}
+\def\GG{\mathscr{G}}
+\def\CC{\mathbf{C}}
 \def\gg{\mathfrak{g}}
 \def\ad{\mathrm{ad}}
-\def\ZZ{\mathbb{Z}}
-\def\RR{\mathbb{R}}
-\def\KK{\mathbb{K}}
-\def\SF{\mathbb{S}}
-\def\TT{\mathbb{T}}
-\def\NN{\mathbb{N}}
-\def\HH{\mathbb{H}}
-\def\PP{\mathbb{P}}
+\def\ZZ{\mathbf{Z}}
+\def\RR{\mathbf{R}}
+\def\KK{\mathbf{K}}
+\def\SF{\mathbf{S}}
+\def\TT{\mathbf{T}}
+\def\NN{\mathbf{N}}
+\def\HH{\mathbf{H}}
+\def\PP{\mathbf{P}}
 \def\tr{\mathrm{tr}}
 \def\rk{\mathrm{rk}}
 \def\id{\mathbf{1}}
 \def\im{\mathrm{im}\ }
 \def\End{\mathrm{End}}
+\def\Aut{\mathrm{Aut}}
 \def\Sym{\mathrm{Sym}}
+\def\Pic{\mathrm{Pic}}
 \def\Spec{\mathrm{Spec}}
 \def\Span{\mathrm{span}}
+\def\delbar{\bar{\partial}}
 \newcommand{\ve}[1]{\mathbf{#1}}
 
 \let\emph\relax
@@ -88,7 +94,7 @@
 \tableofcontents
 \chapter{Vector bundles on Riemann surfaces}
 \section{Topological classification of vector bundles}
-The first step towards the classification of vector bundles on Riemann surfaces is their ``topological'' classification. That is, we want to classify smooth complex vector bundles on Riemann surface up to $C^\infty$ isomorphism. This is indeed pretty easy to do, since the problem can be reduced to the classification of line bundles.
+The first step towards the classification of vector bundles on Riemann surfaces is their ``topological'' classification. That is, we want to classify smooth complex vector bundles on a Riemann surface up to $C^\infty$ isomorphism. This is indeed pretty easy to do, since the problem can be reduced to the classification of line bundles.
 \begin{thm}
   If $E$ is a rank $n$ smooth complex vector bundle over a compact Riemann surface $X$ then it is isomorphic to $\det E \oplus (X\times \CC^{n-1})$.
 \end{thm}
@@ -121,7 +127,7 @@ The first step towards the classification of vector bundles on Riemann surfaces 
      Thus, we have shown that $E\cong E'\oplus (X\times \CC)$. Now, applying the induction hypothesis, $E'\cong \det E' \oplus (X\times \CC^{n-2})$, so $E\cong \det E' \oplus (X\times \CC^{n-1})$. Finally, via transition functions it can be easily shown that $\det E \cong \det E'$.
 \end{proof}
 
-This last theorem says that vector bundles can be topologically classified by their rank and their determinant, which is a line bundle. Let us proceed then with the classification of line bundles. Recall that all the data of a vector bundle can be recovered by the transition functions $\{g_{\alpha \beta}\in C^\infty(U_\alpha \cap U_\beta , \CC)\}$ defining it, where $\left\{ U_\alpha \right\}$ is an open cover of $X$. These functions verifiy the cocycle condition $$g_{\alpha \beta}=g_{\gamma \beta}\cdot g_{\alpha \gamma}.$$ Also recall that an isomorphism of vector bundles induces a coboundary on the transition functions
+This last theorem says that vector bundles can be topologically classified by their rank and their determinant, which is a line bundle. Let us proceed then with the classification of line bundles. Recall that all the data of a vector bundle can be recovered by the transition functions $\{g_{\alpha \beta}\in C^\infty(U_\alpha \cap U_\beta , \CC)\}$ defining it, where $\left\{ U_\alpha \right\}$ is an open cover of $X$. These functions verify the cocycle condition $$g_{\alpha \beta}=g_{\gamma \beta}\cdot g_{\alpha \gamma}.$$ Also recall that an isomorphism of vector bundles induces a coboundary on the transition functions
 \begin{equation*}
   \tilde{g}_{\alpha\beta}=f^{-1}_{\delta\beta}\cdot g_{\gamma\delta} \cdot f_{\gamma\alpha}.
 \end{equation*}
@@ -144,15 +150,15 @@ The next proposition [REF:Wells] summarizes the most important properties about 
   Let $E$ and $F$ be complex vector bundles over a compact Riemann surface $X$.
   \begin{enumerate}
     \item $\deg(E)$ depends only on the isomorphism class of $E$.
-    \item $\deg(E) \in \mathbb{Z}$.
+    \item $\deg(E) \in \mathbf{Z}$.
     \item $\deg(E\oplus F)=\deg(E)+ \deg(F)$.
     \item $\deg(E\otimes F)=\rk F \deg E + \rk E \deg F.$
     \item $\deg E=\deg(\det E) $.
     \item
-       Let $\delta$ be the connecting homomorphism of the long exact sequence in cohomology induced by the exponential sheaf exact sequence
+      Let $\delta:H^1(X,C^{\infty,*}_X) \rightarrow H^2(X,\ZZ)$ be the connecting homomorphism of the long exact sequence in cohomology induced by the exponential sheaf exact sequence
       \begin{center}
 	\begin{tikzcd}
-	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X,
+	  0 \arrow{r} &	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X \arrow{r} &0,
 	 \end{tikzcd}
        \end{center}
        where $\exp(f)=e^{2\pi if}$.
@@ -170,7 +176,7 @@ The next proposition [REF:Wells] summarizes the most important properties about 
 This last property will be crucial in the classification of line bundles. Let us consider again the exponential sheaf exact sequence
       \begin{center}
 	\begin{tikzcd}
-	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X.
+	  0 \arrow{r} &	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X \arrow{r} & 0.
 	 \end{tikzcd}
        \end{center}
        The existence of smooth partitions of unity implies that the sheaf $C^\infty_X$ is fine, so $H^1(X,C^\infty_X)=H^2(X,C^\infty_X)=0$. Therefore, the connecting map $\delta:H^1(X,C^{\infty,*}_X)\rightarrow H^2(X,\ZZ)$ is an isomorphism. If we now consider the set of second de Rham cohomology classes with integer coefficients $H^2_{\mathrm{dR}}(X,\ZZ)$, which is just the image of $H^2(X,\ZZ)$ by the inclusion $H^2(X,\ZZ)\hookrightarrow H^2_{\mathrm{dR}}(X)$, we get an isomorphism $c_1:H^1(X,C_X^{\infty,*})\rightarrow H^2_{\mathrm{dR}}(X,\ZZ)$. Now, the isomorphism $H^2_{\mathrm{dR}}(X) \cong \CC$ given by integration on $X$, descends to an isomorphism $H^2_{\mathrm{dR}}(X,\ZZ) \cong \ZZ$.
@@ -186,4 +192,77 @@ This last property will be crucial in the classification of line bundles. Let us
        \end{thm}
   
        \section{The problem of classification of holomorphic vector bundles}
+       Now that we have classified vector bundles up to topological ($C^\infty$) isomorphism, we are going to pursue the full classification of holomorphic vector bundles over Riemann surfaces. According to the results of last section, we can reduce our problem to the study of the ``list'' of isomorphism classes of holomorphic vector bundles of fixed rank $n$ and degree $d$ (regarding them in particular as complex vector bundles). From the beginning, this problem gets really involved, since this ``lists'' are so big that they themselves admit a geometric structure. These are what we call \emph{moduli spaces}. Therefore, the classification problem translates to that of investigating the geometric properties of the associated moduli spaces.
+
+       To illustrate this ideas in more detail, let us consider the case of holomorphic line bundles. The same arguments regarding \v{C}ech cocycles of the previous section also apply now to show that the isomorphism classes of holomorphic vector bundles are parametrized by the sheaf cohomology group
+       \begin{equation*}
+	 H^1(X,\OO_X^*).
+       \end{equation*}
+       This cohomology group is called the \emph{Picard group} of $X$ and we denote it by $\Pic(X)$.
+       Now, as before, we can consider the exponential sheaf sequence
+      \begin{center}
+	\begin{tikzcd}
+	  0\arrow{r}&	  \ZZ \arrow{r} & \OO_X \arrow{r}{\exp} & \OO_X^* \arrow{r} & 0,
+	 \end{tikzcd}
+       \end{center}
+       and the connecting operator $\delta:H^1(X,\OO_X^*)\rightarrow H^2(X,\ZZ)$ of the induced long exact sequence in cohomology. Analogously to the previous section, one can show that the diagram 
+      \begin{center}
+	\begin{tikzcd}
+	  \Pic(X)	  \arrow{r}{\delta}\arrow{rd}[anchor=north,rotate=-30]{c_1} & H^2(X,\ZZ) \arrow[hook]{d}\\ 
+	  & H^2_{\mathrm{dR}}(X)
+	 \end{tikzcd}
+       \end{center}
+       is commutative. However, unlike the smooth case, the sheaf $\OO_X$ is not fine, since there are not holomorphic partitions of unity, so in general $\delta$ is not an isomorphism anymore. Let $\Pic^0(X)=\ker \delta \subset \Pic(X)$ be the subgroup of degree zero line bundles. Then, we have an exact sequence
+      \begin{center}
+	\begin{tikzcd}
+	  0\arrow{r}&	  H^1(X,\ZZ) \arrow{r} & H^1(X,\OO_X) \arrow{r} & \Pic^0(X) \arrow{r}{\delta} & 0.
+	 \end{tikzcd}
+       \end{center}
+       Therefore $\Pic^0(X)\cong H^1(X,\OO_X)/H^1(X,\ZZ)$. Now, the Dolbeaut theorem says that $H^1(X,\OO_X)\cong H^{0,1}(X)$ and the Hodge decomposition theorem says that $H^1(X,\CC)\cong H^{1,0}(X) \oplus H^{0,1}(X)$. Also, by Serre duality, $H^{1,0}(X)\cong H^{0,1}(X)^*$ and via Mayer-Vietoris one can easily prove that $H^1(X,\CC)=\CC^{2g}$ and that $H^1(X,\ZZ)=\ZZ^{2g}$, where $g$ is the genus of $X$. Putting all this together we have that $H^1(X,\OO_X)\cong \CC^{g}$, so $\Pic^0(X)$ is isomorphic to the complex torus
+       \begin{equation*}
+J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
+       \end{equation*}
+       We call this complex torus the \emph{Jacobian} of $X$. The other components of fixed degree of $\Pic(X)$ can be also shown to be isomorphic to the Jacobian of $X$, via the isomorphism
+       \begin{align*}
+	  \Pic^d(X)&\longrightarrow \Pic^0(X)\\ 
+	   L &\longmapsto L\otimes M, 
+	 \end{align*}
+	 where $M \in \Pic^{-d}(X)$ is a fixed line bundle. It is of course injective, since if $L\otimes M = L'\otimes M$, then 
+	 \begin{equation*}
+	   L=L\otimes M \otimes M^* = L' \otimes M \otimes M^* = L',
+	 \end{equation*}
+	 and it is also surjective since for every line bundle $L \in \Pic^0(X)$, $L=(L\otimes M^*) \otimes M$.
+       
+	 The result for line bundles already gives some hints on the complexity of the general problem. However, for very low genus the problem can be solved relatively easy. For genus 0, Grothendieck proved that every holomorphic vector bundle on the Riemann sphere $\PP^1_\CC$ can be decomposed as a direct sum of line bundles. A proof of this result can be found in [REF:Hartshorne]. For genus 1, it was Atiyah who showed that the ``moduli space'' of indecomposable vector bundles with fixed rank and degree over an elliptic curve is isomorphic to the curve itself. Check out [REF:Mukai] for a construction of the moduli space and for a proof of this. 
+
+	 The problem gets its full complexity in the case of general genus $g\geq 2$, for which we will dedicate the rest of the chapter. To construct a ``good'' moduli space (one with nice topological properties, like being Hausdorff) we need to consider the idea of stability, arising from Mumford's Geometric Invariant Theory [REF:GIT]. This theory also allows to construct the moduli space of stable vector bundles, although it can also be done using analytic methods [REF:Kobayashi]. This moduli space has very nice and interesting geometric properties and it has been studied from the algebraic point of view (for example in the works of Narasimhan, Ramanan or Seshadri) as well as from the analytical or gauge-theoretical point of view (by Atiyah, Bott, Donaldson or Hitchin, for example).
+
+	 \section{Holomorphic structures as Dolbeaut operators}
+	 Let $\ve{E}$ be a holomorphic vector bundle on a compact Riemann surface $X$. Associated to $\ve{E}$, we have the \emph{Dolbeaut operator}
+	 \begin{align*}
+	   \delbar_\ve{E}:\Omega^{p,q}(X,\ve{E})&\longrightarrow \Omega^{p,q+1}(X,\ve{E})
+	   \end{align*}
+	   which satisfies
+	   \begin{equation*}
+	     \delbar_{\ve{E}}(\alpha\psi)=(\delbar \alpha)\psi + (-1)^{p} \alpha \wedge \delbar_{\ve{E}} \psi,
+	   \end{equation*}
+	   for every $\alpha \in \Omega^p(X)$, $\psi \in \Gamma(\ve{E})$, and 
+	   \begin{equation*}
+	     \delbar_{\ve{E}}^2=0.
+	   \end{equation*}
+
+	   Conversely, if $E$ is a complex vector bundle, any operator $\delbar_E:\Omega^{p,q}(X,E)\rightarrow \Omega^{p,q+1}(X,E)$ which satisfies the conditions above induces on $E$ the structure of a holomorphic vector bundle. The idea here is that $\delbar_E^2=0$ is the \emph{integrability condition} for the PDE $\delbar_E s=0$ (check out [REF:Donaldson4Variedades] for a proof of this fact). The solutions of this PDE are the holomorphic vector functions, so the sheaf of local solutions is locally free over $\OO_X$ and therefore it is an holomorphic vector bundle supported on $E$. In conclusion, if we define $\AA_{\delbar}$ as the set of all such $\delbar$ operators satisfying the previous conditions, this set is in bijection with the set of all holomorphic structures on $E$.
+
+	   Now let us consider the group $\GG^c$ of \emph{gauge transformations} of a complex vector bundle $E$, that is, diffeomorphisms $g:E\rightarrow E$ such that the diagram
+	   \begin{center}
+	     \begin{tikzcd}
+	       E \arrow{rr}{g} \arrow{rd} && E \arrow{ld}	       \\ 
+	       & X &
+	     \end{tikzcd}
+	   \end{center}
+	   commutes. That is, $\GG^c=\Gamma(\Aut(E))$. This group acts on $\AA_{\delbar}$ by the rule
+	   \begin{equation*}
+	     g\cdot \delbar_E=g\delbar_E g^{-1}.
+	   \end{equation*}
+	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$.
 \end{document}
