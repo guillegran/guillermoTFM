@@ -38,6 +38,7 @@
 \def\pr{\mathrm{pr}}
 \def\OO{\mathscr{O}}
 \def\AA{\mathscr{A}}
+\def\MM{\mathscr{M}}
 \def\GG{\mathscr{G}}
 \def\CC{\mathbf{C}}
 \def\gg{\mathfrak{g}}
@@ -192,9 +193,9 @@ This last property will be crucial in the classification of line bundles. Let us
        \end{thm}
   
        \section{The problem of classification of holomorphic vector bundles}
-       Now that we have classified vector bundles up to topological ($C^\infty$) isomorphism, we are going to pursue the full classification of holomorphic vector bundles over Riemann surfaces. According to the results of last section, we can reduce our problem to the study of the ``list'' of isomorphism classes of holomorphic vector bundles of fixed rank $n$ and degree $d$ (regarding them in particular as complex vector bundles). From the beginning, this problem gets really involved, since this ``lists'' are so big that they themselves admit a geometric structure. These are what we call \emph{moduli spaces}. Therefore, the classification problem translates to that of investigating the geometric properties of the associated moduli spaces.
+       Now that we have classified vector bundles up to topological ($C^\infty$) isomorphism, we are going to pursue the full classification of holomorphic vector bundles over Riemann surfaces. According to the results of last section, we can reduce our problem to the study of the ``list'' of isomorphism classes of holomorphic vector bundles of fixed rank $n$ and degree $d$ (regarding them in particular as complex vector bundles). From the beginning, this problem gets really involved, since this ``lists'' are so big that they themselves admit a geometric structure. These are the so called \emph{moduli spaces}. Therefore, the classification problem translates to that of investigating the geometric properties of the associated moduli spaces.
 
-       To illustrate this ideas in more detail, let us consider the case of holomorphic line bundles. The same arguments regarding \v{C}ech cocycles of the previous section also apply now to show that the isomorphism classes of holomorphic vector bundles are parametrized by the sheaf cohomology group
+       To illustrate these ideas in more detail, let us consider the case of holomorphic line bundles. The same arguments regarding \v{C}ech cocycles of the previous section also apply now to show that the isomorphism classes of holomorphic vector bundles are parametrized by the sheaf cohomology group
        \begin{equation*}
 	 H^1(X,\OO_X^*).
        \end{equation*}
@@ -251,7 +252,7 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	     \delbar_{\ve{E}}^2=0.
 	   \end{equation*}
 
-	   Conversely, if $E$ is a complex vector bundle, any operator $\delbar_E:\Omega^{p,q}(X,E)\rightarrow \Omega^{p,q+1}(X,E)$ which satisfies the conditions above induces on $E$ the structure of a holomorphic vector bundle. The idea here is that $\delbar_E^2=0$ is the \emph{integrability condition} for the PDE $\delbar_E s=0$ (check out [REF:Donaldson4Variedades] for a proof of this fact). The solutions of this PDE are the holomorphic vector functions, so the sheaf of local solutions is locally free over $\OO_X$ and therefore it is an holomorphic vector bundle supported on $E$. In conclusion, if we define $\AA_{\delbar}$ as the set of all such $\delbar$ operators satisfying the previous conditions, this set is in bijection with the set of all holomorphic structures on $E$.
+	   Conversely, if $E$ is a complex vector bundle, any operator $\delbar_{\ve{E}}:\Omega^{p,q}(X,E)\rightarrow \Omega^{p,q+1}(X,E)$ which satisfies the conditions above induces on $E$ the structure of a holomorphic vector bundle. The idea here is that $\delbar_{\ve{E}}^2=0$ is the \emph{integrability condition} for the PDE $\delbar_{\ve{E}} s=0$ (check out [REF:Donaldson4Variedades] for a proof of this fact). The solutions of this PDE are the holomorphic vector functions, so the sheaf of local solutions is locally free over $\OO_X$ and therefore it is an holomorphic vector bundle supported on $E$. In conclusion, if we define $\AA_{\delbar}$ as the set of all such $\delbar_{\ve{E}}$ operators satisfying the previous conditions, this set is in bijection with the set of all holomorphic structures on $E$.
 
 	   Now let us consider the group $\GG^c$ of \emph{gauge transformations} of a complex vector bundle $E$, that is, diffeomorphisms $g:E\rightarrow E$ such that the diagram
 	   \begin{center}
@@ -262,7 +263,33 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	   \end{center}
 	   commutes. That is, $\GG^c=\Gamma(\Aut(E))$. This group acts on $\AA_{\delbar}$ by the rule
 	   \begin{equation*}
-	     g\cdot \delbar_E=g\delbar_E g^{-1}.
+	     g\cdot \delbar_{\ve{E}}=g\delbar_{\ve{E}} g^{-1}.
 	   \end{equation*}
-	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$.
+	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$. Even though $\AA_{\delbar}$ and $\GG^c$ are infinite-dimensional spaces, using analytic techniques [REF:Kobayashi] they can be given the structure of \emph{Banach manifolds} (roughly, spaces locally modeled by Banach spaces) and this quotient space can be precisely constructed. This has however a serious problem: the obtained space is not Hausdorff. However, if we restrict ourselves to the class of \emph{stable vector bundles}, with the same analytic methods we can obtain a ``good'' moduli space.
+	   \begin{defn}
+	     Let $\ve{E}$ be a holomorphic vector bundle over a compact Riemann surface $X$. We define the \emph{slope} of $\ve{E}$ as the number
+	     \begin{equation*}
+	       \mu(\ve{E})=\deg \ve{E}/ \rk \ve{E}.
+	     \end{equation*}
+	     We say that the vector bundle $\ve{E}$ is \emph{stable} if for every holomorphic subbundle $\ve{F}\subset \ve{E}$, $$\mu(\ve{F})<\mu(\ve{E}).$$ 
+	     Fixed $E$ a complex vector bundle of rank $n$ and degree $d$, we consider $\AA_{\delbar}^s\subset \AA_{\delbar}$ the subset of stable holomorphic bundles $(\ve{E},\delbar_{\ve{E}})$ and define the \emph{moduli space of stable holomorphic vector bundles} of rank $n$ and degree $d$ as the quotient
+	     \begin{equation*}
+	       M_{n,d}=\AA_{\delbar}^s/\GG^c.
+	     \end{equation*}
+	   \end{defn}
+	   \begin{thm}
+	     The moduli space $M_{n,d}$ is a complex manifold of dimension $1+n^2(g-1)$, where $g$ is the genus of $X$.
+	   \end{thm}
+
+	   \section{Holomorphic structures and unitary connections}
+In this section we are going to give a gauge-theoretical approach to holomorphic vector bundles. This will allow us to give another analytical construction of the moduli space, this time as the space of solutions (up to gauge equivalence) to some differential equation.
+
+Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let $h$ be a Hermitian metric on E. Recall that for any connection $\nabla:\Gamma(E) \rightarrow \Omega^1(X,E)=\Omega^{1,0}(X,E) \oplus \Omega^{0,1}(X,E)$ on $E$ there is a natural splitting $\nabla=\nabla^{1,0}+\nabla^{0,1}$, where
+\begin{align*}
+  \nabla^{1,0}:\Gamma(E) \longrightarrow \Omega^{1,0}(X,E), \\
+  \nabla^{0,1}:\Gamma(E) \longrightarrow \Omega^{0,1}(X,E).
+\end{align*}
+The \emph{Chern connection} in $(\ve{E},h)$ is the unique $h$-\emph{unitary} connection (that is, $$d\esc{\xi,\eta}=\esc{\nabla \xi,\eta} + \esc{\xi,\nabla \eta},$$ for $\xi, \eta$ local sections of $E$) such that $$\nabla^{0,1}= \delbar_{\ve{E}}:\Gamma(E) \rightarrow \Omega^{0,1}(X,E).$$ Go to [REF: Wells] for a proof of the existence and uniqueness of this connection. 
+
+Conversely, given any $h$-unitary connection $\nabla$ on $E$, we can define a holomorphic structure by fixing $\delbar_{\ve{E}}=\nabla^{0,1}$ and extending to operators $\Omega^{p,q}(X,E) \rightarrow \Omega^{p,q+1}(X,E)$ by linearity. Therefore, the set holomorphic structures on $E$ can be identified with the set $\AA_h$ of all $h$-unitary connections on $E$.
 \end{document}

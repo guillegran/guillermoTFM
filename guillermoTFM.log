@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  27 MAY 2019 20:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  28 MAY 2019 21:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1250,45 +1250,45 @@ File: block.tss 2016/03/15
 (./guillermoTFM.aux)
 \openout1 = `guillermoTFM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 92.
-LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 92
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 93.
+LaTeX Font Info:    Try loading font information for OML+ntxmi on input line 93
 .
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 92
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/ntxsy/m/n on input line 93.
+LaTeX Font Info:    Try loading font information for OMS+ntxsy on input line 93
 .
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/omsntxsy.fd
 File: omsntxsy.fd 2012/11/14 Fontinst v1.933 font definitions for OMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for U+ntxexa on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 93.
+LaTeX Font Info:    Try loading font information for U+ntxexa on input line 93.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 92.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 92.
-LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1354,7 +1354,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box41
-Package hyperref Info: Link coloring ON on input line 92.
+Package hyperref Info: Link coloring ON on input line 93.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1364,9 +1364,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count148
 )
-LaTeX Info: Redefining \ref on input line 92.
-LaTeX Info: Redefining \pageref on input line 92.
-LaTeX Info: Redefining \nameref on input line 92.
+LaTeX Info: Redefining \ref on input line 93.
+LaTeX Info: Redefining \pageref on input line 93.
+LaTeX Info: Redefining \nameref on input line 93.
 
 (./guillermoTFM.out) (./guillermoTFM.out)
 \@outlinefile=\write4
@@ -1375,66 +1375,66 @@ LaTeX Info: Redefining \nameref on input line 92.
 \c@mv@tabular=\count149
 \c@mv@boldtabular=\count150
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 94.
+(Font)              scaled to size 20.74pt on input line 95.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 94.
+(Font)              scaled to size 14.4pt on input line 95.
 LaTeX Font Info:    Try loading font information for OT1+ntxtlf on input line 9
-4.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2015/01/17 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 94.
+(Font)              scaled to size 14.4pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.5pt on input line 94.
+(Font)              scaled to size 10.5pt on input line 95.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.9pt on input line 94.
-LaTeX Font Info:    Try loading font information for U+msa on input line 94.
+(Font)              scaled to size 7.9pt on input line 95.
+LaTeX Font Info:    Try loading font information for U+msa on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 94.
+LaTeX Font Info:    Try loading font information for U+msb on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+ntxmia on input line 94.
+LaTeX Font Info:    Try loading font information for U+ntxmia on input line 95.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsym on input line 94.
+LaTeX Font Info:    Try loading font information for U+ntxsym on input line 95.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 94.
+LaTeX Font Info:    Try loading font information for U+ntxsyc on input line 95.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 14.4pt on input line 94.
+(Font)              scaled to size 14.4pt on input line 95.
  [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
-(Font)              scaled to size 12.0pt on input line 94.
+(Font)              scaled to size 12.0pt on input line 95.
  [2
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.88pt on input line 94.
+(Font)              scaled to size 24.88pt on input line 95.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 94.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 95.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.88pt on input line 94.
+(Font)              scaled to size 24.88pt on input line 95.
  (./guillermoTFM.toc
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <12> not available
 (Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 1.
@@ -1455,38 +1455,38 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 ]
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/n' in size <15> not available
-(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 96.
+(Font)              Font shape `T1/ntxtlf/b/n' tried instead on input line 97.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.0pt on input line 96.
+(Font)              scaled to size 15.0pt on input line 97.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 98.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.0pt on input line 99.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.8pt on input line 99.
+(Font)              scaled to size 12.0pt on input line 100.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 6.6pt on input line 99.
+(Font)              scaled to size 8.8pt on input line 100.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
+(Font)              scaled to size 6.6pt on input line 100.
 [5]
 LaTeX Font Info:    Font shape `T1/ntxtlf/bx/it' in size <12> not available
-(Font)              Font shape `T1/ntxtlf/b/it' tried instead on input line 140
+(Font)              Font shape `T1/ntxtlf/b/it' tried instead on input line 141
 .
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
-(Font)              scaled to size 12.0pt on input line 140.
- [6] [7] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 268.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 268.
+(Font)              scaled to size 12.0pt on input line 141.
+ [6] [7] [8] [9] [10]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
  (./guillermoTFM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 268.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 268.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
 Package rerunfilecheck Info: File `guillermoTFM.out' has not changed.
-(rerunfilecheck)             Checksum: 783C254D0C6687EF3DCDDA2D434DB6AE;354.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 268.
+(rerunfilecheck)             Checksum: 5C8D289AEEDEC090DFDA17FF5BF527DC;446.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
  ) 
 Here is how much of TeX's memory you used:
- 21874 strings out of 494850
- 407920 string characters out of 6178023
- 460511 words of memory out of 5000000
- 24679 multiletter control sequences out of 15000+600000
+ 21880 strings out of 494850
+ 407971 string characters out of 6178023
+ 460517 words of memory out of 5000000
+ 24681 multiletter control sequences out of 15000+600000
  77188 words of font info for 138 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  56i,14n,84p,972b,1104s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1509,10 +1509,10 @@ e/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dis
 t/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/
 zxxrw8a.pfb>
-Output written on guillermoTFM.pdf (9 pages, 201468 bytes).
+Output written on guillermoTFM.pdf (10 pages, 207242 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
- 25 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 179 PDF objects out of 1000 (max. 8388607)
+ 147 compressed objects within 2 object streams
+ 29 named destinations out of 1000 (max. 500000)
+ 53 words of extra memory for PDF output out of 10000 (max. 10000000)
 
