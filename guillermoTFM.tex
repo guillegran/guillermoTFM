@@ -57,6 +57,7 @@
 \def\im{\mathrm{im}\ }
 \def\End{\mathrm{End}}
 \def\Aut{\mathrm{Aut}}
+\def\Hom{\mathrm{Hom}}
 \def\Sym{\mathrm{Sym}}
 \def\Pic{\mathrm{Pic}}
 \def\Spec{\mathrm{Spec}}
@@ -69,23 +70,35 @@
 
 \DeclarePairedDelimiter\esc{\langle}{\rangle}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
 
 %%%        Otro formato para las secciones
 \usepackage{titlesec}
 \usepackage{remreset}
 
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thechapter}{\Roman{chapter}}
+
+\titleformat{\chapter}[block]
+{\fontsize{20}{22}\bfseries\sffamily}
+{\hfill CHAPTER \thechapter}
+{1em}
+{\vspace{1cm} \hrule\vspace{.5cm}\hfill}
+[\vspace{.5cm}\hrule]
+
+
 \titleformat{\section}[block]
-{\fontsize{15}{18}\bfseries\filcenter}
+{\fontsize{15}{18}\bfseries\sffamily\filcenter}
 {\S\ \thesection.}
 {1em}
 {}
 
-\makeatletter
-\@removefromreset{section}{chapter}
-\makeatother
+%\makeatletter
+%\@removefromreset{section}{chapter}
+%\makeatother
 %%%
 
-\title{Higgs bundles twisted by a vector bundle}
+\title{\bfseries \sffamily Higgs bundles twisted by a vector bundle}
 \author{\it Guillermo Gallego Sánchez}
 \date{}
 
@@ -265,14 +278,14 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	   \begin{equation*}
 	     g\cdot \delbar_{\ve{E}}=g\delbar_{\ve{E}} g^{-1}.
 	   \end{equation*}
-	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$. Even though $\AA_{\delbar}$ and $\GG^c$ are infinite-dimensional spaces, using analytic techniques [REF:Kobayashi] they can be given the structure of \emph{Banach manifolds} (roughly, spaces locally modeled by Banach spaces) and this quotient space can be precisely constructed. This has however a serious problem: the obtained space is not Hausdorff. However, if we restrict ourselves to the class of \emph{stable vector bundles}, with the same analytic methods we can obtain a ``good'' moduli space.
+	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$. Even though $\AA_{\delbar}$ and $\GG^c$ are infinite-dimensional spaces, using analytic techniques [REF:Kobayashi] they can be given the structure of \emph{Banach manifolds} (roughly, spaces locally modeled by Banach spaces) and this quotient space can be precisely constructed. This has however a serious problem: the obtained space is not Hausdorff. Nevertheless, if we restrict ourselves to the class of \emph{stable vector bundles}, with the same analytic methods we can obtain a ``good'' moduli space.
 	   \begin{defn}
-	     Let $\ve{E}$ be a holomorphic vector bundle over a compact Riemann surface $X$. We define the \emph{slope} of $\ve{E}$ as the number
+	     Let $E$ be a complex vector bundle over a compact Riemann surface $X$. We define the \emph{slope} of $E$ as the number
 	     \begin{equation*}
-	       \mu(\ve{E})=\deg \ve{E}/ \rk \ve{E}.
+	       \mu(E)=\deg E/ \rk E.
 	     \end{equation*}
-	     We say that the vector bundle $\ve{E}$ is \emph{stable} if for every holomorphic subbundle $\ve{F}\subset \ve{E}$, $$\mu(\ve{F})<\mu(\ve{E}).$$ 
-	     Fixed $E$ a complex vector bundle of rank $n$ and degree $d$, we consider $\AA_{\delbar}^s\subset \AA_{\delbar}$ the subset of stable holomorphic bundles $(\ve{E},\delbar_{\ve{E}})$ and define the \emph{moduli space of stable holomorphic vector bundles} of rank $n$ and degree $d$ as the quotient
+	     We say that a holomorphic vector bundle $\ve{E}=(E,\delbar_{\ve{E}})$ is \emph{stable} if for every holomorphic subbundle $\ve{E}'\subset \ve{E}$ (that is, for every subbundle $E'\subset E$ such that $\delbar$ preserves $E'$), $$\mu(E')<\mu(E).$$ 
+	     Let $n=\rk E$ and $d=\deg E$. We consider $\AA_{\delbar}^s\subset \AA_{\delbar}$ the subset of stable holomorphic bundles $\ve{E}=(E,\delbar_{\ve{E}})$ and define the \emph{moduli space of stable holomorphic vector bundles} of rank $n$ and degree $d$ as the quotient
 	     \begin{equation*}
 	       M_{n,d}=\AA_{\delbar}^s/\GG^c.
 	     \end{equation*}
@@ -282,7 +295,8 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	   \end{thm}
 
 	   \section{Holomorphic structures and unitary connections}
-In this section we are going to give a gauge-theoretical approach to holomorphic vector bundles. This will allow us to give another analytical construction of the moduli space, this time as the space of solutions (up to gauge equivalence) to some differential equation.
+	   Although we will not enter into detail, the main reason why the quotient $\AA_{\delbar}/\GG^c$ is not Hausdorff and why we need to introduce the stability condition is that the group $\GG^c=\Gamma(\Aut(E))$ is a complex group. Indeed, it is the complexification of the group $\GG=\Gamma(\Aut(E,h))$, where $h$ is a Hermitian metric on $E$. The idea for this is essentially that the general linear group $\mathrm{GL}(n,\CC)$ is the complexification of the unitary group $\mathrm{U}(n)$. This motivates the study of unitary connections,
+which will give a gauge-theoretical approach to holomorphic vector bundles. This will allow us to give another analytical construction of the moduli space, this time as the space of solutions (up to gauge equivalence) to some differential equation.
 
 Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let $h$ be a Hermitian metric on E. Recall that for any connection $\nabla:\Gamma(E) \rightarrow \Omega^1(X,E)=\Omega^{1,0}(X,E) \oplus \Omega^{0,1}(X,E)$ on $E$ there is a natural splitting $\nabla=\nabla^{1,0}+\nabla^{0,1}$, where
 \begin{align*}
@@ -292,4 +306,110 @@ Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let 
 The \emph{Chern connection} in $(\ve{E},h)$ is the unique $h$-\emph{unitary} connection (that is, $$d\esc{\xi,\eta}=\esc{\nabla \xi,\eta} + \esc{\xi,\nabla \eta},$$ for $\xi, \eta$ local sections of $E$) such that $$\nabla^{0,1}= \delbar_{\ve{E}}:\Gamma(E) \rightarrow \Omega^{0,1}(X,E).$$ Go to [REF: Wells] for a proof of the existence and uniqueness of this connection. 
 
 Conversely, given any $h$-unitary connection $\nabla$ on $E$, we can define a holomorphic structure by fixing $\delbar_{\ve{E}}=\nabla^{0,1}$ and extending to operators $\Omega^{p,q}(X,E) \rightarrow \Omega^{p,q+1}(X,E)$ by linearity. Therefore, the set holomorphic structures on $E$ can be identified with the set $\AA_h$ of all $h$-unitary connections on $E$.
+
+Note now that for any connection on $E$, is curvature must satisfy that the cohomology class
+\begin{equation*}
+  [\tr F] = -i2\pi c_1(E).
+\end{equation*}
+Fixing an area form $\omega_X$ on $X$ so that $\int_X \omega_X=1$, we can choose a representative of $c_1(E)$ of the form $k\omega_X$, where $k\in \CC$ is a constant. Of course,
+\begin{equation*}
+  \deg E = \int_X c_1(E) = \int_X C\omega_X=k,
+\end{equation*}
+so $k=\deg E$. Therefore we can ask if there is a connection on $E$ such that its curvature satisfies
+\begin{equation*}
+  \tr F = -2\pi i\deg(E) \omega_X.
+\end{equation*}
+Or, more generally, if $\id_{E}$ denotes the identity endomorphism of $E$, we can ask whether 
+\begin{equation*}
+  F = -2\pi i\frac{\deg E}{\rk E} \id_E \omega_X.
+\end{equation*}
+Recall that we defined the number $\mu(E)=\deg E /\rk E$ as the slope of $E$. 
+
+\begin{defn}
+  We say that a connection $\nabla$ on a complex vector bundle $E$ has \emph{constant central curvature} if is curvature $F$ satisfies
+  \begin{equation*}
+    F=-2\pi i \mu(E) \id_E \omega_X.
+  \end{equation*}
+  In particular, if $\deg E=0$, $F=0$ and we say that $\nabla$ is a \emph{flat connection}.
+\end{defn}
+
+Finally, we want to consider connections that are \textit{irreducible}:
+\begin{defn}
+  A unitary connection $\nabla$ on a complex Hermitian vector bundle $(E,h)$ is \emph{reducible} if $(E,h)=(E_1,h_1)\oplus (E_2,h_2)$ and $\nabla=\nabla_1\oplus \nabla_2$. We say that $\nabla$ is \emph{irreducible} if it is not reducible.
+\end{defn}
+
+Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connections of central constant curvature on $E$. The gauge group $\GG$ acts on connections by conjugation $\nabla \mapsto g\nabla g^{-1}$, $g\in \GG$, and this actions preserves irreducibility and the equation of constant central curvature, so the group $\GG$ acts on $\AA_h^s$. Now, the same analytic techniques mentioned in the previous section [REF:Kobayashi] allow us to construct a ``good'' quotient:
+\begin{thm}
+  The moduli space of irreducible constant central curvature unitary connections $\AA_h^s/\GG$ on $(E,h)$ has the structure of a smooth real manifold of dimension $2+2n^2(g-1)$, where $n=\rk E$ and $g$ is the genus of $X$.
+\end{thm}
+
+Now, Donaldson's version of the theorem of Narasimhan-Seshadri relates this moduli space with the moduli space of stable holomorphic vector bundles.
+
+\begin{thm}[Narasimhan-Seshadri]
+  Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$. An irreducible unitary connection $\nabla$ has constant central curvature if and only if the associated holomorphic vector bundle $(E,\nabla^{0,1})$ is stable.
+\end{thm}
+This can be reformulated in terms of moduli spaces:
+\begin{corol}
+  The map
+  \begin{align*}
+    \AA_h&\longrightarrow \AA_{\delbar}\\ 
+     \nabla &\longmapsto \nabla^{0,1}, 
+    \end{align*}
+    descends to a homeomorphism
+    \begin{equation*}
+      \AA_h^s/\GG \cong \AA^s_{\delbar} /\GG^c = M_{n,d}.
+    \end{equation*}
+\end{corol}
+We will prove the ``easy'' direction of the equivalence. The proof in the other direction consists in defining a Yang-Mills functional and look for a minimum of it using analytic techniques, in particular a theorem by Uhlenbeck [REF:Uhlenbeck]. Check [REF:Donaldson] for the details.
+\begin{proof}
+First, let us suppose that $\nabla$ has constant central curvature
+\begin{equation*}
+  F=-2\pi i \frac{d}{n} \id_E \omega_X,
+\end{equation*}
+and define $\delbar_{\ve{E}}=\nabla^{0,1}$. Let $E'\subset E$ be a subbundle preserved by $\delbar_{\ve{E}}$. The Hermitian metric gives a smooth splitting
+\begin{equation*}
+  E=E'\oplus E'',
+\end{equation*}
+and we can write
+\begin{equation*}
+  \delbar_{\ve{E}}=\left(
+  \begin{array}{cc}
+    \delbar_{\ve{E}'} & \beta \\
+    0 & \delbar_{\ve{E}''}
+  \end{array}\right),
+\end{equation*}
+where $\delbar_{\ve{E}'}$ and $\delbar_{\ve{E}''}$ are the restrictions of $\delbar_{\ve{E}}$ to $E'$ and $E''$ and $\beta \in \Omega^{0,1}(X,\Hom (E'',E'))$. Now $\nabla$ can be written as
+\begin{equation*}
+  \nabla=\left(
+  \begin{array}{cc}
+    \nabla_{E'} & \beta \\
+    -\beta^\dagger & \nabla_{E''}
+  \end{array}\right),
+\end{equation*}
+where $\nabla_{E'}$ and $\nabla_{E''}$ are the connections associated to $\delbar_{\ve{E}'}$ and $\delbar_{\ve{E}''}$ and $\beta^\dagger=\star \bar{\beta} \in \Omega^{1,0}(X,\Hom(E',E''))$ is the transpose (on the matrix part) conjugate (on the form part) of $\beta$. The curvature of $\nabla$ can be written now as
+\begin{equation*}
+  F=\left(
+  \begin{array}{cc}
+    F_{E'}-\beta\wedge \beta^\dagger & \nabla_{\Hom(E'',E')}\beta \\
+    -\nabla_{\Hom (E',E'')}\beta^\dagger & F_{E''}-\beta^\dagger \wedge \beta
+  \end{array}\right)=-2\pi i\frac{d}{n} \id_E \omega_X.
+\end{equation*}
+The first corner of this equality now says that
+\begin{equation*}
+  F_{E'}-\beta \wedge \beta^\dagger = -2\pi i \frac{d}{n} \id_{E'} \omega_X.
+\end{equation*}
+Taking the trace and integrating we get
+\begin{equation*}
+  \frac{i}{2\pi}\int_X \tr F_{E'} - \frac{i}{2\pi} \int_X \tr(\beta \wedge \beta^\dagger) = d\frac{\rk E'}{n}.
+\end{equation*}
+Therefore
+\begin{equation*}
+  \frac{\deg E'}{ \rk E'} = \frac{d}{n} + \frac{i}{2\pi} \int_X \tr(\beta \wedge \beta^\dagger).
+\end{equation*}
+Now, $\tr(\beta\wedge \beta^\dagger)$ is precisely the Hodge pairing $\tr(\beta \wedge \star \bar{\beta}) = - \norm{\beta}^2 \omega_X$. Thus we have proven that 
+\begin{equation*}
+\mu(E')= \mu(E) - \norm{\beta}^2 .
+\end{equation*}
+The connection $\nabla$ is irreducible, so $\norm{\beta}\neq 0$ and $\mu(E')< \mu(E)$. That is, $E$ is stable.
+\end{proof}
 \end{document}
