@@ -1,0 +1,79 @@
+\begin{thebibliography}{GPW07}
+
+\bibitem[DK90]{donaldson4manifolds}
+S.K. Donaldson and P.B. Kronheimer.
+\newblock {\em The Geometry of Four-manifolds}.
+\newblock Oxford mathematical monographs. Clarendon Press, 1990.
+
+\bibitem[Don83]{donaldson}
+S.K. Donaldson.
+\newblock A new proof of a theorem of {N}arasimhan and {S}eshadri.
+\newblock {\em Journal of Differential Geometry}, 18(2):269--277, 1983.
+
+\bibitem[GH14]{griffithsharris}
+P.~Griffiths and J.~Harris.
+\newblock {\em Principles of Algebraic Geometry}.
+\newblock Wiley Classics Library. Wiley, 2014.
+
+\bibitem[GPW07]{wells}
+O.~Garcia-Prada and R.O. Wells.
+\newblock {\em Differential Analysis on Complex Manifolds}.
+\newblock Graduate Texts in Mathematics. Springer New York, 2007.
+
+\bibitem[Har13]{hartshorne}
+R.~Hartshorne.
+\newblock {\em Algebraic Geometry}.
+\newblock Graduate Texts in Mathematics. Springer New York, 2013.
+
+\bibitem[Hir12]{hirsch}
+M.W. Hirsch.
+\newblock {\em Differential Topology}.
+\newblock Graduate Texts in Mathematics. Springer New York, 2012.
+
+\bibitem[Hit87a]{hitchinselfduality}
+N.~Hitchin.
+\newblock The self-duality equations on a {R}iemann surface.
+\newblock {\em Proceedings of the London Mathematical Society}, 3(1):59--126,
+  1987.
+
+\bibitem[Hit87b]{hitchinsystem}
+N.~Hitchin.
+\newblock Stable bundles and integrable systems.
+\newblock {\em Duke mathematical journal}, 54(1):91--114, 1987.
+
+\bibitem[Kob14]{kobayashi}
+S.~Kobayashi.
+\newblock {\em Differential Geometry of Complex Vector Bundles}.
+\newblock Princeton Legacy Library. Princeton University Press, 2014.
+
+\bibitem[MFK94]{git}
+D.~Mumford, J.~Fogarty, and F.~Kirwan.
+\newblock {\em Geometric Invariant Theory}.
+\newblock Number v. 34 in Ergebnisse der Mathematik und ihrer Grenzgebiete : a
+  series of modern surveys in mathematics. Springer Berlin Heidelberg, 1994.
+
+\bibitem[Muk03]{mukai}
+S.~Mukai.
+\newblock {\em An Introduction to Invariants and Moduli}.
+\newblock Cambridge Studies in Advanced Mathematics. Cambridge University
+  Press, 2003.
+
+\bibitem[Sch08]{schmitt}
+A.H.W. Schmitt.
+\newblock {\em Geometric Invariant Theory and Decorated Principal Bundles}.
+\newblock Zurich lectures in advanced mathematics. European Mathematical
+  Society, 2008.
+
+\bibitem[XY14]{xieyonekura}
+D.~Xie and K.~Yonekura.
+\newblock Generalized {H}itchin system, spectral curve and $\mathcal{N}= 1$
+  dynamics.
+\newblock {\em Journal of High Energy Physics}, 2014(1):1, 2014.
+
+\bibitem[Yon14]{yonekura}
+K.~Yonekura.
+\newblock Supersymmetric gauge theory,(2, 0) theory and twisted 5d
+  super-{Y}ang-{M}ills.
+\newblock {\em Journal of High Energy Physics}, 2014(1):142, 2014.
+
+\end{thebibliography}

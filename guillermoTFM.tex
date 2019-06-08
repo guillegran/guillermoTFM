@@ -58,6 +58,7 @@
 \def\End{\mathrm{End}}
 \def\Aut{\mathrm{Aut}}
 \def\Hom{\mathrm{Hom}}
+\def\Bun{\mathbf{Bun}}
 \def\Sym{\mathrm{Sym}}
 \def\Pic{\mathrm{Pic}}
 \def\Spec{\mathrm{Spec}}
@@ -118,7 +119,7 @@ The first step towards the classification of vector bundles on Riemann surfaces 
      $E$ has a nowhere vanishing section.
    \end{lema}
    \begin{proof}
-     Let $s_0$ be the zero section of $E$ and $S_0=s_0(X)\subset E$. By the transversality theorem [REF: Hirsch], we can densely choose a section $s\in \Gamma(E)$ transversal to $S_0$. Now, if $s$ vanishes at some point $x\in X$, then $s(x)\in S_0$ and, since $s$ is transversal to $S_0$, $$d_xs(T_xX) + T_{s(x)}S_0 = T_{s(x)}E.$$ But $\dim_\RR E=2n+2$, $\dim_\RR S_0 = 2$ and $\dim_\RR d_xs(T_xX) \leq \dim_\RR X = 2$, so, if $n>1$, dimensions do not add up to verify the above equality and therefore we get a contradiction. 
+     Let $s_0$ be the zero section of $E$ and $S_0=s_0(X)\subset E$. By the transversality theorem \cite{hirsch}, we can densely choose a section $s\in \Gamma(E)$ transversal to $S_0$. Now, if $s$ vanishes at some point $x\in X$, then $s(x)\in S_0$ and, since $s$ is transversal to $S_0$, $$d_xs(T_xX) + T_{s(x)}S_0 = T_{s(x)}E.$$ But $\dim_\RR E=2n+2$, $\dim_\RR S_0 = 2$ and $\dim_\RR d_xs(T_xX) \leq \dim_\RR X = 2$, so, if $n>1$, dimensions do not add up to verify the above equality and therefore we get a contradiction. 
    \end{proof}
 
    Let us continue with the proof of the theorem. Since $E$ has a nowhere vanishing section $s$, we can define the line bundle
@@ -151,7 +152,7 @@ Therefore, topological ($C^\infty$) isomorphism classes of vector bundles are pa
 \end{equation*}
 To obtain more information about this cohomology group we are going to introduce a very powerful tool: the first Chern class of a vector bundle.
 
-Recall from Chern-Weil theory [REF:Griffiths-Harris,Wells] that for any complex vector bundle $E$ over $X$ and for any connection $\nabla$ on $E$ with associated curvature form $F$, the $2$-form $\tr F$ is closed and its de Rham cohomology class $[\tr F]\in H_{\mathrm{dR}}^2(X)$ does not depend on the choice of the connection, so it is an invariant of the vector bundle $E$. If we normalize this form to get an integer cohomology class, we define the \emph{first Chern class} of $E$ as the cohomology class:
+Recall from Chern-Weil theory \cite{griffithsharris,wells} that for any complex vector bundle $E$ over $X$ and for any connection $\nabla$ on $E$ with associated curvature form $F$, the $2$-form $\tr F$ is closed and its de Rham cohomology class $[\tr F]\in H_{\mathrm{dR}}^2(X)$ does not depend on the choice of the connection, so it is an invariant of the vector bundle $E$. If we normalize this form to get an integer cohomology class, we define the \emph{first Chern class} of $E$ as the cohomology class:
 \begin{equation*}
   c_1(E)=\left[ \frac{i}{2\pi} \tr F \right] \in H_{\mathrm{dR}}^2(X).
 \end{equation*}
@@ -159,7 +160,7 @@ We define the \emph{degree} of a vector bundle $E$ as the pairing of $c_1(E)$ wi
 \begin{equation*}
   \deg E = \int_X\frac{i}{2\pi} \tr F. 
 \end{equation*}
-The next proposition [REF:Wells] summarizes the most important properties about the degree that we are going to use:
+The next proposition \cite{wells} summarizes the most important properties about the degree that we are going to use:
 \begin{prop}[Propierties of the degree]
   Let $E$ and $F$ be complex vector bundles over a compact Riemann surface $X$.
   \begin{enumerate}
@@ -247,9 +248,9 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	 \end{equation*}
 	 and it is also surjective since for every line bundle $L \in \Pic^0(X)$, $L=(L\otimes M^*) \otimes M$.
        
-	 The result for line bundles already gives some hints on the complexity of the general problem. However, for very low genus the problem can be solved relatively easy. For genus 0, Grothendieck proved that every holomorphic vector bundle on the Riemann sphere $\PP^1_\CC$ can be decomposed as a direct sum of line bundles. A proof of this result can be found in [REF:Hartshorne]. For genus 1, it was Atiyah who showed that the ``moduli space'' of indecomposable vector bundles with fixed rank and degree over an elliptic curve is isomorphic to the curve itself. Check out [REF:Mukai] for a construction of the moduli space and for a proof of this. 
+	 The result for line bundles already gives some hints on the complexity of the general problem. However, for very low genus the problem can be solved relatively easily. For genus 0, Grothendieck proved that every holomorphic vector bundle on the Riemann sphere $\PP^1_\CC$ can be decomposed as a direct sum of line bundles. A proof of this result can be found in \cite{hartshorne}. For genus 1, it was Atiyah who showed that the ``moduli space'' of indecomposable vector bundles with fixed rank and degree over an elliptic curve is isomorphic to the curve itself. Check out [REF:Mukai?] for a construction of the moduli space and for a proof of this. 
 
-	 The problem gets its full complexity in the case of general genus $g\geq 2$, for which we will dedicate the rest of the chapter. To construct a ``good'' moduli space (one with nice topological properties, like being Hausdorff) we need to consider the idea of stability, arising from Mumford's Geometric Invariant Theory [REF:GIT]. This theory also allows to construct the moduli space of stable vector bundles, although it can also be done using analytic methods [REF:Kobayashi]. This moduli space has very nice and interesting geometric properties and it has been studied from the algebraic point of view (for example in the works of Narasimhan, Ramanan or Seshadri) as well as from the analytical or gauge-theoretical point of view (by Atiyah, Bott, Donaldson or Hitchin, for example).
+	 The problem gets its full complexity in the case of general genus $g\geq 2$, for which we will dedicate the rest of the chapter. To construct a ``good'' moduli space (one with nice topological properties, like being Hausdorff) we need to consider the idea of stability, arising from Mumford's Geometric Invariant Theory \cite{git}. This theory also allows to construct the moduli space of stable vector bundles, although it can also be done using analytic methods \cite{kobayashi}. This moduli space has very nice and interesting geometric properties and it has been studied from the algebraic point of view (for example in the works of Narasimhan, Ramanan or Seshadri) as well as from the analytical or gauge-theoretical point of view (by Atiyah, Bott, Donaldson or Hitchin, for example).
 
 	 \section{Holomorphic structures as Dolbeaut operators}
 	 Let $\ve{E}$ be a holomorphic vector bundle on a compact Riemann surface $X$. Associated to $\ve{E}$, we have the \emph{Dolbeaut operator}
@@ -265,7 +266,7 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	     \delbar_{\ve{E}}^2=0.
 	   \end{equation*}
 
-	   Conversely, if $E$ is a complex vector bundle, any operator $\delbar_{\ve{E}}:\Omega^{p,q}(X,E)\rightarrow \Omega^{p,q+1}(X,E)$ which satisfies the conditions above induces on $E$ the structure of a holomorphic vector bundle. The idea here is that $\delbar_{\ve{E}}^2=0$ is the \emph{integrability condition} for the PDE $\delbar_{\ve{E}} s=0$ (check out [REF:Donaldson4Variedades] for a proof of this fact). The solutions of this PDE are the holomorphic vector functions, so the sheaf of local solutions is locally free over $\OO_X$ and therefore it is an holomorphic vector bundle supported on $E$. In conclusion, if we define $\AA_{\delbar}$ as the set of all such $\delbar_{\ve{E}}$ operators satisfying the previous conditions, this set is in bijection with the set of all holomorphic structures on $E$.
+	   Conversely, if $E$ is a complex vector bundle, any operator $\delbar_{\ve{E}}:\Omega^{p,q}(X,E)\rightarrow \Omega^{p,q+1}(X,E)$ which satisfies the conditions above induces on $E$ the structure of a holomorphic vector bundle. The idea here is that $\delbar_{\ve{E}}^2=0$ is the \emph{integrability condition} for the PDE $\delbar_{\ve{E}} s=0$ (check out \cite{donaldson4manifolds}  for a proof of this fact). The solutions of this PDE are the holomorphic vector functions, so the sheaf of local solutions is locally free over $\OO_X$ and therefore it is an holomorphic vector bundle supported on $E$. In conclusion, if we define $\AA_{\delbar}$ as the set of all such $\delbar_{\ve{E}}$ operators satisfying the previous conditions, this set is in bijection with the set of all holomorphic structures on $E$.
 
 	   Now let us consider the group $\GG^c$ of \emph{gauge transformations} of a complex vector bundle $E$, that is, diffeomorphisms $g:E\rightarrow E$ such that the diagram
 	   \begin{center}
@@ -278,7 +279,7 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	   \begin{equation*}
 	     g\cdot \delbar_{\ve{E}}=g\delbar_{\ve{E}} g^{-1}.
 	   \end{equation*}
-	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$. Even though $\AA_{\delbar}$ and $\GG^c$ are infinite-dimensional spaces, using analytic techniques [REF:Kobayashi] they can be given the structure of \emph{Banach manifolds} (roughly, spaces locally modeled by Banach spaces) and this quotient space can be precisely constructed. This has however a serious problem: the obtained space is not Hausdorff. Nevertheless, if we restrict ourselves to the class of \emph{stable vector bundles}, with the same analytic methods we can obtain a ``good'' moduli space.
+	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$. Even though $\AA_{\delbar}$ and $\GG^c$ are infinite-dimensional spaces, using analytic techniques \cite{kobayashi} they can be given the structure of \emph{Banach manifolds} (roughly, spaces locally modeled by Banach spaces) and this quotient space can be precisely constructed. This has however a serious problem: the obtained space is not Hausdorff. Nevertheless, if we restrict ourselves to the class of \emph{stable vector bundles}, with the same analytic methods we can obtain a ``good'' moduli space.
 	   \begin{defn}
 	     Let $E$ be a complex vector bundle over a compact Riemann surface $X$. We define the \emph{slope} of $E$ as the number
 	     \begin{equation*}
@@ -287,11 +288,11 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	     We say that a holomorphic vector bundle $\ve{E}=(E,\delbar_{\ve{E}})$ is \emph{stable} if for every holomorphic subbundle $\ve{E}'\subset \ve{E}$ (that is, for every subbundle $E'\subset E$ such that $\delbar$ preserves $E'$), $$\mu(E')<\mu(E).$$ 
 	     Let $n=\rk E$ and $d=\deg E$. We consider $\AA_{\delbar}^s\subset \AA_{\delbar}$ the subset of stable holomorphic bundles $\ve{E}=(E,\delbar_{\ve{E}})$ and define the \emph{moduli space of stable holomorphic vector bundles} of rank $n$ and degree $d$ as the quotient
 	     \begin{equation*}
-	       M_{n,d}=\AA_{\delbar}^s/\GG^c.
+	       \Bun(n,d)=\AA_{\delbar}^s/\GG^c.
 	     \end{equation*}
 	   \end{defn}
 	   \begin{thm}
-	     The moduli space $M_{n,d}$ is a complex manifold of dimension $1+n^2(g-1)$, where $g$ is the genus of $X$.
+	     The moduli space $\Bun(n,d)$ is a complex manifold of dimension $1+n^2(g-1)$, where $g$ is the genus of $X$.
 	   \end{thm}
 
 	   \section{Holomorphic structures and unitary connections}
@@ -303,7 +304,7 @@ Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let 
   \nabla^{1,0}:\Gamma(E) \longrightarrow \Omega^{1,0}(X,E), \\
   \nabla^{0,1}:\Gamma(E) \longrightarrow \Omega^{0,1}(X,E).
 \end{align*}
-The \emph{Chern connection} in $(\ve{E},h)$ is the unique $h$-\emph{unitary} connection (that is, $$d\esc{\xi,\eta}=\esc{\nabla \xi,\eta} + \esc{\xi,\nabla \eta},$$ for $\xi, \eta$ local sections of $E$) such that $$\nabla^{0,1}= \delbar_{\ve{E}}:\Gamma(E) \rightarrow \Omega^{0,1}(X,E).$$ Go to [REF: Wells] for a proof of the existence and uniqueness of this connection. 
+The \emph{Chern connection} in $(\ve{E},h)$ is the unique $h$-\emph{unitary} connection (that is, $$d\esc{\xi,\eta}=\esc{\nabla \xi,\eta} + \esc{\xi,\nabla \eta},$$ for $\xi, \eta$ local sections of $E$) such that $$\nabla^{0,1}= \delbar_{\ve{E}}:\Gamma(E) \rightarrow \Omega^{0,1}(X,E).$$ Go to \cite{wells} for a proof of the existence and uniqueness of this connection. 
 
 Conversely, given any $h$-unitary connection $\nabla$ on $E$, we can define a holomorphic structure by fixing $\delbar_{\ve{E}}=\nabla^{0,1}$ and extending to operators $\Omega^{p,q}(X,E) \rightarrow \Omega^{p,q+1}(X,E)$ by linearity. Therefore, the set holomorphic structures on $E$ can be identified with the set $\AA_h$ of all $h$-unitary connections on $E$.
 
@@ -313,7 +314,7 @@ Note now that for any connection on $E$, is curvature must satisfy that the coho
 \end{equation*}
 Fixing an area form $\omega_X$ on $X$ so that $\int_X \omega_X=1$, we can choose a representative of $c_1(E)$ of the form $k\omega_X$, where $k\in \CC$ is a constant. Of course,
 \begin{equation*}
-  \deg E = \int_X c_1(E) = \int_X C\omega_X=k,
+  \deg E = \int_X c_1(E) = \int_X k\omega_X=k,
 \end{equation*}
 so $k=\deg E$. Therefore we can ask if there is a connection on $E$ such that its curvature satisfies
 \begin{equation*}
@@ -338,7 +339,7 @@ Finally, we want to consider connections that are \textit{irreducible}:
   A unitary connection $\nabla$ on a complex Hermitian vector bundle $(E,h)$ is \emph{reducible} if $(E,h)=(E_1,h_1)\oplus (E_2,h_2)$ and $\nabla=\nabla_1\oplus \nabla_2$. We say that $\nabla$ is \emph{irreducible} if it is not reducible.
 \end{defn}
 
-Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connections of central constant curvature on $E$. The gauge group $\GG$ acts on connections by conjugation $\nabla \mapsto g\nabla g^{-1}$, $g\in \GG$, and this actions preserves irreducibility and the equation of constant central curvature, so the group $\GG$ acts on $\AA_h^s$. Now, the same analytic techniques mentioned in the previous section [REF:Kobayashi] allow us to construct a ``good'' quotient:
+Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connections of central constant curvature on $E$. The gauge group $\GG$ acts on connections by conjugation $\nabla \mapsto g\nabla g^{-1}$, $g\in \GG$, and this actions preserves irreducibility and the equation of constant central curvature, so the group $\GG$ acts on $\AA_h^s$. Now, the same analytic techniques mentioned in the previous section \cite{kobayashi} allow us to construct a ``good'' quotient:
 \begin{thm}
   The moduli space of irreducible constant central curvature unitary connections $\AA_h^s/\GG$ on $(E,h)$ has the structure of a smooth real manifold of dimension $2+2n^2(g-1)$, where $n=\rk E$ and $g$ is the genus of $X$.
 \end{thm}
@@ -357,10 +358,10 @@ This can be reformulated in terms of moduli spaces:
     \end{align*}
     descends to a homeomorphism
     \begin{equation*}
-      \AA_h^s/\GG \cong \AA^s_{\delbar} /\GG^c = M_{n,d}.
+      \AA_h^s/\GG \cong \AA^s_{\delbar} /\GG^c = \Bun(n,d).
     \end{equation*}
 \end{corol}
-We will prove the ``easy'' direction of the equivalence. The proof in the other direction consists in defining a Yang-Mills functional and look for a minimum of it using analytic techniques, in particular a theorem by Uhlenbeck [REF:Uhlenbeck]. Check [REF:Donaldson] for the details.
+We will prove the ``easy'' direction of the equivalence. The proof in the other direction consists in defining a Yang-Mills functional and look for a minimum of it using analytic techniques, in particular a theorem by Uhlenbeck [REF:Uhlenbeck?]. Check \cite{donaldson} for the details.
 \begin{proof}
 First, let us suppose that $\nabla$ has constant central curvature
 \begin{equation*}
@@ -412,4 +413,8 @@ Now, $\tr(\beta\wedge \beta^\dagger)$ is precisely the Hodge pairing $\tr(\beta 
 \end{equation*}
 The connection $\nabla$ is irreducible, so $\norm{\beta}\neq 0$ and $\mu(E')< \mu(E)$. That is, $E$ is stable.
 \end{proof}
+
+\nocite{*}
+\bibliographystyle{alpha}
+\bibliography{biblio}
 \end{document}
