@@ -1,5 +1,10 @@
 \begin{thebibliography}{GPW07}
 
+\bibitem[AMR12]{abrahammarsdenratiu}
+R.~Abraham, J.E. Marsden, and T.~Ratiu.
+\newblock {\em Manifolds, Tensor Analysis, and Applications}.
+\newblock Applied Mathematical Sciences. Springer New York, 2012.
+
 \bibitem[DK90]{donaldson4manifolds}
 S.K. Donaldson and P.B. Kronheimer.
 \newblock {\em The Geometry of Four-manifolds}.
@@ -45,6 +50,11 @@ N.~Hitchin.
 S.~Kobayashi.
 \newblock {\em Differential Geometry of Complex Vector Bundles}.
 \newblock Princeton Legacy Library. Princeton University Press, 2014.
+
+\bibitem[Lan12]{lang}
+S.~Lang.
+\newblock {\em Differential and Riemannian Manifolds}.
+\newblock Graduate Texts in Mathematics. Springer New York, 2012.
 
 \bibitem[MFK94]{git}
 D.~Mumford, J.~Fogarty, and F.~Kirwan.

@@ -1,6 +1,6 @@
-\backcite {hirsch}{{5}{1}{lema.1}}
-\backcite {griffithsharris,wells}{{6}{1}{lema.1}}
-\backcite {wells}{{6}{1}{lema.1}}
+\backcite {hirsch}{{5}{1}{thm.1.1.2}}
+\backcite {griffithsharris,wells}{{6}{1}{thm.1.1.2}}
+\backcite {wells}{{6}{1}{thm.1.1.2}}
 \backcite {hartshorne}{{9}{2}{section.1.2}}
 \backcite {git}{{9}{2}{section.1.2}}
 \backcite {kobayashi}{{9}{2}{section.1.2}}
@@ -9,3 +9,6 @@
 \backcite {wells}{{10}{4}{section.1.4}}
 \backcite {kobayashi}{{11}{4}{thm.1.4.2}}
 \backcite {donaldson}{{12}{4}{thm.1.4.5}}
+\backcite {abrahammarsdenratiu,lang}{{13}{1}{section.2.1}}
+\backcite {abrahammarsdenratiu}{{16}{3}{section.2.3}}
+\backcite {kobayashi}{{17}{3}{thm.2.3.1}}
