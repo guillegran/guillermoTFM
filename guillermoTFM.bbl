@@ -1,5 +1,11 @@
 \begin{thebibliography}{GPW07}
 
+\bibitem[AB83]{atiyahbott}
+M.~F. Atiyah and R.~Bott.
+\newblock The {Y}ang-{M}ills equations over {R}iemann surfaces.
+\newblock {\em Philosophical Transactions of the Royal Society of London.
+  Series A, Mathematical and Physical Sciences}, 308(1505):523--615, 1983.
+
 \bibitem[AMR12]{abrahammarsdenratiu}
 R.~Abraham, J.E. Marsden, and T.~Ratiu.
 \newblock {\em Manifolds, Tensor Analysis, and Applications}.

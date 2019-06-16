@@ -55,10 +55,11 @@
 \def\rk{\mathrm{rk}}
 \def\id{\mathbf{1}}
 \def\im{\mathrm{im}\ }
+\def\Lie{\mathrm{Lie}}
 \def\End{\mathrm{End}}
 \def\Aut{\mathrm{Aut}}
 \def\Hom{\mathrm{Hom}}
-\def\Bun{\mathbf{M}_{\delbar}}
+\def\Bun{\mathbf{M}_{\mathrm{Bun}}}
 \def\Sym{\mathrm{Sym}}
 \def\Pic{\mathrm{Pic}}
 \def\Spec{\mathrm{Spec}}
@@ -295,6 +296,8 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	     The moduli space $\Bun(n,d)$ is a complex manifold of dimension $1+n^2(g-1)$, where $g$ is the genus of $X$.
 	   \end{thm}
 
+	   \section{Deformations of holomorphic structures}
+
 	   \section{Holomorphic structures and unitary connections}
 	   Although we will not enter into detail, the main reason why the quotient $\AA_{\delbar}/\GG^c$ is not Hausdorff and why we need to introduce the stability condition is that the group $\GG^c=\Gamma(\Aut(E))$ is a complex group. Indeed, it is the complexification of the group $\GG=\Gamma(\Aut(E,h))$, where $h$ is a Hermitian metric on $E$. The idea for this is essentially that the general linear group $\mathrm{GL}(n,\CC)$ is the complexification of the unitary group $\mathrm{U}(n)$. This motivates the study of unitary connections,
 which will give a gauge-theoretical approach to holomorphic vector bundles. This will allow us to give another analytical construction of the moduli space, this time as the space of solutions (up to gauge equivalence) to some differential equation.
@@ -416,21 +419,21 @@ The connection $\nabla$ is irreducible, so $\norm{\beta}\neq 0$ and $\mu(E')< \m
 
 \section{Representations of the fundamental group}
 
-\chapter{The moduli space as a symplectic quotient}
+\chapter{Momentum maps and symplectic quotients}
 \section{Banach manifolds}
-For the purpose of this work it is necessary to work on an infinite-dimensional context, so we can construct the moduli spaces as quotients of infinite-dimensional manifolds. To do this, we need to consider an infinite-dimensional analogous to differential calculus and the notion of infinite-dimensional smooth manifold. Here we just state the basic definitions and results, which are a direct generalization of the classical ones, and refer to \cite{abrahammarsdenratiu,lang} for more details.
+For the purpose of this work it is necessary to work on an infinite-dimensional context, so we can construct the moduli spaces as quotients of infinite-dimensional manifolds. To do this, we need to consider an infinite-dimensional analogous to differential calculus and the notion of an infinite-dimensional smooth manifold. Here we just state the basic definitions and results, which are a direct generalization of the classical ones, and refer to \cite{abrahammarsdenratiu,lang} for more details.
 \begin{defn}
-  Let $X$ and $Y$ be Banach spaces and $U\subset X$ an open set. Let $f:X\rightarrow Y$ be a continuous map. We say that $f$ is \emph{differentiable} at a point $x_0 \in U$ if there exists a continuous linear map $d_{x_0}f:X\rightarrow Y$ such that 
+  Let $E$ and $F$ be Banach spaces and $U\subset E$ an open set. Let $f:E\rightarrow F$ be a continuous map. We say that $f$ is \emph{differentiable} at a point $x_0 \in U$ if there exists a continuous linear map $d_{x_0}f:E\rightarrow F$ such that 
   \begin{equation*}
-    \lim_{h\rightarrow 0} \frac{\norm{f(x_0+h)-f(x_0)-d_{x_0}f(h)}_Y}{\norm{h}_X}=0.
+    \lim_{h\rightarrow 0} \frac{\norm{f(x_0+h)-f(x_0)-d_{x_0}f(h)}_F}{\norm{h}_E}=0.
   \end{equation*}
   If this map $d_{x_0}f$ exists, then it is unique and it is called the \emph{derivative of $f$ at $x_0$}.
   If $f$ is differentiable at every point of $U$, then we have a map
   \begin{align*}
-    df :U&\longrightarrow L(X,Y)\\ 
+    df :U&\longrightarrow L(E,F)\\ 
       x &\longmapsto d_xf, 
     \end{align*}
-    where $L(X,Y)$ denotes the set of bounded linear maps $X\rightarrow Y$. If $df$ is continuous, we say that $f$ is \emph{of class} $C^1$. Inductively, we define maps of class $C^p$, for $p\in \mathbf{N} \cup \left\{ \infty \right\}$. If $f$ is of class $C^{\infty}$, we say that it is \emph{smooth}. If $f$ is bijective map of class $C^p$ such that its inverse is also of class $C^p$, we say that $f$ is a $C^p$-\emph{diffeomorphism}. If we do not specify, by a \emph{diffeomorphism} we just mean a $C^\infty$-diffeomorphism.
+    where $L(E,F)$ denotes the set of bounded linear maps $E\rightarrow F$. If $df$ is continuous, we say that $f$ is \emph{of class} $C^1$. Inductively, we define maps of class $C^p$, for $p\in \mathbf{N} \cup \left\{ \infty \right\}$. If $f$ is of class $C^{\infty}$, we say that it is \emph{smooth}. If $f$ is a bijective map of class $C^p$ such that its inverse is also of class $C^p$, we say that $f$ is a $C^p$-\emph{diffeomorphism}. If we do not specify, by a \emph{diffeomorphism} we just mean a $C^\infty$-diffeomorphism.
 \end{defn}
 
 As we said before, all the basic definitions and results of classical differential calculus (the chain rule, Taylor's formula, inverse and implicit function theorems etc.) can be generalized to the infinite-dimensional context. 
@@ -442,7 +445,7 @@ As we said before, all the basic definitions and results of classical differenti
   Let $X$ be a Hausdorff topological space. An \emph{atlas of class} $C^p$ on $X$ is a collection of \emph{charts} $(U_\alpha,\varphi_\alpha)$ such that
   \begin{enumerate}
     \item The $U_\alpha\subset X$ are open subsets of $X$, and $X=\bigcup_\alpha U_\alpha$.
-    \item Each $\varphi_\alpha:U_\alpha \rightarrow V_\alpha$ is a homeomorphism of $U_\alpha$ onto some open subset of a Banach space $V_\alpha \subset Y_\alpha$ and for any $\alpha, \beta$, $\varphi_\alpha(U_\alpha \cap U_\beta)$ is open in $Y_\alpha$.
+    \item Each $\varphi_\alpha:U_\alpha \rightarrow V_\alpha$ is a homeomorphism of $U_\alpha$ onto some open subset of a Banach space $V_\alpha \subset E_\alpha$ and for any $\alpha, \beta$, $\varphi_\alpha(U_\alpha \cap U_\beta)$ is open in $E_\alpha$.
     \item The map 
       \begin{equation*}
 	\varphi_\beta \circ \varphi_\alpha ^{-1}:\varphi_\alpha(U_\alpha \cap U_\beta) \rightarrow \varphi_\beta(U_\alpha \cap U_\beta)
@@ -452,7 +455,7 @@ As we said before, all the basic definitions and results of classical differenti
 \end{defn}
 Compatibility classes for this kind of atlases are defined like in the finite-dimensional case. A equivalence class of this atlases (or a maximal atlas) is what gives $X$ the structure of a $C^p$-\emph{Banach manifold}. A $C^\infty$-Banach manifold is what we call a \emph{Banach smooth manifold}.
 
-Let $X$ be a Banach smooth manifold and $x\in X$. Consider triples $(U,\varphi,v)$, where $(U,\varphi)$ is a chart at $x$ with $\varphi:U\rightarrow Y$, $Y$ a Banach space, and $v\in Y$. We say that two such triples $(U,\varphi,v)$ and $(U',\varphi',v')$ are \emph{equivalent} if 
+Let $X$ be a Banach smooth manifold and $x\in X$. Consider triples $(U,\varphi,v)$, where $(U,\varphi)$ is a chart at $x$ with $\varphi:U\rightarrow E$, $E$ a Banach space, and $v\in E$. We say that two such triples $(U,\varphi,v)$ and $(U',\varphi',v')$ are \emph{equivalent} if 
 \begin{equation*}
   d_{\varphi(x)}(\varphi'\circ \varphi^{-1})(v)=v'.
 \end{equation*}
@@ -472,12 +475,12 @@ To finish the section, we generalize the notion of a Lie group. A \emph{Banach L
   is a smooth map.
   As in the classical case, the \emph{Lie algebra} $\gg$ of $G$ is just the tangent space at the identity $T_eG$, which again happens to be isomorphic to the space the set of (left) invariant vector fields, so it is naturally equipped with a \emph{Lie bracket}.
 
-  \section{Symplectic manifolds and the moment map}
+  \section{Symplectic manifolds and the momentum map}
   \begin{defn}
     Let $X$ be a Banach smooth manifold. A \emph{symplectic form} on $X$ is a non-degenerate closed $2$-form on $X$, that is, a $2$-form $\omega$ satisfying:
     \begin{enumerate}
       \item For each $x\in X$, $\omega_x:T_xX \times T_xX \rightarrow \RR$ is continuous;
-      \item For each $x\in X$, $\omega_x$ is non-degenerate, i.e., if $\omega_x(u,v)=0$ for all $v\in T_xX$, then $u=0$M
+      \item For each $x\in X$, $\omega_x$ is non-degenerate, i.e., if $\omega_x(u,v)=0$ for all $v\in T_xX$, then $u=0$;
       \item $\omega_x$ is smooth in $x$;
       \item $\omega$ is closed, i.e., $d\omega=0$.
     \end{enumerate}
@@ -495,7 +498,7 @@ We say that a vector field $v$ on a symplectic manifold $(X,\omega)$ is \emph{sy
 \begin{equation*}
   L_v \omega = d(i_v \omega) + i_v (d\omega)=0,
 \end{equation*}
-where $i_v \omega$ denotes the contraction. Since $\omega$ is closed, $v$ is symplectic if and only if the $1$-form $i_v \omega$ is closed. We say that $v$ is \emph{Hamiltonian} if $i_v \omega$ is exact. In that case, there exists a function $f:X\rightarrow \RR$, called the \emph{Hamiltonian} of $v$ such that
+where $i_v$ denotes the contraction. Since $\omega$ is closed, $v$ is symplectic if and only if the $1$-form $i_v \omega$ is closed. We say that $v$ is \emph{Hamiltonian} if $i_v \omega$ is exact. In that case, there exists a function $f:X\rightarrow \RR$, called the \emph{Hamiltonian} of $v$ such that
 \begin{equation*}
   df=-i_v \omega.
 \end{equation*}
@@ -505,24 +508,24 @@ Let $G$ be a Banach Lie group acting symplectically on $X$, that is, if we denot
 \begin{equation*}
   \rho(g)^*\omega=\omega.
 \end{equation*}
-Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall that to every element $\xi \in \gg$ we can associate the vector field $v_\xi$ defined as the infinitesimal generator of $\rho(\exp{t\xi})$. Consider now an smooth map $\mu:X\rightarrow \gg^*$ and, for every $\xi \in \gg$ define the function
+Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall that to every element $\xi \in \gg$ we can associate the vector field $\vec{\xi}$ defined as the infinitesimal generator of $\rho(\exp{t\xi})$. Consider now an smooth map $\mu:X\rightarrow \gg^*$ and, for every $\xi \in \gg$ define the function
 \begin{align*}
   \mu_\xi :X&\longrightarrow \RR\\ 
   x &\longmapsto \esc{\mu(x),\xi}, 
   \end{align*}
-  where $\esc{-,-}$ denotes the natural pairing between $\gg$ and its dual. We say that $\mu$ is a \emph{moment map} for the action of $G$ on $X$ if for every $\xi\in \gg$, the vector field $v_\xi$ is Hamiltonian with Hamiltonian $\mu_\xi$, that is, if
+  where $\esc{-,-}$ denotes the natural pairing between $\gg$ and its dual. We say that $\mu$ is a \emph{momentum map}\footnote{Originally due to a bad translation by Marsden and Weinstein of the French term ``\textit{application moment}'', introduced by Souriau, it is not uncommon in the literature to call this the ``moment'' map. The physically correct term is ``momentum'' map since it is a generalization of the physical notions of linear and angular momentum.} for the action of $G$ on $X$ if for every $\xi\in \gg$, the vector field $\vec{\xi}$ is Hamiltonian with Hamiltonian $\mu_\xi$, that is, if
   \begin{equation*}
-    d\mu_\xi=-i_{v_\xi}\omega
+    d\mu_\xi=-i_{\vec{\xi}}\omega
   \end{equation*}
   or, equivalently, if
   \begin{equation*}
-    \esc{d_x\mu(u),\xi}=\omega(u,v_{\xi}(x)),
+    \esc{d_x\mu(u),\xi}=\omega(u,\vec{\xi}(x)),
   \end{equation*}
   for every $u\in T_xX$, where $d_x\mu:T_xX \rightarrow \gg^*$ is the derivative of $\mu$ at $x$.
 
   \section{Symplectic reduction}
 
-  We are going now to introduce \emph{symplectic reduction}, for which we will need to assume that we have a symplectic action of a Banach Lie group $G$ on a symplectic manifold $(X,\omega)$ that admits a moment map with the following technical conditions. First, assume that $\mu$ is $G$-\emph{equivariant}, that is, 
+  We are going now to introduce \emph{symplectic reduction}, for which we will need to assume that we have a symplectic action of a Banach Lie group $G$ on a symplectic manifold $(X,\omega)$ that admits a momentum map with the following technical conditions. First, assume that $\mu$ is $G$-\emph{equivariant}, that is, 
   \begin{equation*}
     \mu(\rho(g)(x))=(\mathrm{ad}_g)^*(\mu(x)),
   \end{equation*}
@@ -553,7 +556,7 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
     \end{align*}
     is proper. For details on why this properness condition is necessary to get a Hausdorff space, check \cite{abrahammarsdenratiu}.
 
-    \begin{thm}
+    \begin{thm}[Marsden-Weinstein]
       Under the previous conditions, there is a unique symplectic form $\omega_Z$ on the symplectic quotient $Z$ such that
       \begin{equation*}
 	\pi^*\omega_Z=j^*\omega,
@@ -568,47 +571,79 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
       \end{equation*}
       for $u,v \in T_x(\mu^{-1}(0))$. To see that it is well defined choose another representative $u'\in T_{\rho(g)(x)}(\mu^{-1}(0))$, for some $g\in G$, such that $d_{\rho(g)(x)}\pi(u')=d_x\pi(u)$. Then, $u$ and $u'$ are related by
       \begin{equation*}
-	u'=d_x\rho(g) (u+v_{\xi}(x)),
+	u'=d_x\rho(g) (u+\vec{\xi}(x)),
       \end{equation*}
       for some $\xi \in \gg$, since $$T_{\rho(g)(x)}(\mu^{-1}(0))=d_x\rho(g)(T_x(\mu^{-1}(0)))=d_x\rho(g)(T_x(S_x)+T_x(Gx)).$$
       Therefore,
       \begin{equation*}
-	\omega_{\rho(g)x}(u',v')=(\rho(g)^*\omega)_x(u+v_\xi(x),v+v_\eta(x)).
+	\omega_{\rho(g)x}(u',v')=(\rho(g)^*\omega)_x(u+\vec{\xi}(x),v+\vec{\eta}(x)).
       \end{equation*}
       Now, since the action is symplectic, $\rho(g)^*\omega=\omega$, so
       \begin{align*}
-	\omega_{\rho(g)x}(u',v')=&\omega_x(u+v_\xi(x),v+v_\eta(x)) \\
-	=&\omega_x(u,v)+\omega_x(v_{\xi}(x),v) \\ &+\omega_x(u,v_\eta(x))+\omega_x(v_\xi(x),v_\eta(x)) \\
-	=& \omega_x(u,v) + \esc{d_x\mu(u),\eta} - \esc{d_x\mu(v),\xi} + \esc{d_x\mu(v_\xi(x)),\eta} \\
+	\omega_{\rho(g)x}(u',v')=&\omega_x(u+\vec{\xi}(x),v+\vec{\eta}(x)) \\
+	=&\omega_x(u,v)+\omega_x(\vec{\xi}(x),v) \\ &+\omega_x(u,\vec{\eta}(x))+\omega_x(\vec{\xi}(x),\vec{\eta}(x)) \\
+	=& \omega_x(u,v) + \esc{d_x\mu(u),\eta} - \esc{d_x\mu(v),\xi} + \esc{d_x\mu(\vec{\xi}(x)),\eta} \\
 	=& \omega_x(u,v),
       \end{align*}
-      since $u, v, v_\xi(x) \in T_x(\mu^{-1}(0))=\ker(d_x\mu)$. 
+      since $u, v, \vec{\xi}(x) \in T_x(\mu^{-1}(0))=\ker(d_x\mu)$. 
       
       This gives the existence of $\omega_Z$, while the uniqueness follows from the fact that $d_x\pi:T_x(\mu^{-1}(0))\rightarrow T_{\pi(x)}Z$ is surjective. Since $\pi:S_x \rightarrow \pi(S_x)\subset Z$ is a diffeomorphism and $\pi^*\omega_Z|_{S_x}=\omega|_{S_x}$, $\omega_Z$ is also smooth and closed. 
 
-      It remains to check that $\omega_Z$ is non-degenerate. Let $u\in T_x(\mu^{-1}(0))$ be such that $\omega(u,v)=0$ for all $v\in T_x(\mu^{-1}(0))$. We have to show that $d_x\pi(u)=0$, that is, that $u=v_\xi(x)$ for some $\xi\in \gg$. To see this we need the following technical lemma, we refer to \cite{kobayashi} for a proof.
+      It remains to check that $\omega_Z$ is non-degenerate. Let $u\in T_x(\mu^{-1}(0))$ be such that $\omega(u,v)=0$ for all $v\in T_x(\mu^{-1}(0))$. We have to show that $d_x\pi(u)=0$, that is, that $u=\vec{\xi}(x)$ for some $\xi\in \gg$. To see this we need the following technical lemma, we refer to \cite{kobayashi} for a proof.
       \begin{lema}
-	Let $V$ be a Banach space and $\omega:V\times V \rightarrow \RR$ a continuous non-degenerate skew-symmetric form. For any closed subspace $W\subset V$, set
+	Let $E$ be a Banach space and $\omega:E\times E \rightarrow \RR$ a continuous non-degenerate skew-symmetric form. For any closed subspace $F\subset E$, set
 	\begin{equation*}
-	  W^\omega=\left\{ v\in V:\omega(u,v)=0 \text{ for all } u \in W \right\}.
+	  F^\omega=\left\{ v\in E:\omega(u,v)=0 \text{ for all } u \in F \right\}.
 	\end{equation*}
-	Then $(W^\omega)^\omega=W$.
+	Then $(F^\omega)^\omega=F$.
       \end{lema}
 
-      In our case $V=T_xX$ and $W=\left\{ v_\xi(x) : \xi \in \gg \right\}=\left\{ u \in T_x(\mu^{-1}(0)) : d_x\pi(u)=0 \right\}$. Therefore
+      In our case $E=T_xX$ and $F=\left\{ \vec{\xi}(x) : \xi \in \gg \right\}=\left\{ u \in T_x(\mu^{-1}(0)) : d_x\pi(u)=0 \right\}$. Therefore
       \begin{equation*}
-	W^\omega=\left\{ w\in T_xX: \omega(v_\xi(x),w)=0 \text{ for all } \xi \in \gg \right\}=\left\{ w\in T_xX: d_x\mu(w)=0 \right\}=T_x(\mu^{-1}(0)),
+	F^\omega=\left\{ v\in T_xX: \omega(\vec{\xi}(x),v)=0 \text{ for all } \xi \in \gg \right\}=\left\{ v\in T_xX: d_x\mu(v)=0 \right\}=T_x(\mu^{-1}(0)),
       \end{equation*}
       since $\ker(d_x\mu)=T_x(\mu^{-1}(0))$. Now, applying the Lemma
       \begin{equation*}
-	W=(W^\omega)^\omega=\left\{ u\in T_x X: \omega(u,v)=0 \text{ for all } v\in T_x(\mu^{-1}(0)) \right\},
+	F=(F^\omega)^\omega=\left\{ u\in T_x X: \omega(u,v)=0 \text{ for all } v\in T_x(\mu^{-1}(0)) \right\},
       \end{equation*}
      which is exactly what we wanted to prove.
     \end{proof}
 
     \section{The moduli space as a symplectic quotient}
+In this section we are going to construct the moduli space of stable holomorphic vector bundles $\Bun(n,d)$, regarded as the moduli space of irreducible constant central curvature unitary connections $\AA^s_h/\GG$, as a symplectic quotient. 
 
+Let $X$ be a compact Riemann surface of genus $g\geq 2$, $E$ a complex vector bundle on $X$ of rank $n$ and degree $d$ and $h$ a Hermitian metric on $E$. Consider the set $\AA_h$ of all $h$-unitary connections on $E$. Any two $h$-unitary connection can be seen to differ in a $1$-form with values in the bundle $\End(E,h)$, which is just the ``Lie algebra'' of the bundle $\Aut(E,h)$ of $h$-preserving automorphisms of $E$. Therefore, $\AA_h$ is an affine space modeled on $\Omega^1(X,\End(E,h))$. This space admits a non-degenerate skew-symmetric form
+\begin{equation*}
+  \omega(A,B)=-\int_X \tr(A\wedge B),
+\end{equation*}
+endowing $\AA_h$, at least formally, with the structure of a symplectic manifold. Strictly speaking, we would need to give in $\AA_h$ the structure of a Banach manifold. This is a technical procedure that we will not detail here, but the essential idea is to give completions of this space with respect to \emph{Sobolev norms}. In a similar fashion, for our purposes we also need to give Sobolev completions of the group $\GG=\Gamma(\Aut(E,h))$, in order to get a Banach Lie group. Go to \cite{atiyahbott,kobayashi} for explicit constructions.
 
+Remember that the Lie group $\GG$ acted on $\AA_h$ by congugation $\nabla\mapsto g\nabla g^{-1}$. We will now show that this action does indeed admit a momentum map, given by
+\begin{equation*}
+  \mu(\nabla)=-F-2\pi i \mu(E) \id_E \omega_X,
+\end{equation*}
+where $F$ is the curvature of $\nabla$. In fact, $\mu(\nabla)=-F$ could be also a suitable momentum map, however, the second term is added in there in order to get a non-empty symplectic quotient. Indeed, $\mu^{-1}(0)$ would be empty unless $\deg E=0$. This definition makes sense if we identify the Lie algebra of $\GG$ as $\Lie\ \GG= \Gamma(\End(E,h))$ and its dual with $(\Lie\ \GG)^*=\Omega^2(X,\End(E,h))$, via the pairing
+\begin{equation*}
+  \esc{\alpha,\xi}=\int_X \tr(\xi \alpha),
+\end{equation*}
+for $\xi \in \Gamma(\End(E,h))$ and $\alpha \in \Omega^2(X,\End(E,h))$.
+Now, to see how $\vec{\xi}$ looks like for an element $\xi \in \Gamma(\End(E,h))$, just compute
+\begin{equation*}
+  \vec{\xi}(\nabla)=\left.\frac{d}{dt}\right|_{t=0} \exp(t\xi)\nabla \exp(-t\xi)= -\nabla \xi.
+\end{equation*}
+Let us compute also $d_\nabla \mu (A)$ for some $A \in \Omega^1(X,\End(E,h))$,
+\begin{align*}
+  d_\nabla \mu (A) =& \left.\frac{d}{dt} \right|_{t=0} \mu(\nabla + tA)=\left.\frac{d}{dt} \right|_{t=0} [-(\nabla +tA) \circ (\nabla + tA) -2\pi i \mu(E) \id_E \omega X ] = -\nabla A.
+\end{align*}
+Therefore we have
+\begin{align*}
+  \esc{d_\nabla \mu(A), \xi}=-\int_X \tr(\xi \nabla A) = \int_X \tr(\nabla \xi \wedge A) = \omega(A,\nabla \xi)=\omega(A,\vec{\xi}),
+\end{align*}
+so $\mu$ is a momentum map for the action of $\GG$ in $\AA_h$. 
+
+The $\GG$-action can be shown to verify all the technical conditions for it to define a symplectic structure on the symplectic quotient $\mu^{-1}(0)/\GG$. In general, this quotient will classify \emph{polystable} holomorphic vector bundles. To get stable vector bundles we consider the submanifold $\AA^s_h$ of irreducible $h$-unitary connections and the same method can be applied to construct the moduli space $\Bun(n,d)=\AA^s_h/\GG$ as a symplectic quotient $\mu^{-1}(0)/\GG$. All the good properties of the action guarantee that $\Bun(n,d)$ is indeed a smooth manifold. Moreover, thanks to the Marsden-Weinstein theorem, it is also a symplectic manifold.
+
+\chapter{Higgs bundles and the Hitchin system}
 
 \nocite{*}
 \bibliographystyle{alpha}
