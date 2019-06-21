@@ -58,6 +58,8 @@
 \def\Lie{\mathrm{Lie}}
 \def\End{\mathrm{End}}
 \def\Aut{\mathrm{Aut}}
+\def\UU{\mathrm{U}}
+\def\uu{\mathfrak{u}}
 \def\Hom{\mathrm{Hom}}
 \def\Bun{\mathbf{M}_{\mathrm{Bun}}}
 \def\Sym{\mathrm{Sym}}
@@ -195,7 +197,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	  0 \arrow{r} &	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X \arrow{r} & 0.
 	 \end{tikzcd}
        \end{center}
-       The existence of smooth partitions of unity implies that the sheaf $C^\infty_X$ is fine, so $H^1(X,C^\infty_X)=H^2(X,C^\infty_X)=0$. Therefore, the connecting map $\delta:H^1(X,C^{\infty,*}_X)\rightarrow H^2(X,\ZZ)$ is an isomorphism. If we now consider the set of second de Rham cohomology classes with integer coefficients $H^2_{\mathrm{dR}}(X,\ZZ)$, which is just the image of $H^2(X,\ZZ)$ by the inclusion $H^2(X,\ZZ)\hookrightarrow H^2_{\mathrm{dR}}(X)$, we get an isomorphism $c_1:H^1(X,C_X^{\infty,*})\rightarrow H^2_{\mathrm{dR}}(X,\ZZ)$. Now, the isomorphism $H^2_{\mathrm{dR}}(X) \cong \CC$ given by integration on $X$, descends to an isomorphism $H^2_{\mathrm{dR}}(X,\ZZ) \cong \ZZ$.
+       The existence of smooth partitions of unity implies that the sheaf $C^\infty_X$ is fine, so $H^1(X,C^\infty_X)=H^2(X,C^\infty_X)=0$. Therefore, the connecting map $\delta:H^1(X,C^{\infty,*}_X)\rightarrow H^2(X,\ZZ)$ is an isomorphism. If we now consider the set of integer de Rham cohomology classes with $H^2_{\mathrm{dR}}(X,\ZZ)$, which is just the image of $H^2(X,\ZZ)$ by the inclusion $H^2(X,\ZZ)\hookrightarrow H^2_{\mathrm{dR}}(X)$, we get an isomorphism $c_1:H^1(X,C_X^{\infty,*})\rightarrow H^2_{\mathrm{dR}}(X,\ZZ)$. Now, the isomorphism $H^2_{\mathrm{dR}}(X) \cong \CC$ given by integration on $X$, descends to an isomorphism $H^2_{\mathrm{dR}}(X,\ZZ) \cong \ZZ$.
     Summarizing, we have the diagram
        \begin{center}
 	 \begin{tikzcd}
@@ -292,14 +294,63 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	       \Bun(n,d)=\AA_{\delbar}^s/\GG^c.
 	     \end{equation*}
 	   \end{defn}
-	   \begin{thm}
+	   \begin{thm}\label{modulibundles}
 	     The moduli space $\Bun(n,d)$ is a complex manifold of dimension $1+n^2(g-1)$, where $g$ is the genus of $X$.
 	   \end{thm}
 
 	   \section{Deformations of holomorphic structures}
+	   In this section we are going to compute the dimension of $\Bun(n,d)$, stated in Theorem \ref{modulibundles}, using deformation theory. The idea is to identify the tangent space of $\Bun(n,d)$ at some point $\delbar_\ve{E}$ and find its dimension. 
+
+	   In first place, observe that $\AA_{\delbar}$ is an affine space modelled on $\Omega^{0,1}(X,\End\ E)$. Therefore, the tangent space of $\AA_{\delbar}$ at $\delbar_{\ve{E}}$ is isomorphic to $\Omega^{0,1}(X,\End\ E)$. Now, let $\Lie\ \GG^c = \Gamma(\End\ E)$ be the Lie algebra of $\GG^c$ and pick an element $\xi \in \Gamma(\End\ E)$. Let us compute the action of this element on the tangent space $\Omega^{0,1}(X,\End\ E)$,
+	   \begin{equation*}
+	     \left. \frac{d}{dt} \right|_{t=0} \exp(\xi t)  \delbar_{\ve{E}} \exp(-\xi t) = -\delbar_\ve{E} \xi.
+	   \end{equation*}
+	   Hence, since stability is an open condition, the tangent space $T_{\delbar_{\ve{E}}}\Bun(n,d)$ is isomorphic to
+	   \begin{equation*}
+	     H^1(X,\End\ \ve{E})=\frac{\Omega^{0,1}(X,\End\ E)}{\delbar_\ve{E} \Gamma(\End\ E)}.
+	   \end{equation*}
+
+	   To compute the dimension of this tangent space, we use the \emph{Riemann-Roch theorem}
+	   \begin{equation*}
+	     \dim H^0(X,\End\ \ve{E}) - \dim H^1(X,\End\ \ve{E})=\deg(\End\ \ve{E}) + \rk(\End\ \ve{E})(1-g).
+	   \end{equation*}
+	   Now, note that $\End\ E=\Hom(E,E)\cong E^*\otimes E$, so
+	   \begin{equation*}
+	     \rk(\End\ E)=n^2
+	   \end{equation*}
+	   and
+	   \begin{equation*}
+	     \deg(\End\ E)=\rk(E^*)\deg(E) + \rk(E)\deg(E^*)=n\deg E - n\deg E=0.
+	   \end{equation*}
+	   Therefore
+	   \begin{equation*}
+	     \dim H^0(X,\End\ \ve{E}) - \dim H^1(X,\End\ \ve{E})=n^2(1-g).
+	   \end{equation*}
+
+	   To find the dimension of $H^0(X,\End\ \ve{E})$ we use the following result:
+	   \begin{prop}
+	     If $\ve{E}$ is a stable holomorphic vector bundle, then
+	     \begin{equation*}
+	       H^0(X,\End\ \ve{E})=\CC.
+	     \end{equation*}
+	   \end{prop}
+	   \begin{proof}
+	     What we will see is that every endomorphism is a scalar multiple of the identity $\id_{\ve{E}}$. Pick any endomorphism $f:\ve{E}\rightarrow \ve{E}$ and let $\lambda \in \CC$ be an eigenvalue of $f_x:\ve{E}_x \rightarrow \ve{E}_x$. Let us define the endomorphism $g=f-\lambda \id_E$. Since $\lambda$ is an eigenvalue of $f_x$, we have $\det(g)_x=0$. 
+	     Assuming that $g$ is nonzero, we will prove that $g$ is injective and hence $\det(g)_x\neq 0$ arriving at a contradiction.
+	     To see this, suppose that $\im g \subset \ve{E}$ is a holomorphic strict subbundle of $\ve{E}$. Then, since $\ve{E}$ is stable, $\mu(\im g) < \mu(\ve{E})$. But we also have that $\mu(\ve{E})<\mu(\im g)$, so $\mu(\ve{E})<\mu(\ve{E})$ and we have a contradiction. Therefore $g$ is injective.	     
+	     We conclude then that $g=0$, so $f=\lambda\id_E$.
+	   \end{proof}
+
+	   Finally, we get
+	   \begin{equation*}
+	     \dim \Bun(n,d)=\dim H^1(X,\End\ \ve{E})= 1+n^2(g-1).
+	   \end{equation*}
+
+
+	   
 
 	   \section{Holomorphic structures and unitary connections}
-	   Although we will not enter into detail, the main reason why the quotient $\AA_{\delbar}/\GG^c$ is not Hausdorff and why we need to introduce the stability condition is that the group $\GG^c=\Gamma(\Aut(E))$ is a complex group. Indeed, it is the complexification of the group $\GG=\Gamma(\Aut(E,h))$, where $h$ is a Hermitian metric on $E$. The idea for this is essentially that the general linear group $\mathrm{GL}(n,\CC)$ is the complexification of the unitary group $\mathrm{U}(n)$. This motivates the study of unitary connections,
+	   Although we will not enter into detail, the main reason why the quotient $\AA_{\delbar}/\GG^c$ is not Hausdorff and why we need to introduce the stability condition is that the group $\GG^c=\Gamma(\Aut(E))$ is a complex group. Indeed, it is the complexification of the group $\GG=\Gamma(\UU_h(E))$, where $h$ is a Hermitian metric on $E$ and $\UU_h(E)$ is the subgroup of $\Aut(E)$ consisting on automorphisms of $E$ preserving the metric $h$. The idea for this is essentially that the general linear group $\mathrm{GL}(n,\CC)$ is the complexification of the unitary group $\mathrm{U}(n)$. This motivates the study of unitary connections,
 which will give a gauge-theoretical approach to holomorphic vector bundles. This will allow us to give another analytical construction of the moduli space, this time as the space of solutions (up to gauge equivalence) to some differential equation.
 
 Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let $h$ be a Hermitian metric on E. Recall that for any connection $\nabla:\Gamma(E) \rightarrow \Omega^1(X,E)=\Omega^{1,0}(X,E) \oplus \Omega^{0,1}(X,E)$ on $E$ there is a natural splitting $\nabla=\nabla^{1,0}+\nabla^{0,1}$, where
@@ -342,7 +393,7 @@ Finally, we want to consider connections that are \textit{irreducible}:
   A unitary connection $\nabla$ on a complex Hermitian vector bundle $(E,h)$ is \emph{reducible} if $(E,h)=(E_1,h_1)\oplus (E_2,h_2)$ and $\nabla=\nabla_1\oplus \nabla_2$. We say that $\nabla$ is \emph{irreducible} if it is not reducible.
 \end{defn}
 
-Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connections of central constant curvature on $E$. The gauge group $\GG$ acts on connections by conjugation $\nabla \mapsto g\nabla g^{-1}$, $g\in \GG$, and this actions preserves irreducibility and the equation of constant central curvature, so the group $\GG$ acts on $\AA_h^s$. Now, the same analytic techniques mentioned in the previous section \cite{kobayashi} allow us to construct a ``good'' quotient:
+Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connections of central constant curvature on $E$. The gauge group $\GG$ acts on connections by conjugation $\nabla \mapsto g\nabla g^{-1}$, $g\in \GG$, and this action preserves irreducibility and the equation of constant central curvature, so the group $\GG$ acts on $\AA_h^s$. Now, the same analytic techniques mentioned in the previous section \cite{kobayashi} allow us to construct a ``good'' quotient:
 \begin{thm}
   The moduli space of irreducible constant central curvature unitary connections $\AA_h^s/\GG$ on $(E,h)$ has the structure of a smooth real manifold of dimension $2+2n^2(g-1)$, where $n=\rk E$ and $g$ is the genus of $X$.
 \end{thm}
@@ -612,26 +663,26 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
     \section{The moduli space as a symplectic quotient}
 In this section we are going to construct the moduli space of stable holomorphic vector bundles $\Bun(n,d)$, regarded as the moduli space of irreducible constant central curvature unitary connections $\AA^s_h/\GG$, as a symplectic quotient. 
 
-Let $X$ be a compact Riemann surface of genus $g\geq 2$, $E$ a complex vector bundle on $X$ of rank $n$ and degree $d$ and $h$ a Hermitian metric on $E$. Consider the set $\AA_h$ of all $h$-unitary connections on $E$. Any two $h$-unitary connection can be seen to differ in a $1$-form with values in the bundle $\End(E,h)$, which is just the ``Lie algebra'' of the bundle $\Aut(E,h)$ of $h$-preserving automorphisms of $E$. Therefore, $\AA_h$ is an affine space modeled on $\Omega^1(X,\End(E,h))$. This space admits a non-degenerate skew-symmetric form
+Let $X$ be a compact Riemann surface of genus $g\geq 2$, $E$ a complex vector bundle on $X$ of rank $n$ and degree $d$ and $h$ a Hermitian metric on $E$. Consider the set $\AA_h$ of all $h$-unitary connections on $E$. Any two $h$-unitary connections can be seen to differ in a $1$-form with values in $\uu_h(E)$, the Lie algebra of $\UU_h(E)$. Therefore, $\AA_h$ is an affine space modeled on $\Omega^1(X,\uu(E))$. This space admits a non-degenerate skew-symmetric form
 \begin{equation*}
   \omega(A,B)=-\int_X \tr(A\wedge B),
 \end{equation*}
-endowing $\AA_h$, at least formally, with the structure of a symplectic manifold. Strictly speaking, we would need to give in $\AA_h$ the structure of a Banach manifold. This is a technical procedure that we will not detail here, but the essential idea is to give completions of this space with respect to \emph{Sobolev norms}. In a similar fashion, for our purposes we also need to give Sobolev completions of the group $\GG=\Gamma(\Aut(E,h))$, in order to get a Banach Lie group. Go to \cite{atiyahbott,kobayashi} for explicit constructions.
+endowing $\AA_h$, at least formally, with the structure of a symplectic manifold. Strictly speaking, we would need to give in $\AA_h$ the structure of a Banach manifold. This is a technical procedure that we will not detail here, but the essential idea is to give completions of this space with respect to \emph{Sobolev norms}. In a similar fashion, for our purposes we also need to give Sobolev completions of the group $\GG=\Gamma(\UU_h(E))$, in order to get a Banach Lie group. Go to \cite{atiyahbott,kobayashi} for explicit constructions.
 
 Remember that the Lie group $\GG$ acted on $\AA_h$ by congugation $\nabla\mapsto g\nabla g^{-1}$. We will now show that this action does indeed admit a momentum map, given by
 \begin{equation*}
   \mu(\nabla)=-F-2\pi i \mu(E) \id_E \omega_X,
 \end{equation*}
-where $F$ is the curvature of $\nabla$. In fact, $\mu(\nabla)=-F$ could be also a suitable momentum map, however, the second term is added in there in order to get a non-empty symplectic quotient. Indeed, $\mu^{-1}(0)$ would be empty unless $\deg E=0$. This definition makes sense if we identify the Lie algebra of $\GG$ as $\Lie\ \GG= \Gamma(\End(E,h))$ and its dual with $(\Lie\ \GG)^*=\Omega^2(X,\End(E,h))$, via the pairing
+where $F$ is the curvature of $\nabla$. In fact, $\mu(\nabla)=-F$ could be also a suitable momentum map, however, the second term is added in there in order to get a non-empty symplectic quotient. Indeed, $\mu^{-1}(0)$ would be empty unless $\deg E=0$. This definition makes sense if we identify the Lie algebra of $\GG$ as $\Lie\ \GG= \Gamma(\uu_h(E))$ and its dual with $(\Lie\ \GG)^*=\Omega^2(X,\uu_h(E))$, via the pairing
 \begin{equation*}
   \esc{\alpha,\xi}=\int_X \tr(\xi \alpha),
 \end{equation*}
-for $\xi \in \Gamma(\End(E,h))$ and $\alpha \in \Omega^2(X,\End(E,h))$.
-Now, to see how $\vec{\xi}$ looks like for an element $\xi \in \Gamma(\End(E,h))$, just compute
+for $\xi \in \Gamma(\uu_h(E))$ and $\alpha \in \Omega^2(X,\uu_h(E))$.
+Now, to see how $\vec{\xi}$ looks like for an element $\xi \in \Gamma(\uu_h(E))$, just compute
 \begin{equation*}
   \vec{\xi}(\nabla)=\left.\frac{d}{dt}\right|_{t=0} \exp(t\xi)\nabla \exp(-t\xi)= -\nabla \xi.
 \end{equation*}
-Let us compute also $d_\nabla \mu (A)$ for some $A \in \Omega^1(X,\End(E,h))$,
+Let us compute also $d_\nabla \mu (A)$ for some $A \in \Omega^1(X,\uu_h(E))$,
 \begin{align*}
   d_\nabla \mu (A) =& \left.\frac{d}{dt} \right|_{t=0} \mu(\nabla + tA)=\left.\frac{d}{dt} \right|_{t=0} [-(\nabla +tA) \circ (\nabla + tA) -2\pi i \mu(E) \id_E \omega X ] = -\nabla A.
 \end{align*}
