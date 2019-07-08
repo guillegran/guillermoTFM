@@ -8,6 +8,7 @@
 \contentsline {chapter}{\numberline {II}Momentum maps and symplectic quotients}{15}{chapter.2}
 \contentsline {section}{\numberline {1}Banach manifolds}{15}{section.2.1}
 \contentsline {section}{\numberline {2}Symplectic manifolds and the momentum map}{16}{section.2.2}
-\contentsline {section}{\numberline {3}Symplectic reduction}{18}{section.2.3}
-\contentsline {section}{\numberline {4}The moduli space as a symplectic quotient}{20}{section.2.4}
+\contentsline {section}{\numberline {3}Symplectic reduction}{19}{section.2.3}
+\contentsline {section}{\numberline {4}The moduli space as a symplectic quotient}{21}{section.2.4}
 \contentsline {chapter}{\numberline {III}Higgs bundles and the Hitchin system}{23}{chapter.3}
+\contentsline {section}{\numberline {1}The Hitchin system}{23}{section.3.1}

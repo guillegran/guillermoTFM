@@ -6,14 +6,14 @@ Database file #1: biblio.bib
 You've used 17 entries,
             2543 wiz_defined-function locations,
             653 strings with 6564 characters,
-and the built_in function-call counts, 5619 in all, are:
+and the built_in function-call counts, 5615 in all, are:
 = -- 554
 > -- 225
 < -- 11
 + -- 74
 - -- 68
 * -- 362
-:= -- 968
+:= -- 964
 add.period$ -- 62
 call.type$ -- 17
 change.case$ -- 83
@@ -32,7 +32,7 @@ pop$ -- 97
 preamble$ -- 1
 purify$ -- 111
 quote$ -- 0
-skip$ -- 184
+skip$ -- 186
 stack$ -- 0
 substring$ -- 230
 swap$ -- 18
@@ -42,5 +42,5 @@ top$ -- 0
 type$ -- 92
 warning$ -- 0
 while$ -- 51
-width$ -- 21
+width$ -- 19
 write$ -- 223

@@ -38,7 +38,7 @@
 \def\pr{\mathrm{pr}}
 \def\OO{\mathscr{O}}
 \def\AA{\mathscr{A}}
-\def\MM{\mathscr{M}}
+\def\BB{\mathscr{B}}
 \def\GG{\mathscr{G}}
 \def\CC{\mathbf{C}}
 \def\gg{\mathfrak{g}}
@@ -236,11 +236,11 @@ This last property will be crucial in the classification of line bundles. Let us
 	  0\arrow{r}&	  H^1(X,\ZZ) \arrow{r} & H^1(X,\OO_X) \arrow{r} & \Pic^0(X) \arrow{r}{\delta} & 0.
 	 \end{tikzcd}
        \end{center}
-       Therefore $\Pic^0(X)\cong H^1(X,\OO_X)/H^1(X,\ZZ)$. Now, the Dolbeaut theorem says that $H^1(X,\OO_X)\cong H^{0,1}(X)$ and the Hodge decomposition theorem says that $H^1(X,\CC)\cong H^{1,0}(X) \oplus H^{0,1}(X)$. Also, by Serre duality, $H^{1,0}(X)\cong H^{0,1}(X)^*$ and via Mayer-Vietoris one can easily prove that $H^1(X,\CC)\cong\CC^{2g}$ and that $H^1(X,\ZZ)\cong\ZZ^{2g}$, where $g$ is the genus of $X$. Putting all this together we have that $H^1(X,\OO_X)\cong \CC^{g}$, so $\Pic^0(X)$ is isomorphic to the complex torus
+       Therefore $\Pic^0(X)\cong H^1(X,\OO_X)/H^1(X,\ZZ)$. Now, the Dolbeaut theorem says that $H^1(X,\OO_X)\cong H^{0,1}(X)$ and the Hodge decomposition theorem says that $H^1(X,\CC)\cong H^{1,0}(X) \oplus H^{0,1}(X)$. Also, by Serre duality, $H^{1,0}(X)\cong H^{0,1}(X)^*$ and via Mayer-Vietoris one can easily prove that $H^1(X,\CC)\cong\CC^{2g}$ and that $H^1(X,\ZZ)\cong\ZZ^{2g}$, where $g$ is the genus of $X$. Putting all this together we have that $H^1(X,\OO_X)\cong \CC^{g}$, so $\Pic^0(X)$ is isomorphic to a complex torus. We call this complex torus 
        \begin{equation*}
-J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
+	 J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)}
        \end{equation*}
-       We call this complex torus the \emph{Jacobian} of $X$. The other components of fixed degree of $\Pic(X)$ can be also shown to be isomorphic to the Jacobian of $X$, via the isomorphism
+       the \emph{Jacobian} of $X$. The other components of fixed degree of $\Pic(X)$ can be also shown to be isomorphic to the Jacobian of $X$, via the isomorphism
        \begin{align*}
 	  \Pic^d(X)&\longrightarrow \Pic^0(X)\\ 
 	   L &\longmapsto L\otimes M, 
@@ -251,7 +251,7 @@ J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)} \cong \frac{\CC^g}{\ZZ^{2g}}.
 	 \end{equation*}
 	 and it is also surjective since for every line bundle $L \in \Pic^0(X)$, $L=(L\otimes M^*) \otimes M$.
        
-	 The result for line bundles already gives some hints on the complexity of the general problem. However, for very low genus the problem can be solved relatively easily. For genus 0, Grothendieck proved that every holomorphic vector bundle on the Riemann sphere $\PP^1_\CC$ can be decomposed as a direct sum of line bundles. A proof of this result can be found in \cite{hartshorne}. For genus 1, it was Atiyah who showed that the ``moduli space'' of indecomposable vector bundles with fixed rank and degree over an elliptic curve is isomorphic to the curve itself. Check out [REF:Mukai?] for a construction of the moduli space and for a proof of this. 
+	 The result for line bundles already hints on the complexity of the general problem. However, for very low genus the problem can be solved relatively easily. For genus 0, Grothendieck proved that every holomorphic vector bundle on the Riemann sphere $\PP^1_\CC$ can be decomposed as a direct sum of line bundles. A proof of this result can be found in \cite{hartshorne}. For genus 1, it was Atiyah who showed that the ``moduli space'' of indecomposable vector bundles with fixed rank and degree over an elliptic curve is isomorphic to the curve itself. Check out [REF:Mukai?] for a construction of the moduli space and for a proof of this. 
 
 	 The problem gets its full complexity in the case of general genus $g\geq 2$, for which we will dedicate the rest of the chapter. To construct a ``good'' moduli space (one with nice topological properties, like being Hausdorff) we need to consider the idea of stability, arising from Mumford's Geometric Invariant Theory \cite{git}. This theory also allows to construct the moduli space of stable vector bundles, although it can also be done using analytic methods \cite{kobayashi}. This moduli space has very nice and interesting geometric properties and it has been studied from the algebraic point of view (for example in the works of Narasimhan, Ramanan or Seshadri) as well as from the analytical or gauge-theoretical point of view (by Atiyah, Bott, Donaldson or Hitchin, for example).
 
@@ -362,7 +362,7 @@ The \emph{Chern connection} in $(\ve{E},h)$ is the unique $h$-\emph{unitary} con
 
 Conversely, given any $h$-unitary connection $\nabla$ on $E$, we can define a holomorphic structure by fixing $\delbar_{\ve{E}}=\nabla^{0,1}$ and extending to operators $\Omega^{p,q}(X,E) \rightarrow \Omega^{p,q+1}(X,E)$ by linearity. Therefore, the set holomorphic structures on $E$ can be identified with the set $\AA_h$ of all $h$-unitary connections on $E$.
 
-Note now that for any connection on $E$, is curvature must satisfy that the cohomology class
+Note now that the curvature of any connection on $E$ must satisfy that the cohomology class
 \begin{equation*}
   [\tr F] = -i2\pi c_1(E).
 \end{equation*}
@@ -545,6 +545,26 @@ To finish the section, we generalize the notion of a Lie group. A \emph{Banach L
     \end{align*}
 Unlike in the finite-dimensional case, the non-degeneracy condition does not imply that this map is bijective, although it does imply that it is injective.
 
+\begin{ejemplo}\label{cotangente}
+The cotangent space $T^*M$ of any smooth manifold can be endowed with a symplectic structure in the following way. We first consider the bundle projection $\pi:T^*M\rightarrow M$ and the pull-back bundle
+\begin{center}
+  \begin{tikzcd}
+\pi^*T^*M    \arrow{rr}\arrow{dd} && T^*M \arrow{dd} \\ 
+     && \\
+     T^*M \arrow{rr}[anchor=south]{\pi} && M.
+   \end{tikzcd}
+ \end{center}
+ This bundle has a tautological section $\theta\in \Gamma(T^*M,\pi^*T^*M)$: $\theta(y)=(y,y)$ for each $y \in T^*M$. The differential of this section $\omega=d\theta$ is a symplectic form on $T^*M$. Locally, if $M$ is finite-dimensional and $(x_1,\dots,x_n)$ are coordinates on $M$ and cotangent vectors are parametrized by coordinates $(_1,\dots,y_n)$, the form $\theta$ is defined by
+ \begin{equation*}
+   \theta=\sum_{i=1}^n y_i dx_i,
+ \end{equation*}
+ and
+ \begin{equation*}
+   \omega=\sum_{i=1}^n dy_i \wedge dx_i.
+ \end{equation*}
+ \qed
+\end{ejemplo}
+
 We say that a vector field $v$ on a symplectic manifold $(X,\omega)$ is \emph{symplectic} if the Lie derivative $L_v \omega$ vanishes, that is, if
 \begin{equation*}
   L_v \omega = d(i_v \omega) + i_v (d\omega)=0,
@@ -553,7 +573,15 @@ where $i_v$ denotes the contraction. Since $\omega$ is closed, $v$ is symplectic
 \begin{equation*}
   df=-i_v \omega.
 \end{equation*}
-The minus sign in the last equality is just a widely used convention. Of course, if the first de Rham cohomology of $X$ vanishes, $H^1_{\mathrm{dR}}(X)=0$, then every symplectic vector field is Hamiltonian. In particular, every symplectic vector field is \emph{locally Hamiltonian}.
+The minus sign in the last equality is just a widely used convention. Of course, if the first de Rham cohomology of $X$ vanishes, $H^1_{\mathrm{dR}}(X)=0$, then every symplectic vector field is Hamiltonian. In particular, every symplectic vector field is \emph{locally Hamiltonian}. Reciprocally, to every function $f:X\rightarrow \RR$, we can define the \emph{Hamiltonian vector field associated to $f$} as the vector field $v_f$ determined by the equation
+\begin{equation*}
+  df=-i_{v_f}\omega.
+\end{equation*}
+Given two functions $f$ and $g$, we define their \emph{Poisson bracket} as the function
+\begin{equation*}
+  \left\{ f,g \right\}=v_f g = -v_g f = -\left\{ g,f \right\}.
+\end{equation*}
+Two functions are said to \emph{Poisson-commute} if $\{f,g\}=0$.
 
 Let $G$ be a Banach Lie group acting symplectically on $X$, that is, if we denote the action by $\rho:G\rightarrow \mathrm{Diff}(X)$, for every $g\in G$ we have
 \begin{equation*}
@@ -573,6 +601,17 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
     \esc{d_x\mu(u),\xi}=\omega(u,\vec{\xi}(x)),
   \end{equation*}
   for every $u\in T_xX$, where $d_x\mu:T_xX \rightarrow \gg^*$ is the derivative of $\mu$ at $x$.
+
+  \begin{ejemplo}
+    Let $(X,\omega)$ be any finite-dimensional symplectic manifold and $f_1,\dots,f_n:X\rightarrow \RR$ be functions. If the vector fields $v_{f_1},\dots,v_{f_n}$ form the basis of a Lie sub-algebra $\gg$ of the Lie algebra of vector fields on $X$, then the functions define a map
+    \begin{align*}
+      \mu :X&\longrightarrow \gg^*\\ 
+      x &\longmapsto \sum_{i=1}^n f_i(x) \xi_i, 
+      \end{align*}
+      where $\left\{ \xi_i \right\}$ is the dual basis of $\left\{ v_{f_i} \right\}$. If the vector fields integrate to give the action of a Lie group $G$ on $X$, $\mu$ is a momentum map for that action. 
+
+      An special case of this example is that in which $n=\tfrac{1}{2}\dim X$ and the functions $f_1,\dots,f_n$ pairwise Poisson commute. In that case the vector fields $v_{f_1},\dots,v_{f_n}$ generate an abelian Lie algebra. If the functions are independent, that is, $df_1\wedge \dots \wedge df_n$ is generically nonzero, the momentum map, which is simply $f=(f_1,\dots,f_n):X\rightarrow \RR^n$, has the property that a generic fibre is an $n$-dimensional submanifold with $n$ linearly independent commuting vector fields $v_{f_1},\dots,v_{f_n}$. This is called a \emph{completely integrable system}. Using the aforementioned properties, it can be easily shown that on the regular fibres the symplectic form vanishes, that the flow of any of the $v_{f_i}$ is linear in them and that generic fibres are open sets in tori $\RR^n/\TT^n$. This is the content of the theorem of Arnold-Liouville [REF:Arnold]. \qed
+  \end{ejemplo}
 
   \section{Symplectic reduction}
 
@@ -663,13 +702,13 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
     \section{The moduli space as a symplectic quotient}
 In this section we are going to construct the moduli space of stable holomorphic vector bundles $\Bun(n,d)$, regarded as the moduli space of irreducible constant central curvature unitary connections $\AA^s_h/\GG$, as a symplectic quotient. 
 
-Let $X$ be a compact Riemann surface of genus $g\geq 2$, $E$ a complex vector bundle on $X$ of rank $n$ and degree $d$ and $h$ a Hermitian metric on $E$. Consider the set $\AA_h$ of all $h$-unitary connections on $E$. Any two $h$-unitary connections can be seen to differ in a $1$-form with values in $\uu_h(E)$, the Lie algebra of $\UU_h(E)$. Therefore, $\AA_h$ is an affine space modeled on $\Omega^1(X,\uu(E))$. This space admits a non-degenerate skew-symmetric form
+Let $X$ be a compact Riemann surface of genus $g\geq 2$, $E$ a complex vector bundle on $X$ of rank $n$ and degree $d$ and $h$ a Hermitian metric on $E$. Consider the set $\AA_h$ of all $h$-unitary connections on $E$. Any two $h$-unitary connections can be seen to differ in a $1$-form with values in $\uu_h(E)$, the Lie algebra of $\UU_h(E)$. Therefore, $\AA_h$ is an affine space modeled on $\Omega^1(X,\uu_h(E))$. This space admits a non-degenerate skew-symmetric form
 \begin{equation*}
   \omega(A,B)=-\int_X \tr(A\wedge B),
 \end{equation*}
 endowing $\AA_h$, at least formally, with the structure of a symplectic manifold. Strictly speaking, we would need to give in $\AA_h$ the structure of a Banach manifold. This is a technical procedure that we will not detail here, but the essential idea is to give completions of this space with respect to \emph{Sobolev norms}. In a similar fashion, for our purposes we also need to give Sobolev completions of the group $\GG=\Gamma(\UU_h(E))$, in order to get a Banach Lie group. Go to \cite{atiyahbott,kobayashi} for explicit constructions.
 
-Remember that the Lie group $\GG$ acted on $\AA_h$ by congugation $\nabla\mapsto g\nabla g^{-1}$. We will now show that this action does indeed admit a momentum map, given by
+Remember that the Lie group $\GG$ acts on $\AA_h$ by congugation $\nabla\mapsto g\nabla g^{-1}$. We will now show that this action does indeed admit a momentum map, given by
 \begin{equation*}
   \mu(\nabla)=-F-2\pi i \mu(E) \id_E \omega_X,
 \end{equation*}
@@ -695,6 +734,16 @@ so $\mu$ is a momentum map for the action of $\GG$ in $\AA_h$.
 The $\GG$-action can be shown to verify all the technical conditions for it to define a symplectic structure on the symplectic quotient $\mu^{-1}(0)/\GG$. In general, this quotient will classify \emph{polystable} holomorphic vector bundles. To get stable vector bundles we consider the submanifold $\AA^s_h$ of irreducible $h$-unitary connections and the same method can be applied to construct the moduli space $\Bun(n,d)=\AA^s_h/\GG$ as a symplectic quotient $\mu^{-1}(0)/\GG$. All the good properties of the action guarantee that $\Bun(n,d)$ is indeed a smooth manifold. Moreover, thanks to the Marsden-Weinstein theorem, it is also a symplectic manifold.
 
 \chapter{Higgs bundles and the Hitchin system}
+\section{The Hitchin system}
+Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is $K_X=T^{1,0}X$. As in example \ref{cotangente}, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold. We shall see that this space admits a completely integrable system, the Hitchin system. More specifically, what we will prove is the following
+\begin{thm}[Hitchin]
+  Let $X$ be a Riemann surface and $\Bun(n,d)$ the moduli space of stable holomorphic vector bundles of rank $n$ and degree $d$ on $X$. Let $k=n^2(g-1)+1$ be the complex dimension of $\Bun(n,d)$. There is a map
+  \begin{equation*}
+    H: T^*\Bun(n,d) \rightarrow \BB,
+  \end{equation*}
+  where $\BB$ is a complex vector space of complex dimension $k$, such that generic fibres of it are open sets in some submanifolds which are diffeomorphic to tori $\CC^k/\TT^{2k}$ and the canonical symplectic form of $T^*\Bun(n,d)$ vanishes on them.
+\end{thm}
+  
 
 \nocite{*}
 \bibliographystyle{alpha}

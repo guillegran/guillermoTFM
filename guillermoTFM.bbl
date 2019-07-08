@@ -1,4 +1,4 @@
-\begin{thebibliography}{GPW07}
+\begin{thebibliography}{WGP07}
 
 \bibitem[AB83]{atiyahbott}
 M.~F. Atiyah and R.~Bott.
@@ -25,11 +25,6 @@ S.K. Donaldson.
 P.~Griffiths and J.~Harris.
 \newblock {\em Principles of Algebraic Geometry}.
 \newblock Wiley Classics Library. Wiley, 2014.
-
-\bibitem[GPW07]{wells}
-O.~Garcia-Prada and R.O. Wells.
-\newblock {\em Differential Analysis on Complex Manifolds}.
-\newblock Graduate Texts in Mathematics. Springer New York, 2007.
 
 \bibitem[Har13]{hartshorne}
 R.~Hartshorne.
@@ -79,6 +74,11 @@ A.H.W. Schmitt.
 \newblock {\em Geometric Invariant Theory and Decorated Principal Bundles}.
 \newblock Zurich lectures in advanced mathematics. European Mathematical
   Society, 2008.
+
+\bibitem[WGP07]{wells}
+R.O. Wells and O.~Garcia-Prada.
+\newblock {\em Differential Analysis on Complex Manifolds}.
+\newblock Graduate Texts in Mathematics. Springer New York, 2007.
 
 \bibitem[XY14]{xieyonekura}
 D.~Xie and K.~Yonekura.
