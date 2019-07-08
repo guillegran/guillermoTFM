@@ -610,7 +610,7 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
       \end{align*}
       where $\left\{ \xi_i \right\}$ is the dual basis of $\left\{ v_{f_i} \right\}$. If the vector fields integrate to give the action of a Lie group $G$ on $X$, $\mu$ is a momentum map for that action. 
 
-      An special case of this example is that in which $n=\tfrac{1}{2}\dim X$ and the functions $f_1,\dots,f_n$ pairwise Poisson commute. In that case the vector fields $v_{f_1},\dots,v_{f_n}$ generate an abelian Lie algebra. If the functions are independent, that is, $df_1\wedge \dots \wedge df_n$ is generically nonzero, the momentum map, which is simply $f=(f_1,\dots,f_n):X\rightarrow \RR^n$, has the property that a generic fibre is an $n$-dimensional submanifold with $n$ linearly independent commuting vector fields $v_{f_1},\dots,v_{f_n}$. This is called a \emph{completely integrable system}. Using the aforementioned properties, it can be easily shown that on the regular fibres the symplectic form vanishes, that the flow of any of the $v_{f_i}$ is linear in them and that generic fibres are open sets in tori $\RR^n/\TT^n$. This is the content of the theorem of Arnold-Liouville [REF:Arnold]. \qed
+      An special case of this example is that in which $n=\tfrac{1}{2}\dim X$ and the functions $f_1,\dots,f_n$ pairwise Poisson commute. In that case the vector fields $v_{f_1},\dots,v_{f_n}$ generate an abelian Lie algebra. If the functions are independent, that is, $df_1\wedge \dots \wedge df_n$ is generically nonzero, the momentum map, which is simply $f=(f_1,\dots,f_n):X\rightarrow \RR^n$, has the property that a generic fibre is an $n$-dimensional submanifold with $n$ linearly independent commuting vector fields $v_{f_1},\dots,v_{f_n}$. This is called a \emph{completely integrable system}. Using the aforementioned properties, it can be easily shown that on the regular fibres the symplectic form vanishes, that the flow of any of the $v_{f_i}$ is linear in them and that generic fibres are open sets in tori $\RR^n/\ZZ^n$. This is the content of the theorem of Arnold-Liouville [REF:Arnold]. \qed
   \end{ejemplo}
 
   \section{Symplectic reduction}
@@ -731,18 +731,30 @@ Therefore we have
 \end{align*}
 so $\mu$ is a momentum map for the action of $\GG$ in $\AA_h$. 
 
-The $\GG$-action can be shown to verify all the technical conditions for it to define a symplectic structure on the symplectic quotient $\mu^{-1}(0)/\GG$. In general, this quotient will classify \emph{polystable} holomorphic vector bundles. To get stable vector bundles we consider the submanifold $\AA^s_h$ of irreducible $h$-unitary connections and the same method can be applied to construct the moduli space $\Bun(n,d)=\AA^s_h/\GG$ as a symplectic quotient $\mu^{-1}(0)/\GG$. All the good properties of the action guarantee that $\Bun(n,d)$ is indeed a smooth manifold. Moreover, thanks to the Marsden-Weinstein theorem, it is also a symplectic manifold.
+The $\GG$-action can be shown to verify all the technical conditions for it to define a symplectic structure on the symplectic quotient $\mu^{-1}(0)/\GG$. In general, this quotient will classify \emph{polystable} holomorphic vector bundles. To get stable vector bundles we consider the submanifold $\AA^s_h$ of irreducible $h$-unitary connections and the same method can be applied to construct the moduli space $\Bun(n,d)=\AA^s_h/\GG$ as a symplectic quotient $\mu^{-1}(0)/\GG$. All the good properties of the action guarantee that $\Bun(n,d)$ is indeed a smooth manifold.
 
 \chapter{Higgs bundles and the Hitchin system}
 \section{The Hitchin system}
-Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is $K_X=T^{1,0}X$. As in example \ref{cotangente}, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold. We shall see that this space admits a completely integrable system, the Hitchin system. More specifically, what we will prove is the following
+Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is, the cotangent bundle $K_X=(T^{1,0}X)^*$. As in example \ref{cotangente}, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold. We shall see that this space admits a completely integrable system, the Hitchin system. More specifically, what we will prove is the following
 \begin{thm}[Hitchin]
   Let $X$ be a Riemann surface and $\Bun(n,d)$ the moduli space of stable holomorphic vector bundles of rank $n$ and degree $d$ on $X$. Let $k=n^2(g-1)+1$ be the complex dimension of $\Bun(n,d)$. There is a map
   \begin{equation*}
     H: T^*\Bun(n,d) \rightarrow \BB,
   \end{equation*}
-  where $\BB$ is a complex vector space of complex dimension $k$, such that generic fibres of it are open sets in some submanifolds which are diffeomorphic to tori $\CC^k/\TT^{2k}$ and the canonical symplectic form of $T^*\Bun(n,d)$ vanishes on them.
+  where $\BB$ is a complex vector space of complex dimension $k$, such that generic fibres of it are open sets in some submanifolds which are diffeomorphic to tori $\CC^k/\ZZ^{2k}$ and the canonical symplectic form of $T^*\Bun(n,d)$ vanishes on them.
 \end{thm}
+
+\begin{ejemplo}
+  For the line bundle case this result is trivial. The moduli space $\Bun(1,d)=\Pic^d(X)$ is the degree $d$ component of the Picard group $\Pic(X)=H^1(X,\OO_X^*)$, that, as we saw, can be identified with the Jacobian of the curve, $J(X)$, which is indeed a complex torus: it is diffeomorphic to $\CC^g/\ZZ^{2g}$. The tangent bundle of the Jacobian is trivial and isomorphic to $H^1(X,\OO_X)$, so by Serre duality the cotangent bundle is 
+  \begin{equation*}
+    T^*\Bun(1,d) = J(X)\times H^0(X,K_X).
+  \end{equation*}
+  The dimension of $H^0(X,K_X)$ is $g=\dim \Bun(1,d)$, so we can take $\BB=H^0(X,K_X)$ and define
+  \begin{equation*}
+    H:T^*\Bun(1,d) \rightarrow \BB
+  \end{equation*}
+  as the projection on the second factor $\pr_2:J(X)\times H^0(X,K_X) \rightarrow H^0(X,K_X)$. \qed
+\end{ejemplo}
   
 
 \nocite{*}
