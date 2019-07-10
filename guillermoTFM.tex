@@ -298,7 +298,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	     The moduli space $\Bun(n,d)$ is a complex manifold of dimension $1+n^2(g-1)$, where $g$ is the genus of $X$.
 	   \end{thm}
 
-	   \section{Deformations of holomorphic structures}
+	   \section{Deformations of holomorphic structures}\label{deformationsholomorphic}
 	   In this section we are going to compute the dimension of $\Bun(n,d)$, stated in Theorem \ref{modulibundles}, using deformation theory. The idea is to identify the tangent space of $\Bun(n,d)$ at some point $\delbar_\ve{E}$ and find its dimension. 
 
 	   In first place, observe that $\AA_{\delbar}$ is an affine space modelled on $\Omega^{0,1}(X,\End\ E)$. Therefore, the tangent space of $\AA_{\delbar}$ at $\delbar_{\ve{E}}$ is isomorphic to $\Omega^{0,1}(X,\End\ E)$. Now, let $\Lie\ \GG^c = \Gamma(\End\ E)$ be the Lie algebra of $\GG^c$ and pick an element $\xi \in \Gamma(\End\ E)$. Let us compute the action of this element on the tangent space $\Omega^{0,1}(X,\End\ E)$,
@@ -587,7 +587,7 @@ Let $G$ be a Banach Lie group acting symplectically on $X$, that is, if we denot
 \begin{equation*}
   \rho(g)^*\omega=\omega.
 \end{equation*}
-Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall that to every element $\xi \in \gg$ we can associate the vector field $\vec{\xi}$ defined as the infinitesimal generator of $\rho(\exp{t\xi})$. Consider now an smooth map $\mu:X\rightarrow \gg^*$ and, for every $\xi \in \gg$ define the function
+Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall that to every element $\xi \in \gg$ we can associate the vector field $\vec{\xi}$ defined as the infinitesimal generator of $\rho(\exp{t\xi})$. Consider now a smooth map $\mu:X\rightarrow \gg^*$ and, for every $\xi \in \gg$ define the function
 \begin{align*}
   \mu_\xi :X&\longrightarrow \RR\\ 
   x &\longmapsto \esc{\mu(x),\xi}, 
@@ -735,17 +735,17 @@ The $\GG$-action can be shown to verify all the technical conditions for it to d
 
 \chapter{Higgs bundles and the Hitchin system}
 \section{The Hitchin system}
-Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is, the cotangent bundle $K_X=(T^{1,0}X)^*$. As in example \ref{cotangente}, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold. We shall see that this space admits a completely integrable system, the Hitchin system. More specifically, what we will prove is the following
+Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is, the cotangent bundle $K_X=(T^{1,0}X)^*$. As we shall see, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold and it admits a completely integrable system, the Hitchin system. More specifically, what we will prove is the following
 \begin{thm}[Hitchin]
   Let $X$ be a Riemann surface and $\Bun(n,d)$ the moduli space of stable holomorphic vector bundles of rank $n$ and degree $d$ on $X$. Let $k=n^2(g-1)+1$ be the complex dimension of $\Bun(n,d)$. There is a map
   \begin{equation*}
     H: T^*\Bun(n,d) \rightarrow \BB,
   \end{equation*}
-  where $\BB$ is a complex vector space of complex dimension $k$, such that generic fibres of it are open sets in some submanifolds which are diffeomorphic to tori $\CC^k/\ZZ^{2k}$ and the canonical symplectic form of $T^*\Bun(n,d)$ vanishes on them.
+  where $\BB$ is a complex vector space of complex dimension $k$, such that its components Poisson commute and generic fibres of it are open sets in some submanifolds which are isomorphic to complex tori $\CC^k/\ZZ^{2k}$.
 \end{thm}
 
 \begin{ejemplo}
-  For the line bundle case this result is trivial. The moduli space $\Bun(1,d)=\Pic^d(X)$ is the degree $d$ component of the Picard group $\Pic(X)=H^1(X,\OO_X^*)$, that, as we saw, can be identified with the Jacobian of the curve, $J(X)$, which is indeed a complex torus: it is diffeomorphic to $\CC^g/\ZZ^{2g}$. The tangent bundle of the Jacobian is trivial and isomorphic to $H^1(X,\OO_X)$, so by Serre duality the cotangent bundle is 
+  For the line bundle case this result is trivial. The moduli space $\Bun(1,d)=\Pic^d(X)$ is the degree $d$ component of the Picard group $\Pic(X)=H^1(X,\OO_X^*)$, that, as we saw, can be identified with the Jacobian of the curve, $J(X)$, which is indeed a complex torus. The tangent bundle of the Jacobian is trivial and isomorphic to $H^1(X,\OO_X)$, so by Serre duality the cotangent bundle is 
   \begin{equation*}
     T^*\Bun(1,d) = J(X)\times H^0(X,K_X).
   \end{equation*}
@@ -756,6 +756,43 @@ Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold
   as the projection on the second factor $\pr_2:J(X)\times H^0(X,K_X) \rightarrow H^0(X,K_X)$. \qed
 \end{ejemplo}
   
+First of all, let us describe the symplectic form on $T^*\Bun(n,d)$. In order to do this, we are going to regard $T^*\Bun(n,d)$ as
+\begin{equation*}
+  T^*\Bun(n,d)=T^*(\AA^s_{\delbar}/\GG^c).
+\end{equation*}
+Fix now a smooth vector bundle $E$ over $X$, of rank $n$ and degree $d$. Now we define the ``complexification''
+\begin{equation*}
+  \AA^c=\AA_{\delbar}\times \Omega^{1,0}(X,\End E),
+\end{equation*}
+which is a complex affine space over $\Omega^{0,1}(X,\End E) \oplus \Omega^{1,0}(X,\End E)$ and $\AA^c=T^*\AA_{\delbar}$. This space carries a natural symplectic form 
+\begin{equation*}
+  \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=2i\int_X \tr(A_1 \wedge \varphi_2-A_2\wedge \varphi_1),
+\end{equation*}
+where $A_i \in \Omega^{0,1}(X,\End E)$ and $\varphi_i \in \Omega^{1,0}(X,\End E)$. If we denote points of $\AA^c$ as pairs $(\delbar_{\ve{E}},\varphi)$, $\AA^c$ has a natural action of $\GG^c$ that we can write as
+\begin{equation*}
+  (\delbar_{\ve{E}},\varphi) \mapsto (g\delbar_{\ve{E}}g^{-1},g\varphi g^{-1}).
+\end{equation*}
+We now define the momentum map
+\begin{align*}
+  \mu :\AA^c=\AA_{\delbar}\times \Omega^{1,0}(X,\End E)&\longrightarrow (\Lie\GG^c)^*=\Omega^2(X,\End E) \\
+  (\delbar_{\ve{E}},\varphi) &\longmapsto- 2i\delbar_{\ve{E}}\varphi.
+  \end{align*}
+  To check that this is indeed the momentum map for this action, compute
+  \begin{align*}
+    d_{(\delbar_{\ve{E}},\varphi)}\mu(A,\psi)&=\left.\frac{d}{dt}\right|_{t=0} \mu\left( (\delbar_{\ve{E}},\varphi)+t(A,\psi) \right)\\ &=\left.\frac{d}{dt}\right|_{t=0} 2i(\delbar_{\ve{E}}(\varphi+t\psi)+t[A, (\varphi+t\psi)]) \\
+    &=- 2i(\delbar_{\ve{E}} \psi + [A,\varphi]).
+  \end{align*}
+  Recall now that an element of the Lie algebra $\xi\in\Gamma(\End E)$ acts on $\Omega^{0,1}(X, \End E)$ as $-\delbar_{\ve{E}} \xi$. On a similar way one shows that the action on $\Omega^{1,0}(X,\End E)$ is given by $[\xi,\varphi]$, so 
+  \begin{equation*}
+    \vec{\xi}(\delbar_{\ve{E}},\varphi)=(-\delbar_{\ve{E}}\xi, [\xi,\varphi]).
+  \end{equation*}
+  Therefore
+  \begin{equation*}
+    \omega\left( (A,\psi),\vec{\xi} \right)=2i\int_X \tr(A\wedge[\xi,\varphi] + \delbar_{\ve{E}} \xi \wedge \psi)=- 2i\int_X \tr(\xi[A,\varphi] + \xi \delbar_{\ve{E}} \psi)=\langle d_{\delbar_{\ve{E}},\varphi}\mu(A,\psi),\xi \rangle.
+  \end{equation*}
+  Therefore we get a symplectic quotient $$T^*\Bun(n,d)=\AA^{c,s}/\GG^c=\mu^{-1}(0)/\GG^c,$$ where $\AA^{c,s}=\AA_{\delbar}^s\times \Omega^{1,0}(X,\End\ E)$ denotes the open subset corresponding to stable holomorphic vector bundles.
+  Note also that for a pair $(\delbar_{\ve{E}},\varphi)\in \AA^c$ we have that $\mu(\delbar_{\ve{E}},\varphi)=0$ if $\delbar_{\ve{E}} \varphi=0$, that is, if $\varphi\in H_{\delbar_{\ve{E}}}^{1,0}(X, \End\ E)=H^0(X,\End\ \ve{E} \otimes K_X)$, just as we wanted.
+
 
 \nocite{*}
 \bibliographystyle{alpha}
