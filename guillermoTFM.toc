@@ -12,3 +12,4 @@
 \contentsline {section}{\numberline {4}The moduli space as a symplectic quotient}{21}{section.2.4}
 \contentsline {chapter}{\numberline {III}Higgs bundles and the Hitchin system}{23}{chapter.3}
 \contentsline {section}{\numberline {1}The Hitchin system}{23}{section.3.1}
+\contentsline {section}{\numberline {2}The spectral correspondence}{25}{section.3.2}

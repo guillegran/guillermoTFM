@@ -236,7 +236,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	  0\arrow{r}&	  H^1(X,\ZZ) \arrow{r} & H^1(X,\OO_X) \arrow{r} & \Pic^0(X) \arrow{r}{\delta} & 0.
 	 \end{tikzcd}
        \end{center}
-       Therefore $\Pic^0(X)\cong H^1(X,\OO_X)/H^1(X,\ZZ)$. Now, the Dolbeaut theorem says that $H^1(X,\OO_X)\cong H^{0,1}(X)$ and the Hodge decomposition theorem says that $H^1(X,\CC)\cong H^{1,0}(X) \oplus H^{0,1}(X)$. Also, by Serre duality, $H^{1,0}(X)\cong H^{0,1}(X)^*$ and via Mayer-Vietoris one can easily prove that $H^1(X,\CC)\cong\CC^{2g}$ and that $H^1(X,\ZZ)\cong\ZZ^{2g}$, where $g$ is the genus of $X$. Putting all this together we have that $H^1(X,\OO_X)\cong \CC^{g}$, so $\Pic^0(X)$ is isomorphic to a complex torus. We call this complex torus 
+       Therefore $\Pic^0(X)\cong H^1(X,\OO_X)/H^1(X,\ZZ)$. Now, the Dolbeaut theorem says that $H^1(X,\OO_X)\cong H^{0,1}(X)$ and the Hodge decomposition theorem says that $H^1(X,\CC)\cong H^{1,0}(X) \oplus H^{0,1}(X)$. Also, by Serre duality, $H^{1,0}(X)\cong H^{0,1}(X)^*$ and via Mayer-Vietoris one can easily prove that $H^1(X,\CC)\cong\CC^{2g}$ and that $H^1(X,\ZZ)\cong\ZZ^{2g}$, where $g$ is the genus of $X$. Putting all this together we have that $H^1(X,\OO_X)\cong \CC^{g}$, so $\Pic^0(X)$ is a complex torus. We call this complex torus 
        \begin{equation*}
 	 J(X):=	 \frac{H^1(X,\OO_X)}{H^1(X,\ZZ)}
        \end{equation*}
@@ -581,7 +581,23 @@ Given two functions $f$ and $g$, we define their \emph{Poisson bracket} as the f
 \begin{equation*}
   \left\{ f,g \right\}=v_f g = -v_g f = -\left\{ g,f \right\}.
 \end{equation*}
-Two functions are said to \emph{Poisson-commute} if $\{f,g\}=0$.
+Two functions are said to \emph{Poisson commute} if $\{f,g\}=0$.
+
+\begin{ejemplo}
+  We can consider the cotangent bundle $T^*M$ of some manifold $M$ with the canonical symplectic structure $\omega=\sum dy_i \wedge dx_i$. If $f$ and $g$ are functions of $(y_1,\dots,y_n)$ alone,
+  \begin{equation*}
+    df=\sum_i \frac{\partial f}{\partial y_i} dy_i =- i_{v_f}\omega
+  \end{equation*}
+  so
+  \begin{equation*}
+    v_f=\sum_i \frac{\partial f}{\partial y_i}\frac{\partial}{\partial x_i}.
+  \end{equation*}
+  Thus, 
+  \begin{equation*}
+    \left\{ f,g \right\}=v_f g=\sum_{i} \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}=0.
+  \end{equation*}
+  \qed
+\end{ejemplo}
 
 Let $G$ be a Banach Lie group acting symplectically on $X$, that is, if we denote the action by $\rho:G\rightarrow \mathrm{Diff}(X)$, for every $g\in G$ we have
 \begin{equation*}
@@ -602,7 +618,7 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
   \end{equation*}
   for every $u\in T_xX$, where $d_x\mu:T_xX \rightarrow \gg^*$ is the derivative of $\mu$ at $x$.
 
-  \begin{ejemplo}
+  \begin{ejemplo}\label{ejintegrable}
     Let $(X,\omega)$ be any finite-dimensional symplectic manifold and $f_1,\dots,f_n:X\rightarrow \RR$ be functions. If the vector fields $v_{f_1},\dots,v_{f_n}$ form the basis of a Lie sub-algebra $\gg$ of the Lie algebra of vector fields on $X$, then the functions define a map
     \begin{align*}
       \mu :X&\longrightarrow \gg^*\\ 
@@ -699,6 +715,10 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
      which is exactly what we wanted to prove.
     \end{proof}
 
+    \begin{rem}
+      Let $M$ be a symplectic manifold with the action of a Lie group $G$ and momentum map $\mu:X\rightarrow \gg^*$ defined by functions $f_1,\dots,f_n$ as in example \ref{ejintegrable}. If $g$ is a $G$-invariant function on $M$ by restriction we can define a $G$-invariant function $\tilde{g}$ on $\mu^{-1}(0)$ and therefore on the quotient $\mu^{-1}(0)/G$. If $g,h$ are two such functions such that $\left\{ g,h \right\}=0$, $X_gh=0$, so $h$ is constant along the orbits of $X_g$. But the projection of these orbits to the quotients are the orbits of $X_{\tilde{g}}$, so $\tilde{h}$ is constant on these orbits and so $\left\{ \tilde{g},\tilde{h} \right\}=0$.
+    \end{rem}
+
     \section{The moduli space as a symplectic quotient}
 In this section we are going to construct the moduli space of stable holomorphic vector bundles $\Bun(n,d)$, regarded as the moduli space of irreducible constant central curvature unitary connections $\AA^s_h/\GG$, as a symplectic quotient. 
 
@@ -741,7 +761,7 @@ Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold
   \begin{equation*}
     H: T^*\Bun(n,d) \rightarrow \BB,
   \end{equation*}
-  where $\BB$ is a complex vector space of complex dimension $k$, such that its components Poisson commute and generic fibres of it are open sets in some submanifolds which are isomorphic to complex tori $\CC^k/\ZZ^{2k}$.
+  where $\BB$ is a complex vector space of complex dimension $k$, such that its components Poisson commute and generic fibres of it are open sets in some $k$-dimensional complex tori.
 \end{thm}
 
 \begin{ejemplo}
@@ -792,6 +812,39 @@ We now define the momentum map
   \end{equation*}
   Therefore we get a symplectic quotient $$T^*\Bun(n,d)=\AA^{c,s}/\GG^c=\mu^{-1}(0)/\GG^c,$$ where $\AA^{c,s}=\AA_{\delbar}^s\times \Omega^{1,0}(X,\End\ E)$ denotes the open subset corresponding to stable holomorphic vector bundles.
   Note also that for a pair $(\delbar_{\ve{E}},\varphi)\in \AA^c$ we have that $\mu(\delbar_{\ve{E}},\varphi)=0$ if $\delbar_{\ve{E}} \varphi=0$, that is, if $\varphi\in H_{\delbar_{\ve{E}}}^{1,0}(X, \End\ E)=H^0(X,\End\ \ve{E} \otimes K_X)$, just as we wanted.
+
+  Let us now construct the map 
+  \begin{align*}
+    H :T^*\Bun(n,d)\rightarrow \BB.
+    \end{align*}
+    First of all, consider any element $\varphi \in \Omega^{1,0}(X,\End E)=\Gamma(X,\End E \otimes K_X)$. Associated to this element we have the characteristic polynomial, formally written as
+    \begin{equation*}
+      \det(T-\varphi)=T^n + \sum_{i=1}^{n} \sigma_i(\varphi) T^{n-i},
+    \end{equation*}
+    with its coefficients being sections $\sigma_i(\varphi) \in \Gamma(K_X^i)$. This defines a map
+    \begin{align*}
+      \AA_{\delbar} \times \Omega^{1,0}(X,\End E)&\longrightarrow \bigoplus_{i=1}^n \Gamma(K_X^i)\\ 
+      (\partial_{\ve{E}},\varphi) &\longmapsto (\sigma_1(\varphi),\dots,\sigma_n(\varphi)). 
+      \end{align*}
+      Since the components of this map are functions of $\Omega^{1,0}(X,\End E)$ alone, they Poisson commute and also will the components of the map defined in the symplectic quotient
+      \begin{align*}
+	H :T^*\Bun(n,d)&\longrightarrow \bigoplus_{i=1}^n H^0(X,K^i_X)\\ 
+	(\ve{E},\varphi) &\longmapsto (\sigma_1(\varphi),\dots,\sigma_n(\varphi)). 
+	\end{align*}
+	This is the \emph{Hitchin map}. We define now the vector space $\BB= \bigoplus_{i=1}^n H^0(X,K^i_X)$ and let us check that it has the desired dimension. This is a straightforward computation using Riemann-Roch:
+	\begin{align*}
+      \dim \BB &= \sum_{i=1}^n \dim H^0(X,K_X^i)= \dim H^0(X,K_X) + \sum_{i=2}^n \dim H^0(X,K_X^i)\\
+      &= g + \sum_{i=2}^n [i(2g-2)-g+1] =1+ \sum_{i=1}^n [i(2g-2)-g+1] \\
+      &= 1+ (2g-2)\frac{n(n+1)}{2} - n(g-1) = 1+(g-1)(n^2+n) - n(g-1) \\
+      &= n^2(g-1)+1.
+    \end{align*}
+    To finish the proof of Hitchin's theorem it remains to check that the fibers are open sets in $n^2(g-1)+1$-dimensional complex tori. In order to prove this, we are going to need a very powerful tool that will be introduced in the following section.
+
+    \section{The spectral correspondence}
+
+
+      
+    
 
 
 \nocite{*}
