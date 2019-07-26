@@ -66,6 +66,8 @@
 \def\Pic{\mathrm{Pic}}
 \def\Spec{\mathrm{Spec}}
 \def\Span{\mathrm{span}}
+\def\Disc{\mathrm{Disc}}
+\def\Res{\mathrm{Res}}
 \def\delbar{\bar{\partial}}
 \newcommand{\ve}[1]{\mathbf{#1}}
 
@@ -626,7 +628,7 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
       \end{align*}
       where $\left\{ \xi_i \right\}$ is the dual basis of $\left\{ v_{f_i} \right\}$. If the vector fields integrate to give the action of a Lie group $G$ on $X$, $\mu$ is a momentum map for that action. 
 
-      An special case of this example is that in which $n=\tfrac{1}{2}\dim X$ and the functions $f_1,\dots,f_n$ pairwise Poisson commute. In that case the vector fields $v_{f_1},\dots,v_{f_n}$ generate an abelian Lie algebra. If the functions are independent, that is, $df_1\wedge \dots \wedge df_n$ is generically nonzero, the momentum map, which is simply $f=(f_1,\dots,f_n):X\rightarrow \RR^n$, has the property that a generic fibre is an $n$-dimensional submanifold with $n$ linearly independent commuting vector fields $v_{f_1},\dots,v_{f_n}$. This is called a \emph{completely integrable system}. Using the aforementioned properties, it can be easily shown that on the regular fibres the symplectic form vanishes, that the flow of any of the $v_{f_i}$ is linear in them and that generic fibres are open sets in tori $\RR^n/\ZZ^n$. This is the content of the theorem of Arnold-Liouville [REF:Arnold]. \qed
+      An special case of this example is that in which $n=\tfrac{1}{2}\dim X$ and the functions $f_1,\dots,f_n$ pairwise Poisson commute. In that case the vector fields $v_{f_1},\dots,v_{f_n}$ generate an abelian Lie algebra. If the functions are independent, that is, $df_1\wedge \dots \wedge df_n$ is generically nonzero, the momentum map, which is simply $f=(f_1,\dots,f_n):X\rightarrow \RR^n$, has the property that a generic fibre is an $n$-dimensional submanifold with $n$ linearly independent commuting vector fields $v_{f_1},\dots,v_{f_n}$. This is called a \emph{completely integrable system}. Using the aforementioned properties, it can be easily shown that on the regular fibres the symplectic form vanishes, that the flow of any of the $v_{f_i}$ is linear in them and that generic fibres are open sets in tori $\RR^n/\ZZ^n$. This is the content of the theorem of Arnold-Liouville \cite{arnold}. \qed
   \end{ejemplo}
 
   \section{Symplectic reduction}
@@ -841,6 +843,108 @@ We now define the momentum map
     To finish the proof of Hitchin's theorem it remains to check that the fibers are open sets in $n^2(g-1)+1$-dimensional complex tori. In order to prove this, we are going to need a very powerful tool that will be introduced in the following section.
 
     \section{The spectral correspondence}
+    In this section we are going to study the spectral data of ``twisted'' endomorphisms on vector bundles. We are going to work in a more general setting than the previous section, in which we were only considering pairs $(\ve{E},\varphi)$ were $\varphi\in \End\ \ve{E} \otimes K_X$ was an endomorphism ``twisted'' by the canonical line bundle $K_X$. We are now going to allow twisting by any holomorphic line bundle $L$.
+
+    \begin{defn}
+      Let $X$ be a compact Riemann surface and let $\ve{E}\rightarrow X$ be a holomorphic vector bundle of rank $n$ and degree $d$. Let us fix a holomorphic line bundle $L\rightarrow X$. A \emph{$L$-twisted endomorphism} is a bundle homomorphism $\varphi:\ve{E}\rightarrow \ve{E}\otimes L$, or equivalently, a section $\varphi \in H^0(X,\End\ \ve{E} \otimes L)$.
+    \end{defn}
+
+    Any $L$-twisted endomorhpism induces, for each $i=1,\dots,n$ a homomorphism
+    \begin{align*}
+      \wedge^i\varphi : \Lambda^i E&\longrightarrow \Lambda^i(E\otimes L)= \Lambda^i E \otimes L^{i}.
+      \end{align*}
+      We can then take the traces of these homomorphisms and get sections $\tr \wedge^i \varphi \in H^0(X,L^{i})$. With these sections we can construct the characteristic polynomial of $\varphi$, 
+      \begin{equation*}
+	P_\varphi(T)=\det(T-\varphi)=T^n+\sum_{i=1}^n (-1)^i \sigma_i(\varphi) T^{n-i},
+      \end{equation*}
+      where the coefficients are precisely $\sigma_i(\varphi)=(-1)^i\tr \wedge^i \varphi \in H^0(X,L^{i})$. For example, $$\sigma_1(\varphi)=-\tr\ \varphi, \hspace{1 cm} \sigma_n(\varphi)=(-1)^n \det \varphi.$$
+      Therefore, to any $L$-twisted endomorphism $\varphi$ we can associate an element 
+      \begin{equation*}
+	(\sigma_1(\varphi),\dots,\sigma_n(\varphi)) \in \bigoplus_{i=1}^n H^0(X,L^i).
+      \end{equation*}
+
+      Let us now consider any element $b=(b_1,\dots,b_n) \in \bigoplus_{i=1}^n H^0(X,L^i)$. If we take the pullback bundle of $L$, $p^*L$ given by the diagram
+      \begin{center}
+	\begin{tikzcd}
+p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\ 
+	   && \\
+	   L\arrow{rr}[anchor=south]{p} && X,
+	 \end{tikzcd}
+       \end{center}
+       where $p:L\rightarrow X$ is just the canonical projection of the bundle, it is easy to check that it has a tautological section $\lambda \in H^0(L,p^*L)$. Locally, $\lambda$ can be seen as a coordinate on the total space of the bundle $L$. Let us define then the section
+       \begin{equation*}
+	 s_b=\lambda^n + \sum_{i=1}^n p^* b_i \lambda^{n-i} \in H^0(L,p^*L^n).
+       \end{equation*}
+
+       \begin{defn}
+	 The \emph{spectral curve} $S_b$ associated to an element $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ is the zero locus of the section $s_b$,
+	 \begin{equation*}
+	   S_b=(s_b)_0 \subset L.
+	 \end{equation*}
+       \end{defn}
+       Note that generic values of $b\in \bigoplus_{i=1}^n H^0(X,L^i)$ define an ``irreducible polynomial'' and therefore the spectral curve will be generically irreducible.
+
+       Near some point of $X$ we take some neighbourhood $U$ and think of the spectral curve as the set 
+       \begin{equation*}
+	 \left\{ (x,\lambda) \in X\times \CC : \lambda^n + \sum_{i=1}^n b_i \lambda^{n-i} =0 \right\}.
+       \end{equation*}
+       Therefore, if $b=(\sigma_1(\varphi),\dots,\sigma_n(\varphi))$ for some $L$-twisted endomorphism $\varphi: \ve{E} \rightarrow \ve{E}\otimes L$, then locally the spectral curve can be thought as the set
+       \begin{equation*}
+	 \left\{ (x,\lambda) \in X\times \CC: \det(\lambda \id - \varphi)=0 \right\}
+       \end{equation*}
+       That is, fiberwise, over some point $x \in X$ the points of the spectral curve are precisely the ``eigenvalues'' $\lambda_1(x),\dots,\lambda_n(x) \in L_x$ of the twisted endomorphism $\varphi_x:E_x \rightarrow E_x \otimes L_x$; hence the name \textit{spectral curve}.
+
+       [dibujo]
+
+       \begin{prop}
+	 Assume that $L^n$ is base point free. Then, for generic elements $b\in \bigoplus_{i=1}^n H^0(X,L^i)$, the spectral curve $S_b$ is smooth.
+       \end{prop}
+
+       \begin{proof}
+	 The spectral curve $S_b$ is an irreducible hypersurface of $L$, so it can be thought as a divisor on it and on its compactification $\PP(L\oplus \OO_X)$. Moreover, as the $b$ varies, $s_b$ defines a linear subspace of $\PP(H^0(L,p^*L^n))$, so 
+	 \begin{equation*}
+	   \mathfrak{d}=\left\{ S_b: b\in \bigoplus_{i=1}^n H^0(X,L^i) \right\}
+	 \end{equation*}
+	 is a linear system of divisors on $L$. Bertini's theorem says that, away from the base locus of $\mathfrak{d}$, the generic divisor of the system is smooth. Let us check then that the base locus of $\mathfrak{d}$ is empty.
+
+	 Suppose that $y \in L$ is a base point of $\mathfrak{d}$. Then, since $(\lambda^n)_0 \in \mathfrak{d}$, $\lambda(y)=0$. But then $s_b(y)=p^*b_n(y)=b_n(p(y))$ for every $b$ and, since $y$ is a base point, $s_b(y)=0$. Therefore $b_n(p(y)) = 0$ for every $b_n \in H^0(X,L^n)$, so $p(y)$ is a base point of $L^n$. But by hypothesis $L^n$ is base point free, so we reach a contradiction.
+       \end{proof}
+
+       Note now that the restriction of the natural projection $p:L\rightarrow X$ defines a map,
+       \begin{center}
+	 \begin{tikzcd}
+	   S_b	   \arrow[hook]{rr}\arrow{rrdd}[anchor=north,rotate=-30]{\pi} && L\arrow{dd}[anchor=west]{p} \\ 
+	    && \\
+	    && X.
+	  \end{tikzcd}
+	\end{center}
+	Since $\pi:S_b\rightarrow X$ is a morphism of Riemann surfaces it defines a branched covering of $S_b$ over $X$. Note that at a point $x$ where this morphism is étale the fiber has exactly $n$ points, the $n$ eigenvalues of $\varphi_x$. Therefore the degree of the map $\pi$ is $\deg \pi = n$. Similarly, the \emph{branch locus} will be given precisely by those points $x\in X$ where some eigenvalues of $\varphi_x$ have algebraic multiplicity $>1$. By the same reason, the \emph{ramification divisor} $R$ on $S_b$ is defined as the zero divisor of $\Disc(s_b)\in H^0(p^*L^{n(n-1)})$, which is the discriminant of $s_b$, or equivalently, the resultant of $s_b$ and its derivative
+	\begin{equation*}
+	  \Disc(s_b)=\Res\left(s_b, \frac{\partial}{\partial \lambda} s_b\right).
+	\end{equation*}
+	$R$ is the zero locus of a section of $p^*L^{n(n-1)}$, so its degree is precisely
+	\begin{equation*}
+	  \deg R = \deg (L^{n(n-1)})=n(n-1)\deg L.
+	\end{equation*}
+	The Riemann-Hurwitz formula yields the genus of the spectral curve,
+	\begin{equation*}
+	  2g_S - 2 = n(2g_X-2) + \deg R = n(2g_X-2) + n(n-1)\deg L,
+	\end{equation*}
+	\begin{equation*}
+	  g_S= 1+n(g_X-1)+ \frac{n(n-1)}{2}\deg L.
+	\end{equation*}
+
+	We are now in position to prove the spectral correspondence:
+	\begin{thm}[Beauville-Narasimhan-Ramanan, \cite{bnr}]
+	  Let $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ such that the spectral curve $S_b$ is smooth. We have a bijective correspondence, up to isomorphism, between holomorphic line bundles over $S_b$ of degree $\delta$ and pairs $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ of rank $n$ and degree $d$, and $\varphi$ is a $L$-twisted endomorphism with characteristic polynomial
+	  \begin{equation*}
+	    P_\varphi(T)=T^n + \sum_{i=1}^n b_i T^{n-i}.   
+	  \end{equation*}
+	  The degrees $d$ and $\delta$ are related by
+	  \begin{equation*}
+	    d=\delta - \deg L \frac{n(n-1)}{2}.
+	  \end{equation*}
+	\end{thm}
 
 
       
