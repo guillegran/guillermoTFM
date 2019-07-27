@@ -471,8 +471,6 @@ Now, $\tr(\beta\wedge \beta^\dagger)$ is precisely the Hodge pairing $\tr(\beta 
 The connection $\nabla$ is irreducible, so $\norm{\beta}\neq 0$ and $\mu(E')< \mu(E)$. That is, $E$ is stable.
 \end{proof}
 
-\section{Representations of the fundamental group}
-
 \chapter{Momentum maps and symplectic quotients}
 \section{Banach manifolds}
 For the purpose of this work it is necessary to work on an infinite-dimensional context, so we can construct the moduli spaces as quotients of infinite-dimensional manifolds. To do this, we need to consider an infinite-dimensional analogous to differential calculus and the notion of an infinite-dimensional smooth manifold. Here we just state the basic definitions and results, which are a direct generalization of the classical ones, and refer to \cite{abrahammarsdenratiu,lang} for more details.
@@ -1079,21 +1077,21 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	      \begin{equation*}
 		\vec{H}(A)=\left.\frac{d}{dt} \right|_{t=0} (e^{-Ht}Ae^{Ht})=-HA+AH=[A,H].
 	      \end{equation*}
-	      Let us compute also $d_{A}\mu(K)$ for some $K \in \uu(n)$
+	      Let us compute also $d_{A}\mu(B)$ for some $B \in \End \CC^n$
 	      \begin{equation*}
-		d_A \mu(K) =\left.\frac{d}{dt} \right|_{t=0} \mu(A+tK)=\tfrac{i}{2}\left.\frac{d}{dt} \right|_{t=0}    [A+tK,A^{\dagger}+tK^\dagger]=\tfrac{i}{2} \left([K,A^{\dagger}] + [A,K^{\dagger}]\right).
+		d_A \mu(B) =\left.\frac{d}{dt} \right|_{t=0} \mu(A+tB)=\tfrac{i}{2}\left.\frac{d}{dt} \right|_{t=0}    [A+tB,A^{\dagger}+tB^\dagger]=\tfrac{i}{2} \left([B,A^{\dagger}] + [A,B^{\dagger}]\right).
 	      \end{equation*}
 	      Now
 	      \begin{equation*}
-		\esc{d_A\mu(K),H}=\tfrac{i}{2}\tr([K,A^\dagger]H^\dagger+[A,K^{\dagger}]H^\dagger)=-\tfrac{i}{2} \tr([K,A^\dagger]H+[A,K^{\dagger}]H)
+		\esc{d_A\mu(B),H}=\tfrac{i}{2}\tr([B,A^\dagger]H^\dagger+[A,B^{\dagger}]H^\dagger)=-\tfrac{i}{2} \tr([B,A^\dagger]H+[A,B^{\dagger}]H)
 	      \end{equation*}
 	      Using the cyclic property of the trace one gets
 	      \begin{equation*}
-		\esc{d_A\mu(K),H}=-\tfrac{i}{2}\tr(K[A^\dagger,H]-[H,A]K^\dagger)=-\mathrm{Im}\ \tr((K [A,H])).
+		\esc{d_A\mu(B),H}=-\tfrac{i}{2}\tr(B[A^\dagger,H]-[H,A]B^\dagger)=-\mathrm{Im}\ \tr((B [A,H])).
 	      \end{equation*}
 	      On the other hand
 	      \begin{equation*}
-		\omega(K,\vec{H}(A))=-\mathrm{Im}\ \tr(K[A,H])=\esc{d_A\mu(K),H}.
+		\omega(B,\vec{H}(A))=-\mathrm{Im}\ \tr(B[A,H])=\esc{d_A\mu(B),H}.
 	      \end{equation*}
 	      This finishes the proof of the lemma.
 	    \end{proof}
@@ -1127,7 +1125,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  \begin{defn}
 	    A pair $(\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ is called \emph{irreducible} if there exist no subbundles $E'\subset E$ which are preserved by both $\nabla$ and $\varphi$. 
 	  \end{defn}
-	  \begin{thm}[Hitchin's correspondence] \label{Hitchin correspondence}
+	  \begin{thm}[Hitchin correspondence] \label{Hitchin correspondence}
 	    Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$.
 	    An irreducible pair $(\nabla ,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ is a solution to the Hitchin equations if and only if for every proper subbundle $E'\subset E$ which is invariant by $\nabla^{0,1}$ and $\varphi$,
 	    \begin{equation*}
@@ -1151,7 +1149,12 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	      \varphi_{E'} & \theta \\
 	      0 & \varphi_{E''}
 	    \end{array}
-	    \right).
+	    \right),
+	  \end{equation*}
+	  for $\theta \in \Omega^{1,0}(X,\Hom(E'',E'))$.
+	  The top left element of $[\varphi,\varphi^\dagger]$ is
+	  \begin{equation*}
+	    \varphi_{E'}\wedge \varphi_{E'}^\dagger + \theta \wedge \theta^\dagger - \varphi_{E'}^\dagger \wedge \varphi_{E'}=[\varphi_{E'},\varphi_{E'}^\dagger] + \theta \wedge \theta^\dagger.
 	  \end{equation*}
 	  Using the equation
 	  \begin{equation*}
@@ -1159,11 +1162,11 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
   \begin{array}{cc}
     F_{E'}-\beta\wedge \beta^\dagger & \nabla_{\Hom(E'',E')}\beta \\
     -\nabla_{\Hom (E',E'')}\beta^\dagger & F_{E''}-\beta^\dagger \wedge \beta
-  \end{array}\right)=-2\pi i\frac{d}{n} \id_E \omega_X,
+  \end{array}\right),
 	  \end{equation*}
 	  from the proof of Narasimhan-Seshadri (Theorem \ref{narasimhanseshadri}) we have
 	  \begin{equation*}
-	    F_{E'}-\beta\wedge \beta^{\dagger} + [\varphi_{E'},\varphi_{E'}^\dagger]-\theta \wedge \theta^{\dagger}=-2\pi i \frac{d}{n}\id_{E'} \omega_X.
+	    F_{E'}-\beta\wedge \beta^{\dagger} + [\varphi_{E'},\varphi_{E'}^\dagger]+\theta \wedge \theta^{\dagger}=-2\pi i \frac{d}{n}\id_{E'} \omega_X.
 	  \end{equation*}
 	  Now, since $\tr[\varphi,\varphi^\dagger]=0$, taking the trace and integrating we get
 	  \begin{equation*}
@@ -1190,7 +1193,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	    The moduli space $\Hig(n,d)$ is a complex manifold of dimension $2+2n^2(g-1)$, where $g$ is the genus of $X$.
 	  \end{thm}
 
-	  Hitchin's correspondence \ref{Hitchin correspondence} can be now reinterpreted as follows
+	  The Hitchin correspondence \ref{Hitchin correspondence} can be now reinterpreted as follows
 	  \begin{corol}
 	    Let $(E,h)$ be a smooth Hermitian vector bundle of rank $n$ and degree $d$. The moduli space of solutions to the Hitchin equations on $E$ is homeomorphic to the moduli space of stable Higgs bundles $\Hig(n,d)$.
 	  \end{corol}
@@ -1208,7 +1211,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	      Suppose that $\ve{E}'\subset \ve{E}$ is a proper holomorphic subbundle invariant by $\varphi$. Then we can take the characteristic polynomial of $\varphi|_{\ve{E}'}$ and it must divide the characteristic polynomial of $\varphi$, thus contradicting that the spectral curve is irreducible.
 	    \end{proof}
 
-	    As a conclusion, we get that generic fibers of the Hitchin map $H:\Hig(n,d) \rightarrow \BB$ are whole Jacobians of the spectral curves.
+	    As a conclusion, we get that generic fibers of the Hitchin map $H:\Hig(n,d) \rightarrow \BB$ are whole Jacobians of the spectral curve
 
 	  
 
