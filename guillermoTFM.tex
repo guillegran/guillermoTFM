@@ -62,6 +62,7 @@
 \def\uu{\mathfrak{u}}
 \def\Hom{\mathrm{Hom}}
 \def\Bun{\mathbf{M}_{\mathrm{Bun}}}
+\def\Hig{\mathbf{M}_{\mathrm{Higgs}}}
 \def\Sym{\mathrm{Sym}}
 \def\Pic{\mathrm{Pic}}
 \def\Spec{\mathrm{Spec}}
@@ -730,16 +731,27 @@ Let $X$ be a compact Riemann surface of genus $g\geq 2$, $E$ a complex vector bu
 \end{equation*}
 endowing $\AA_h$, at least formally, with the structure of a symplectic manifold. Strictly speaking, we would need to give in $\AA_h$ the structure of a Banach manifold. This is a technical procedure that we will not detail here, but the essential idea is to give completions of this space with respect to \emph{Sobolev norms}. In a similar fashion, for our purposes we also need to give Sobolev completions of the group $\GG=\Gamma(\UU_h(E))$, in order to get a Banach Lie group. Go to \cite{atiyahbott,kobayashi} for explicit constructions.
 
-Remember that the Lie group $\GG$ acts on $\AA_h$ by congugation $\nabla\mapsto g\nabla g^{-1}$. We will now show that this action does indeed admit a momentum map, given by
+Remember that the Lie group $\GG$ acts on $\AA_h$ by congugation $\nabla\mapsto g\nabla g^{-1}$. 
+\begin{prop}
+  This action does a momentum map, given by
 \begin{equation*}
   \mu(\nabla)=-F-2\pi i \mu(E) \id_E \omega_X,
 \end{equation*}
-where $F$ is the curvature of $\nabla$. In fact, $\mu(\nabla)=-F$ could be also a suitable momentum map, however, the second term is added in there in order to get a non-empty symplectic quotient. Indeed, $\mu^{-1}(0)$ would be empty unless $\deg E=0$. This definition makes sense if we identify the Lie algebra of $\GG$ as $\Lie\ \GG= \Gamma(\uu_h(E))$ and its dual with $(\Lie\ \GG)^*=\Omega^2(X,\uu_h(E))$, via the pairing
+where $F$ is the curvature of $\nabla$.
+\end{prop}
+
+\begin{rem}
+This definition makes sense if we identify the Lie algebra of $\GG$ as $\Lie\ \GG= \Gamma(\uu_h(E))$ and its dual with $(\Lie\ \GG)^*=\Omega^2(X,\uu_h(E))$, via the pairing
 \begin{equation*}
   \esc{\alpha,\xi}=\int_X \tr(\xi \alpha),
 \end{equation*}
 for $\xi \in \Gamma(\uu_h(E))$ and $\alpha \in \Omega^2(X,\uu_h(E))$.
-Now, to see how $\vec{\xi}$ looks like for an element $\xi \in \Gamma(\uu_h(E))$, just compute
+\end{rem}
+\begin{rem}
+In fact, $\mu(\nabla)=-F$ could be also a suitable momentum map, however, the second term is added in there in order to get a non-empty symplectic quotient. Indeed, $\mu^{-1}(0)$ would be empty unless $\deg E=0$.
+\end{rem}
+\begin{proof}
+To see how $\vec{\xi}$ looks like for an element $\xi \in \Gamma(\uu_h(E))$, just compute
 \begin{equation*}
   \vec{\xi}(\nabla)=\left.\frac{d}{dt}\right|_{t=0} \exp(t\xi)\nabla \exp(-t\xi)= -\nabla \xi.
 \end{equation*}
@@ -752,13 +764,14 @@ Therefore we have
   \esc{d_\nabla \mu(A), \xi}=-\int_X \tr(\xi \nabla A) = \int_X \tr(\nabla \xi \wedge A) = \omega(A,\nabla \xi)=\omega(A,\vec{\xi}),
 \end{align*}
 so $\mu$ is a momentum map for the action of $\GG$ in $\AA_h$. 
+\end{proof}
 
 The $\GG$-action can be shown to verify all the technical conditions for it to define a symplectic structure on the symplectic quotient $\mu^{-1}(0)/\GG$. In general, this quotient will classify \emph{polystable} holomorphic vector bundles. To get stable vector bundles we consider the submanifold $\AA^s_h$ of irreducible $h$-unitary connections and the same method can be applied to construct the moduli space $\Bun(n,d)=\AA^s_h/\GG$ as a symplectic quotient $\mu^{-1}(0)/\GG$. All the good properties of the action guarantee that $\Bun(n,d)$ is indeed a smooth manifold.
 
 \chapter{Higgs bundles and the Hitchin system}
 \section{The Hitchin system}
 Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is, the cotangent bundle $K_X=(T^{1,0}X)^*$. As we shall see, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold and it admits a completely integrable system, the Hitchin system. More specifically, what we will prove is the following
-\begin{thm}[Hitchin]
+\begin{thm}[Hitchin] \label{hitchinsystem}
   Let $X$ be a Riemann surface and $\Bun(n,d)$ the moduli space of stable holomorphic vector bundles of rank $n$ and degree $d$ on $X$. Let $k=n^2(g-1)+1$ be the complex dimension of $\Bun(n,d)$. There is a map
   \begin{equation*}
     H: T^*\Bun(n,d) \rightarrow \BB,
@@ -784,9 +797,9 @@ First of all, let us describe the symplectic form on $T^*\Bun(n,d)$. In order to
 \end{equation*}
 Fix now a smooth vector bundle $E$ over $X$, of rank $n$ and degree $d$. Now we define the ``complexification''
 \begin{equation*}
-  \AA^c=\AA_{\delbar}\times \Omega^{1,0}(X,\End E),
+  \AA^c=\AA^s_{\delbar}\times \Omega^{1,0}(X,\End E),
 \end{equation*}
-which is a complex affine space over $\Omega^{0,1}(X,\End E) \oplus \Omega^{1,0}(X,\End E)$ and $\AA^c=T^*\AA_{\delbar}$. This space carries a natural symplectic form 
+which is an open subset of a complex affine space over $\Omega^{0,1}(X,\End E) \oplus \Omega^{1,0}(X,\End E)$ and $\AA^c=T^*\AA^s_{\delbar}$. This space carries a natural symplectic form 
 \begin{equation*}
   \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=2i\int_X \tr(A_1 \wedge \varphi_2-A_2\wedge \varphi_1),
 \end{equation*}
@@ -796,7 +809,7 @@ where $A_i \in \Omega^{0,1}(X,\End E)$ and $\varphi_i \in \Omega^{1,0}(X,\End E)
 \end{equation*}
 We now define the momentum map
 \begin{align*}
-  \mu :\AA^c=\AA_{\delbar}\times \Omega^{1,0}(X,\End E)&\longrightarrow (\Lie\GG^c)^*=\Omega^2(X,\End E) \\
+  \mu :\AA^c=\AA^s_{\delbar}\times \Omega^{1,0}(X,\End E)&\longrightarrow (\Lie\GG^c)^*=\Omega^2(X,\End E) \\
   (\delbar_{\ve{E}},\varphi) &\longmapsto- 2i\delbar_{\ve{E}}\varphi.
   \end{align*}
   To check that this is indeed the momentum map for this action, compute
@@ -812,8 +825,7 @@ We now define the momentum map
   \begin{equation*}
     \omega\left( (A,\psi),\vec{\xi} \right)=2i\int_X \tr(A\wedge[\xi,\varphi] + \delbar_{\ve{E}} \xi \wedge \psi)=- 2i\int_X \tr(\xi[A,\varphi] + \xi \delbar_{\ve{E}} \psi)=\langle d_{\delbar_{\ve{E}},\varphi}\mu(A,\psi),\xi \rangle.
   \end{equation*}
-  Therefore we get a symplectic quotient $$T^*\Bun(n,d)=\AA^{c,s}/\GG^c=\mu^{-1}(0)/\GG^c,$$ where $\AA^{c,s}=\AA_{\delbar}^s\times \Omega^{1,0}(X,\End\ E)$ denotes the open subset corresponding to stable holomorphic vector bundles.
-  Note also that for a pair $(\delbar_{\ve{E}},\varphi)\in \AA^c$ we have that $\mu(\delbar_{\ve{E}},\varphi)=0$ if $\delbar_{\ve{E}} \varphi=0$, that is, if $\varphi\in H_{\delbar_{\ve{E}}}^{1,0}(X, \End\ E)=H^0(X,\End\ \ve{E} \otimes K_X)$, just as we wanted.
+  Therefore we get a symplectic quotient $$T^*\Bun(n,d)=\AA^{c}/\GG^c=\mu^{-1}(0)/\GG^c.$$   Note also that for a pair $(\delbar_{\ve{E}},\varphi)\in \AA^c$ we have that $\mu(\delbar_{\ve{E}},\varphi)=0$ if $\delbar_{\ve{E}} \varphi=0$, that is, if $\varphi\in H_{\delbar_{\ve{E}}}^{1,0}(X, \End\ E)=H^0(X,\End\ \ve{E} \otimes K_X)$, just as we wanted.
 
   Let us now construct the map 
   \begin{align*}
@@ -846,7 +858,7 @@ We now define the momentum map
     In this section we are going to study the spectral data of ``twisted'' endomorphisms on vector bundles. We are going to work in a more general setting than the previous section, in which we were only considering pairs $(\ve{E},\varphi)$ were $\varphi\in \End\ \ve{E} \otimes K_X$ was an endomorphism ``twisted'' by the canonical line bundle $K_X$. We are now going to allow twisting by any holomorphic line bundle $L$.
 
     \begin{defn}
-      Let $X$ be a compact Riemann surface and let $\ve{E}\rightarrow X$ be a holomorphic vector bundle of rank $n$ and degree $d$. Let us fix a holomorphic line bundle $L\rightarrow X$. A \emph{$L$-twisted endomorphism} is a bundle homomorphism $\varphi:\ve{E}\rightarrow \ve{E}\otimes L$, or equivalently, a section $\varphi \in H^0(X,\End\ \ve{E} \otimes L)$.
+      Let $X$ be a compact Riemann surface and let $\ve{E}\rightarrow X$ be a holomorphic vector bundle of rank $n$ and degree $d$. Let us fix a holomorphic line bundle $L\rightarrow X$. A \emph{$L$-twisted endomorphism} is a bundle homomorphism $\varphi:\ve{E}\rightarrow \ve{E}\otimes L$, or equivalently, a holomorphic section $\varphi \in H^0(X,\End\ \ve{E} \otimes L)$.
     \end{defn}
 
     Any $L$-twisted endomorhpism induces, for each $i=1,\dots,n$ a homomorphism
@@ -886,11 +898,11 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 
        Near some point of $X$ we take some neighbourhood $U$ and think of the spectral curve as the set 
        \begin{equation*}
-	 \left\{ (x,\lambda) \in X\times \CC : \lambda^n + \sum_{i=1}^n b_i \lambda^{n-i} =0 \right\}.
+	 \left\{ (x,\lambda) \in U\times \CC : \lambda^n + \sum_{i=1}^n b_i \lambda^{n-i} =0 \right\}.
        \end{equation*}
        Therefore, if $b=(\sigma_1(\varphi),\dots,\sigma_n(\varphi))$ for some $L$-twisted endomorphism $\varphi: \ve{E} \rightarrow \ve{E}\otimes L$, then locally the spectral curve can be thought as the set
        \begin{equation*}
-	 \left\{ (x,\lambda) \in X\times \CC: \det(\lambda \id - \varphi)=0 \right\}
+	 \left\{ (x,\lambda) \in U\times \CC: \det(\lambda \id - \varphi)=0 \right\}
        \end{equation*}
        That is, fiberwise, over some point $x \in X$ the points of the spectral curve are precisely the ``eigenvalues'' $\lambda_1(x),\dots,\lambda_n(x) \in L_x$ of the twisted endomorphism $\varphi_x:E_x \rightarrow E_x \otimes L_x$; hence the name \textit{spectral curve}.
 
@@ -918,7 +930,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	    && X.
 	  \end{tikzcd}
 	\end{center}
-	Since $\pi:S_b\rightarrow X$ is a morphism of Riemann surfaces it defines a branched covering of $S_b$ over $X$. Note that at a point $x$ where this morphism is étale the fiber has exactly $n$ points, the $n$ eigenvalues of $\varphi_x$. Therefore the degree of the map $\pi$ is $\deg \pi = n$. Similarly, the \emph{branch locus} will be given precisely by those points $x\in X$ where some eigenvalues of $\varphi_x$ have algebraic multiplicity $>1$. By the same reason, the \emph{ramification divisor} $R$ on $S_b$ is defined as the zero divisor of $\Disc(s_b)\in H^0(p^*L^{n(n-1)})$, which is the discriminant of $s_b$, or equivalently, the resultant of $s_b$ and its derivative
+	Since $\pi:S_b\rightarrow X$ is a morphism of Riemann surfaces it defines a branched covering of $S_b$ over $X$. Note that at a point $x$ where this morphism is étale the fiber has exactly $n$ points, the $n$ eigenvalues of $\varphi_x$. Therefore the degree of the map $\pi$ is $\deg \pi = n$. Similarly, the \emph{branch locus} will be given precisely by those points $x\in X$ where some eigenvalues of $\varphi_x$ have algebraic multiplicity $>1$. By the same reason, the \emph{ramification divisor} $R$ on $S_b$ is defined as the zero divisor of $\Disc(s_b)\in H^0(X,p^*L^{n(n-1)})$, which is the discriminant of $s_b$, or equivalently, the resultant of $s_b$ and its derivative
 	\begin{equation*}
 	  \Disc(s_b)=\Res\left(s_b, \frac{\partial}{\partial \lambda} s_b\right).
 	\end{equation*}
@@ -928,23 +940,137 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	\end{equation*}
 	The Riemann-Hurwitz formula yields the genus of the spectral curve,
 	\begin{equation*}
-	  2g_S - 2 = n(2g_X-2) + \deg R = n(2g_X-2) + n(n-1)\deg L,
+	  2g_{S_b} - 2 = n(2g-2) + \deg R = n(2g-2) + n(n-1)\deg L,
 	\end{equation*}
 	\begin{equation*}
-	  g_S= 1+n(g_X-1)+ \frac{n(n-1)}{2}\deg L.
+	  g_{S_b}= 1+n(g-1)+ \frac{n(n-1)}{2}\deg L.
 	\end{equation*}
 
 	We are now in position to prove the spectral correspondence:
 	\begin{thm}[Beauville-Narasimhan-Ramanan, \cite{bnr}]
-	  Let $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ such that the spectral curve $S_b$ is smooth. We have a bijective correspondence, up to isomorphism, between holomorphic line bundles over $S_b$ of degree $\delta$ and pairs $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ of rank $n$ and degree $d$, and $\varphi$ is a $L$-twisted endomorphism with characteristic polynomial
+	  Let $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ such that the spectral curve $S_b$ is irreducible and smooth. We have a bijective correspondence, up to isomorphism, between holomorphic line bundles over $S_b$ of degree $\delta$ and pairs $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ of rank $n$ and degree $d$, and $\varphi$ is a $L$-twisted endomorphism with characteristic polynomial
 	  \begin{equation*}
-	    P_\varphi(T)=T^n + \sum_{i=1}^n b_i T^{n-i}.   
+	    P_\varphi(T)=P_b(T):=T^n + \sum_{i=1}^n b_i T^{n-i}.   
 	  \end{equation*}
 	  The degrees $d$ and $\delta$ are related by
 	  \begin{equation*}
-	    d=\delta - \deg L \frac{n(n-1)}{2}.
+	    d=\delta - \frac{n(n-1)}{2}\deg L .
 	  \end{equation*}
 	\end{thm}
+
+	\begin{proof}
+	  Let $M$ be a holomorphic line bundle over $S_b$ of degree $\delta$. We can consider the direct image bundle $\pi_*M$, which is a rank $\deg \pi=n$ vector bundle over and its degree is given by the formula
+	  \begin{equation*}
+	    \deg(\pi_*M)=\deg M + (1-g_{S_b}) - \deg \pi (1-g)=\delta -  \frac{n(n-1)}{2}\deg L.
+	  \end{equation*}
+	  Let now $U\subset X$ be any open subset. If we take tensor product by the tautological section restricted to $\pi^{-1}(U)$, $\lambda|_{\pi^{-1}(U)} \in H^0(\pi^{-1}(U),\pi^*L)$ we can construct a homomorphism
+	  \begin{equation*}
+	    \otimes \lambda|_{\pi^{-1}(U)}: H^0(\pi^{-1}(U),M) \rightarrow H^0(\pi^{-1}(U),M \otimes \pi^*L).
+	  \end{equation*}
+	  But, by definition of the direct image sheaf,
+	  \begin{equation*}
+	    H^0(\pi^{-1}(U),M)=H^0(U,\pi_*M),
+	  \end{equation*}
+	  \begin{equation*}
+	    H^0(\pi^{-1}(U),M\otimes \pi^{*}L)=H^0(U,\pi_*(M\otimes \pi^*L))=H^0(U,\pi_*M \otimes L).
+	  \end{equation*}
+	  Therefore, we have a homomorphism of locally free sheaves
+	  \begin{equation*}
+	     \otimes \lambda|_{\pi^{-1}(U)}: \OO(\pi_*M) \rightarrow \OO(\pi_*M \otimes L),
+	  \end{equation*}
+	  that induces a $L$-twisted endomorphism
+	  \begin{equation*}
+	    \varphi:\pi_*M \rightarrow \pi_*M\otimes L.
+	  \end{equation*}
+	  Moreover, by construction $P_b(\varphi)=0$, and since $P_b$ is irreducible, the Cayley-Hamilton theorem guarantees that $P_b$ is the characteristic polynomial of $\varphi$.
+
+	  On the other hand, take a pair $(\ve{E},\varphi)$, with $\ve{E}$ a rank $n$ holomorphic vector bundle and $\varphi$ a $L$-twisted endomorphism such that $b=(\sigma_1(\varphi),\dots,\sigma_n(\varphi))$. Consider the pullback bundle $\pi^*\ve{E}$,
+	  \begin{center}
+	    \begin{tikzcd}
+	      \pi^*\ve{E}	      \arrow{rr}\arrow{dd} && \ve{E}\arrow{dd} \\ 
+	       && \\
+	       S_b\arrow{rr}[anchor=south]{\pi} && X.
+	     \end{tikzcd}
+	   \end{center}
+	   The pullback section $\pi^*\varphi\in H^0(S_b,\End (\pi^*\ve{E})\otimes \pi^*L)$ must satisfy
+	   \begin{equation*}
+	     P_{\pi^*\varphi}(\lambda|_{S_b})=(\lambda|_{S_b})^n+ \sum_{i=1}^n \pi^*b_i (\lambda|_{S_b})^{n-i} = s_b=0,
+	   \end{equation*}
+	   since $S_b=(s_b)_0$. Therefore, locally we can see $\lambda$ as an eigenvalue of $\varphi$ and one could construct the line bundle $M$, at least away from the ramification divisor, as the bundle defined at each point $x$ by the eigenspace of $\varphi_x$ associated to $\lambda_x$. Globally what we do is to consider $\lambda|_{S_b}\id - \pi^*\varphi$ as a morphism of locally free sheaves and the sheaf $\ker(\lambda|_{S_b}\id - \pi^*\varphi) \subset \pi^*E$, which is a rank one locally free sheaf, so it defines a line bundle $M$ over $S_b$ such that $\pi_*(M)=\ve{E}$. Another direct way to do it is to define $M$ by the exact sequence
+	   \begin{center}
+	     \begin{tikzcd}
+	       0 \arrow{r} & M(-R) \arrow{r} & \pi^*E \arrow{rr}{\lambda|_{S_b}\id -\pi^*\varphi} && \pi^*(E\otimes L) \arrow{r} & M\otimes \pi^*L  \arrow{r} & 0.
+	     \end{tikzcd}
+	   \end{center}
+	   
+	   The naturality of the constructions implies that the correspondence is given up to isomorphism. It is also clear from the constructions that they are inverse to each other.
+	\end{proof}
+
+	\section{Hitchin's equations}
+	Let us now apply the results of the previous section to the case of the Hitchin system
+	\begin{align*}
+	  H:T^*\Bun(n,d)& \longrightarrow \BB = \bigoplus_{i=1}^n H^0(X,K_X^i) \\
+	  (\ve{E},\varphi) &\longmapsto (\sigma_1(\varphi),\dots,\sigma_n(\varphi)). 
+	  \end{align*}
+	  The fiber of some point $b=(b_1,\dots,b_n)\in \BB$ by this map is formed precisely by (isomorphism classes of) that pairs $(\ve{E},\varphi)$ such that $\ve{E}$ is a holomorphic \textit{stable} vector bundle of rank $n$ and degree $d$ and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ is a $K_X$-twisted endomorphism with $P_\varphi(T)=P_b(T)$. Moreover, $K_X^n$ is base point free, so for generic $b\in \BB$ the spectral curve $S_b$ will be irreducible and smooth. Stability is an open condition, so in this case the Beauville-Narasimhan-Ramanan theorem says that the fiber of a generic $b$ is an open subset of the set of isomorphism classes of holomorphic line bundles over $S_b$ of degree 
+	  $$\delta=d+\frac{n(n-1)}{2}\deg K_X=d+n(n-1)(g-1).$$
+	  But this set of isomorphism classes is precisely the component $\Pic^\delta (S_b)$ of the Picard group, which is isomorphic to the Jacobian $J(S_b)$; so it is indeed a complex torus! Moreover, the dimension of this complex torus is the genus of the spectral curve, and if we compute it the miracle occurs:
+	  \begin{equation*}
+	    g_{S_b}=1+n(g-1)+\frac{n(n-1)}{2}\deg K_X=1+n^2(g-1).
+	  \end{equation*}
+	  Summing up, we have proven that for some point $b\in \BB$, the fiber of the Hitchin map $H^{-1}(b)$ is an open set of $\Pic^{\delta}(S_b)$, a complex torus of dimension $n^2(g-1)+1$. This completes the proof of Hitchin's theorem \ref{hitchinsystem}.
+
+	  A natural question to ask now is what happens to the remaining elements of the Jacobian: if they do not yield elements of $T^*\Bun(n,d)$, what do they correspond to? This suggest the existence of a wider symplectic manifold, of which $T^*\Bun(n,d)$ is a subset. 
+
+	  Recall that we constructed the space $T^*\Bun(n,d)$ by fixing a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and considering the action of $\GG^c$ on the space $\AA^c=\AA_{\delbar}^s \times \Omega^{1,0}(X,\End E)$. To get this wider space we will now consider the action of the real group $\GG$ on the space $\AA_h \times \Omega^{1,0}(X,\End E)$. Of course, to do this we first have to fix an hermitian metric $h$ on $E$. We then get a symplectic structure on $\AA_h \times \Omega^{1,0}(X,\End E)$ given by
+	  \begin{equation*}
+	    \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1\wedge A_2) -\mathrm{Im}\ \tr(\varphi_1 \wedge \varphi_2^*),
+	  \end{equation*}
+	  where $A_i \in \Omega^{1}(X,\mathfrak{u}_h(E))$ and $\varphi_i \in \Omega^{1,0}(X,\End E)$.
+
+	  \begin{rem}
+	    Let us see explicitly what we mean by $\varphi \wedge \varphi^*$. $\varphi$ is an element of $\Omega^{1,0}(X,\End E)=\Gamma(\Lambda^{1,0}(X)\otimes\End E)$, thus, locally it can be seen as $\varphi=\phi \otimes \alpha$, with $\phi: X \rightarrow \End E$ and $\alpha:X\rightarrow \Lambda^{1,0}(X)$. By $\varphi*$ then we mean an element of $\Omega^{0,1}(X,\End E)$ which locally looks like $\varphi^*=\phi^{\dagger} \otimes \bar{\alpha}$ with $\phi^{\dagger}$ the transpose conjugate (globally the adjoint, given by $h$) of $\phi$ and $\bar{\alpha}:X\rightarrow \Lambda^{0,1}(X)$ the conjugate of $\alpha$. Therefore by $\varphi \wedge \varphi^*$ we mean an element of $\Omega^{1,1}(X,\End E)$, which locally looks like
+	    \begin{equation*}
+	      \varphi \wedge \varphi^*=(\phi\phi^{\dagger})\alpha \wedge \bar{\alpha}.
+	    \end{equation*}
+	    We can also consider the element
+	    \begin{equation*}
+	      [\varphi, \varphi^*] := \varphi \wedge \varphi^* + \varphi^* \wedge \varphi = (\phi\phi^{\dagger}) \alpha \wedge \bar{\alpha} + (\phi^{\dagger} \phi) \bar{\alpha} \wedge \alpha=[\phi,\phi^{\dagger}] \alpha \wedge \bar{\alpha}.
+	    \end{equation*}
+	  \end{rem}
+	  
+	  Remember that the elements $g$ of the group act by conjugation $(\nabla,\varphi)\mapsto (g\nabla g^{-1},g\varphi g^{-1})$. 
+	  \begin{prop}
+	    The action of $\GG$ on $\AA_h\times \Omega^{1,0}(X,\End E)$ admits a momentum map,
+	  \begin{equation*}
+	    \mu(\nabla,\varphi)=-F+[\varphi,\varphi^*]-2\pi i \mu(E) \id_E \omega_X.
+	  \end{equation*}
+	  \end{prop}
+	  \begin{proof}
+	    The part of the momentum map corresponding to $-F-2\pi i \mu(E) \id_E \omega_X$ comes form the action on $\AA_h$ and the proof is identical to the case of the previous chapter. 
+	    
+	    On the other hand, taking into account the previous remark we can we can focus in computing the momentum map for a much simpler case:
+	    \begin{lema}
+	    Consider the space $\End\ \CC^n$ equipped with the symplectic form
+	    \begin{equation*}
+	      \omega(A,B)=-\mathrm{Im}\ \tr(AB^{\dagger}),
+	    \end{equation*}
+	    and consider the action of $\UU(n)$ on it by conjugation. This action admits a momentum map
+	    \begin{equation*}
+	      \mu(A)=\tfrac{1}{2} i [A,A^{\dagger}].
+	    \end{equation*}
+	    \end{lema}
+	    \begin{proof}
+	      To see how $\vec{H}$ looks like for an element $H\in \mathfrak{u}(n)$, just compute
+	      \begin{equation*}
+		\vec{H}(A)=\left.\frac{d}{dt} \right|_{t=0} (e^{-Ht}Ae^{Ht})=-HA+AH=[A,H].
+	      \end{equation*}
+	      Let us compute also $d_{A}\mu(K)$ for some $K \in \uu(n)$
+	      \begin{equation*}
+		d_A \mu(K) =\left.\frac{d}{dt} \right|_{t=0} \mu(A+tK)=\left.\frac{d}{dt} \right|_{t=0}  \tfrac{1}{2} i [A+tK,A^{\dagger}+tK^\dagger]
+	      \end{equation*}<++>
+	    \end{proof}<++>
+	  \end{proof}
 
 
       
