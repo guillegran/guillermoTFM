@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  27 JUL 2019 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  27 JUL 2019 19:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1545,31 +1545,39 @@ e-ments $\OML/ntxmi/m/it/12 b \OMS/ntxsy/m/n/12 2 [][] \OML/ntxmi/m/it/12 H[]\U
 2 ,
  []
 
-[26] [27] [28] [29] (./guillermoTFM.bbl (./guillermoTFM.brf)
+[26] [27] [28] [29] [30]
+Overfull \hbox (20.48625pt too wide) in paragraph at lines 1114--1117
+\T1/ntxtlf/m/n/12 Avoiding pos-si-ble sin-gu-lar-i-ties, this va-ri-ety in-her-
+its the sym-plec-tic struc-ture from $\U/BOONDOX-scr/m/n/12 A[] \OMS/ntxsy/m/n/
+12 ^^B \U/ntxmia/m/it/12 
+[]}\OML/ntxmi/m/it/12 X; []E\U/ntxmia/m/it/12 ~$
+ []
+
+[31] [32] (./guillermoTFM.bbl (./guillermoTFM.brf)
 \tf@brf=\write6
 \openout6 = `guillermoTFM.brf'.
 
- [30] [31
+ [33] [34
 
-])
-[32]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1083.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1083.
- (./guillermoTFM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1083.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1083.
+] [35]) [36]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1223.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1223.
+
+(./guillermoTFM.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1223.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1223.
 
 Package rerunfilecheck Info: File `guillermoTFM.out' has not changed.
-(rerunfilecheck)             Checksum: AE3CB1716C4E17B36DCE81CC5DDB1F33;1271.
+(rerunfilecheck)             Checksum: 23F329FB5A99E29977C9AB0FA09D4724;1331.
 Package rerunfilecheck Info: File `guillermoTFM.brf' has not changed.
-(rerunfilecheck)             Checksum: DE5D4E3F1550BEA14C6CAF21F736630A;761.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1083.
+(rerunfilecheck)             Checksum: AD3BB69B9926D7DBD34BAE9FD1FB6F02;812.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1223.
  ) 
 Here is how much of TeX's memory you used:
- 22439 strings out of 494850
- 418373 string characters out of 6178023
- 465021 words of memory out of 5000000
- 25140 multiletter control sequences out of 15000+600000
+ 22453 strings out of 494850
+ 418523 string characters out of 6178023
+ 465120 words of memory out of 5000000
+ 25143 multiletter control sequences out of 15000+600000
  104806 words of font info for 150 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  56i,14n,84p,972b,1102s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1595,10 +1603,10 @@ exlive/texmf-dist/fonts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/urw/times/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boo
 ndox/zxxrw8a.pfb>
-Output written on guillermoTFM.pdf (32 pages, 336710 bytes).
+Output written on guillermoTFM.pdf (36 pages, 348212 bytes).
 PDF statistics:
- 449 PDF objects out of 1000 (max. 8388607)
- 391 compressed objects within 4 object streams
- 113 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 484 PDF objects out of 1000 (max. 8388607)
+ 421 compressed objects within 5 object streams
+ 124 named destinations out of 1000 (max. 500000)
+ 149 words of extra memory for PDF output out of 10000 (max. 10000000)
 

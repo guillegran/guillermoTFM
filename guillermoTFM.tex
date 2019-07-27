@@ -291,7 +291,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	     \begin{equation*}
 	       \mu(E)=\deg E/ \rk E.
 	     \end{equation*}
-	     We say that a holomorphic vector bundle $\ve{E}=(E,\delbar_{\ve{E}})$ is \emph{stable} if for every holomorphic subbundle $\ve{E}'\subset \ve{E}$ (that is, for every subbundle $E'\subset E$ such that $\delbar$ preserves $E'$), $$\mu(E')<\mu(E).$$ 
+	     We say that a holomorphic vector bundle $\ve{E}=(E,\delbar_{\ve{E}})$ is \emph{stable} if for every proper holomorphic subbundle $\ve{E}'\subset \ve{E}$ (that is, for every subbundle $E'\subset E$ such that $\delbar$ preserves $E'$), $$\mu(E')<\mu(E).$$ 
 	     Let $n=\rk E$ and $d=\deg E$. We consider $\AA_{\delbar}^s\subset \AA_{\delbar}$ the subset of stable holomorphic bundles $\ve{E}=(E,\delbar_{\ve{E}})$ and define the \emph{moduli space of stable holomorphic vector bundles} of rank $n$ and degree $d$ as the quotient
 	     \begin{equation*}
 	       \Bun(n,d)=\AA_{\delbar}^s/\GG^c.
@@ -403,7 +403,7 @@ Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connection
 
 Now, Donaldson's version of the theorem of Narasimhan-Seshadri relates this moduli space with the moduli space of stable holomorphic vector bundles.
 
-\begin{thm}[Narasimhan-Seshadri]
+\begin{thm}[Narasimhan-Seshadri]\label{narasimhanseshadri}
   Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$. An irreducible unitary connection $\nabla$ has constant central curvature if and only if the associated holomorphic vector bundle $(E,\nabla^{0,1})$ is stable.
 \end{thm}
 This can be reformulated in terms of moduli spaces:
@@ -996,10 +996,10 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	   \begin{equation*}
 	     P_{\pi^*\varphi}(\lambda|_{S_b})=(\lambda|_{S_b})^n+ \sum_{i=1}^n \pi^*b_i (\lambda|_{S_b})^{n-i} = s_b=0,
 	   \end{equation*}
-	   since $S_b=(s_b)_0$. Therefore, locally we can see $\lambda$ as an eigenvalue of $\varphi$ and one could construct the line bundle $M$, at least away from the ramification divisor, as the bundle defined at each point $x$ by the eigenspace of $\varphi_x$ associated to $\lambda_x$. Globally what we do is to consider $\lambda|_{S_b}\id - \pi^*\varphi$ as a morphism of locally free sheaves and the sheaf $\ker(\lambda|_{S_b}\id - \pi^*\varphi) \subset \pi^*E$, which is a rank one locally free sheaf, so it defines a line bundle $M$ over $S_b$ such that $\pi_*(M)=\ve{E}$. Another direct way to do it is to define $M$ by the exact sequence
+	   since $S_b=(s_b)_0$. Therefore, locally we can see $\lambda$ as an eigenvalue of $\varphi$ and one could construct the line bundle $M$, at least away from the ramification divisor, as the bundle defined at each point $x$ by the eigenspace of $\varphi_x$ associated to $\lambda_x$. Globally what we do is to consider $\lambda|_{S_b}\id - \pi^*\varphi$ as a morphism of locally free sheaves and the sheaf $\ker(\lambda|_{S_b}\id - \pi^*\varphi) \subset \pi^*\ve{E}$, which is a rank one locally free sheaf, so it defines a line bundle $M$ over $S_b$ such that $\pi_*(M)=\ve{E}$. Another direct way to do it is to define $M$ by the exact sequence
 	   \begin{center}
 	     \begin{tikzcd}
-	       0 \arrow{r} & M(-R) \arrow{r} & \pi^*E \arrow{rr}{\lambda|_{S_b}\id -\pi^*\varphi} && \pi^*(E\otimes L) \arrow{r} & M\otimes \pi^*L  \arrow{r} & 0.
+	       0 \arrow{r} & M(-R) \arrow{r} & \pi^*\ve{E} \arrow{rr}{\lambda|_{S_b}\id -\pi^*\varphi} && \pi^*(\ve{E}\otimes L) \arrow{r} & M\otimes \pi^*L  \arrow{r} & 0.
 	     \end{tikzcd}
 	   \end{center}
 	   
@@ -1024,18 +1024,18 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 
 	  Recall that we constructed the space $T^*\Bun(n,d)$ by fixing a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and considering the action of $\GG^c$ on the space $\AA^c=\AA_{\delbar}^s \times \Omega^{1,0}(X,\End E)$. To get this wider space we will now consider the action of the real group $\GG$ on the space $\AA_h \times \Omega^{1,0}(X,\End E)$. Of course, to do this we first have to fix an hermitian metric $h$ on $E$. We then get a symplectic structure on $\AA_h \times \Omega^{1,0}(X,\End E)$ given by
 	  \begin{equation*}
-	    \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1\wedge A_2) -\mathrm{Im}\ \tr(\varphi_1 \wedge \varphi_2^*),
+	    \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1\wedge A_2) -2i\ \mathrm{Im}\ \tr(\varphi_1 \wedge \varphi_2^\dagger),
 	  \end{equation*}
 	  where $A_i \in \Omega^{1}(X,\mathfrak{u}_h(E))$ and $\varphi_i \in \Omega^{1,0}(X,\End E)$.
 
 	  \begin{rem}
-	    Let us see explicitly what we mean by $\varphi \wedge \varphi^*$. $\varphi$ is an element of $\Omega^{1,0}(X,\End E)=\Gamma(\Lambda^{1,0}(X)\otimes\End E)$, thus, locally it can be seen as $\varphi=\phi \otimes \alpha$, with $\phi: X \rightarrow \End E$ and $\alpha:X\rightarrow \Lambda^{1,0}(X)$. By $\varphi*$ then we mean an element of $\Omega^{0,1}(X,\End E)$ which locally looks like $\varphi^*=\phi^{\dagger} \otimes \bar{\alpha}$ with $\phi^{\dagger}$ the transpose conjugate (globally the adjoint, given by $h$) of $\phi$ and $\bar{\alpha}:X\rightarrow \Lambda^{0,1}(X)$ the conjugate of $\alpha$. Therefore by $\varphi \wedge \varphi^*$ we mean an element of $\Omega^{1,1}(X,\End E)$, which locally looks like
+	    Let us see explicitly what we mean by $\varphi_1 \wedge \varphi_2^\dagger$. $\varphi$ is an element of $\Omega^{1,0}(X,\End E)=\Gamma(\Lambda^{1,0}(X)\otimes\End E)$, thus, locally it can be seen as $\varphi=\phi \otimes \alpha$, with $\phi: X \rightarrow \End E$ and $\alpha:X\rightarrow \Lambda^{1,0}(X)$. By $\varphi^\dagger$ then we mean an element of $\Omega^{0,1}(X,\End E)$ which locally looks like $\varphi^\dagger=\phi^{\dagger} \otimes \bar{\alpha}$ with $\phi^{\dagger}$ the transpose conjugate (globally the adjoint, given by $h$) of $\phi$ and $\bar{\alpha}:X\rightarrow \Lambda^{0,1}(X)$ the conjugate of $\alpha$. Therefore by $\varphi_1 \wedge \varphi_2^\dagger$ we mean an element of $\Omega^{1,1}(X,\End E)$, which locally looks like
 	    \begin{equation*}
-	      \varphi \wedge \varphi^*=(\phi\phi^{\dagger})\alpha \wedge \bar{\alpha}.
+	      \varphi_1 \wedge \varphi_2^\dagger=(\phi_1\phi_2^{\dagger})\otimes \alpha_1 \wedge \bar{\alpha}_2.
 	    \end{equation*}
-	    We can also consider the element
+	    We can also consider elements of the form
 	    \begin{equation*}
-	      [\varphi, \varphi^*] := \varphi \wedge \varphi^* + \varphi^* \wedge \varphi = (\phi\phi^{\dagger}) \alpha \wedge \bar{\alpha} + (\phi^{\dagger} \phi) \bar{\alpha} \wedge \alpha=[\phi,\phi^{\dagger}] \alpha \wedge \bar{\alpha}.
+	      [\varphi_1, \varphi_2] := \varphi_1 \wedge \varphi_2 + \varphi_2 \wedge \varphi_1 = (\phi_1\phi_2)\otimes \alpha_1 \wedge \alpha_2 + (\phi_2 \phi_1) \otimes \alpha_2 \wedge \alpha_1=[\phi_1,\phi_2] \otimes \alpha_1 \wedge \alpha_2.
 	    \end{equation*}
 	  \end{rem}
 	  
@@ -1043,7 +1043,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  \begin{prop}
 	    The action of $\GG$ on $\AA_h\times \Omega^{1,0}(X,\End E)$ admits a momentum map,
 	  \begin{equation*}
-	    \mu(\nabla,\varphi)=-F+[\varphi,\varphi^*]-2\pi i \mu(E) \id_E \omega_X.
+	    \mu(\nabla,\varphi)=-F-[\varphi,\varphi^\dagger]-2\pi i \mu(E) \id_E \omega_X.
 	  \end{equation*}
 	  \end{prop}
 	  \begin{proof}
@@ -1057,20 +1057,160 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	    \end{equation*}
 	    and consider the action of $\UU(n)$ on it by conjugation. This action admits a momentum map
 	    \begin{equation*}
-	      \mu(A)=\tfrac{1}{2} i [A,A^{\dagger}].
+	      \mu(A)= \tfrac{i}{2} [A,A^{\dagger}].
 	    \end{equation*}
 	    \end{lema}
 	    \begin{proof}
+	      First of all, notice that we can identify $\uu(n)$ with its dual via the pairing
+	      \begin{equation*}
+		\esc{H,K}=\tr(HK^\dagger).
+	      \end{equation*}
+	      The Lie algebra $\uu(n)$ is formed by skew-hermitian matrices, so
+	      \begin{equation*}
+		\overline{\esc{H,K}}=\tr(KH^\dagger)=\tr\left( (-K^\dagger)(-H) \right)=\tr (K^\dagger H) =\tr (HK^\dagger ) = \esc{H,K}.
+	      \end{equation*}
+	      That is, $\esc{H,K}$ is indeed a real number. Also notice that 
+	      \begin{equation*}
+		\mu(A)^{\dagger}=-\tfrac{i}{2}[A,A^{\dagger}]=-\mu(A),
+	      \end{equation*}
+	      so $\mu(A) \in \uu(n)$; the momentum map is well defined.
+	      
 	      To see how $\vec{H}$ looks like for an element $H\in \mathfrak{u}(n)$, just compute
 	      \begin{equation*}
 		\vec{H}(A)=\left.\frac{d}{dt} \right|_{t=0} (e^{-Ht}Ae^{Ht})=-HA+AH=[A,H].
 	      \end{equation*}
 	      Let us compute also $d_{A}\mu(K)$ for some $K \in \uu(n)$
 	      \begin{equation*}
-		d_A \mu(K) =\left.\frac{d}{dt} \right|_{t=0} \mu(A+tK)=\left.\frac{d}{dt} \right|_{t=0}  \tfrac{1}{2} i [A+tK,A^{\dagger}+tK^\dagger]
-	      \end{equation*}<++>
-	    \end{proof}<++>
+		d_A \mu(K) =\left.\frac{d}{dt} \right|_{t=0} \mu(A+tK)=\tfrac{i}{2}\left.\frac{d}{dt} \right|_{t=0}    [A+tK,A^{\dagger}+tK^\dagger]=\tfrac{i}{2} \left([K,A^{\dagger}] + [A,K^{\dagger}]\right).
+	      \end{equation*}
+	      Now
+	      \begin{equation*}
+		\esc{d_A\mu(K),H}=\tfrac{i}{2}\tr([K,A^\dagger]H^\dagger+[A,K^{\dagger}]H^\dagger)=-\tfrac{i}{2} \tr([K,A^\dagger]H+[A,K^{\dagger}]H)
+	      \end{equation*}
+	      Using the cyclic property of the trace one gets
+	      \begin{equation*}
+		\esc{d_A\mu(K),H}=-\tfrac{i}{2}\tr(K[A^\dagger,H]-[H,A]K^\dagger)=-\mathrm{Im}\ \tr((K [A,H])).
+	      \end{equation*}
+	      On the other hand
+	      \begin{equation*}
+		\omega(K,\vec{H}(A))=-\mathrm{Im}\ \tr(K[A,H])=\esc{d_A\mu(K),H}.
+	      \end{equation*}
+	      This finishes the proof of the lemma.
+	    \end{proof}
+	    In the general case, the symplectic structure locally has the form
+	    \begin{equation*}
+	    \omega(\varphi_1,\varphi_2)=2i \int_X \mathrm{Im}\  \tr(\varphi_1\wedge \varphi_2)=2i \int_X \mathrm{Im}\ [\tr(\phi_1\phi_2^\dagger)] \otimes \alpha_1 \wedge \bar{\alpha_2}.
+	    \end{equation*}
+	    Therefore, the momentum map must have the form
+	    \begin{equation*}
+	      \mu(\varphi)=-[\varphi,\varphi^\dagger].
+	    \end{equation*}
+	    This finishes the proof of the proposition.
 	  \end{proof}
+
+	  Now that we have a momentum map, and assuming that the $\GG$-action verifies all the technical requirements, we can take the symplectic quotient $\mu^{-1}(0)/\GG$. Let us consider now the subvariety
+	  \begin{equation*}
+	    \left\{ (\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End E) : \nabla^{0,1}\varphi = 0\right\}.
+	  \end{equation*}
+	  Avoiding possible singularities, this variety inherits the symplectic structure from $\AA_h\times \Omega^{1,0}(X,\End E)$ and, since it is $\GG$-invariant, the restriction of the momentum map. This allows us to take another symplectic quotient.
+	  The space we obtain is the \emph{moduli space of solutions to the Hitchin equations} on $E$, that is, the set of equivalence classes of pairs $(\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ that satisfy \emph{Hitchin's equations}:
+	  \begin{equation*}
+	    \begin{cases}
+	      F+[\varphi,\varphi^\dagger]=-2\pi i \mu(E) \id_E \omega_X, \\
+	      \nabla^{0,1}\varphi=0.
+	    \end{cases}
+	  \end{equation*}
+	  
+	  In the next section we are going to see how this space corresponds to a broader notion of stability for pairs $(\ve{E},\varphi)$, with $\ve{E}$ a holomorphic vector bundle and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ a $K_X$-twisted endomorphism and we will find that this moduli space is precisely the wider symplectic manifold containing $T^*\Bun(n,d)$ and the pairs associated to the remaining points of the Jacobian in the spectral correspondence.
+
+	  \section{Higgs bundles}
+	  \begin{defn}
+	    A pair $(\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ is called \emph{irreducible} if there exist no subbundles $E'\subset E$ which are preserved by both $\nabla$ and $\varphi$. 
+	  \end{defn}
+	  \begin{thm}[Hitchin's correspondence] \label{Hitchin correspondence}
+	    Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$.
+	    An irreducible pair $(\nabla ,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ is a solution to the Hitchin equations if and only if for every proper subbundle $E'\subset E$ which is invariant by $\nabla^{0,1}$ and $\varphi$,
+	    \begin{equation*}
+	      \mu(E')<\mu(E).
+	    \end{equation*}
+	  \end{thm}
+	  The proof of this theorem uses the same techniques and is very similar to Donaldson's proof of the theorem of Narasimhan-Seshadri (Theorem \ref{narasimhanseshadri}). As in that case, we will only prove the ``easy'' direction of the equivalence.
+	  \begin{proof}
+	    Let $(\nabla,\varphi)$ be a solution of the Hitchin equations
+	  \begin{equation*}
+	    \begin{cases}
+	      F+[\varphi,\varphi^\dagger]=-2\pi i \mu(E) \id_E \omega_X, \\
+	      \nabla^{0,1}\varphi=0.
+	    \end{cases}
+	  \end{equation*}
+	  and define $\delbar_{\ve{E}}=\nabla^{0,1}$. Let $E'\subset E$ be a subbundle preserved by $\delbar_{\ve{E}}$ such that $\varphi(E')\subset E'\otimes K_X$. The Hermitian metric gives a smooth splitting $E=E'\oplus E''$, and we can write
+	  \begin{equation*}
+	    \varphi=
+	    \left(
+	    \begin{array}{cc}
+	      \varphi_{E'} & \theta \\
+	      0 & \varphi_{E''}
+	    \end{array}
+	    \right).
+	  \end{equation*}
+	  Using the equation
+	  \begin{equation*}
+  F=\left(
+  \begin{array}{cc}
+    F_{E'}-\beta\wedge \beta^\dagger & \nabla_{\Hom(E'',E')}\beta \\
+    -\nabla_{\Hom (E',E'')}\beta^\dagger & F_{E''}-\beta^\dagger \wedge \beta
+  \end{array}\right)=-2\pi i\frac{d}{n} \id_E \omega_X,
+	  \end{equation*}
+	  from the proof of Narasimhan-Seshadri (Theorem \ref{narasimhanseshadri}) we have
+	  \begin{equation*}
+	    F_{E'}-\beta\wedge \beta^{\dagger} + [\varphi_{E'},\varphi_{E'}^\dagger]-\theta \wedge \theta^{\dagger}=-2\pi i \frac{d}{n}\id_{E'} \omega_X.
+	  \end{equation*}
+	  Now, since $\tr[\varphi,\varphi^\dagger]=0$, taking the trace and integrating we get
+	  \begin{equation*}
+	    \frac{i}{2\pi}\int_X \tr F_{E'} + \norm{\beta}^2 + \norm{\theta}^2  = \mu(E) \rk E',
+	  \end{equation*}
+	  and hence
+	  \begin{equation*}
+	   \mu(E')= \deg E'/\rk E'= \mu(E)-\norm{\beta}^2 - \norm{\theta}^2.
+	  \end{equation*}
+	  Since the pair $(\nabla,\varphi)$ is irreducible, $\norm{\beta}$ and $\norm{\theta}$ are nonzero, so $\mu(E')<\mu(E)$.
+	  \end{proof}
+
+	  \begin{defn}
+	    Let $X$ be a compact Riemann surface. A \emph{Higgs bundle} (or \emph{Hitchin pair}) over $X$ is a pair $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ is a $K_X$-twisted endomorphism.
+	    A Higgs bundle $(\ve{E},\varphi)$ is said to be \emph{stable} if for every proper holomorphic subbundle $\ve{E}' \subset \ve{E}$ such that $\varphi(\ve{E}')\subset \ve{E}'\otimes K_X$
+	    \begin{equation*}
+	      \mu(\ve{E}')<\mu(\ve{E}).
+	    \end{equation*}
+	    The \emph{moduli space of stable Higgs bundles of rank $n$ and degree $d$}, $\Hig(n,d)$, is defined as the set of isomorphism classes of stable Higgs bundles $(\ve{E},\varphi)$ with $\rk\ \ve{E}=n$ and $\deg \ve{E}=d$.
+	  \end{defn}
+
+	  In \cite{hitchinselfduality}, Hitchin gave an analytic construction of a particular case of rank $2$ of this moduli space and a general GIT construction was given by Nitsure in [REF:Nitsure].
+	  \begin{thm}
+	    The moduli space $\Hig(n,d)$ is a complex manifold of dimension $2+2n^2(g-1)$, where $g$ is the genus of $X$.
+	  \end{thm}
+
+	  Hitchin's correspondence \ref{Hitchin correspondence} can be now reinterpreted as follows
+	  \begin{corol}
+	    Let $(E,h)$ be a smooth Hermitian vector bundle of rank $n$ and degree $d$. The moduli space of solutions to the Hitchin equations on $E$ is homeomorphic to the moduli space of stable Higgs bundles $\Hig(n,d)$.
+	  \end{corol}
+
+	  We can now extend the Hitchin map to the bigger space $\Hig(n,d)\supset T^*\Bun(n,d)$,
+	  \begin{align*}
+	    H :\Hig(n,d)&\longrightarrow \BB=\bigoplus_{i=1}^n H^0(X,K^i_X)\\ 
+	    (\ve{E},\varphi) &\longmapsto (\sigma_1(\varphi),\dots,\sigma_n(\varphi)). 
+	    \end{align*}
+	    Take now a point $b\in \BB$ such that the spectral curve $S_b$ is irreducible and smooth. For every holomorphic line bundle $M$ over $S_b$ the spectral correspondence gives us a Higgs bundle $(\ve{E}=\pi_*M, \varphi)$. 
+	    \begin{prop}
+	      The pair $(\ve{E},\varphi)$ induced by a line bundle $M$ on an irreducible spectral curve $S_b$ is stable.
+	    \end{prop}
+	    \begin{proof}
+	      Suppose that $\ve{E}'\subset \ve{E}$ is a proper holomorphic subbundle invariant by $\varphi$. Then we can take the characteristic polynomial of $\varphi|_{\ve{E}'}$ and it must divide the characteristic polynomial of $\varphi$, thus contradicting that the spectral curve is irreducible.
+	    \end{proof}
+
+	    As a conclusion, we get that generic fibers of the Hitchin map $H:\Hig(n,d) \rightarrow \BB$ are whole Jacobians of the spectral curves.
+
+	  
 
 
       
