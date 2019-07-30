@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm, mathtools}
 \usepackage{tikz,tikz-cd}
+\usepackage{adjustbox}
 \usetikzlibrary{arrows, babel}
 \usepackage{url}
 \urlstyle{rm}
@@ -39,6 +40,7 @@
 \def\OO{\mathscr{O}}
 \def\AA{\mathscr{A}}
 \def\BB{\mathscr{B}}
+\def\HH{\mathscr{H}}
 \def\GG{\mathscr{G}}
 \def\CC{\mathbf{C}}
 \def\gg{\mathfrak{g}}
@@ -49,7 +51,6 @@
 \def\SF{\mathbf{S}}
 \def\TT{\mathbf{T}}
 \def\NN{\mathbf{N}}
-\def\HH{\mathbf{H}}
 \def\PP{\mathbf{P}}
 \def\tr{\mathrm{tr}}
 \def\rk{\mathrm{rk}}
@@ -338,10 +339,10 @@ This last property will be crucial in the classification of line bundles. Let us
 	     \end{equation*}
 	   \end{prop}
 	   \begin{proof}
-	     What we will see is that every endomorphism is a scalar multiple of the identity $\id_{\ve{E}}$. Pick any endomorphism $f:\ve{E}\rightarrow \ve{E}$ and let $\lambda \in \CC$ be an eigenvalue of $f_x:\ve{E}_x \rightarrow \ve{E}_x$. Let us define the endomorphism $g=f-\lambda \id_E$. Since $\lambda$ is an eigenvalue of $f_x$, we have $\det(g)_x=0$. 
-	     Assuming that $g$ is nonzero, we will prove that $g$ is injective and hence $\det(g)_x\neq 0$ arriving at a contradiction.
+	     What we will see is that every endomorphism is a scalar multiple of the identity $\id_{\ve{E}}$. Pick any endomorphism $f:\ve{E}\rightarrow \ve{E}$ and let $\lambda \in \CC$ be an eigenvalue of $f_x:\ve{E}_x \rightarrow \ve{E}_x$. Let us define the endomorphism $g=f-\lambda \id_{\ve{E}}$. Since $\lambda$ is an eigenvalue of $f_x$, we have $\det g_x=0$. 
+	     Assuming that $g$ is nonzero, we will prove that $g$ is injective and hence $\det g_x\neq 0$ arriving at a contradiction.
 	     To see this, suppose that $\im g \subset \ve{E}$ is a holomorphic strict subbundle of $\ve{E}$. Then, since $\ve{E}$ is stable, $\mu(\im g) < \mu(\ve{E})$. But we also have that $\mu(\ve{E})<\mu(\im g)$, so $\mu(\ve{E})<\mu(\ve{E})$ and we have a contradiction. Therefore $g$ is injective.	     
-	     We conclude then that $g=0$, so $f=\lambda\id_E$.
+	     We conclude then that $g=0$, so $f=\lambda\id_{\ve{E}}$.
 	   \end{proof}
 
 	   Finally, we get
@@ -1189,7 +1190,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  \end{defn}
 
 	  In \cite{hitchinselfduality}, Hitchin gave an analytic construction of a particular case of rank $2$ of this moduli space and a general GIT construction was given by Nitsure in [REF:Nitsure].
-	  \begin{thm}
+	  \begin{thm}\label{thm:higgs}
 	    The moduli space $\Hig(n,d)$ is a complex manifold of dimension $2+2n^2(g-1)$, where $g$ is the genus of $X$.
 	  \end{thm}
 
@@ -1213,6 +1214,106 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 
 	    As a conclusion, we get that generic fibers of the Hitchin map $H:\Hig(n,d) \rightarrow \BB$ are whole Jacobians of the spectral curve
 
+	    \section{Deformations of Higgs bundles}
+	    In this section we are going to compute the dimension of $\Hig(n,d)$, stated in Theorem \ref{thm:higgs}, using deformation theory. As in the case for vector bundles, the idea is to identify the tangent space of $\Hig(n,d)$ at some point $(\delbar_{\ve{E}},\varphi)$ and find its dimension.
+
+	    First of all, note that an analytic construction of $\Hig(n,d)$ can be given if we consider the variety
+	    \begin{equation*}
+	     \HH= \left\{(\delbar_{\ve{E}},\varphi) \in\AA^s_\partial \times \Omega^{1,0}(X,\End E) : \delbar_{\ve{E}}\varphi=0 \right\}
+	    \end{equation*}
+	    and its subset
+	    \begin{equation*}
+	      \HH^s=\left\{ (\delbar_{\ve{E}},\varphi) \in \HH : (\delbar_{\ve{E}},\varphi) \text{ is stable} \right\}      .
+	    \end{equation*}
+	    As usual, an element $g$ of the complex group $\GG^c=\Gamma(\Aut E)$ acts on $\HH$ by conjugation,
+	    \begin{equation*}
+	      (\delbar_{\ve{E}},\varphi) \mapsto (g\delbar_{\ve{E}}g^{-1},g\varphi g^{-1}).
+	    \end{equation*}
+	    We can then obtain the moduli space of Higgs bundles as the quotient $\Hig(n,d)=\HH^s/\GG^c$, where $n=\rk\ E$ and $d= \deg E$.
+
+	    The differential of action of the complex group on $\HH$ is mapping from the Lie algebra $\Lie \GG^c= \Gamma(\End\ E)$ to the tangent space of $\HH$,
+	    \begin{align*}
+	      f:\Gamma(\End\ E)&\longrightarrow T_{(E,\varphi)}\HH\\ 
+	      \xi &\longmapsto (\delbar_{\ve{E}} \xi, [\varphi,\xi]). 
+	      \end{align*}
+	      Since stability is an open condition, we can identify the tangent space to the moduli space with the quotient of the tangent space of $\HH$ by the image of this mapping, $$T_{(\delbar_{\ve{E}},\varphi)}\Hig(n,d)=T_{(\delbar_{\ve{E}},\varphi)}\HH/\im f.$$ On the other hand, to obtain how an element of the tangent space $T_{(\delbar_{\ve{E}},\varphi)}\HH$ looks like, consider a small perturbation $$(\delbar_{\ve{E}}(\epsilon), \varphi(\epsilon))=(\delbar_{\ve{E}}+\epsilon A, \varphi + \epsilon \psi),$$ for $(A,\psi) \in \Omega^{0,1}(X,\End \ E) \oplus \Omega^{1,0}(X, \End \ E)$ and impose that the condition $\delbar_{\ve{E}}(\epsilon)\varphi(\epsilon)=0$ is infinitesimally satisfied. That is,
+	    \begin{equation*}
+	      0=\left.\frac{d}{d\epsilon} \right|_{\epsilon=0} \delbar_{\ve{E}}(\epsilon)\varphi(\epsilon)=\left.\frac{d}{d\epsilon} \right|_{\epsilon=0}\left[ \delbar_{\ve{E}} \varphi + \epsilon\left( [A,\varphi]+\delbar_{\ve{E}}\psi \right)+ o(\epsilon^2) \right] = [A,\varphi]+\delbar_{\ve{E}}\psi.
+	    \end{equation*}
+	    Therefore, we can think of $T_{(\delbar_{\ve{E}},\varphi)}\HH$ as the kernel of the map
+	    \begin{align*}
+	      g :\Omega^{0,1}(X,\End \ E) \oplus \Omega^{1,0}(X, \End \ E)&\longrightarrow \Omega^{1,1}(X, \End\ E)\\ 
+	      (A,\psi) &\longmapsto [A,\varphi]+\delbar_{\ve{E}}\psi. 
+	      \end{align*}
+	      Note then that $f$ is well defined,
+	      \begin{equation*}
+		g\circ f(\xi)=[\delbar_{\ve{E}}\xi,\varphi]+\delbar_{\ve{E}}[\varphi,\xi]=[\delbar_{\ve{E}}\xi,\varphi]+[\delbar_{\ve{E}}\varphi,\xi]-[\delbar_{\ve{E}}\xi,\varphi]=0,
+	      \end{equation*}
+	      since $\delbar_{\ve{E}}\varphi=0$. In other words, what we are saying is that we have a chain complex
+	      \begin{center}
+		\begin{tikzcd}
+		  C^\bullet: \Gamma(\End\ E) \arrow{r}{f}&  \Omega^{0,1}(X,\End \ E) \oplus \Omega^{1,0}(X, \End \ E) \arrow{r}{g}& \Omega^{1,1}(X,\End\ E)
+		\end{tikzcd}
+	      \end{center}
+	      and the tangent space $T_{(\delbar_{\ve{E}},\varphi)}\Hig(n,d)$ is the first cohomology of this complex, $H^1(C^\bullet)$.
+
+	      Consider now the double complex
+	      \begin{center}
+		\begin{tikzcd}
+		   0 \arrow{r}\arrow{d} & \Gamma(\End\ E) \arrow{r}{=}\arrow{d}{f} &\Gamma(\End\ E) \arrow{d}{\delbar_{\ve{E}}} 		  \\ 
+		  \Omega^0(X,\End\ E \otimes K_X) \arrow{d}{\delbar_{\ve{E}}} \arrow[hook]{r}{\iota} & \Omega^{0,1}(X,\End\ E)  \oplus \Omega^{1,0}(X, \End\ E) \arrow{d}{g}\arrow{r}{\pr_1} & \Omega^{0,1}(X,\End\ E) \arrow{d}{\delbar_{\ve{E}}} \\
+		  \Omega^{0,1}(X,\End\ E \otimes K_X) \arrow{d}{\delbar_{\ve{E}}}\arrow{r} & \Omega^{1,1}(X, \End\ E) \arrow{r} & 0 \\
+		  0.
+		\end{tikzcd}
+	      \end{center}
+	      The rows of this complex are short exact sequences, so then we get a short exact sequence of complexes
+	      \begin{center}
+		\begin{tikzcd}
+		  0 \arrow{r} & \Omega^{0,\bullet}(X,\End\ E \otimes K_X)[1] \arrow{r} & C^\bullet \arrow{r}& \Omega^{0,\bullet}(X,\End\ E) \arrow{r} & 0,
+		\end{tikzcd}
+	      \end{center}
+	      where the $[1]$ after a complex denotes shifting one place and adding zero in the first place. This induces a long exact sequence in cohomology
+	      \begin{align*}
+		  0 \rightarrow  H^0(C^\bullet) \rightarrow  H^0(X,\End\ E) \rightarrow H^0(X,\End\ E \otimes K_X) \rightarrow &		  \\ 
+		  \rightarrow H^1(C^\bullet) \rightarrow H^1(X, \End\ E) \rightarrow H^1(X, \End\ E \otimes K_X) \rightarrow H^2(C^\bullet) \rightarrow 0.
+	      \end{align*}
+	      The Euler characteristic of any exact sequence vanishes, so
+
+	      \begin{equation*}
+		H^0(C^\bullet) - H^1(C^\bullet) + H^2(C^\bullet) - \chi(\End\ E) + \chi(\End\ E \otimes K_X)=0.
+	      \end{equation*}
+	      Now, note that $\chi(\End\ E)= -\chi(\End\ E \otimes K_X)$ and recall that we computed that $\chi(\End\ E)= n^2(1-g)$. 
+	      Therefore
+	      \begin{equation*}
+		\dim H^1(C^\bullet)= \dim H^0(C^\bullet) + \dim H^2(C^\bullet) + 2n^2(g-1).
+	      \end{equation*}
+
+	      Noting that, by Serre duality
+	      \begin{align*}
+		H^1(X,\End\ E)^*\cong H^0(X,(\End E)^* \otimes K_X) \cong H^0(X,\End E \otimes K_X) \\
+		H^1(X,\End\ E \otimes K_X)^* \cong H^0(X,(\End\ E \otimes K_X)^*\otimes K_X) \cong H^0(X, \End\ E),
+	      \end{align*}
+	      we can dualize in the above exact sequence and we get that $H^2(C^\bullet)^*\cong H^0(C^\bullet)$, so $$\dim H^2(C^\bullet)=\dim H^0(C^\bullet).$$ 
+	      To find this dimension we use the following result:
+	      \begin{prop}
+		If $(\ve{E},\varphi)$ is a stable Higgs bundle, then 
+		\begin{equation*}
+		  H^0(C^\bullet) = \CC.
+		\end{equation*}
+	      \end{prop}
+	      \begin{proof}
+	Note that 
+	\begin{equation*}
+	  H^0(C^\bullet)=\ker f = \left\{ \xi \in H^0(X,\End\ \ve{E}): [\varphi,\xi]=0 \right\}.
+	\end{equation*}
+	What we are going to prove is that every endomorphism $\xi$ that satisfies that condition is a multiple of the identity $\id_{\ve{E}}$. Indeed, let $\lambda \in \CC$ be an eigenvalue of $\xi_x:\ve{E}_x \rightarrow \ve{E}_x$ and define the endomorphism $\eta= \xi-\lambda \id_{\ve{E}}$. Since $\lambda$ is an eigenvalue of $\xi_x$, we have $\det \eta_x=0$. Assuming that $\eta$ is nonzero, we will prove that $\eta$ is injective and hence $\det \eta_x \neq 0$ arriving at a contradiction. To see this, suppose that $\im \eta \subset \ve{E}$ is a holomorphic strict subbundle of $\ve{E}$. Note too that $\im \eta$ is $\varphi$-invariant, since, if $w=\eta(v)$, then $$\varphi(w)=\varphi((\xi - \lambda \id_{\ve{E}})(v))= \varphi(\xi(v)) -  \varphi(\lambda v)=\xi(\varphi(v))-\lambda \varphi(v)=\eta(\varphi(v)),$$
+	since $[\varphi,\xi]=0$. Therefore, since $(\ve{E},\varphi)$ is stable, $\mu(\im \eta) < \mu(\ve{E})$. But we also have that $\mu(\ve{E})<\mu(\im \eta)$, so $\mu(\ve{E})<\mu(\ve{E})$ and we have a contradiction. Therefore $\eta$ is injective. We conclude then that $\eta=0$, so $\xi=\lambda \id_{\ve{E}}$.
+	      \end{proof}
+
+	      In conclusion, we get that $\dim H^2(C^\bullet)=\dim H^0(C^\bullet)=1$. We then arrive at the result we were looking for:
+	      \begin{equation*}
+		\dim \Hig(n,d)=\dim H^1(C^\bullet)=2+2n^2(g-1).
+	      \end{equation*}
 	  
 
 
