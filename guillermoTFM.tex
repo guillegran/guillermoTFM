@@ -34,7 +34,7 @@
 \newtheorem{corol}[thm]{Corollary}
 \theoremstyle{definition} \newtheorem{defn}[thm]{Definition}
 \theoremstyle{definition} \newtheorem{ejemplo}[thm]{Example}
-\theoremstyle{remark} \newtheorem*{rem}{Remark}
+\theoremstyle{remark} \newtheorem{rem}[thm]{Remark}
 
 \def\pr{\mathrm{pr}}
 \def\OO{\mathscr{O}}
@@ -449,23 +449,24 @@ where $\nabla_{E'}$ and $\nabla_{E''}$ are the connections associated to $\delba
 \begin{equation*}
   F=\left(
   \begin{array}{cc}
-    F_{E'}-\beta\wedge \beta^\dagger & \nabla_{\Hom(E'',E')}\beta \\
-    -\nabla_{\Hom (E',E'')}\beta^\dagger & F_{E''}-\beta^\dagger \wedge \beta
-  \end{array}\right)=-2\pi i\frac{d}{n} \id_E \omega_X.
+    F_{E'}-\beta \beta^\dagger & \nabla_{\Hom(E'',E')}\beta \\
+    -\nabla_{\Hom (E',E'')}\beta^\dagger & F_{E''}-\beta^\dagger  \beta
+  \end{array}\right)=-2\pi i\frac{d}{n} \id_E \omega_X,
 \end{equation*}
+where we understand $\beta \beta^\dagger$ as $BB^\dagger \otimes \alpha \wedge \bar{\alpha}$, where $B \in \Hom(E'',E)$ and $\alpha \in \Omega^{0,1}(X)$ (take a look at Remark \ref{obsproducto}).
 The first corner of this equality now says that
 \begin{equation*}
-  F_{E'}-\beta \wedge \beta^\dagger = -2\pi i \frac{d}{n} \id_{E'} \omega_X.
+  F_{E'}-\beta\beta^\dagger = -2\pi i \frac{d}{n} \id_{E'} \omega_X.
 \end{equation*}
 Taking the trace and integrating we get
 \begin{equation*}
-  \frac{i}{2\pi}\int_X \tr F_{E'} - \frac{i}{2\pi} \int_X \tr(\beta \wedge \beta^\dagger) = d\frac{\rk E'}{n}.
+  \frac{i}{2\pi}\int_X \tr F_{E'} - \frac{i}{2\pi} \int_X \tr(\beta \beta^\dagger) = d\frac{\rk E'}{n}.
 \end{equation*}
 Therefore
 \begin{equation*}
-  \frac{\deg E'}{ \rk E'} = \frac{d}{n} + \frac{i}{2\pi} \int_X \tr(\beta \wedge \beta^\dagger).
+  \frac{\deg E'}{ \rk E'} = \frac{d}{n} + \frac{i}{2\pi} \int_X \tr(\beta \beta^\dagger).
 \end{equation*}
-Now, $\tr(\beta\wedge \beta^\dagger)$ is precisely the Hodge pairing $\tr(\beta \wedge \star \bar{\beta}) = - \norm{\beta}^2 \omega_X$. Thus we have proven that 
+Now, $\tr(\beta\beta^\dagger)$ is precisely $- \norm{\beta}^2 \omega_X$. Thus we have proven that 
 \begin{equation*}
 \mu(E')= \mu(E) - \norm{\beta}^2 .
 \end{equation*}
@@ -1023,18 +1024,18 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 
 	  Recall that we constructed the space $T^*\Bun(n,d)$ by fixing a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and considering the action of $\GG^c$ on the space $\AA^c=\AA_{\delbar}^s \times \Omega^{1,0}(X,\End E)$. To get this wider space we will now consider the action of the real group $\GG$ on the space $\AA_h \times \Omega^{1,0}(X,\End E)$. Of course, to do this we first have to fix an hermitian metric $h$ on $E$. We then get a symplectic structure on $\AA_h \times \Omega^{1,0}(X,\End E)$ given by
 	  \begin{equation*}
-	    \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1\wedge A_2) -2i\ \mathrm{Im}\ \tr(\varphi_1 \wedge \varphi_2^\dagger),
+	    \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1\wedge A_2) -2i\ \mathrm{Im}\ \tr(\varphi_1 \varphi_2^\dagger),
 	  \end{equation*}
 	  where $A_i \in \Omega^{1}(X,\mathfrak{u}_h(E))$ and $\varphi_i \in \Omega^{1,0}(X,\End E)$.
 
-	  \begin{rem}
-	    Let us see explicitly what we mean by $\varphi_1 \wedge \varphi_2^\dagger$. $\varphi$ is an element of $\Omega^{1,0}(X,\End E)=\Gamma(\Lambda^{1,0}(X)\otimes\End E)$, thus, locally it can be seen as $\varphi=\phi \otimes \alpha$, with $\phi: X \rightarrow \End E$ and $\alpha:X\rightarrow \Lambda^{1,0}(X)$. By $\varphi^\dagger$ then we mean an element of $\Omega^{0,1}(X,\End E)$ which locally looks like $\varphi^\dagger=\phi^{\dagger} \otimes \bar{\alpha}$ with $\phi^{\dagger}$ the transpose conjugate (globally the adjoint, given by $h$) of $\phi$ and $\bar{\alpha}:X\rightarrow \Lambda^{0,1}(X)$ the conjugate of $\alpha$. Therefore by $\varphi_1 \wedge \varphi_2^\dagger$ we mean an element of $\Omega^{1,1}(X,\End E)$, which locally looks like
+	  \begin{rem}\label{obsproducto}
+	    Let us see explicitly what we mean by $\varphi_1\varphi_2^\dagger$. $\varphi$ is an element of $\Omega^{1,0}(X,\End E)=\Gamma(\Lambda^{1,0}(X)\otimes\End E)$, thus, locally it can be seen as $\varphi=\phi \otimes \alpha$, with $\phi: X \rightarrow \End E$ and $\alpha:X\rightarrow \Lambda^{1,0}(X)$. By $\varphi^\dagger$ then we mean an element of $\Omega^{0,1}(X,\End E)$ which locally looks like $\varphi^\dagger=\phi^{\dagger} \otimes \bar{\alpha}$ with $\phi^{\dagger}$ the transpose conjugate (globally the adjoint, given by $h$) of $\phi$ and $\bar{\alpha}:X\rightarrow \Lambda^{0,1}(X)$ the conjugate of $\alpha$. By $\varphi_1 \varphi_2^\dagger$ we mean an element of $\Omega^{1,1}(X,\End E)$, which locally looks like
 	    \begin{equation*}
-	      \varphi_1 \wedge \varphi_2^\dagger=(\phi_1\phi_2^{\dagger})\otimes \alpha_1 \wedge \bar{\alpha}_2.
+	      \varphi_1 \varphi_2^\dagger=(\phi_1\phi_2^{\dagger})\otimes \alpha_1 \wedge \bar{\alpha}_2.
 	    \end{equation*}
 	    We can also consider elements of the form
 	    \begin{equation*}
-	      [\varphi_1, \varphi_2] := \varphi_1 \wedge \varphi_2 + \varphi_2 \wedge \varphi_1 = (\phi_1\phi_2)\otimes \alpha_1 \wedge \alpha_2 + (\phi_2 \phi_1) \otimes \alpha_2 \wedge \alpha_1=[\phi_1,\phi_2] \otimes \alpha_1 \wedge \alpha_2.
+	      [\varphi_1, \varphi_2] := \varphi_1 \varphi_2 + \varphi_2 \varphi_1 = (\phi_1\phi_2)\otimes \alpha_1 \wedge \alpha_2 + (\phi_2 \phi_1) \otimes \alpha_2 \wedge \alpha_1=[\phi_1,\phi_2] \otimes \alpha_1 \wedge \alpha_2.
 	    \end{equation*}
 	  \end{rem}
 	  
@@ -1098,7 +1099,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	    \end{proof}
 	    In the general case, the symplectic structure locally has the form
 	    \begin{equation*}
-	    \omega(\varphi_1,\varphi_2)=2i \int_X \mathrm{Im}\  \tr(\varphi_1\wedge \varphi_2)=2i \int_X \mathrm{Im}\ [\tr(\phi_1\phi_2^\dagger)] \otimes \alpha_1 \wedge \bar{\alpha_2}.
+	    \omega(\varphi_1,\varphi_2)=2i \int_X \mathrm{Im}\  \tr(\varphi_1\varphi_2)=2i \int_X \mathrm{Im}\ [\tr(\phi_1\phi_2^\dagger)] \otimes \alpha_1 \wedge \bar{\alpha_2}.
 	    \end{equation*}
 	    Therefore, the momentum map must have the form
 	    \begin{equation*}
@@ -1155,19 +1156,19 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  for $\theta \in \Omega^{1,0}(X,\Hom(E'',E'))$.
 	  The top left element of $[\varphi,\varphi^\dagger]$ is
 	  \begin{equation*}
-	    \varphi_{E'}\wedge \varphi_{E'}^\dagger + \theta \wedge \theta^\dagger - \varphi_{E'}^\dagger \wedge \varphi_{E'}=[\varphi_{E'},\varphi_{E'}^\dagger] + \theta \wedge \theta^\dagger.
+	    \varphi_{E'}\varphi_{E'}^\dagger + \theta\theta^\dagger - \varphi_{E'}^\dagger\varphi_{E'}=[\varphi_{E'},\varphi_{E'}^\dagger] + \theta  \theta^\dagger.
 	  \end{equation*}
 	  Using the equation
 	  \begin{equation*}
   F=\left(
   \begin{array}{cc}
-    F_{E'}-\beta\wedge \beta^\dagger & \nabla_{\Hom(E'',E')}\beta \\
-    -\nabla_{\Hom (E',E'')}\beta^\dagger & F_{E''}-\beta^\dagger \wedge \beta
+    F_{E'}-\beta\beta^\dagger & \nabla_{\Hom(E'',E')}\beta \\
+    -\nabla_{\Hom (E',E'')}\beta^\dagger & F_{E''}-\beta^\dagger \beta
   \end{array}\right),
 	  \end{equation*}
 	  from the proof of Narasimhan-Seshadri (Theorem \ref{narasimhanseshadri}) we have
 	  \begin{equation*}
-	    F_{E'}-\beta\wedge \beta^{\dagger} + [\varphi_{E'},\varphi_{E'}^\dagger]+\theta \wedge \theta^{\dagger}=-2\pi i \frac{d}{n}\id_{E'} \omega_X.
+	    F_{E'}-\beta \beta^{\dagger} + [\varphi_{E'},\varphi_{E'}^\dagger]+\theta \theta^{\dagger}=-2\pi i \frac{d}{n}\id_{E'} \omega_X.
 	  \end{equation*}
 	  Now, since $\tr[\varphi,\varphi^\dagger]=0$, taking the trace and integrating we get
 	  \begin{equation*}
