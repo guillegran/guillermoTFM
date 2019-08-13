@@ -15,3 +15,6 @@
 \contentsline {section}{\numberline {3}Hitchin's equations}{29}{section.3.3}
 \contentsline {section}{\numberline {4}Higgs bundles}{31}{section.3.4}
 \contentsline {section}{\numberline {5}Deformations of Higgs bundles}{33}{section.3.5}
+\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{35}{section.3.6}
+\contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{38}{section.3.7}
+\contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{41}{chapter.4}
