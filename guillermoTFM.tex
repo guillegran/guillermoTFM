@@ -1030,9 +1030,9 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 
 	  A natural question to ask now is what happens to the remaining elements of the Jacobian: if they do not yield elements of $T^*\Bun(n,d)$, what do they correspond to? This suggest the existence of a wider symplectic manifold, of which $T^*\Bun(n,d)$ is a subset. 
 
-	  Recall that we constructed the space $T^*\Bun(n,d)$ by fixing a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and considering the action of $\GG^c$ on the space $\AA^c=\AA_{\delbar}^s \times \Omega^{1,0}(X,\End E)$. To get this wider space we will now consider the action of the real group $\GG$ on the space $\AA_h \times \Omega^{1,0}(X,\End E)$. Of course, to do this we first have to fix an hermitian metric $h$ on $E$. We then get a symplectic structure on $\AA_h \times \Omega^{1,0}(X,\End E)$ given by
+	  Recall that we constructed the space $T^*\Bun(n,d)$ by fixing a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and considering the action of $\GG^c$ on the space $\AA^c=\AA_{\delbar}^s \times \Omega^{1,0}(X,\End E)$. To get this wider space we will now consider the action of the real group $\GG$ on the space $\AA_h \times \Omega^{1,0}(X,\End E)$. Of course, to do this we first have to fix an Hermitian metric $h$ on $E$. We then get a symplectic structure on $\AA_h \times \Omega^{1,0}(X,\End E)$ given by
 	  \begin{equation*}
-	    \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1\wedge A_2) -2i\ \mathrm{Im}\ \tr(\varphi_1 \varphi_2^\dagger),
+	    \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1\wedge A_2) +2i\ \mathrm{Im}\ \tr(\varphi_1 \varphi_2^\dagger),
 	  \end{equation*}
 	  where $A_i \in \Omega^{1}(X,\mathfrak{u}_h(E))$ and $\varphi_i \in \Omega^{1,0}(X,\End E)$.
 
@@ -1071,9 +1071,9 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	    \begin{proof}
 	      First of all, notice that we can identify $\uu(n)$ with its dual via the pairing
 	      \begin{equation*}
-		\esc{H,K}=\tr(HK^\dagger).
+		\esc{H,K}=\tr(HK^\dagger)=-\tr(HK).
 	      \end{equation*}
-	      The Lie algebra $\uu(n)$ is formed by skew-hermitian matrices, so
+	      The Lie algebra $\uu(n)$ is formed by skew-Hermitian matrices, so
 	      \begin{equation*}
 		\overline{\esc{H,K}}=\tr(KH^\dagger)=\tr\left( (-K^\dagger)(-H) \right)=\tr (K^\dagger H) =\tr (HK^\dagger ) = \esc{H,K}.
 	      \end{equation*}
@@ -1085,7 +1085,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	      
 	      To see how $\vec{H}$ looks like for an element $H\in \mathfrak{u}(n)$, just compute
 	      \begin{equation*}
-		\vec{H}(A)=\left.\frac{d}{dt} \right|_{t=0} (e^{-Ht}Ae^{Ht})=-HA+AH=[A,H].
+		\vec{H}(A)=\left.\frac{d}{dt} \right|_{t=0} (e^{Ht}Ae^{-Ht})=HA-AH=[H,A].
 	      \end{equation*}
 	      Let us compute also $d_{A}\mu(B)$ for some $B \in \End \CC^n$
 	      \begin{equation*}
@@ -1093,25 +1093,29 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	      \end{equation*}
 	      Now
 	      \begin{equation*}
-		\esc{d_A\mu(B),H}=\tfrac{i}{2}\tr([B,A^\dagger]H^\dagger+[A,B^{\dagger}]H^\dagger)=-\tfrac{i}{2} \tr([B,A^\dagger]H+[A,B^{\dagger}]H)
+		\esc{d_A\mu(B),H}=-\tfrac{i}{2} \tr([B,A^\dagger]H+[A,B^{\dagger}]H)
 	      \end{equation*}
-	      Using the cyclic property of the trace one gets
+	      Using the cyclic property of the trace and the fact that $H^\dagger=-H$  one gets
 	      \begin{equation*}
-		\esc{d_A\mu(B),H}=-\tfrac{i}{2}\tr(B[A^\dagger,H]-[H,A]B^\dagger)=-\mathrm{Im}\ \tr((B [A,H])).
+		\tr([A,B^\dagger]H)=\tr(H[A,B^\dagger])-\tr(H^\dagger[A,B^\dagger])=-\overline{\tr([B,A^\dagger]H)}.
+	      \end{equation*}
+Therefore
+	      \begin{equation*}
+		\esc{d_A\mu(B),H}=- \tfrac{i}{2}2i \mathrm{Im}\ \tr([B,A^\dagger]H)=  \mathrm{Im}\ \tr([B,A^\dagger]H).
 	      \end{equation*}
 	      On the other hand
 	      \begin{equation*}
-		\omega(B,\vec{H}(A))=-\mathrm{Im}\ \tr(B[A,H])=\esc{d_A\mu(B),H}.
+		\omega(B,\vec{H}(A))=-\mathrm{Im}\ \tr(B[A^\dagger,H^\dagger])=\mathrm{Im}\ \tr([B,A^\dagger]H])=\esc{d_A\mu(B),H}.
 	      \end{equation*}
 	      This finishes the proof of the lemma.
 	    \end{proof}
 	    In the general case, the symplectic structure locally has the form
 	    \begin{equation*}
-	    \omega(\varphi_1,\varphi_2)=2i \int_X \mathrm{Im}\  \tr(\varphi_1\varphi_2)=2i \int_X \mathrm{Im}\ [\tr(\phi_1\phi_2^\dagger)] \otimes \alpha_1 \wedge \bar{\alpha_2}.
+	    \omega(\varphi_1,\varphi_2)=-2i \int_X \mathrm{Im}\  \tr(\varphi_1\varphi_2^\dagger)=-2i \int_X \mathrm{Im}\ [\tr(\phi_1\phi_2^\dagger)] \otimes \alpha_1 \wedge \bar{\alpha_2}.
 	    \end{equation*}
 	    Therefore, the momentum map must have the form
 	    \begin{equation*}
-	      \mu(\varphi)=-[\varphi,\varphi^\dagger].
+	      \mu(\varphi)=-[\varphi,\varphi^\dagger] \in \Omega^2(\uu_h(E)).
 	    \end{equation*}
 	    This finishes the proof of the proposition.
 	  \end{proof}
@@ -1370,7 +1374,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
   \begin{equation*}
    \left.  \frac{\Sym(\LL^{-1})}{\ker \tilde{\varphi}}\right|_x \cong \OO_{X,x} \otimes \CC[\phi(x)]
   \end{equation*}
-  which has Krull dimension 1, since $\dim \OO_{X,x}=1$ and $\dim \CC[\varphi(x)]=0$. Therefore, $S_\varphi $ is a $1$-dimensional scheme.
+  which has Krull dimension 1, since $\dim \OO_{X,x}=1$ and $\dim \CC[\phi(x)]=0$. Therefore, $S_\varphi $ is a $1$-dimensional scheme. 
 
   On the other hand we can consider the coefficients of the characteristic polynomial of $\varphi$, which are sections $\sigma_i(\varphi) \in \Gamma(L^i)=\LL^i$. These sections define imbeddings 
   \begin{align*}
@@ -1386,15 +1390,15 @@ The sum of these imbeddings gives a homomorphism $\LL^{-n}\rightarrow \Sym(\LL^{
       \LL^{-n}(U)&\longrightarrow \Sym(\LL^{-1})(U)\\ 
       \lambda^n &\longmapsto \sum_{i=1}^n \sigma_i(\varphi) \otimes \lambda^n=\sum_{i=1}^n \tilde{\sigma_i}(\varphi) \lambda^{n-i}.
       \end{align*}
-      The image of this homomorphism generates an ideal sheaf $\II$ and the spectral curve can be defined as $\RSpec(\Sym(\LL^{-1})/\II)$. The Cayley-Hamilton theorem assures that $\II \subset \ker \tilde{\varphi}$. When the spectral curve is integral, the minimal and characteristic polynomial generate the same ideal and so the spectral curve coincides with the scheme $S_\varphi$.  
+      The image of this homomorphism generates an ideal sheaf $\II$ and the spectral curve can be defined as $\RSpec(\Sym(\LL^{-1})/\II)$. The Cayley-Hamilton theorem assures that $\II \subset \ker \tilde{\varphi}$. When the spectral curve is integral, (away from ramification points) the minimal and characteristic polynomial generate the same ideal and so the spectral curve coincides with the scheme $S_\varphi$. Moreover, away from ramification points, that is, when the characteristic polynomial of $\phi(x)$ coincides with its minimal polynomial, the rank of $\OO_{X,x}[\varphi(x)]$ as a $\OO_{X,x}$ module equals the dimension of $\CC[\varphi(x)]$ as a $\CC$-vector space, which in this case is exactly $n$. What this says is that the restriction $\pi:p|_{S_\varphi}:S_{\varphi} \rightarrow X$ is a finite morphism of degree $\deg \pi =n$.
 
-      The spectral correspondence is now clear, the restriction $\pi=p|_{S_\varphi}:S_\varphi \rightarrow X$ is an finite morphism of degree $n$, so in particular it is affine and $\pi_*$ gives an equivalence of categories
+      The spectral correspondence is now clear, $\pi$ is a finite morphism so in particular it is affine and $\pi_*$ gives an equivalence of categories
   \begin{center}
     \begin{tikzcd}
       \left\{ \text{Quasi-coherent sheaves of } \OO_{S_\varphi}\text{-modules} \right\}\arrow{r}{\pi_*} &    \left\{ \text{Quasi-coherent sheaves of } \pi_*\OO_{S_\varphi}\text{-modules} \right\}      .
     \end{tikzcd}
   \end{center}
-  Of course $\pi_*\OO_{S_\varphi}=\Sym(\LL^{-1})/\ker \tilde{\varphi}$, so $\varphi$ endows $E$ with a $\pi_*\OO_{S_\varphi}$-module structure, that must correspond to a quasi-coherent sheaf $\MM$ of $\OO_{S_\varphi}$-modules such that $\pi_* \MM=\EE$. If $S_\varphi$ is smooth then the sheaf $\MM$ is locally free. Moreover, since $\deg(\pi)=n$, $\pi_*\OO_{S_\varphi}$ has the same rank that $\EE$, $n$, as an $\OO_X$ module, so $\MM$ must have rank $1$. Conversely, from a line bundle $M$ on $S_\varphi$ we recover $\pi_*M$ a rank $n$ vector bundle endowed with a $\pi_*\OO_{S_\varphi}$-module structure. 
+  Of course $\pi_*\OO_{S_\varphi}=\Sym(\LL^{-1})/\ker \tilde{\varphi}$, so $\varphi$ endows $E$ with a $\pi_*\OO_{S_\varphi}$-module structure, that must correspond to a quasi-coherent sheaf $\MM$ of $\OO_{S_\varphi}$-modules such that $\pi_* \MM=\EE$. If $S_\varphi$ is smooth then the sheaf $\MM$ is locally free. Moreover, since  $\pi_*\OO_{S_\varphi}$ has the same rank, $n$, that $\EE$ as an $\OO_X$ module, $\MM$ must have rank $1$. Conversely, from a line bundle $M$ on $S_\varphi$ we recover $\pi_*M$ a rank $n$ vector bundle endowed with a $\pi_*\OO_{S_\varphi}$-module structure. 
 
   This point of view yields and alternative way of computing the genus of the spectral curve and the degree of the corresponding line bundle $M$ in terms of the degree $d$ of $E$. First, we can compute explicitly $\pi_*\OO_{S_\varphi}$ as
   \begin{equation*}
@@ -1477,10 +1481,177 @@ To understand this conditions let us consider the norm map
     \begin{defn}
       The \emph{Prym variety} $P(S_b,X)$ associated to a morphism $\pi:S_b \rightarrow X$ is the kernel of the norm map $\Nm_\pi:\Pic(S_b) \rightarrow \Pic(X)$.
     \end{defn}
-    Summing up, we have that the fiber $H^{-1}(b)$ of the Hitchin map corresponds to the Prym variety $P(S_b,X)$, wich can be shown to be a complex torus of dimension equal to $\dim(\BB_{\SL(n,\CC)})$ and giving again an integrable system.
+    Summing up, we have that the fiber $H^{-1}(b)$ of the Hitchin map corresponds to the Prym variety $P(S_b,X)$. Since the norm map preserves degrees, the Prym variety can be seen as the kernel of the restriction
+    \begin{equation*}
+      \Nm_\pi |_{J(S_b)}: J(S_b) \longrightarrow J(X).
+    \end{equation*}
+    This is a morphism of complex tori and its kernel will be again a complex torus, of dimension
+    \begin{equation*}
+      \dim P(S_b,X)= \dim J(S_b) - \dim J(X)= g_{S_b} - g = 1+n^2(g-1) -g
+    \end{equation*}
+    which, as expected, coincides with the dimension of $\BB_{\SL(n,\CC)}$,
+    \begin{equation*}
+      \dim \BB_{\SL(n,\CC)}= \dim \BB - \dim H^0(X,K_X)= 1+n^2(g-1)-g.
+    \end{equation*}
+    Therefore in the $\SL(n,\CC)$ case the Hitchin map gives again an integrable system.
 
     \chapter{Higgs bundles twisted by a vector bundle}
-    
+    In this chapter we are going to work with a more general notion of Higgs bundle, in which the Higgs field is an endomorphism twisted by a general rank $r>1$ vector bundle. The interest for these objects comes from the study of \textit{generalized Hitchin equations} that appear ``naturally'' the study of $\mathcal{N}=1$ supersymmetric gauge theories. Our main inspiration here is the paper \cite{xieyonekura} by D. Xie and K. Yonekura.
+
+    \section{Generalized Hitchin's equations}
+
+    \begin{defn}
+      Let $X$ be a compact Riemann surface and $V$ be a rank $r$ holomorphic vector bundle on $X$. A $V$-\emph{twisted Higgs bundle} is a pair $(\ve{E},\varphi)$, where $\ve{E}$ is a rank $n$ holomorphic vector bundle on $X$ and
+      \begin{equation*}
+	\varphi: \ve{E} \longrightarrow \ve{E} \otimes V,
+      \end{equation*}
+      or, equivalently, $\varphi \in H^0(X,\End\ \ve{E} \otimes V)$, with the additional condition that 
+      $	\varphi \wedge \varphi =0$ in $\End\ \ve{E} \otimes \Lambda^2 V$.
+    \end{defn}
+
+    \begin{rem}
+      What this last condition is telling us is that, if locally, in some open subset $U\subset X$, we decompose $V|_U=\bigoplus_{i=1}^r L_i|_U$ and 
+      \begin{equation*}
+	\varphi= \sum_{i=1}^r \phi^i \otimes v_i,
+      \end{equation*}
+      with $\phi^i \in H^0(U,\End\ \ve{E})$ and $v_i \in H^0(U,L_i)$, we have that
+      \begin{equation*}
+	[\phi^i,\phi^j]=0
+      \end{equation*}
+      for all $i,j=1,\dots,r$.
+    \end{rem}
+
+    In this section we are going to conjecture a notion of stability for $V$-twisted Higgs bundles by writing a momentum map that will give us ``generalized'' Hitchin equations. In order to do this, fix $E$ a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and fix a Hermitian metric $h$ on $E$. Morevoer, in this case we also need to fix a Hermitian metric $h_V$ on the holomorphic vector bundle $V$. We can then endow the space $\Gamma(\End E \otimes V)$ with a Hermitian metric $\tilde{h}$, that locally looks like
+    \begin{equation*}
+      \tilde{h}(\varphi_1,\varphi_2)=\sum_{i,j} \tilde{h}(\phi_1^i\otimes v_i,\phi_2^j\otimes v_j)=\sum_{i,j} \tr(\phi_1^i\phi_2^{j,\dagger}) h(v_i,v_j)=\sum_{i,j}h_{ij} \tr(\phi_1^i\phi_2^{j,\dagger}).
+    \end{equation*}
+
+    Recall that by $\AA_h$ we denoted the set of all $h$-unitary connections of constant central curvature on $E$ and by $\GG$ the (real) gauge group $\Gamma(\UU_h(E))$. Consider now the space 
+    \begin{equation*}
+      \AA_h \times \Gamma(\End E \otimes V).
+    \end{equation*}
+    The elements $g\in \GG$ act by conjugation on this space
+    \begin{equation*}
+      (\nabla,\varphi) \longmapsto (g\nabla g^{-1}, g\varphi g^{-1}).
+    \end{equation*}
+    We can then define a symplectic structure on $\AA_h\times \Gamma(\End E \otimes V)$ given by
+    \begin{equation*}
+      \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1 \wedge A_2) + 2i \mathrm{Im}(\tilde{h}(\varphi_1, \varphi_2)) \omega_X,
+    \end{equation*}
+    where $A_i\in \Omega^1(X,\uu_h(E))$ and $\varphi_i \in \Gamma(\End E \otimes V)$. We will then obtain the momentum map by considering the following example:
+    \begin{ejemplo}
+      Let $V$ be a complex vector space of dimension $n$ with a base $\left\{ v_i:i=1,\dots,n \right\}$ and equipped with a Hermitian inner product $h_V$. Let us denote $h_{ij}=h_V(v_i,v_j)$. Consider the space $\End \CC^n \otimes V$, naturally endowed with the metric
+      \begin{equation*}
+	h(A,B)=h\left(\sum_i A_i \otimes v_i, \sum_j B_j \otimes v_j\right)=\sum_{i,j} \tr(A_i B_j^{\dagger}) h(v_i,v_j)=\sum_{i,j}h_{ij}\tr(A_iB_j^{\dagger}).
+      \end{equation*}
+      This space naturally admits a symplectic structure
+      \begin{equation*}
+	\omega(A,B)=-\mathrm{Im} h(A,B).
+      \end{equation*}
+      The elements of the unitary group $U\in\UU(n)$ act on this space by conjugation
+      \begin{equation*}
+	A=\sum_i A_i \otimes v_i \mapsto \sum_i U A_i U^{-1} \otimes v_i.
+      \end{equation*}
+    \begin{lema}
+      This action admits a momentum map
+      \begin{align*}
+	\mu :\End \CC^n \otimes V&\longrightarrow \uu(n)\\ 
+	A=\sum_i A_i \otimes v_i &\longmapsto \tfrac{i}{2}\sum_{i,j} h_{ij} [A_i,A_j^\dagger].
+	\end{align*}
+	(As usual, we identify $\uu(n)$ with its dual via the pairing $\esc{H,K}=\tr(HK^\dagger)=-\tr(HK)$).
+    \end{lema}
+    \begin{proof}
+      First of all, note that $\mu$ is well defined since
+      \begin{equation*}
+	\mu(A)^\dagger=-\tfrac{i}{2} \sum_{i,j} \overline{h_{ij}} [A_j,A_i^\dagger]= -\tfrac{i}{2} \sum_{i,j} h_{ji}[A_j,A_i^\dagger] = -\tfrac{i}{2} \sum_{i,j} h_{ij} [A_i,A_j^\dagger]=-\mu(A). 
+      \end{equation*}
+      To see how $\vec{H}$ looks like for an element $H\in \uu(n)$, just compute
+      \begin{equation*}
+	\vec{H}(A)=\left. \frac{d}{dt}\right|_{t=0} \left(\sum_i e^{Ht}A_ie^{-Ht} \otimes v_i\right)= \sum_i [H,A_i] \otimes v_i.
+      \end{equation*}
+      Let us compute also $d_A\mu(B)$ for some $B\in \End \CC^n\otimes V$,
+      \begin{align*}
+	d_A\mu(B)&=\left. \frac{d}{dt}\right|_{t=0} \mu(A+tB) = \tfrac{i}{2} \sum_{i,j} h_{ij}\left. \frac{d}{dt}\right|_{t=0} [A_i+tB_i,A_j^\dagger + tB_j^\dagger] \\
+	&= \tfrac{i}{2}\sum_{i,j} h_{ij} ([B_i,A_j^\dagger]+[A_i,B_j^\dagger]) = \tfrac{i}{2}\sum_{i,j} (h_{ij} [B_i,A_j^\dagger]+ h_{ji}[A_j,B_i^\dagger]) \\
+	&= \tfrac{i}{2} \sum_{i,j} h_{ij} [B_i,A_j^\dagger]+ \overline{h_{ij}}[A_j,B_i^\dagger].
+      \end{align*}
+      Now, for $H\in \uu(n)$,
+      \begin{equation*}
+	\esc{d_A\mu(B),H}=-\tfrac{i}{2} \sum_{i,j} h_{ij} \tr([B_i,A_j^\dagger]H)+ \overline{h_{ij}}\tr([A_j,B_i^\dagger]H).
+      \end{equation*}
+      Using the cyclic properties of the trace and the fact that $H^\dagger=-H$, we have
+      \begin{equation*}
+\tr(	[A_j,B_i^\dagger]H)=\tr(H[A_j,B_i^\dagger])=-\tr(H^\dagger[A_j,B_i^\dagger])=-\overline{\tr([B_i,A_j^\dagger]H)}.
+      \end{equation*}
+      Therefore
+      \begin{equation*}
+	\esc{d_A\mu(B),H} =- \tfrac{i}{2} \sum_{i,j} 2i \mathrm{Im}[h_{ij}\tr([B_i,A_j^\dagger]H)]= \sum_{i,j} \mathrm{Im}[h_{ij}\tr([B_i,A_j^\dagger]H)]
+      \end{equation*}
+On the other hand
+\begin{equation*}
+  \omega(B,\vec{H}(A))=-\sum_{i,j}\mathrm{Im}[h_{ij} \tr(B_i [A_i^\dagger,H^\dagger])]=\sum_{i,j}\mathrm{Im}[h_{ij} \tr([B_i,A_j^\dagger]H)]=\esc{d_A\mu(B),H}.
+\end{equation*}
+This finishes the proof of the lemma.
+    \end{proof}
+    \end{ejemplo}
+
+    Let us consider again the symplectic structure on $\AA_h\times \Gamma(\End E \otimes V)$,
+    \begin{equation*}
+      \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1 \wedge A_2) + 2i \mathrm{Im}(\tilde{h}(\varphi_1, \varphi_2)) \omega_X.
+    \end{equation*}
+    The first part of this form corresponds to $\AA_h$ and we already computed the momentum map for the conjugation action on this space
+    \begin{equation*}
+      \mu(\nabla)=-F-2\pi i \mu(E)\id_E \omega_X \in \Omega^2(X,\uu_h(E)).
+    \end{equation*}
+    The second part of the symplectic form, corresponding to $\Gamma(\End E \otimes V)$ locally looks like
+    \begin{equation*}
+      \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=- 2i\int_X  \mathrm{Im}(\tilde{h}(\varphi_1, \varphi_2)) \omega_X=-2i\int_X \sum_{i,j}\mathrm{Im}[h_{ij} \tr(\phi_1^i\phi_2^{j,\dagger})] \omega_X
+    \end{equation*}
+    Therefore, the corresponding momentum map locally must have the form
+    \begin{equation*}
+      \mu(\varphi)=-\sum_{i,j} h_{ij}[\phi^i,\phi^{j,\dagger}]\omega_X \in \Omega^2(X,\uu_h(E)).
+    \end{equation*}
+    Globally, we can denote this as $\mu(\varphi)=-[\varphi,\varphi^{\dagger}]_h\omega_X$. We have then proven the following
+    \begin{prop}
+     The action of $\GG$ on $\AA_h \times \Gamma(\End E \otimes V)$ admits a momentum map
+     \begin{equation*}
+       \mu(\nabla,\varphi)=-F-\left[ \varphi,\varphi^\dagger \right]_h \omega_X -2\pi i \mu(E) \id_E \omega_X.
+     \end{equation*}
+    \end{prop}
+
+    Now that we have a momentum map, if we assume that the action of $\GG$ verifies the technical requirements, we can take the symplectic quotient $\mu^{-1}(0)/\GG$. Let us aswell consider the subvariety corresponding to \textit{holomorphic} $V$-twisted endomorphisms that verify the additional condition $\varphi \wedge \varphi=0$,
+    \begin{equation*}
+      \left\{ (\nabla,\varphi) \in \AA_h \times \Gamma(\End E \otimes V) : \nabla^{0,1} \varphi =0 \text{ and } \varphi \wedge \varphi=0 \right\}.
+    \end{equation*}
+    Avoiding possible singularities, this is a $\GG$-invariant variety that inherits the symplectic structure from $\AA_h \times \Gamma(\End E \otimes V)$ so we can consider in it the restriction of the momentum map. This allows us to take another symplectic quotient. The space we obtain is the \emph{moduli space of solutions to the generalized Hitchin equations} on $E$, that is, the set of equivalence classes of pairs $(\nabla,\varphi)\in \AA_h\times \Gamma(\End E \otimes V)$ that satisfy the \emph{generalized Hitchin equations}
+    \begin{equation*}
+      \begin{cases}
+	F+\left[ \varphi,\varphi^\dagger \right]_h \omega_X =-2\pi i \mu(E) \id_E \omega_X \\
+	\nabla^{0,1} \varphi=0 \\
+	\varphi \wedge \varphi =0.
+      \end{cases}
+    \end{equation*}
+
+    As in the (classical) Higgs bundle case, we can say that a pair $(\nabla,\varphi)$ is \emph{irreducible} if there exist no subbundles $E'\subset E$ which are preserved by both $\nabla$ and $\varphi$. We can then conjecture a new notion of stability from the following result:
+    \begin{thm}\label{twistedhitchincorr}
+      Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$. If $(\nabla,\varphi)$ is a solution to the generalized Hitchin equations then for every proper subbundle $E'\subset E$ which is invariant by $\nabla^{0,1}$ and $\varphi$,
+      \begin{equation*}
+	\mu(E')<\mu(E).
+      \end{equation*}
+    \end{thm}
+    \begin{proof}
+      The proof is exactly that of (the easy direction of) the Hitchin correspondence, Theorem \ref{Hitchin correspondence} of Chapter III.
+      \textbf{REALLY??}
+    \end{proof}
+
+    \begin{defn}
+      We say that a $V$-twisted Higgs bundle $(\ve{E},\varphi)$ is \emph{stable} if for every proper holomorphic subbundle $\ve{E}'\subset \ve{E}$ such that $\varphi(\ve{E}')\subset \ve{E}'\otimes V$
+      \begin{equation*}
+	\mu(\ve{E}')<\mu(\ve{E}).
+      \end{equation*}
+    \end{defn}
+
+    We expect that a GIT construction of the moduli space of stable $V$-twisted Higgs bundle can be constructed as well as a proof the converse of Theorem \ref{twistedhitchincorr}. This would be an isomorphism between this moduli space and the moduli space of solutions to the generalized Hitchin equations. However, none of this has been yet done and we leave it as an open problem.
 
 \nocite{*}
 \bibliographystyle{alpha}

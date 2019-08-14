@@ -18,3 +18,4 @@
 \contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{35}{section.3.6}
 \contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{38}{section.3.7}
 \contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{41}{chapter.4}
+\contentsline {section}{\numberline {1}Generalized Hitchin's equations}{41}{section.4.1}

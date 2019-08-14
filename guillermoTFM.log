@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  13 AUG 2019 20:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  14 AUG 2019 19:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1583,7 +1583,7 @@ e-ments $\OML/ntxmi/m/it/12 b \OMS/ntxsy/m/n/12 2 [][] \OML/ntxmi/m/it/12 H[]\U
  []
 
 [26] [27] [28] [29] [30]
-Overfull \hbox (20.48625pt too wide) in paragraph at lines 1122--1125
+Overfull \hbox (20.48625pt too wide) in paragraph at lines 1126--1129
 \T1/ntxtlf/m/n/12 Avoiding pos-si-ble sin-gu-lar-i-ties, this va-ri-ety in-her-
 its the sym-plec-tic struc-ture from $\U/BOONDOX-scr/m/n/12 A[] \OMS/ntxsy/m/n/
 12 ^^B \U/ntxmia/m/it/12 
@@ -1591,65 +1591,65 @@ its the sym-plec-tic struc-ture from $\U/BOONDOX-scr/m/n/12 A[] \OMS/ntxsy/m/n/
  []
 
 [31] [32] [33] [34] [35]
-Overfull \hbox (3.54126pt too wide) in paragraph at lines 1363--1364
+Overfull \hbox (3.54126pt too wide) in paragraph at lines 1367--1368
  [] 
  []
 
 [36]
-Overfull \hbox (16.4801pt too wide) in paragraph at lines 1395--1396
+Overfull \hbox (16.4801pt too wide) in paragraph at lines 1399--1400
  [] 
  []
 
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 1426.
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 1430.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.0pt on input line 1426.
+(Font)              scaled to size 15.0pt on input line 1430.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.94994pt on input line 1426.
+(Font)              scaled to size 10.94994pt on input line 1430.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.25005pt on input line 1426.
+(Font)              scaled to size 8.25005pt on input line 1430.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.0pt on input line 1426.
+(Font)              scaled to size 15.0pt on input line 1430.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.94994pt on input line 1426.
+(Font)              scaled to size 10.94994pt on input line 1430.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.25005pt on input line 1426.
+(Font)              scaled to size 8.25005pt on input line 1430.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1426.
+(hyperref)                removing `math shift' on input line 1430.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1426.
+(hyperref)                removing `math shift' on input line 1430.
 
 [37] [38] [39] [40
 
 ]
 Chapter IV.
-(./guillermoTFM.bbl (./guillermoTFM.brf)
+[41] [42] [43] (./guillermoTFM.bbl (./guillermoTFM.brf)
 \tf@brf=\write6
 \openout6 = `guillermoTFM.brf'.
 
- [41] [42
+ [44] [45
 
-] [43]) [44]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1488.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1488.
+]) [46]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1659.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1659.
 
 (./guillermoTFM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1488.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1488.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1659.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1659.
 
 Package rerunfilecheck Info: File `guillermoTFM.out' has not changed.
-(rerunfilecheck)             Checksum: C94203B18C84BF299494E7E55C3A5195;1561.
+(rerunfilecheck)             Checksum: 063F13645FBFDD08965F23D437414B32;1639.
 Package rerunfilecheck Info: File `guillermoTFM.brf' has not changed.
-(rerunfilecheck)             Checksum: 4E05A6F241AEE93F41C46A232467C6C8;893.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1488.
+(rerunfilecheck)             Checksum: 097633B58543167CA8B4341A3DA38C43;938.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1659.
  ) 
 Here is how much of TeX's memory you used:
- 23278 strings out of 494850
- 433815 string characters out of 6178023
- 484449 words of memory out of 5000000
- 25899 multiletter control sequences out of 15000+600000
+ 23285 strings out of 494850
+ 433877 string characters out of 6178023
+ 484444 words of memory out of 5000000
+ 25897 multiletter control sequences out of 15000+600000
  127317 words of font info for 208 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  56i,16n,84p,1101b,1102s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1676,10 +1676,10 @@ xlive/texmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf
 /type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/time
 s/utmri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxrw8a
 .pfb>
-Output written on guillermoTFM.pdf (44 pages, 390547 bytes).
+Output written on guillermoTFM.pdf (46 pages, 407558 bytes).
 PDF statistics:
- 561 PDF objects out of 1000 (max. 8388607)
- 489 compressed objects within 5 object streams
- 146 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 511 compressed objects within 6 object streams
+ 155 named destinations out of 1000 (max. 500000)
+ 181 words of extra memory for PDF output out of 10000 (max. 10000000)
 
