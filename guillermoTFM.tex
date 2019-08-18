@@ -93,8 +93,9 @@
 \usepackage{titlesec}
 \usepackage{remreset}
 
-\renewcommand{\thesection}{\arabic{section}}
 \renewcommand{\thechapter}{\Roman{chapter}}
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thethm}{\thechapter.\thesection.\arabic{thm}}
 
 \titleformat{\chapter}[block]
 {\fontsize{20}{22}\bfseries\sffamily}
@@ -1650,7 +1651,7 @@ This finishes the proof of the lemma.
       \end{equation*}
     \end{thm}
     \begin{proof}
-      The proof is exactly that of (the easy direction of) the Hitchin correspondence, Theorem \ref{Hitchin correspondence} of Chapter III.
+      The proof is exactly that of (the easy direction of) the Hitchin correspondence, Theorem \ref{Hitchin correspondence}.
       \textbf{REALLY??}
     \end{proof}
 
