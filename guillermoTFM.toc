@@ -1,21 +1,21 @@
-\contentsline {chapter}{\numberline {I}Vector bundles on Riemann surfaces}{5}{chapter.1}
-\contentsline {section}{\numberline {1}Topological classification of vector bundles}{5}{section.1.1}
-\contentsline {section}{\numberline {2}The problem of classification of holomorphic vector bundles}{7}{section.1.2}
-\contentsline {section}{\numberline {3}Holomorphic structures as Dolbeaut operators}{9}{section.1.3}
-\contentsline {section}{\numberline {4}Deformations of holomorphic structures}{10}{section.1.4}
-\contentsline {section}{\numberline {5}Holomorphic structures and unitary connections}{11}{section.1.5}
-\contentsline {chapter}{\numberline {II}Momentum maps and symplectic quotients}{15}{chapter.2}
-\contentsline {section}{\numberline {1}Banach manifolds}{15}{section.2.1}
-\contentsline {section}{\numberline {2}Symplectic manifolds and the momentum map}{16}{section.2.2}
-\contentsline {section}{\numberline {3}Symplectic reduction}{19}{section.2.3}
-\contentsline {section}{\numberline {4}The moduli space as a symplectic quotient}{21}{section.2.4}
-\contentsline {chapter}{\numberline {III}Higgs bundles and the Hitchin system}{23}{chapter.3}
-\contentsline {section}{\numberline {1}The Hitchin system}{23}{section.3.1}
-\contentsline {section}{\numberline {2}The spectral correspondence}{25}{section.3.2}
-\contentsline {section}{\numberline {3}Hitchin's equations}{29}{section.3.3}
-\contentsline {section}{\numberline {4}Higgs bundles}{31}{section.3.4}
-\contentsline {section}{\numberline {5}Deformations of Higgs bundles}{33}{section.3.5}
-\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{35}{section.3.6}
-\contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{38}{section.3.7}
-\contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{41}{chapter.4}
-\contentsline {section}{\numberline {1}Generalized Hitchin's equations}{41}{section.4.1}
+\contentsline {chapter}{\numberline {I}Vector bundles on Riemann surfaces}{7}{chapter.1}
+\contentsline {section}{\numberline {1}Topological classification of vector bundles}{7}{section.1.1}
+\contentsline {section}{\numberline {2}The problem of classification of holomorphic vector bundles}{9}{section.1.2}
+\contentsline {section}{\numberline {3}Holomorphic structures as Dolbeaut operators}{11}{section.1.3}
+\contentsline {section}{\numberline {4}Deformations of holomorphic structures}{12}{section.1.4}
+\contentsline {section}{\numberline {5}Holomorphic structures and unitary connections}{13}{section.1.5}
+\contentsline {chapter}{\numberline {II}Momentum maps and symplectic quotients}{17}{chapter.2}
+\contentsline {section}{\numberline {1}Banach manifolds}{17}{section.2.1}
+\contentsline {section}{\numberline {2}Symplectic manifolds and the momentum map}{18}{section.2.2}
+\contentsline {section}{\numberline {3}Symplectic reduction}{21}{section.2.3}
+\contentsline {section}{\numberline {4}The moduli space as a symplectic quotient}{23}{section.2.4}
+\contentsline {chapter}{\numberline {III}Higgs bundles and the Hitchin system}{25}{chapter.3}
+\contentsline {section}{\numberline {1}The Hitchin system}{25}{section.3.1}
+\contentsline {section}{\numberline {2}The spectral correspondence}{27}{section.3.2}
+\contentsline {section}{\numberline {3}Hitchin's equations}{31}{section.3.3}
+\contentsline {section}{\numberline {4}Higgs bundles}{33}{section.3.4}
+\contentsline {section}{\numberline {5}Deformations of Higgs bundles}{35}{section.3.5}
+\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{37}{section.3.6}
+\contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{40}{section.3.7}
+\contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{43}{chapter.4}
+\contentsline {section}{\numberline {1}Generalized Hitchin's equations}{43}{section.4.1}
