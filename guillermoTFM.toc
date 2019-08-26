@@ -13,9 +13,9 @@
 \contentsline {section}{\numberline {1}The Hitchin system}{25}{section.3.1}
 \contentsline {section}{\numberline {2}The spectral correspondence}{27}{section.3.2}
 \contentsline {section}{\numberline {3}Hitchin's equations}{31}{section.3.3}
-\contentsline {section}{\numberline {4}Higgs bundles}{33}{section.3.4}
+\contentsline {section}{\numberline {4}Higgs bundles}{34}{section.3.4}
 \contentsline {section}{\numberline {5}Deformations of Higgs bundles}{35}{section.3.5}
-\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{37}{section.3.6}
+\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{38}{section.3.6}
 \contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{40}{section.3.7}
 \contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{43}{chapter.4}
 \contentsline {section}{\numberline {1}Generalized Hitchin's equations}{43}{section.4.1}

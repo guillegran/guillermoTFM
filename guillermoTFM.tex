@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 \usepackage{amsthm, mathtools}
 \usepackage{tikz,tikz-cd}
+\usepackage{pdfpages}
 \usepackage{adjustbox}
 \usetikzlibrary{arrows, babel}
 \usepackage{url}
@@ -116,13 +117,49 @@
 %\makeatother
 %%%
 
-\title{\bfseries \sffamily Higgs bundles twisted by a vector bundle}
-\author{\it Guillermo Gallego Sánchez}
+\title{Higgs bundles twisted by a vector bundle}
+\author{Guillermo Gallego Sánchez}
 \date{}
 
 
 \begin{document}
-\maketitle
+\includepdf[pages=-]{portada.pdf}
+\begin{titlepage}
+  \centering
+%  \vspace*{1cm}
+  \LARGE \textsc{Universidad Complutense de Madrid} \\
+  \vspace{1cm}
+  \includegraphics[width=0.3\textwidth]{logoucm.png} \\
+  \vspace{1cm}
+  \LARGE \textit{Trabajo Final para optar al título de\\ \textbf{Máster de Matemáticas Avanzadas}} \\
+  \vspace{1cm}
+
+\rm \LARGE SEPTIEMBRE 2019
+
+  \vspace{3cm}
+  \hrule \vspace{0.5cm}
+\Huge \bfseries \sffamily Higgs bundles twisted by a vector bundle \\
+  \vspace{1cm}
+\rm \Large \sffamily \it (Fibrados de Higgs torcidos por un fibrado vectorial) \\
+   \vspace{0.5cm}\hrule
+
+  \vfill
+
+\begin{minipage}{0.5\textwidth}
+  \rm \Large
+  \textit{Autor:} \\
+  Guillermo \textsc{Gallego Sánchez}
+ \end{minipage}
+ \hfill
+\begin{minipage}{0.4\textwidth}
+  \rm \large
+  \textit{Director:}\\
+Óscar \textsc{García Prada} \\
+\textit{Tutor:} \\
+Enrique \textsc{Arrondo Esteban}
+  \end{minipage}
+\end{titlepage}
+
 \newpage\null\thispagestyle{empty}
 \newpage\null\thispagestyle{empty}
 \epigraph{\textit{¿Por ventura es asunto vano o es tiempo malgastado el que se gasta en vagar por el mundo, no buscando los regalos de él, sino las
@@ -925,7 +962,12 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
        \end{equation*}
        That is, fiberwise, over some point $x \in X$ the points of the spectral curve are precisely the ``eigenvalues'' $\lambda_1(x),\dots,\lambda_n(x) \in L_x$ of the twisted endomorphism $\varphi_x:E_x \rightarrow E_x \otimes L_x$; hence the name \textit{spectral curve}.
 
-       [dibujo]
+       \begin{figure}[h]
+	 \centering
+	 \includegraphics[width=0.5\textwidth]{curvaespectral.png}
+	 \caption{The spectral curve on its ambient space $L$. The elements $\left\{ \lambda_{1,x},\dots,\lambda_{4,x} \right\}$ are the ``eigenvalues'' of $\varphi_x$.}
+	 \label{fig:spectral}
+       \end{figure}
 
        \begin{prop}
 	 Assume that $L^n$ is base point free. Then, for generic elements $b\in \bigoplus_{i=1}^n H^0(X,L^i)$, the spectral curve $S_b$ is smooth.
