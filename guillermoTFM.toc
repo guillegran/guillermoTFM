@@ -19,3 +19,6 @@
 \contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{40}{section.3.7}
 \contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{43}{chapter.4}
 \contentsline {section}{\numberline {1}Generalized Hitchin's equations}{43}{section.4.1}
+\contentsline {section}{\numberline {2}The generalized Hitchin system}{47}{section.4.2}
+\contentsline {section}{\numberline {3}The generalized spectral correspondence}{49}{section.4.3}
+\contentsline {section}{\numberline {4}Open questions and further directions}{51}{section.4.4}
