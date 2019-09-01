@@ -174,12 +174,12 @@ ser llamado bobo, díganlo vuestras grandezas.}}{Don Quijote de la Mancha}
 \tableofcontents
 \chapter{Vector bundles on Riemann surfaces}
 \section{Topological classification of vector bundles}
-The first step towards the classification of vector bundles on Riemann surfaces is their ``topological'' classification. That is, we want to classify smooth complex vector bundles on a Riemann surface up to $C^\infty$ isomorphism. This is indeed pretty easy to do, since the problem can be reduced to the classification of line bundles.
+The first step towards the classification of vector bundles on Riemann surfaces is their ``topological'' classification. That is, we want to classify smooth complex vector bundles on a Riemann surface up to $C^\infty$ isomorphism. This is in fact pretty easy to do, since the problem can be reduced to the classification of line bundles.
 \begin{thm}
   If $E$ is a rank $n$ smooth complex vector bundle over a compact Riemann surface $X$ then it is isomorphic to $\det E \oplus (X\times \CC^{n-1})$.
 \end{thm}
 \begin{proof}
-   We will proceed by induction on $n$. Of course, if $E$ is a line bundle, $E\cong \det E$. Now, let $n>1$, suppose that it is true for any vector bundle of rank $n-1$ and let $E$ be a rank $n$ vector bundle.
+   We will proceed by induction on $n$. Of course, if $E$ is a line bundle, $E\cong \det E$. Now, take $n>1$, suppose that it is true for any vector bundle of rank $n-1$ and let $E$ be a rank $n$ vector bundle.
    \begin{lema}
      $E$ has a nowhere vanishing section.
    \end{lema}
@@ -217,7 +217,7 @@ Therefore, topological ($C^\infty$) isomorphism classes of vector bundles are pa
 \end{equation*}
 To obtain more information about this cohomology group we are going to introduce a very powerful tool: the first Chern class of a vector bundle.
 
-Recall from Chern-Weil theory \cite{griffithsharris,wells} that for any complex vector bundle $E$ over $X$ and for any connection $\nabla$ on $E$ with associated curvature form $F$, the $2$-form $\tr F$ is closed and its de Rham cohomology class $[\tr F]\in H_{\mathrm{dR}}^2(X)$ does not depend on the choice of the connection, so it is an invariant of the vector bundle $E$. If we normalize this form to get an integer cohomology class, we define the \emph{first Chern class} of $E$ as the cohomology class:
+Recall from Chern-Weil theory \cite{griffithsharris,wells} that for any complex vector bundle $E$ over $X$ and for any connection $\nabla$ on $E$ with associated curvature form $F$, the $2$-form $\tr F$ is closed and its de Rham cohomology class $[\tr F]\in H_{\mathrm{dR}}^2(X)$ does not depend on the choice of the connection, so it is an invariant of the vector bundle $E$. If we normalize this form to get an integer cohomology class, we can define the \emph{first Chern class} of $E$ as the cohomology class:
 \begin{equation*}
   c_1(E)=\left[ \frac{i}{2\pi} \tr F \right] \in H_{\mathrm{dR}}^2(X).
 \end{equation*}
@@ -259,7 +259,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	  0 \arrow{r} &	  \ZZ \arrow{r} & C^\infty_X \arrow{r}{\exp} & C^{\infty,*}_X \arrow{r} & 0.
 	 \end{tikzcd}
        \end{center}
-       The existence of smooth partitions of unity implies that the sheaf $C^\infty_X$ is fine, so $H^1(X,C^\infty_X)=H^2(X,C^\infty_X)=0$. Therefore, the connecting map $\delta:H^1(X,C^{\infty,*}_X)\rightarrow H^2(X,\ZZ)$ is an isomorphism. If we now consider the set of integer de Rham cohomology classes with $H^2_{\mathrm{dR}}(X,\ZZ)$, which is just the image of $H^2(X,\ZZ)$ by the inclusion $H^2(X,\ZZ)\hookrightarrow H^2_{\mathrm{dR}}(X)$, we get an isomorphism $c_1:H^1(X,C_X^{\infty,*})\rightarrow H^2_{\mathrm{dR}}(X,\ZZ)$. Now, the isomorphism $H^2_{\mathrm{dR}}(X) \cong \CC$ given by integration on $X$, descends to an isomorphism $H^2_{\mathrm{dR}}(X,\ZZ) \cong \ZZ$.
+       The existence of smooth partitions of unity implies that the sheaf $C^\infty_X$ is fine, so $H^1(X,C^\infty_X)=H^2(X,C^\infty_X)=0$. Therefore, the connecting map $\delta:H^1(X,C^{\infty,*}_X)\rightarrow H^2(X,\ZZ)$ is an isomorphism. If we now consider the set of integer de Rham cohomology classes, $H^2_{\mathrm{dR}}(X,\ZZ)$, which is just the image of $H^2(X,\ZZ)$ by the inclusion $H^2(X,\ZZ)\hookrightarrow H^2_{\mathrm{dR}}(X)$, we get an isomorphism $c_1:H^1(X,C_X^{\infty,*})\rightarrow H^2_{\mathrm{dR}}(X,\ZZ)$. Now, the isomorphism $H^2_{\mathrm{dR}}(X) \cong \CC$ given by integration on $X$, descends to an isomorphism $H^2_{\mathrm{dR}}(X,\ZZ) \cong \ZZ$.
     Summarizing, we have the diagram
        \begin{center}
 	 \begin{tikzcd}
@@ -272,7 +272,7 @@ This last property will be crucial in the classification of line bundles. Let us
        \end{thm}
   
        \section{The problem of classification of holomorphic vector bundles}
-       Now that we have classified vector bundles up to topological ($C^\infty$) isomorphism, we are going to pursue the full classification of holomorphic vector bundles over Riemann surfaces. According to the results of last section, we can reduce our problem to the study of the ``list'' of isomorphism classes of holomorphic vector bundles of fixed rank $n$ and degree $d$ (regarding them in particular as complex vector bundles). From the beginning, this problem gets really involved, since this ``lists'' are so big that they themselves admit a geometric structure. These are the so called \emph{moduli spaces}. Therefore, the classification problem translates to that of investigating the geometric properties of the associated moduli spaces.
+       Now that we have classified vector bundles up to topological ($C^\infty$) isomorphism, we are going to pursue the full classification of holomorphic vector bundles over Riemann surfaces. According to the results of last section, we can reduce our problem to the study of the ``list'' of isomorphism classes of holomorphic vector bundles of fixed rank $n$ and degree $d$ (regarding them in particular as complex vector bundles). From the beginning, this problem gets really involved, since these ``lists'' are so big that they themselves admit a non-trivial geometric structure. These are the so called \emph{moduli spaces}. Therefore, the classification problem translates to that of investigating the geometric properties of the associated moduli spaces.
 
        To illustrate these ideas in more detail, let us consider the case of holomorphic line bundles. The same arguments regarding \v{C}ech cocycles of the previous section also apply now to show that the isomorphism classes of holomorphic vector bundles are parametrized by the sheaf cohomology group
        \begin{equation*}
@@ -307,13 +307,13 @@ This last property will be crucial in the classification of line bundles. Let us
 	  \Pic^d(X)&\longrightarrow \Pic^0(X)\\ 
 	   L &\longmapsto L\otimes M, 
 	 \end{align*}
-	 where $M \in \Pic^{-d}(X)$ is a fixed line bundle. It is of course injective, since if $L\otimes M = L'\otimes M$, then 
+	 where $M \in \Pic^{-d}(X)$ is a fixed line bundle. It is of course injective, since if $L\otimes M \cong L'\otimes M$, then 
 	 \begin{equation*}
-	   L=L\otimes M \otimes M^* = L' \otimes M \otimes M^* = L',
+	   L\cong L\otimes M \otimes M^* \cong L' \otimes M \otimes M^* \cong L',
 	 \end{equation*}
-	 and it is also surjective since for every line bundle $L \in \Pic^0(X)$, $L=(L\otimes M^*) \otimes M$.
+	 and it is also surjective since for every line bundle $L \in \Pic^0(X)$, $L\cong (L\otimes M^*) \otimes M$.
        
-	 The result for line bundles already hints on the complexity of the general problem. However, for very low genus the problem can be solved relatively easily. For genus 0, Grothendieck proved that every holomorphic vector bundle on the Riemann sphere $\PP^1_\CC$ can be decomposed as a direct sum of line bundles. A proof of this result can be found in \cite{hartshorne}. For genus 1, it was Atiyah who showed that the ``moduli space'' of indecomposable vector bundles with fixed rank and degree over an elliptic curve is isomorphic to the curve itself. Check out [REF:Mukai?] for a construction of the moduli space and for a proof of this. 
+	 The result for line bundles already hints on the complexity of the general problem. However, for very low genus the problem can be solved relatively easily. For genus 0, Grothendieck proved that every holomorphic vector bundle on the Riemann sphere $\PP^1_\CC$ can be decomposed as a direct sum of line bundles. A proof of this result can be found in \cite{hartshorne}. For genus 1, it was Atiyah \cite{atiyahelliptic} who showed that the ``moduli space'' of indecomposable vector bundles with fixed rank and degree over an elliptic curve is isomorphic to the curve itself. 
 
 	 The problem gets its full complexity in the case of general genus $g\geq 2$, for which we will dedicate the rest of the chapter. To construct a ``good'' moduli space (one with nice topological properties, like being Hausdorff) we need to consider the idea of stability, arising from Mumford's Geometric Invariant Theory \cite{git}. This theory also allows to construct the moduli space of stable vector bundles, although it can also be done using analytic methods \cite{kobayashi}. This moduli space has very nice and interesting geometric properties and it has been studied from the algebraic point of view (for example in the works of Narasimhan, Ramanan or Seshadri) as well as from the analytical or gauge-theoretical point of view (by Atiyah, Bott, Donaldson or Hitchin, for example).
 
@@ -344,8 +344,8 @@ This last property will be crucial in the classification of line bundles. Let us
 	   \begin{equation*}
 	     g\cdot \delbar_{\ve{E}}=g\delbar_{\ve{E}} g^{-1}.
 	   \end{equation*}
-	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$. Even though $\AA_{\delbar}$ and $\GG^c$ are infinite-dimensional spaces, using analytic techniques \cite{kobayashi} they can be given the structure of \emph{Banach manifolds} (roughly, spaces locally modeled by Banach spaces) and this quotient space can be precisely constructed. This has however a serious problem: the obtained space is not Hausdorff. Nevertheless, if we restrict ourselves to the class of \emph{stable vector bundles}, with the same analytic methods we can obtain a ``good'' moduli space.
-	   \begin{defn}
+	   Therefore we can identify the quotient set $\AA_{\delbar}/\GG^c$ with the set of isomorphism classes of holomorphic vector bundles of rank $\rk E$ and degree $\deg E$. Even though $\AA_{\delbar}$ and $\GG^c$ are infinite-dimensional spaces, using analytic techniques \cite{kobayashi} they can be given the structure of \emph{Banach manifolds} (roughly, spaces locally modeled by Banach spaces) and this quotient space can be precisely constructed. This has however a serious problem: the obtained space is not Hausdorff. Nevertheless, if we restrict ourselves to the class of \textit{stable} vector bundles, with the same analytic methods we can obtain a ``good'' moduli space.
+	   \begin{defn}[Stable vector bundles]
 	     Let $E$ be a complex vector bundle over a compact Riemann surface $X$. We define the \emph{slope} of $E$ as the number
 	     \begin{equation*}
 	       \mu(E)=\deg E/ \rk E.
@@ -356,6 +356,8 @@ This last property will be crucial in the classification of line bundles. Let us
 	       \Bun(n,d)=\AA_{\delbar}^s/\GG^c.
 	     \end{equation*}
 	   \end{defn}
+	   
+	   Using analytic methods \cite{kobayashi} one can show
 	   \begin{thm}\label{modulibundles}
 	     The moduli space $\Bun(n,d)$ is a complex manifold of dimension $1+n^2(g-1)$, where $g$ is the genus of $X$.
 	   \end{thm}
@@ -415,7 +417,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	   Although we will not enter into detail, the main reason why the quotient $\AA_{\delbar}/\GG^c$ is not Hausdorff and why we need to introduce the stability condition is that the group $\GG^c=\Gamma(\Aut(E))$ is a complex group. Indeed, it is the complexification of the group $\GG=\Gamma(\UU_h(E))$, where $h$ is a Hermitian metric on $E$ and $\UU_h(E)$ is the subgroup of $\Aut(E)$ consisting on automorphisms of $E$ preserving the metric $h$. The idea for this is essentially that the general linear group $\mathrm{GL}(n,\CC)$ is the complexification of the unitary group $\mathrm{U}(n)$. This motivates the study of unitary connections,
 which will give a gauge-theoretical approach to holomorphic vector bundles. This will allow us to give another analytical construction of the moduli space, this time as the space of solutions (up to gauge equivalence) to some differential equation.
 
-Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let $h$ be a Hermitian metric on E. Recall that for any connection $\nabla:\Gamma(E) \rightarrow \Omega^1(X,E)=\Omega^{1,0}(X,E) \oplus \Omega^{0,1}(X,E)$ on $E$ there is a natural splitting $\nabla=\nabla^{1,0}+\nabla^{0,1}$, where
+Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let $h$ be a Hermitian metric on $E$. Recall that for any connection $\nabla:\Gamma(E) \rightarrow \Omega^1(X,E)=\Omega^{1,0}(X,E) \oplus \Omega^{0,1}(X,E)$ on $E$ there is a natural splitting $\nabla=\nabla^{1,0}+\nabla^{0,1}$, where
 \begin{align*}
   \nabla^{1,0}:\Gamma(E) \longrightarrow \Omega^{1,0}(X,E), \\
   \nabla^{0,1}:\Gamma(E) \longrightarrow \Omega^{0,1}(X,E).
@@ -462,7 +464,7 @@ Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connection
 
 Now, Donaldson's version of the theorem of Narasimhan-Seshadri relates this moduli space with the moduli space of stable holomorphic vector bundles.
 
-\begin{thm}[Narasimhan-Seshadri]\label{narasimhanseshadri}
+\begin{thm}[Donaldson-Narasimhan-Seshadri]\label{narasimhanseshadri}
   Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$. An irreducible unitary connection $\nabla$ has constant central curvature if and only if the associated holomorphic vector bundle $(E,\nabla^{0,1})$ is stable.
 \end{thm}
 This can be reformulated in terms of moduli spaces:
@@ -477,7 +479,7 @@ This can be reformulated in terms of moduli spaces:
       \AA_h^s/\GG \cong \AA^s_{\delbar} /\GG^c = \Bun(n,d).
     \end{equation*}
 \end{corol}
-We will prove the ``easy'' direction of the equivalence. The proof in the other direction consists in defining a Yang-Mills functional and looking for a minimum of it using analytic techniques, in particular a theorem by Uhlenbeck [REF:Uhlenbeck?]. Check \cite{donaldson} for the details.
+We will prove the ``easy'' direction of the equivalence. The proof in the other direction consists in defining a Yang-Mills functional and looking for a minimum of it using analytic techniques, in particular a theorem by Uhlenbeck \cite{uhlenbeck}. Check \cite{donaldson} for the details.
 \begin{proof}
 First, let us suppose that $\nabla$ has constant central curvature
 \begin{equation*}
@@ -503,7 +505,7 @@ where $\delbar_{\ve{E}'}$ and $\delbar_{\ve{E}''}$ are the restrictions of $\del
     -\beta^\dagger & \nabla_{E''}
   \end{array}\right),
 \end{equation*}
-where $\nabla_{E'}$ and $\nabla_{E''}$ are the connections associated to $\delbar_{\ve{E}'}$ and $\delbar_{\ve{E}''}$ and $\beta^\dagger=\star \bar{\beta} \in \Omega^{1,0}(X,\Hom(E',E''))$ is the transpose (on the matrix part) conjugate (on the form part) of $\beta$. The curvature of $\nabla$ can be written now as
+where $\nabla_{E'}$ and $\nabla_{E''}$ are the connections associated to $\delbar_{\ve{E}'}$ and $\delbar_{\ve{E}''}$ and $$\beta^\dagger=\star \bar{\beta} \in \Omega^{1,0}(X,\Hom(E',E''))$$ is the transpose (on the matrix part) conjugate (on the form part) of $\beta$. The curvature of $\nabla$ can be written now as
 \begin{equation*}
   F=\left(
   \begin{array}{cc}
@@ -533,7 +535,7 @@ The connection $\nabla$ is irreducible, so $\norm{\beta}\neq 0$ and $\mu(E')< \m
 
 \chapter{Momentum maps and symplectic quotients}
 \section{Banach manifolds}
-For the purpose of this work it is necessary to work on an infinite-dimensional context, so we can construct the moduli spaces as quotients of infinite-dimensional manifolds. To do this, we need to consider an infinite-dimensional analogous to differential calculus and the notion of an infinite-dimensional smooth manifold. Here we just state the basic definitions and results, which are a direct generalization of the classical ones, and refer to \cite{abrahammarsdenratiu,lang} for more details.
+For the purpose of this text it is necessary to work on an infinite-dimensional context, so we can construct the moduli spaces as quotients of infinite-dimensional manifolds. To do this, we need to consider an infinite-dimensional analogous to differential calculus and the notion of an infinite-dimensional smooth manifold. Here we just state the basic definitions and results, which are a direct generalization of the classical ones, and refer to \cite{abrahammarsdenratiu,lang} for more details.
 \begin{defn}
   Let $E$ and $F$ be Banach spaces and $U\subset E$ an open set. Let $f:E\rightarrow F$ be a continuous map. We say that $f$ is \emph{differentiable} at a point $x_0 \in U$ if there exists a continuous linear map $d_{x_0}f:E\rightarrow F$ such that 
   \begin{equation*}
@@ -565,7 +567,7 @@ As we said before, all the basic definitions and results of classical differenti
       is a $C^p$-diffeomorphism for each pair of indices $\alpha,\beta$.
   \end{enumerate}
 \end{defn}
-Compatibility classes for this kind of atlases are defined like in the finite-dimensional case. A equivalence class of this atlases (or a maximal atlas) is what gives $X$ the structure of a $C^p$-\emph{Banach manifold}. A $C^\infty$-Banach manifold is what we call a \emph{Banach smooth manifold}.
+Compatibility classes for this kind of atlases are defined like in the finite-dimensional case. An equivalence class of this atlases (or a maximal atlas) is what gives $X$ the structure of a $C^p$-\emph{Banach manifold}. A $C^\infty$-Banach manifold is what we call a \emph{Banach smooth manifold}.
 
 Let $X$ be a Banach smooth manifold and $x\in X$. Consider triples $(U,\varphi,v)$, where $(U,\varphi)$ is a chart at $x$ with $\varphi:U\rightarrow E$, $E$ a Banach space, and $v\in E$. We say that two such triples $(U,\varphi,v)$ and $(U',\varphi',v')$ are \emph{equivalent} if 
 \begin{equation*}
@@ -615,7 +617,7 @@ The cotangent space $T^*M$ of any smooth manifold can be endowed with a symplect
      T^*M \arrow{rr}[anchor=south]{\pi} && M.
    \end{tikzcd}
  \end{center}
- This bundle has a tautological section $\theta\in \Gamma(T^*M,\pi^*T^*M)$: $\theta(y)=(y,y)$ for each $y \in T^*M$. The differential of this section $\omega=d\theta$ is a symplectic form on $T^*M$. Locally, if $M$ is finite-dimensional and $(x_1,\dots,x_n)$ are coordinates on $M$ and cotangent vectors are parametrized by coordinates $(_1,\dots,y_n)$, the form $\theta$ is defined by
+ This bundle has a tautological section $\theta\in \Gamma(T^*M,\pi^*T^*M)$: $\theta(y)=(y,y)$ for each $y \in T^*M$. The differential of this section $\omega=d\theta$ is a symplectic form on $T^*M$. Locally, if $M$ is finite-dimensional and $(x_1,\dots,x_n)$ are coordinates on $M$ and cotangent vectors are parametrized by coordinates $(y_1,\dots,y_n)$, the form $\theta$ is defined by
  \begin{equation*}
    \theta=\sum_{i=1}^n y_i dx_i,
  \end{equation*}
@@ -626,41 +628,41 @@ The cotangent space $T^*M$ of any smooth manifold can be endowed with a symplect
  \qed
 \end{ejemplo}
 
-We say that a vector field $v$ on a symplectic manifold $(X,\omega)$ is \emph{symplectic} if the Lie derivative $L_v \omega$ vanishes, that is, if
+We say that a vector field $\ve{v}:X\rightarrow TX$ on a symplectic manifold $(X,\omega)$ is \emph{symplectic} if the Lie derivative $L_{\ve{v}} \omega$ vanishes, that is, if
 \begin{equation*}
-  L_v \omega = d(i_v \omega) + i_v (d\omega)=0,
+  L_{\ve{v}} \omega = d(i_{\ve{v}} \omega) + i_{\ve{v}} (d\omega)=0,
 \end{equation*}
-where $i_v$ denotes the contraction. Since $\omega$ is closed, $v$ is symplectic if and only if the $1$-form $i_v \omega$ is closed. We say that $v$ is \emph{Hamiltonian} if $i_v \omega$ is exact. In that case, there exists a function $f:X\rightarrow \RR$, called the \emph{Hamiltonian} of $v$ such that
+where $i_{\ve{v}}$ denotes the contraction. Since $\omega$ is closed, $\ve{v}$ is symplectic if and only if the $1$-form $i_{\ve{v}} \omega$ is closed. We say that $\ve{v}$ is \emph{Hamiltonian} if $i_{\ve{v}} \omega$ is exact. In that case, there exists a function $f:X\rightarrow \RR$, called the \emph{Hamiltonian} of $\ve{v}$ such that
 \begin{equation*}
-  df=-i_v \omega.
+  df=-i_{\ve{v}} \omega.
 \end{equation*}
-The minus sign in the last equality is just a widely used convention. Of course, if the first de Rham cohomology of $X$ vanishes, $H^1_{\mathrm{dR}}(X)=0$, then every symplectic vector field is Hamiltonian. In particular, every symplectic vector field is \emph{locally Hamiltonian}. Reciprocally, to every function $f:X\rightarrow \RR$, we can define the \emph{Hamiltonian vector field associated to $f$} as the vector field $v_f$ determined by the equation
+The minus sign in the last equality is just a widely used convention. Of course, if the first de Rham cohomology of $X$ vanishes, $H^1_{\mathrm{dR}}(X)=0$, then every symplectic vector field is Hamiltonian. In particular, every symplectic vector field is \emph{locally Hamiltonian}. Reciprocally, to every function $f:X\rightarrow \RR$, we can define the \emph{Hamiltonian vector field associated to $f$} as the vector field $\ve{v}_f$ determined by the equation
 \begin{equation*}
-  df=-i_{v_f}\omega.
+  df=-i_{\ve{v}_f}\omega.
 \end{equation*}
 Given two functions $f$ and $g$, we define their \emph{Poisson bracket} as the function
 \begin{equation*}
-  \left\{ f,g \right\}=v_f g = -v_g f = -\left\{ g,f \right\}.
+  \left\{ f,g \right\}=\ve{v}_f g = -\ve{v}_g f = -\left\{ g,f \right\}.
 \end{equation*}
 Two functions are said to \emph{Poisson commute} if $\{f,g\}=0$.
 
 \begin{ejemplo}
   We can consider the cotangent bundle $T^*M$ of some manifold $M$ with the canonical symplectic structure $\omega=\sum dy_i \wedge dx_i$. If $f$ and $g$ are functions of $(y_1,\dots,y_n)$ alone,
   \begin{equation*}
-    df=\sum_i \frac{\partial f}{\partial y_i} dy_i =- i_{v_f}\omega
+    df=\sum_i \frac{\partial f}{\partial y_i} dy_i =- i_{\ve{v}_f}\omega
   \end{equation*}
   so
   \begin{equation*}
-    v_f=\sum_i \frac{\partial f}{\partial y_i}\frac{\partial}{\partial x_i}.
+    \ve{v}_f=\sum_i \frac{\partial f}{\partial y_i}\frac{\partial}{\partial x_i}.
   \end{equation*}
   Thus, 
   \begin{equation*}
-    \left\{ f,g \right\}=v_f g=\sum_{i} \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}=0.
+    \left\{ f,g \right\}=\ve{v}_f g=\sum_{i} \frac{\partial f}{\partial y_i}\frac{\partial g}{\partial x_i}=0.
   \end{equation*}
   \qed
 \end{ejemplo}
 
-Let $G$ be a Banach Lie group acting symplectically on $X$, that is, if we denote the action by $\rho:G\rightarrow \mathrm{Diff}(X)$, for every $g\in G$ we have
+Let $G$ be a Banach Lie group acting symplectically on $X$. That is, if we denote the action by $\rho:G\rightarrow \mathrm{Diff}(X)$, for every $g\in G$ we have
 \begin{equation*}
   \rho(g)^*\omega=\omega.
 \end{equation*}
@@ -680,19 +682,19 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
   for every $u\in T_xX$, where $d_x\mu:T_xX \rightarrow \gg^*$ is the derivative of $\mu$ at $x$.
 
   \begin{ejemplo}\label{ejintegrable}
-    Let $(X,\omega)$ be any finite-dimensional symplectic manifold and $f_1,\dots,f_n:X\rightarrow \RR$ be functions. If the vector fields $v_{f_1},\dots,v_{f_n}$ form the basis of a Lie sub-algebra $\gg$ of the Lie algebra of vector fields on $X$, then the functions define a map
+    Let $(X,\omega)$ be any finite-dimensional symplectic manifold and $f_1,\dots,f_n:X\rightarrow \RR$ be functions. If the vector fields $\ve{v}_{f_1},\dots,\ve{v}_{f_n}$ form the basis of a Lie sub-algebra $\gg$ of the Lie algebra of vector fields on $X$, then the functions define a map
     \begin{align*}
       \mu :X&\longrightarrow \gg^*\\ 
       x &\longmapsto \sum_{i=1}^n f_i(x) \xi_i, 
       \end{align*}
-      where $\left\{ \xi_i \right\}$ is the dual basis of $\left\{ v_{f_i} \right\}$. If the vector fields integrate to give the action of a Lie group $G$ on $X$, $\mu$ is a momentum map for that action. 
+      where $\left\{ \xi_i \right\}$ is the dual basis of $\left\{ \ve{v}_{f_i} \right\}$. If the vector fields integrate to give the action of a Lie group $G$ on $X$, $\mu$ is a momentum map for that action. 
 
-      An special case of this example is that in which $n=\tfrac{1}{2}\dim X$ and the functions $f_1,\dots,f_n$ pairwise Poisson commute. In that case the vector fields $v_{f_1},\dots,v_{f_n}$ generate an abelian Lie algebra. If the functions are independent, that is, $df_1\wedge \dots \wedge df_n$ is generically nonzero, the momentum map, which is simply $f=(f_1,\dots,f_n):X\rightarrow \RR^n$, has the property that a generic fibre is an $n$-dimensional submanifold with $n$ linearly independent commuting vector fields $v_{f_1},\dots,v_{f_n}$. This is called a \emph{completely integrable system}. Using the aforementioned properties, it can be easily shown that on the regular fibres the symplectic form vanishes, that the flow of any of the $v_{f_i}$ is linear in them and that generic fibres are open sets in tori $\RR^n/\ZZ^n$. This is the content of the theorem of Arnold-Liouville \cite{arnold}. \qed
+      An special case of this example is that in which $n=\tfrac{1}{2}\dim X$ and the functions $f_1,\dots,f_n$ pairwise Poisson commute. In that case the vector fields $\ve{v}_{f_1},\dots,\ve{v}_{f_n}$ generate an abelian Lie algebra. If the functions are independent, that is, if $df_1\wedge \dots \wedge df_n$ is generically nonzero, the momentum map, which is simply $f=(f_1,\dots,f_n):X\rightarrow \RR^n$, has the property that a generic fibre is an $n$-dimensional submanifold with $n$ linearly independent commuting vector fields $\ve{v}_{f_1},\dots,\ve{v}_{f_n}$. This is called a \emph{completely integrable system}. Using the aforementioned properties, it can be easily shown that on the regular fibres the symplectic form vanishes (we say that $f$ is a \emph{Lagrangian fibration}), that the flow of any of the $v_{f_i}$ is linear in them and that generic fibres are open sets in tori $\RR^n/\ZZ^n$. This is the content of the theorem of Arnold-Liouville \cite{arnold}. \qed
   \end{ejemplo}
 
   \section{Symplectic reduction}
 
-  We are going now to introduce \emph{symplectic reduction}, for which we will need to assume that we have a symplectic action of a Banach Lie group $G$ on a symplectic manifold $(X,\omega)$ that admits a momentum map with the following technical conditions. First, assume that $\mu$ is $G$-\emph{equivariant}, that is, 
+  We are going to introduce now \emph{symplectic reduction}, for which we will need to assume that we have a symplectic action of a Banach Lie group $G$ on a symplectic manifold $(X,\omega)$ that admits a momentum map with the following technical conditions. First, assume that $\mu$ is $G$-\emph{equivariant}, that is, 
   \begin{equation*}
     \mu(\rho(g)(x))=(\mathrm{ad}_g)^*(\mu(x)),
   \end{equation*}
@@ -712,11 +714,11 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
       Z=\mu^{-1}(0)/G, &
     \end{tikzcd}
   \end{center}
-  where $j$ is the inclusion and $\pi$ is the natural projection. Assume now that $\mu^{-1}(0)$ is a submanifold of $X$ and that for every $x\in \mu^{-1}(0)$, $T_x(\mu^{-1}(0))=\ker(d_x\mu)$. In particular this is true if $0\in \gg^*$ is a \emph{regular value} of $\mu$, that is, if $d_x\mu:T_xX \rightarrow \gg^*$ is surjective for every $x\in \mu^{-1}(0)$, by the implicit function theorem. Finally, assume that the action of $G$ on $\mu^{-1}(0)$ is \emph{free} (without fixed points) and that at each point $x\in \mu^{-1}(0)$ there is a \emph{slice} $S_x\subset \mu^{-1}(0)$ for the action, i.e., a submanifold $S_x\subset \mu^{-1}(0)$, $x\in S_x$, transversal to the orbit $Gx$, that is
+  where $j$ is the inclusion and $\pi$ is the natural projection. Assume now that $\mu^{-1}(0)$ is a submanifold of $X$ and that for every $x\in \mu^{-1}(0)$, $T_x(\mu^{-1}(0))=\ker(d_x\mu)$. In particular this is true if $0\in \gg^*$ is a \emph{regular value} of $\mu$, that is, if $d_x\mu:T_xX \rightarrow \gg^*$ is surjective for every $x\in \mu^{-1}(0)$, by the implicit function theorem. Finally, assume that the action of $G$ on $\mu^{-1}(0)$ is \emph{free} (without fixed points) and that at each point $x\in \mu^{-1}(0)$ there is a \emph{slice} $S_x\subset \mu^{-1}(0)$ for the action, i.e., a submanifold $S_x\subset \mu^{-1}(0)$, $x\in S_x$, transversal to the orbit $Gx$. That is
   \begin{equation*}
     T_x(\mu^{-1}(0))=T_x(S_x)+T_x(Gx).
   \end{equation*}
-  Taking $S_x$ small, the projection $\pi:\mu^{-1}(0)\rightarrow Z$ defines a homeomorphism of $S_x$ onto an open set of $Z$, making $Z$ into a manifold. In principle $Z$ could be non-Hausdorff, so in order to get a Hausdorff manifold we also need to ask that the action is \emph{proper}, that is, the map
+  Taking $S_x$ small, the projection $\pi:\mu^{-1}(0)\rightarrow Z$ defines a homeomorphism of $S_x$ onto an open set of $Z$, turning $Z$ into a manifold. In principle $Z$ could be non-Hausdorff, so in order to get a Hausdorff manifold we also need to ask that the action is \emph{proper}, that is, the map
   \begin{align*}
     G\times X&\longrightarrow X\times X\\ 
       (g,x) &\longmapsto (\rho(g)(x),x), 
@@ -777,7 +779,7 @@ Let $\gg$ be the Lie algebra of $G$ and $\gg^*$ its dual Banach space. Recall th
     \end{proof}
 
     \begin{rem}
-      Let $M$ be a symplectic manifold with the action of a Lie group $G$ and momentum map $\mu:X\rightarrow \gg^*$ defined by functions $f_1,\dots,f_n$ as in example \ref{ejintegrable}. If $g$ is a $G$-invariant function on $M$ by restriction we can define a $G$-invariant function $\tilde{g}$ on $\mu^{-1}(0)$ and therefore on the quotient $\mu^{-1}(0)/G$. If $g,h$ are two such functions such that $\left\{ g,h \right\}=0$, $X_gh=0$, so $h$ is constant along the orbits of $X_g$. But the projection of these orbits to the quotients are the orbits of $X_{\tilde{g}}$, so $\tilde{h}$ is constant on these orbits and so $\left\{ \tilde{g},\tilde{h} \right\}=0$.
+      Let $M$ be a symplectic manifold with the action of a Lie group $G$ and momentum map $\mu:X\rightarrow \gg^*$ defined by functions $f_1,\dots,f_n$ as in Example \ref{ejintegrable}. If $g$ is a $G$-invariant function on $M$ by restriction we can define a $G$-invariant function $\tilde{g}$ on $\mu^{-1}(0)$ and therefore on the quotient $\mu^{-1}(0)/G$. If $g,h$ are two such functions such that $\left\{ g,h \right\}=0$, $X_gh=0$, so $h$ is constant along the orbits of $X_g$. But the projection of these orbits onto the quotients are the orbits of $X_{\tilde{g}}$, so $\tilde{h}$ is constant on these orbits and so $\left\{ \tilde{g},\tilde{h} \right\}=0$.
     \end{rem}
 
     \section{The moduli space as a symplectic quotient}
@@ -791,7 +793,7 @@ endowing $\AA_h$, at least formally, with the structure of a symplectic manifold
 
 Remember that the Lie group $\GG$ acts on $\AA_h$ by congugation $\nabla\mapsto g\nabla g^{-1}$. 
 \begin{prop}
-  This action does a momentum map, given by
+  This action admits a momentum map, given by
 \begin{equation*}
   \mu(\nabla)=-F-2\pi i \mu(E) \id_E \omega_X,
 \end{equation*}
@@ -828,9 +830,9 @@ The $\GG$-action can be shown to verify all the technical conditions for it to d
 
 \chapter{Higgs bundles and the Hitchin system}
 \section{The Hitchin system}
-Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is, the cotangent bundle $K_X=(T^{1,0}X)^*$. As we shall see, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold and it admits a completely integrable system, the Hitchin system. More specifically, what we will prove is the following
-\begin{thm}[Hitchin] \label{hitchinsystem}
-  Let $X$ be a Riemann surface and $\Bun(n,d)$ the moduli space of stable holomorphic vector bundles of rank $n$ and degree $d$ on $X$. Let $k=n^2(g-1)+1$ be the complex dimension of $\Bun(n,d)$. There is a map
+Recall that the moduli space $\Bun(n,d)$ has the structure of a complex manifold and that its (smooth) tangent space at some point $\ve{E}$ is isomorphic to $H^1(X,\End\ \ve{E})$. Now, by Serre duality, the cotangent space $T_{\ve{E}}^*\Bun(n,d)$ is isomorphic to $H^0(X,\End\ \ve{E} \otimes K_X)$, where $K_X$ denotes the canonical line bundle of the Riemann surface $X$, that is, the cotangent bundle $K_X=(T^{1,0}X)^*$. As we shall see, the cotangent bundle $T^*\Bun(n,d)$ can be given the structure of a symplectic manifold and it admits a (complex) completely integrable system, the Hitchin system. Specifically, what we will prove is the following
+\begin{thm}[Hitchin, \cite{hitchinsystem}] \label{hitchinsystem}
+  Let $X$ be a compact Riemann surface and $\Bun(n,d)$ the moduli space of stable holomorphic vector bundles of rank $n$ and degree $d$ on $X$. Let $k=n^2(g-1)+1$ be the complex dimension of $\Bun(n,d)$. There is a map
   \begin{equation*}
     H: T^*\Bun(n,d) \rightarrow \BB,
   \end{equation*}
@@ -879,7 +881,7 @@ We now define the momentum map
   \begin{equation*}
     \vec{\xi}(\delbar_{\ve{E}},\varphi)=(-\delbar_{\ve{E}}\xi, [\xi,\varphi]).
   \end{equation*}
-  Therefore
+  Thus
   \begin{equation*}
     \omega\left( (A,\psi),\vec{\xi} \right)=2i\int_X \tr(A\wedge[\xi,\varphi] + \delbar_{\ve{E}} \xi \wedge \psi)=- 2i\int_X \tr(\xi[A,\varphi] + \xi \delbar_{\ve{E}} \psi)=\langle d_{\delbar_{\ve{E}},\varphi}\mu(A,\psi),\xi \rangle.
   \end{equation*}
@@ -903,7 +905,7 @@ We now define the momentum map
 	H :T^*\Bun(n,d)&\longrightarrow \bigoplus_{i=1}^n H^0(X,K^i_X)\\ 
 	(\ve{E},\varphi) &\longmapsto (\sigma_1(\varphi),\dots,\sigma_n(\varphi)). 
 	\end{align*}
-	This is the \emph{Hitchin map}. We define now the vector space $\BB= \bigoplus_{i=1}^n H^0(X,K^i_X)$ and let us check that it has the desired dimension. This is a straightforward computation using Riemann-Roch:
+	This is the \emph{Hitchin map}. We define now the vector space $\BB= \bigoplus_{i=1}^n H^0(X,K^i_X)$. Let us check that this space has the desired dimension. This is a straightforward computation using Riemann-Roch,
 	\begin{align*}
       \dim \BB &= \sum_{i=1}^n \dim H^0(X,K_X^i)= \dim H^0(X,K_X) + \sum_{i=2}^n \dim H^0(X,K_X^i)\\
       &= g + \sum_{i=2}^n [i(2g-2)-g+1] =1+ \sum_{i=1}^n [i(2g-2)-g+1] \\
@@ -913,7 +915,7 @@ We now define the momentum map
     To finish the proof of Hitchin's theorem it remains to check that the fibers are open sets in $n^2(g-1)+1$-dimensional complex tori. In order to prove this, we are going to need a very powerful tool that will be introduced in the following section.
 
     \section{The spectral correspondence}
-    In this section we are going to study the spectral data of ``twisted'' endomorphisms on vector bundles. We are going to work in a more general setting than the previous section, in which we were only considering pairs $(\ve{E},\varphi)$ were $\varphi\in \End\ \ve{E} \otimes K_X$ was an endomorphism ``twisted'' by the canonical line bundle $K_X$. We are now going to allow twisting by any holomorphic line bundle $L$.
+    In this section we are going to study the spectral data of ``twisted'' endomorphisms on vector bundles. We are going to work in a more general setting than the previous section, in which we were only considering pairs $(\ve{E},\varphi)$ where $\varphi\in H^0(X,\End\ \ve{E} \otimes K_X)$ was an endomorphism ``twisted'' by the canonical line bundle $K_X$. We are now going to allow twisting by any holomorphic line bundle $L$.
 
     \begin{defn}
       Let $X$ be a compact Riemann surface and let $\ve{E}\rightarrow X$ be a holomorphic vector bundle of rank $n$ and degree $d$. Let us fix a holomorphic line bundle $L\rightarrow X$. A \emph{$L$-twisted endomorphism} is a bundle homomorphism $\varphi:\ve{E}\rightarrow \ve{E}\otimes L$, or equivalently, a holomorphic section $\varphi \in H^0(X,\End\ \ve{E} \otimes L)$.
@@ -925,7 +927,7 @@ We now define the momentum map
       \end{align*}
       We can then take the traces of these homomorphisms and get sections $\tr \wedge^i \varphi \in H^0(X,L^{i})$. With these sections we can construct the characteristic polynomial of $\varphi$, 
       \begin{equation*}
-	P_\varphi(T)=\det(T-\varphi)=T^n+\sum_{i=1}^n (-1)^i \sigma_i(\varphi) T^{n-i},
+	P_\varphi(T)=\det(T-\varphi)=T^n+\sum_{i=1}^n \sigma_i(\varphi) T^{n-i},
       \end{equation*}
       where the coefficients are precisely $\sigma_i(\varphi)=(-1)^i\tr \wedge^i \varphi \in H^0(X,L^{i})$. For example, $$\sigma_1(\varphi)=-\tr\ \varphi, \hspace{1 cm} \sigma_n(\varphi)=(-1)^n \det \varphi.$$
       Therefore, to any $L$-twisted endomorphism $\varphi$ we can associate an element 
@@ -1011,7 +1013,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 
 	We are now in position to prove the spectral correspondence:
 	\begin{thm}[Beauville-Narasimhan-Ramanan, \cite{bnr}]
-	  Let $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ such that the spectral curve $S_b$ is irreducible and smooth. We have a bijective correspondence, up to isomorphism, between holomorphic line bundles over $S_b$ of degree $\delta$ and pairs $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ of rank $n$ and degree $d$, and $\varphi$ is a $L$-twisted endomorphism with characteristic polynomial
+	  Take $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ such that the spectral curve $S_b$ is irreducible and smooth. We have a bijective correspondence, up to isomorphism, between holomorphic line bundles over $S_b$ of degree $\delta$ and pairs $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ of rank $n$ and degree $d$, and $\varphi$ is a $L$-twisted endomorphism with characteristic polynomial
 	  \begin{equation*}
 	    P_\varphi(T)=P_b(T):=T^n + \sum_{i=1}^n b_i T^{n-i}.   
 	  \end{equation*}
@@ -1022,7 +1024,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	\end{thm}
 
 	\begin{proof}
-	  Let $M$ be a holomorphic line bundle over $S_b$ of degree $\delta$. We can consider the direct image bundle $\pi_*M$, which is a rank $\deg \pi=n$ vector bundle over and its degree is given by the formula
+	  Let $M$ be a holomorphic line bundle over $S_b$ of degree $\delta$. We can consider the direct image bundle $\pi_*M$, which is a rank $\deg \pi=n$ vector bundle over $X$ and its degree is given by the formula
 	  \begin{equation*}
 	    \deg(\pi_*M)=\deg M + (1-g_{S_b}) - \deg \pi (1-g)=\delta -  \frac{n(n-1)}{2}\deg L.
 	  \end{equation*}
@@ -1037,9 +1039,9 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  \begin{equation*}
 	    H^0(\pi^{-1}(U),M\otimes \pi^{*}L)=H^0(U,\pi_*(M\otimes \pi^*L))=H^0(U,\pi_*M \otimes L).
 	  \end{equation*}
-	  Therefore, we have a homomorphism of locally free sheaves
+	  This gives a homomorphism of locally free sheaves
 	  \begin{equation*}
-	     \otimes \lambda|_{\pi^{-1}(U)}: \OO(\pi_*M) \rightarrow \OO(\pi_*M \otimes L),
+	      \OO(\pi_*M) \rightarrow \OO(\pi_*M \otimes L),
 	  \end{equation*}
 	  that induces a $L$-twisted endomorphism
 	  \begin{equation*}
@@ -1057,16 +1059,14 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	   \end{center}
 	   The pullback section $\pi^*\varphi\in H^0(S_b,\End (\pi^*\ve{E})\otimes \pi^*L)$ must satisfy
 	   \begin{equation*}
-	     P_{\pi^*\varphi}(\lambda|_{S_b})=(\lambda|_{S_b})^n+ \sum_{i=1}^n \pi^*b_i (\lambda|_{S_b})^{n-i} = s_b=0,
+	     P_{\pi^*\varphi}(\lambda|_{S_b})=(\lambda|_{S_b})^n+ \sum_{i=1}^n \pi^*b_i (\lambda|_{S_b})^{n-i} = s_b|_{S_b}=0,
 	   \end{equation*}
-	   since $S_b=(s_b)_0$. Therefore, locally we can see $\lambda$ as an eigenvalue of $\varphi$ and one could construct the line bundle $M$, at least away from the ramification divisor, as the bundle defined at each point $x$ by the eigenspace of $\varphi_x$ associated to $\lambda_x$. Globally what we do is to consider $\lambda|_{S_b}\id - \pi^*\varphi$ as a morphism of locally free sheaves and the sheaf $\ker(\lambda|_{S_b}\id - \pi^*\varphi) \subset \pi^*\ve{E}$, which is a rank one locally free sheaf, so it defines a line bundle $M$ over $S_b$ such that $\pi_*(M)=\ve{E}$. Another direct way to do it is to define $M$ by the exact sequence
+	   since $S_b=(s_b)_0$. Therefore, locally we can see $\lambda$ as an eigenvalue of $\varphi$ and one could construct the line bundle $M$, at least away from the ramification divisor, as the bundle defined at each point $x$ by the eigenspace of $\varphi_x$ associated to $\lambda_x$. Globally what we do is consider $\lambda|_{S_b}\id - \pi^*\varphi$ as a morphism of locally free sheaves and the sheaf $\ker(\lambda|_{S_b}\id - \pi^*\varphi) \subset \pi^*\ve{E}$, which is a rank one locally free sheaf, so it defines a line bundle $M$ over $S_b$ such that $\pi_*M \cong\ve{E}$. Another direct way to do this is to define $M$ by the exact sequence
 	   \begin{center}
 	     \begin{tikzcd}
 	       0 \arrow{r} & M(-R) \arrow{r} & \pi^*\ve{E} \arrow{rr}{\lambda|_{S_b}\id -\pi^*\varphi} && \pi^*(\ve{E}\otimes L) \arrow{r} & M\otimes \pi^*L  \arrow{r} & 0.
 	     \end{tikzcd}
 	   \end{center}
-	   
-	   The naturality of the constructions implies that the correspondence is given up to isomorphism. It is also clear from the constructions that they are inverse to each other.
 	\end{proof}
 
 	\section{Hitchin's equations}
@@ -1077,7 +1077,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  \end{align*}
 	  The fiber of some point $b=(b_1,\dots,b_n)\in \BB$ by this map is formed precisely by (isomorphism classes of) that pairs $(\ve{E},\varphi)$ such that $\ve{E}$ is a holomorphic \textit{stable} vector bundle of rank $n$ and degree $d$ and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ is a $K_X$-twisted endomorphism with $P_\varphi(T)=P_b(T)$. Moreover, $K_X^n$ is base point free, so for generic $b\in \BB$ the spectral curve $S_b$ will be irreducible and smooth. Stability is an open condition, so in this case the Beauville-Narasimhan-Ramanan theorem says that the fiber of a generic $b$ is an open subset of the set of isomorphism classes of holomorphic line bundles over $S_b$ of degree 
 	  $$\delta=d+\frac{n(n-1)}{2}\deg K_X=d+n(n-1)(g-1).$$
-	  But this set of isomorphism classes is precisely the component $\Pic^\delta (S_b)$ of the Picard group, which is isomorphic to the Jacobian $J(S_b)$; so it is indeed a complex torus! Moreover, the dimension of this complex torus is the genus of the spectral curve, and if we compute it the miracle occurs:
+	  But this set of isomorphism classes is precisely the component $\Pic^\delta (S_b)$ of the Picard group, which is isomorphic to the Jacobian $J(S_b)$; so it is indeed a complex torus! Moreover, the dimension of this complex torus is the genus of the spectral curve, and if we compute it the \textit{miracle} occurs:
 	  \begin{equation*}
 	    g_{S_b}=1+n(g-1)+\frac{n(n-1)}{2}\deg K_X=1+n^2(g-1).
 	  \end{equation*}
@@ -1102,7 +1102,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	    \end{equation*}
 	  \end{rem}
 	  
-	  Remember that the elements $g$ of the group act by conjugation $(\nabla,\varphi)\mapsto (g\nabla g^{-1},g\varphi g^{-1})$. 
+	  Remember that the elements $g$ of the group $\GG$ act by conjugation $(\nabla,\varphi)\mapsto (g\nabla g^{-1},g\varphi g^{-1})$. 
 	  \begin{prop}
 	    The action of $\GG$ on $\AA_h\times \Omega^{1,0}(X,\End E)$ admits a momentum map,
 	  \begin{equation*}
@@ -1179,7 +1179,7 @@ Therefore
 	  \begin{equation*}
 	    \left\{ (\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End E) : \nabla^{0,1}\varphi = 0\right\}.
 	  \end{equation*}
-	  Avoiding possible singularities, this variety inherits the symplectic structure from $\AA_h\times \Omega^{1,0}(X,\End E)$ and, since it is $\GG$-invariant, the restriction of the momentum map. This allows us to take another symplectic quotient.
+	  By avoiding possible singularities, this variety inherits the symplectic structure from $\AA_h\times \Omega^{1,0}(X,\End E)$ and, since it is $\GG$-invariant, we can use the restriction of the momentum map to take another symplectic quotient.
 	  The space we obtain is the \emph{moduli space of solutions to the Hitchin equations} on $E$, that is, the set of equivalence classes of pairs $(\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ that satisfy \emph{Hitchin's equations}:
 	  \begin{equation*}
 	    \begin{cases}
@@ -1188,7 +1188,7 @@ Therefore
 	    \end{cases}
 	  \end{equation*}
 	  
-	  In the next section we are going to see how this space corresponds to a broader notion of stability for pairs $(\ve{E},\varphi)$, with $\ve{E}$ a holomorphic vector bundle and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ a $K_X$-twisted endomorphism and we will find that this moduli space is precisely the wider symplectic manifold containing $T^*\Bun(n,d)$ and the pairs associated to the remaining points of the Jacobian in the spectral correspondence.
+	  In the next section we are going to see how this space corresponds to a broader notion of stability for pairs $(\ve{E},\varphi)$, with $\ve{E}$ a holomorphic vector bundle and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ a $K_X$-twisted endomorphism and we will show that this moduli space is precisely the wider symplectic manifold containing $T^*\Bun(n,d)$ and the pairs associated to the remaining points of the Jacobian in the spectral correspondence.
 
 	  \section{Higgs bundles}
 	  \begin{defn}
@@ -1201,7 +1201,7 @@ Therefore
 	      \mu(E')<\mu(E).
 	    \end{equation*}
 	  \end{thm}
-	  The proof of this theorem uses the same techniques and is very similar to Donaldson's proof of the theorem of Narasimhan-Seshadri (Theorem \ref{narasimhanseshadri}). As in that case, we will only prove the ``easy'' direction of the equivalence.
+	  The proof of this theorem uses the same techniques and is very similar to the proof of Theorem \ref{narasimhanseshadri}. As in that case, we will only prove the ``easy'' direction of the equivalence.
 	  \begin{proof}
 	    Let $(\nabla,\varphi)$ be a solution of the Hitchin equations
 	  \begin{equation*}
@@ -1257,7 +1257,7 @@ Therefore
 	    The \emph{moduli space of stable Higgs bundles of rank $n$ and degree $d$}, $\Hig(n,d)$, is defined as the set of isomorphism classes of stable Higgs bundles $(\ve{E},\varphi)$ with $\rk\ \ve{E}=n$ and $\deg \ve{E}=d$.
 	  \end{defn}
 
-	  In \cite{hitchinselfduality}, Hitchin gave an analytic construction of a particular case of rank $2$ of this moduli space and a general GIT construction was given by Nitsure in [REF:Nitsure].
+	  In \cite{hitchinselfduality}, Hitchin gave an analytic construction of a particular case of rank $2$ of this moduli space and a general GIT construction was given by Nitsure in \cite{nitsure}.
 	  \begin{thm}\label{thm:higgs}
 	    The moduli space $\Hig(n,d)$ is a complex manifold of dimension $2+2n^2(g-1)$, where $g$ is the genus of $X$.
 	  \end{thm}
@@ -1289,7 +1289,7 @@ Therefore
 	    \begin{equation*}
 	     \HH= \left\{(\delbar_{\ve{E}},\varphi) \in\AA^s_\partial \times \Omega^{1,0}(X,\End E) : \delbar_{\ve{E}}\varphi=0 \right\}
 	    \end{equation*}
-	    and its subset
+	    and its open subset
 	    \begin{equation*}
 	      \HH^s=\left\{ (\delbar_{\ve{E}},\varphi) \in \HH : (\delbar_{\ve{E}},\varphi) \text{ is stable} \right\}      .
 	    \end{equation*}
@@ -1299,7 +1299,7 @@ Therefore
 	    \end{equation*}
 	    We can then obtain the moduli space of Higgs bundles as the quotient $\Hig(n,d)=\HH^s/\GG^c$, where $n=\rk\ E$ and $d= \deg E$.
 
-	    The differential of action of the complex group on $\HH$ is mapping from the Lie algebra $\Lie \GG^c= \Gamma(\End\ E)$ to the tangent space of $\HH$,
+	    The differential of action of the complex group on $\HH$ is a mapping from the Lie algebra $\Lie \GG^c= \Gamma(\End\ E)$ to the tangent space of $\HH$,
 	    \begin{align*}
 	      f:\Gamma(\End\ E)&\longrightarrow T_{(E,\varphi)}\HH\\ 
 	      \xi &\longmapsto (\delbar_{\ve{E}} \xi, [\varphi,\xi]). 
@@ -1334,7 +1334,7 @@ Therefore
 		  0.
 		\end{tikzcd}
 	      \end{center}
-	      The rows of this complex are short exact sequences, so then we get a short exact sequence of complexes
+	      The rows of this complex are short exact sequences so we get a short exact sequence of complexes
 	      \begin{center}
 		\begin{tikzcd}
 		  0 \arrow{r} & \Omega^{0,\bullet}(X,\End\ E \otimes K_X)[1] \arrow{r} & C^\bullet \arrow{r}& \Omega^{0,\bullet}(X,\End\ E) \arrow{r} & 0,
@@ -1399,7 +1399,7 @@ Therefore
 		\qed
 	      \end{ejemplo}
 
-	      First of all, let $X$ be a complex projective smooth and irreducible curve of genus $g\geq 2$. By an \emph{$L$-twisted Higgs bundle} we understand a pair $(E,\varphi)$, with $E$ a rank $n$ (algebraic) vector bundle on $X$ and $\varphi:E\rightarrow E\otimes L$. If we let $\LL=\Gamma(L)$ be the locally free sheaf of sections of $L$, $\varphi$ induces a sheaf morphism
+	      First of all, let $X$ be a complex projective smooth and irreducible curve of genus $g\geq 2$ and let $L$ be a line bundle on $X$. By an \emph{$L$-twisted Higgs bundle} we understand a pair $(E,\varphi)$, with $E$ a rank $n$ (algebraic) vector bundle on $X$ and $\varphi:E\rightarrow E\otimes L$. If we let $\LL=\Gamma(L)$ be the locally free sheaf of sections of $L$, $\varphi$ induces a sheaf morphism
 	      \begin{equation*}
 		\tilde{\varphi}: \Sym(\LL^{-1}) \longrightarrow \End E
 	      \end{equation*}
@@ -1407,7 +1407,7 @@ Therefore
 	      \begin{equation*}
 		\Sym(\LL^{-1})(U) \cong  \OO_X(U)[\lambda]=\OO_X(U) \otimes \CC[\lambda],
 	      \end{equation*}
-	      for $\lambda$ the generator of $\LL^{-1}(U)=\Hom(\LL(U),\OO_X(U))$.
+	      for $\lambda$ the dual of $s$ in $\LL^{-1}(U)=\Hom(\LL(U),\OO_X(U))$.
 	      We can then define the ring homomorphism
 	      \begin{align*}
 		\tilde{\varphi}|_U:\OO_X(U)[\lambda]&\longrightarrow \Gamma(U,\End E)\\ 
@@ -1423,29 +1423,31 @@ Therefore
   \end{center}
   Therefore, since the pair $(E,\varphi)$ can be seen as a $p_*\OO_L$-module, there must be a quasi-coherent sheaf $\hat{\EE}$ on $L$ such that $p_*\hat{\EE}=\EE=\Gamma(E)$. In fact, that module structure descends to a $(p_*\OO_L/\ker \tilde{\varphi})$-module structure, so the support of the sheaf $\hat{\EE}$ must be 
   \begin{equation*}
-    S_\varphi= \RSpec\left( \frac{\Sym(\LL^{-1})}{\ker \tilde{\varphi}} \right)\subset \RSpec(\Sym(\LL^{-1}))=L.
+     \RSpec\left( \frac{\Sym(\LL^{-1})}{\ker \tilde{\varphi}} \right)\subset \RSpec(\Sym(\LL^{-1}))=L.
   \end{equation*}
   Note that, pointwise
   \begin{equation*}
    \left.  \frac{\Sym(\LL^{-1})}{\ker \tilde{\varphi}}\right|_x \cong \OO_{X,x} \otimes \CC[\phi(x)]
   \end{equation*}
-  which has Krull dimension 1, since $\dim \OO_{X,x}=1$ and $\dim \CC[\phi(x)]=0$. Therefore, $S_\varphi $ is a $1$-dimensional scheme. 
+  which has Krull dimension 1, since $\dim \OO_{X,x}=1$ and $\dim \CC[\phi(x)]=0$. Therefore, this is a $1$-dimensional scheme. For generic $\varphi$ this scheme is irreducible. In order to get an integral scheme we can consider the radical $\sqrt{\ker \tilde{\varphi}}$ and the scheme
+  \begin{equation*}
+    S_\varphi= \RSpec\left( \frac{\Sym(\LL^{-1})}{\sqrt{\ker \tilde{\varphi}}} \right).
+  \end{equation*}
 
   On the other hand we can consider the coefficients of the characteristic polynomial of $\varphi$, which are sections $\sigma_i(\varphi) \in \Gamma(L^i)=\LL^i$. These sections define imbeddings 
   \begin{align*}
     \otimes \sigma_i(\varphi):\LL^{-n}&\longrightarrow \LL^{-(n-i)}.
     \end{align*}
-    Locally, if $\varphi=\phi \otimes s$, $\sigma_i(\varphi)=s^i \tr \wedge^i \phi$, and the embedding looks like
+    Locally, if $\varphi=\phi \otimes s$, $\sigma_i(\varphi)=(-1)^i s^i \tr \wedge^i \phi$, and the embedding looks like
 \begin{equation*}
-  f\lambda^n \otimes \sigma_i(\varphi)=f \lambda^i(s^i)  \tr \wedge^i\phi \lambda^{n-i} = \tilde{\sigma_i}(\varphi) \lambda^{n-i},
+  \lambda^n \otimes \sigma_i(\varphi)= (-1)^i \lambda^i(s^i)  \tr \wedge^i\phi \lambda^{n-i} = \sigma_i(\phi) \lambda^{n-i}.
 \end{equation*}
-for $f\in \OO_X(U)$ and $\tilde{\sigma_i}(\varphi):=f \lambda^i(s^i)  \tr \wedge^i\phi \in \OO_X(U)$.
 The sum of these imbeddings gives a homomorphism $\LL^{-n}\rightarrow \Sym(\LL^{-1})$ that locally looks like the characteristic polynomial,
     \begin{align*}
       \LL^{-n}(U)&\longrightarrow \Sym(\LL^{-1})(U)\\ 
-      \lambda^n &\longmapsto \sum_{i=1}^n \sigma_i(\varphi) \otimes \lambda^n=\sum_{i=1}^n \tilde{\sigma_i}(\varphi) \lambda^{n-i}.
+      \lambda^n &\longmapsto \sum_{i=1}^n \sigma_i(\varphi) \otimes \lambda^n=\sum_{i=1}^n \sigma_i(\phi) \lambda^{n-i}.
       \end{align*}
-      The image of this homomorphism generates an ideal sheaf $\II$ and the spectral curve can be defined as $\RSpec(\Sym(\LL^{-1})/\II)$. The Cayley-Hamilton theorem assures that $\II \subset \ker \tilde{\varphi}$. When the spectral curve is integral, (away from ramification points) the minimal and characteristic polynomial generate the same ideal and so the spectral curve coincides with the scheme $S_\varphi$. Moreover, away from ramification points, that is, when the characteristic polynomial of $\phi(x)$ coincides with its minimal polynomial, the rank of $\OO_{X,x}[\varphi(x)]$ as a $\OO_{X,x}$ module equals the dimension of $\CC[\varphi(x)]$ as a $\CC$-vector space, which in this case is exactly $n$. What this says is that the restriction $\pi:p|_{S_\varphi}:S_{\varphi} \rightarrow X$ is a finite morphism of degree $\deg \pi =n$.
+      The image of this homomorphism generates an ideal sheaf $\II$ and the spectral curve can be defined as $\RSpec(\Sym(\LL^{-1})/\II)$. The Cayley-Hamilton theorem assures that $\II \subset \ker \tilde{\varphi}$. After taking the radical, the minimal and characteristic polynomial generate the same ideal and so the spectral curve coincides with the integral scheme $S_\varphi$. Moreover, away from ramification points, that is, when the characteristic polynomial of $\phi(x)$ coincides with its minimal polynomial, the rank of $\OO_{X,x}[\varphi(x)]$ as a $\OO_{X,x}$-module equals the dimension of $\CC[\varphi(x)]$ as a $\CC$-vector space, which in this case is exactly $n$. What this says is that the restriction $\pi=p|_{S_\varphi}:S_{\varphi} \rightarrow X$ is a finite morphism of degree $\deg \pi =n$.
 
       The spectral correspondence is now clear, $\pi$ is a finite morphism so in particular it is affine and $\pi_*$ gives an equivalence of categories
   \begin{center}
@@ -1455,7 +1457,7 @@ The sum of these imbeddings gives a homomorphism $\LL^{-n}\rightarrow \Sym(\LL^{
   \end{center}
   Of course $\pi_*\OO_{S_\varphi}=\Sym(\LL^{-1})/\ker \tilde{\varphi}$, so $\varphi$ endows $E$ with a $\pi_*\OO_{S_\varphi}$-module structure, that must correspond to a quasi-coherent sheaf $\MM$ of $\OO_{S_\varphi}$-modules such that $\pi_* \MM=\EE$. If $S_\varphi$ is smooth then the sheaf $\MM$ is locally free. Moreover, since  $\pi_*\OO_{S_\varphi}$ has the same rank, $n$, that $\EE$ as an $\OO_X$ module, $\MM$ must have rank $1$. Conversely, from a line bundle $M$ on $S_\varphi$ we recover $\pi_*M$ a rank $n$ vector bundle endowed with a $\pi_*\OO_{S_\varphi}$-module structure. 
 
-  This point of view yields and alternative way of computing the genus of the spectral curve and the degree of the corresponding line bundle $M$ in terms of the degree $d$ of $E$. First, we can compute explicitly $\pi_*\OO_{S_\varphi}$ as
+  This point of view yields an alternative way of computing the genus of the spectral curve and the degree of the corresponding line bundle $M$ in terms of the degree $d$ of $E$. First, we can compute explicitly $\pi_*\OO_{S_\varphi}$ as
   \begin{equation*}
     \pi_*\OO_{S_\varphi}=\frac{\Sym(\LL^{-1})}{\II}=\frac{\bigoplus_{i=1}^\infty \LL^{-i}}{\langle(\sigma_1(\varphi)+\cdots+\sigma_n(\varphi))\LL^{-n}\rangle}=\bigoplus_{i=1}^{n-1} \LL^{-i}.
   \end{equation*}
@@ -1483,7 +1485,7 @@ The sum of these imbeddings gives a homomorphism $\LL^{-n}\rightarrow \Sym(\LL^{
     so $\deg M = d+\deg(L)\frac{n(n-1)}{2}$.
 	  
 \section{$\SL(n,\CC)$-Higgs bundles}
-The notion of a Higgs bundle can be generalized to principal bundles, in this section we will give a short example, considering principal $\SL(n,\CC)$-Higgs bundles.
+The notion of a Higgs bundle can be generalized to principal bundles. In this section we will give a short example, considering principal $\SL(n,\CC)$-Higgs bundles.
 
 \begin{defn}
   Let $G^c$ be a complex semi-simple Lie group. A $G^c$-Higgs bundle is a pair $(P,\varphi)$ where $P$ is a principal $G^c$-bundle over $X$ and the Higgs field $\varphi$ is a holomorphic section of the vector bundle $\ad P \otimes K_X$, for $\ad P$ the vector bundle associated to the adjoint representation.
@@ -1512,11 +1514,11 @@ We can consider the moduli space $\SLHig(d)$ corresponding to the subset of $\Hi
     \left\{ [M] \in J(S_b) : \pi_*M \cong \ve{E} \text{ and } \det(\pi_*M)\cong\OO_X  \right\}  . 
   \end{equation*}
 
-To understand this conditions let us consider the norm map
+To understand these conditions let us consider the norm map
   \begin{align*}
      \Nm_\pi: \Pic(S_b)&\longrightarrow \Pic(X)
     \end{align*}
-    associated to $\pi:S_b\rightarrow X$ and recall the formula
+    associated to $\pi:S_b\rightarrow X$ and recall the formula from last section
     \begin{equation*}
       \det \pi_*M \cong \det \pi_*\OO_{S_b} \otimes \Nm_\pi M=K_X^{-\frac{n(n-1)}{2}} \otimes \Nm_\pi M.
     \end{equation*}
@@ -1551,7 +1553,7 @@ To understand this conditions let us consider the norm map
     Therefore in the $\SL(n,\CC)$ case the Hitchin map gives again an integrable system.
 
     \chapter{Higgs bundles twisted by a vector bundle}
-    In this chapter we are going to work with a more general notion of Higgs bundle, in which the Higgs field is an endomorphism twisted by a general rank $r>1$ vector bundle. The interest for these objects comes from the study of \textit{generalized Hitchin equations} that appear ``naturally'' the study of $\mathcal{N}=1$ supersymmetric gauge theories. Our main inspiration here is the paper \cite{xieyonekura} by D. Xie and K. Yonekura.
+    In this chapter we are going to work with a more general notion of Higgs bundle, in which the Higgs field is an endomorphism twisted by a general rank $r>1$ vector bundle. The interest for these objects comes from the study of \textit{generalized Hitchin equations}, that appear ``naturally'' in the study of $\mathcal{N}=1$ supersymmetric gauge theories. Our main inspiration here is the paper \cite{xieyonekura} by D. Xie and K. Yonekura.
 
     \section{Generalized Hitchin's equations}
 
@@ -1565,7 +1567,7 @@ To understand this conditions let us consider the norm map
     \end{defn}
 
     \begin{rem}
-      What this last condition is telling us is that, if locally, in some open subset $U\subset X$, we decompose $V|_U=\bigoplus_{i=1}^r L_i|_U$ and 
+      What this last condition is telling us is that, if locally, in some open subset $U\subset X$, we can decompose $V|_U=\bigoplus_{i=1}^r L_i|_U$ and 
       \begin{equation*}
 	\varphi= \sum_{i=1}^r \phi^i \otimes v_i,
       \end{equation*}
@@ -1654,7 +1656,7 @@ This finishes the proof of the lemma.
     \begin{equation*}
       \omega\left( (A_1,\varphi_1),(A_2,\varphi_2) \right)=-\int_X \tr(A_1 \wedge A_2) + 2i \mathrm{Im}(\tilde{h}(\varphi_1, \varphi_2)) \omega_X.
     \end{equation*}
-    The first part of this form corresponds to $\AA_h$ and we already computed the momentum map for the conjugation action on this space
+    The first part of this form corresponds to $\AA_h$ and we already computed the momentum map for the conjugation action on this space,
     \begin{equation*}
       \mu(\nabla)=-F-2\pi i \mu(E)\id_E \omega_X \in \Omega^2(X,\uu_h(E)).
     \end{equation*}
@@ -1674,15 +1676,16 @@ This finishes the proof of the lemma.
      \end{equation*}
     \end{prop}
 
-    Now that we have a momentum map, if we assume that the action of $\GG$ verifies the technical requirements, we can take the symplectic quotient $\mu^{-1}(0)/\GG$. Let us aswell consider the subvariety corresponding to \textit{holomorphic} $V$-twisted endomorphisms that verify the additional condition $\varphi \wedge \varphi=0$,
+    Now that we have a momentum map, if we assume that the action of $\GG$ verifies the technical requirements, we can take the symplectic quotient $\mu^{-1}(0)/\GG$. Let us aswell consider the subvariety corresponding to \textit{holomorphic} $V$-twisted endomorphisms that verify the additional condition $\varphi \wedge \varphi=0$. In order to do this, we have to consider the Chern connection $\nabla_V$ induced by the metric and the holomorphic structure on $V$ and, for every $\nabla \in \AA_h$, take the connection $\nabla \otimes \id_V + \id_{\End E} \otimes \nabla_{V} $ induced on $\Gamma(\End E \otimes V)$ by $\nabla$ and $\tilde{\nabla}_V$.
+    Thus we get the subvariety
     \begin{equation*}
-      \left\{ (\nabla,\varphi) \in \AA_h \times \Gamma(\End E \otimes V) : \nabla^{0,1} \varphi =0 \text{ and } \varphi \wedge \varphi=0 \right\}.
+      \left\{ (\nabla,\varphi) \in \AA_h \times \Gamma(\End E \otimes V) :(\nabla^{0,1} \otimes \id_V + \id_{\End E} \otimes \nabla^{0,1}_{V}) \varphi =0 \text{ and } \varphi \wedge \varphi=0 \right\}.
     \end{equation*}
     Avoiding possible singularities, this is a $\GG$-invariant variety that inherits the symplectic structure from $\AA_h \times \Gamma(\End E \otimes V)$ so we can consider in it the restriction of the momentum map. This allows us to take another symplectic quotient. The space we obtain is the \emph{moduli space of solutions to the generalized Hitchin equations} on $E$, that is, the set of equivalence classes of pairs $(\nabla,\varphi)\in \AA_h\times \Gamma(\End E \otimes V)$ that satisfy the \emph{generalized Hitchin equations}
     \begin{equation*}
       \begin{cases}
 	F+\left[ \varphi,\varphi^\dagger \right]_h \omega_X =-2\pi i \mu(E) \id_E \omega_X \\
-	\nabla^{0,1} \varphi=0 \\
+(\nabla^{0,1} \otimes \id_V + \id_{\End E} \otimes \nabla^{0,1}_{V}) \varphi =0 \\
 	\varphi \wedge \varphi =0.
       \end{cases}
     \end{equation*}
@@ -1696,7 +1699,6 @@ This finishes the proof of the lemma.
     \end{thm}
     \begin{proof}
       The proof is exactly that of (the easy direction of) the Hitchin correspondence, Theorem \ref{Hitchin correspondence}.
-      \textbf{REALLY??}
     \end{proof}
 
     \begin{defn}
@@ -1706,7 +1708,7 @@ This finishes the proof of the lemma.
       \end{equation*}
     \end{defn}
 
-    We expect that a GIT construction of the moduli space of stable $V$-twisted Higgs bundle can be constructed as well as a proof the converse of Theorem \ref{twistedhitchincorr}. This would yield an isomorphism between this moduli space and the moduli space of solutions to the generalized Hitchin equations. However, none of this has been yet done and we leave it as an open problem.
+    We expect that a GIT construction of the moduli space of stable $V$-twisted Higgs bundle can be constructed aswell as a proof of the converse of Theorem \ref{twistedhitchincorr}. This would yield an isomorphism between this moduli space and the moduli space of solutions to the generalized Hitchin equations. However, none of this has been yet done and we leave it as an open problem.
 
     For the rest of this work we will assume that the \emph{moduli space of stable $V$-twisted Higgs bundles of rank $n$ and degree $d$} exists and we will denote it by $\MV(n,d)$. The problem of the computation of the expected dimension of this moduli space using deformation theory will be approached in further work. In fact, the problem of computing the dimension of the deformation space of a Higgs bundle twisted by a vector bundle of arbitrary rank has already been studied by Biswas and Ramanan \cite{biswasramanan}. However, they did not consider the condition $\varphi \wedge \varphi=0$, so the dimension that we are looking for should be lower than the one they computed in their paper.
 
@@ -1824,7 +1826,7 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
    \begin{equation*}
      \Sym(\VV^\vee)(U) \cong \OO_X(U)[\lambda_1,\dots,\lambda_r] = \OO_X(U) \otimes \CC[\lambda_1,\dots,\lambda_r],
    \end{equation*}
-   for $\lambda_1,\dots,\lambda_r$ generators of $\VV^\vee(U) = \Hom(\VV(U),\OO_X(U))$. We can then define the ring homomorphism
+   for $\left\{\lambda_1,\dots,\lambda_r  \right\}$ the dual basis of $\left\{v_1,\dots,v_r \right\}$ in $\VV^\vee(U) = \Hom(\VV(U),\OO_X(U))$. We can then define the ring homomorphism
    \begin{align*}
      \tilde{\varphi}|_U :\OO_X(U)[\lambda_1,\dots,\lambda_r]&\longrightarrow \Gamma(U,\End E)\\ 
        p(\lambda_1,\dots,\lambda_r) &\longmapsto p(\phi^1,\dots,\phi^r). 

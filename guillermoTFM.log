@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  1 SEP 2019 22:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.10.28)  2 SEP 2019 00:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1659,122 +1659,105 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/bx/it' in size <12> not available
 .
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
 (Font)              scaled to size 12.0pt on input line 220.
- [8] [9] [10] [11] [12] [13] [14]
-Overfull \hbox (27.3281pt too wide) in paragraph at lines 505--507
-\T1/ntxtlf/m/n/12 where $\OMS/ntxsy/m/n/12 r[]$ \T1/ntxtlf/m/n/12 and $\OMS/ntx
-sy/m/n/12 r[]$ \T1/ntxtlf/m/n/12 are the con-nec-tions as-so-ci-ated to $[]$ an
-d $[]$ and $\OML/ntxmi/m/it/12 ^^L[] \U/ntxmia/m/it/12 = \OML/ntxmi/m/it/12 ?[]
- \OMS/ntxsy/m/n/12 2 \U/ntxmia/m/it/12 
-[]}\OML/ntxmi/m/it/12 X; []\U/ntxmia/m/it/12 }\OML/ntxmi/m/it/12 E[]; E[]\U/ntx
-mia/m/it/12 ~~$
- []
-
-[15] [16
+ [8] [9] [10] [11] [12] [13] [14] [15] [16
 
 ]
 Chapter II.
 [17] [18] [19]
 LaTeX Font Info:    Try loading font information for T1+ntxsups on input line 6
-72.
+74.
  (/usr/share/texlive/texmf-dist/tex/latex/newtx/t1ntxsups.fd
 File: t1ntxsups.fd 2015/01/17 v1.0
 )
 LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
-(Font)              scaled to size 12.0pt on input line 672.
+(Font)              scaled to size 12.0pt on input line 674.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 672.
+(Font)              scaled to size 10.0pt on input line 674.
 LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
-(Font)              scaled to size 10.0pt on input line 672.
+(Font)              scaled to size 10.0pt on input line 674.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 10.0pt on input line 672.
+(Font)              scaled to size 10.0pt on input line 674.
 
 [20] [21]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 8.8pt on input line 763.
+(Font)              scaled to size 8.8pt on input line 765.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 6.6pt on input line 763.
+(Font)              scaled to size 6.6pt on input line 765.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 770.
+(Font)              scaled to size 8.8pt on input line 772.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 770.
+(Font)              scaled to size 6.6pt on input line 772.
  [22] [23] [24]
 Chapter III.
 [25
 
-] [26] [27] <curvaespectral.png, id=376, 515.526pt x 513.92pt>
+] [26] [27] <curvaespectral.png, id=383, 515.526pt x 513.92pt>
 File: curvaespectral.png Graphic file (type png)
 
 <use curvaespectral.png>
-Package pdftex.def Info: curvaespectral.png used on input line 969.
+Package pdftex.def Info: curvaespectral.png used on input line 971.
 (pdftex.def)             Requested size: 227.62206pt x 226.90967pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28] [29 <./curvaespectral.png>] [30] [31] [32]
-Overfull \hbox (20.48625pt too wide) in paragraph at lines 1181--1184
-\T1/ntxtlf/m/n/12 Avoiding pos-si-ble sin-gu-lar-i-ties, this va-ri-ety in-her-
-its the sym-plec-tic struc-ture from $\U/BOONDOX-scr/m/n/12 A[] \OMS/ntxsy/m/n/
-12 ^^B \U/ntxmia/m/it/12 
-[]}\OML/ntxmi/m/it/12 X; []E\U/ntxmia/m/it/12 ~$
- []
-
-[33] [34] [35] [36] [37]
+[28] [29 <./curvaespectral.png>] [30] [31] [32] [33] [34] [35] [36] [37]
+[38]
 Overfull \hbox (3.54126pt too wide) in paragraph at lines 1422--1423
  [] 
  []
 
-[38]
-Overfull \hbox (16.4801pt too wide) in paragraph at lines 1454--1455
+[39]
+Overfull \hbox (16.4801pt too wide) in paragraph at lines 1456--1457
  [] 
  []
 
-[39]
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 1485.
+[40]
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 1487.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.0pt on input line 1485.
+(Font)              scaled to size 15.0pt on input line 1487.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.94994pt on input line 1485.
+(Font)              scaled to size 10.94994pt on input line 1487.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.25005pt on input line 1485.
+(Font)              scaled to size 8.25005pt on input line 1487.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.0pt on input line 1485.
+(Font)              scaled to size 15.0pt on input line 1487.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.94994pt on input line 1485.
+(Font)              scaled to size 10.94994pt on input line 1487.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.25005pt on input line 1485.
+(Font)              scaled to size 8.25005pt on input line 1487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1485.
+(hyperref)                removing `math shift' on input line 1487.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 1485.
+(hyperref)                removing `math shift' on input line 1487.
 
-[40] [41] [42
-
-]
+[41] [42]
 Chapter IV.
-[43] [44] [45] [46]
+[43
+
+] [44] [45] [46]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 1734.
+(amsmath)                 on input line 1736.
 
 [47] [48] [49]
-Overfull \hbox (4.61487pt too wide) in paragraph at lines 1838--1839
+Overfull \hbox (4.61487pt too wide) in paragraph at lines 1840--1841
  [] 
  []
 
 
-Overfull \hbox (2.2661pt too wide) in paragraph at lines 1848--1850
+Overfull \hbox (2.2661pt too wide) in paragraph at lines 1850--1852
 \T1/ntxtlf/m/n/12 is 0 since it is a fi-nite di-men-sional $\OT1/ntxtlf/b/n/12 
 C$\T1/ntxtlf/m/n/12 -vector space. There-fore, the scheme $[] []$
  []
 
 
-Overfull \hbox (16.2161pt too wide) in paragraph at lines 1857--1858
+Overfull \hbox (16.2161pt too wide) in paragraph at lines 1859--1860
  [] 
  []
 
@@ -1785,24 +1768,24 @@ Overfull \hbox (16.2161pt too wide) in paragraph at lines 1857--1858
  [51] [52
 
 ] [53]) [54]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1902.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1902.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1904.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1904.
 
 (./guillermoTFM.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1902.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1902.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1904.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1904.
 
 Package rerunfilecheck Info: File `guillermoTFM.out' has not changed.
 (rerunfilecheck)             Checksum: 96BAEAA8140463E2E53266B44AD483F8;1886.
 Package rerunfilecheck Info: File `guillermoTFM.brf' has not changed.
-(rerunfilecheck)             Checksum: 40F497FA69C48DD5E304D35E6FA19FB7;996.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1902.
+(rerunfilecheck)             Checksum: 62A02185737CDF6B50EF313913881771;1221.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1904.
  ) 
 Here is how much of TeX's memory you used:
- 24125 strings out of 494850
- 447519 string characters out of 6178023
- 498463 words of memory out of 5000000
- 26673 multiletter control sequences out of 15000+600000
+ 24135 strings out of 494850
+ 447697 string characters out of 6178023
+ 497276 words of memory out of 5000000
+ 26681 multiletter control sequences out of 15000+600000
  170590 words of font info for 249 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  56i,18n,84p,1101b,1102s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1829,10 +1812,10 @@ xmf-dist/fonts/type1/public/txfonts/txsya.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/txfonts/txsyc.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/boondox/zxxrw8a.pfb>
-Output written on guillermoTFM.pdf (56 pages, 1015645 bytes).
+Output written on guillermoTFM.pdf (56 pages, 1018386 bytes).
 PDF statistics:
- 698 PDF objects out of 1000 (max. 8388607)
- 597 compressed objects within 6 object streams
- 182 named destinations out of 1000 (max. 500000)
+ 711 PDF objects out of 1000 (max. 8388607)
+ 609 compressed objects within 7 object streams
+ 184 named destinations out of 1000 (max. 500000)
  235 words of extra memory for PDF output out of 10000 (max. 10000000)
 

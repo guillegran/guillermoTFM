@@ -16,6 +16,12 @@ V.I. Arnold.
 \newblock {\em Mathematical Methods of Classical Mechanics}.
 \newblock Graduate Texts in Mathematics. Springer New York, 1997.
 
+\bibitem[Ati57]{atiyahelliptic}
+M.~F. Atiyah.
+\newblock Vector bundles over an elliptic curve.
+\newblock {\em Proceedings of the London Mathematical Society}, 3(1):414--452,
+  1957.
+
 \bibitem[BNR89]{bnr}
 A.~Beauville, M.~S. Narasimhan, and S.~Ramanan.
 \newblock Spectral curves and the generalised theta divisor.
@@ -79,17 +85,21 @@ D.~Mumford, J.~Fogarty, and F.~Kirwan.
 \newblock Number v. 34 in Ergebnisse der Mathematik und ihrer Grenzgebiete : a
   series of modern surveys in mathematics. Springer Berlin Heidelberg, 1994.
 
-\bibitem[Muk03]{mukai}
-S.~Mukai.
-\newblock {\em An Introduction to Invariants and Moduli}.
-\newblock Cambridge Studies in Advanced Mathematics. Cambridge University
-  Press, 2003.
+\bibitem[Nit91]{nitsure}
+N.~Nitsure.
+\newblock Moduli space of semistable pairs on a curve.
+\newblock {\em Proceedings of the London Mathematical Society}, 3(2):275--300,
+  1991.
 
-\bibitem[Sch08]{schmitt}
-A.H.W. Schmitt.
-\newblock {\em Geometric Invariant Theory and Decorated Principal Bundles}.
-\newblock Zurich lectures in advanced mathematics. European Mathematical
-  Society, 2008.
+\bibitem[Sch14]{schaposnik}
+L.~P. Schaposnik.
+\newblock An introduction to spectral data for higgs bundles.
+\newblock {\em arXiv preprint arXiv:1408.0333}, 2014.
+
+\bibitem[Uhl82]{uhlenbeck}
+K.~K. Uhlenbeck.
+\newblock Connections withl p bounds on curvature.
+\newblock {\em Communications in Mathematical Physics}, 83(1):31--42, 1982.
 
 \bibitem[WGP07]{wells}
 R.O. Wells and O.~Garcia-Prada.
