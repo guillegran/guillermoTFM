@@ -20,6 +20,7 @@
 \usepackage[scr=boondox]{mathalfa}
 \usepackage{anyfontsize}
 \usepackage{epigraph}
+\usepackage{titlefoot}
 
 %Fuente Palatino:
 %\usepackage[sc]{mathpazo}
@@ -126,6 +127,7 @@
 
 \begin{document}
 \includepdf[pages=-]{portada.pdf}
+\newpage\thispagestyle{empty}
 \begin{titlepage}
   \centering
 %  \vspace*{1cm}
@@ -163,6 +165,36 @@ Enrique \textsc{Arrondo Esteban}
 \end{titlepage}
 
 \newpage\null\thispagestyle{empty}
+
+\newpage\thispagestyle{empty}
+\vspace*{3cm}
+\begin{center}
+  \textbf{Abstract}
+\end{center}
+  In this dissertation we explore a generalization of the theory of Higgs bundles over compact Riemann surfaces, in which the canonical line bundle is replaced by a vector bundle of arbitrary rank. This kind of situation appears naturally in the study of supersymmetric gauge theories. From the mathematical point of view, we study several topics: analogous of Hitchin's equations, stability and a generalization of the spectral correspondence.
+
+  \vspace{.5 cm}
+
+  \noindent \textbf{Keywords}: \textit{Moduli space, vector bundle, Higgs bundle, Hitchin's equations, Hitchin fibration, spectral curve}
+
+
+\begin{center}
+  \textbf{Resumen}
+\end{center}
+% Un fibrado de Higgs sobre una superficie de Riemann compacta $X$ es un par $(E,\varphi)$ formado por un fibrado vectorial holomorfo $E$ sobre $X$ y un endomorfismo de $E$ tensorizado por el fibrado canónico $K_X$ de $X$. Estos objetos fueron introducidos por Nigel Hitchin hace más de 30 años. El polinomio característico de $\varphi$ induce la aplicación de Hitchin, cuya fibra genéricamente es la jacobiana de una determinada curva espectral que vive en el espacio total del fibrado canónico $K_X$.
+
+  El objetivo de este trabajo es explorar una generalización de la
+ % teoría de Hitchin
+ teoría de fibrados de Higgs sobre superficies de Riemann compactas,
+  en la que se sustituye el fibrado canónico por un fibrado vectorial de rango arbitrario. Este tipo de situación aparece de modo natural en el estudio de teorías gauge supersimétricas. Desde el punto de vista matemático, nos centramos en varios temas: ecuaciones análogas a las de Hitchin, estabilidad y generalización de la correspondencia espectral.
+
+  \vspace{.5 cm}
+
+  \noindent \textbf{Palabras clave}: \textit{Espacio de móduli, fibrado vectorial, fibrado de Higgs, ecuaciones de Hitchin, fibración de Hitchin, curva espectral}
+
+\unmarkedfntext{2010 \textit{Mathematics Subject Classification.} Primary 14D20, 14D21, 14H60}
+
+\newpage\null\thispagestyle{empty}
 \newpage\null\thispagestyle{empty}
 \epigraph{\textit{¿Por ventura es asunto vano o es tiempo malgastado el que se gasta en vagar por el mundo, no buscando los regalos de él, sino las
 asperezas por donde los buenos suben al asiento de la inmortalidad? [\dots] caballero soy y caballero he de morir si place al Altísimo. Unos van por el
@@ -171,7 +203,65 @@ verdadera religión; pero yo, inclinado de mi estrella, voy por la angosta senda
 no la honra. [\dots] yo soy enamorado [\dots] y, siéndolo, no soy de los enamorados viciosos, sino de los platónicos continentes. Mis intenciones siempre
 las enderezo a buenos fines, que son de hacer bien a todos y mal a ninguno; si el que esto entiende, si el que esto obra, si el que desto trata merece
 ser llamado bobo, díganlo vuestras grandezas.}}{Don Quijote de la Mancha}
+
+\newpage\null\thispagestyle{empty}
 \tableofcontents
+\addcontentsline{toc}{chapter}{Notation}
+\addcontentsline{toc}{chapter}{Introduction}
+\newpage\null\thispagestyle{empty}
+
+\chapter*{Notation}
+\begin{itemize}
+  \item[$\NN$] The set of natural numbers.
+  \item[$\ZZ$] The ring of integer numbers.
+  \item[$\RR$] The field of real numbers.
+  \item[$\CC$] The field of complex numbers.
+  \item[$\PP(V)$] The projectivization of $V$.
+  \item[$\PP^n_k$] The $n$-dimenisonal projective space over the field $k$.
+
+  \item[$\cong$]  ``is isomorphic to''.
+
+  \item[$\Gamma(E)$]  If $E$ is a smooth vector bundle, it denotes smooth global sections of $E$, that is $\Gamma(E)=\Omega^0(X,E)$. If $E$ is an algebraic vector bundle, it denotes global sections, that is $\Gamma(E)=H^0(X,E)$.
+
+  \item[$C^\infty(X,\CC)$]  The set of smooth functions $X\rightarrow \CC$.
+
+  \item[$C^\infty_X$]  The sheaf of smooth functions on $X$.
+
+  \item[$C^{\infty,*}_X$]  The sheaf of nonzero smooth functions on $X$.
+
+  \item[$\OO_X$] The sheaf of holomorphic functions on $X$, if we regard $X$ as a compact Riemann surface, or the algebraic structure sheaf of $X$ if we regard $X$ as an algebraic projective curve.
+
+  \item[$\OO_X^*$] The sheaf of nonzero holomorphic functions on $X$.
+
+  \item[$\Omega^{p,q}(X,E)$] The sheaf of smooth forms of type $(p,q)$ on $X$ with coefficients in the vector bundle $E$.
+
+  \item[$\Aut E$] The space of automorphisms of the vector bundle $E$.
+
+  \item[$\End E$] The space of endomorphisms of the vector bundle $E$.
+
+  \item[$\Sym^i E$] The $i$-th symmetric power of $E$.
+
+  \item[$\Sym E$] The symmetric algebra of $E$.
+
+  \item[$ \Lambda^i E$] The $i$-th wedge power of $E$.
+
+\end{itemize}
+
+\newpage\null\thispagestyle{empty}
+
+\chapter*{Introduction}
+\subsubsection*{A very short history of the topic}
+
+Bla
+
+\subsubsection*{Structure of the text}
+
+Bla
+
+\subsubsection*{Aknowledgements}
+
+Bla
+
 \chapter{Vector bundles on Riemann surfaces}
 \section{Topological classification of vector bundles}
 The first step towards the classification of vector bundles on Riemann surfaces is their ``topological'' classification. That is, we want to classify smooth complex vector bundles on a Riemann surface up to $C^\infty$ isomorphism. This is in fact pretty easy to do, since the problem can be reduced to the classification of line bundles.
@@ -340,7 +430,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	       & X &
 	     \end{tikzcd}
 	   \end{center}
-	   commutes. That is, $\GG^c=\Gamma(\Aut(E))$. This group acts on $\AA_{\delbar}$ by the rule
+	   commutes. That is, $\GG^c=\Gamma(\Aut E)$. This group acts on $\AA_{\delbar}$ by the rule
 	   \begin{equation*}
 	     g\cdot \delbar_{\ve{E}}=g\delbar_{\ve{E}} g^{-1}.
 	   \end{equation*}
@@ -414,7 +504,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	   
 
 	   \section{Holomorphic structures and unitary connections}
-	   Although we will not enter into detail, the main reason why the quotient $\AA_{\delbar}/\GG^c$ is not Hausdorff and why we need to introduce the stability condition is that the group $\GG^c=\Gamma(\Aut(E))$ is a complex group. Indeed, it is the complexification of the group $\GG=\Gamma(\UU_h(E))$, where $h$ is a Hermitian metric on $E$ and $\UU_h(E)$ is the subgroup of $\Aut(E)$ consisting on automorphisms of $E$ preserving the metric $h$. The idea for this is essentially that the general linear group $\mathrm{GL}(n,\CC)$ is the complexification of the unitary group $\mathrm{U}(n)$. This motivates the study of unitary connections,
+	   Although we will not enter into detail, the main reason why the quotient $\AA_{\delbar}/\GG^c$ is not Hausdorff and why we need to introduce the stability condition is that the group $\GG^c=\Gamma(\Aut E)$ is a complex group. Indeed, it is the complexification of the group $\GG=\Gamma(\UU_h(E))$, where $h$ is a Hermitian metric on $E$ and $\UU_h(E)$ is the subgroup of $\Aut E$ consisting on automorphisms of $E$ preserving the metric $h$. The idea for this is essentially that the general linear group $\mathrm{GL}(n,\CC)$ is the complexification of the unitary group $\mathrm{U}(n)$. This motivates the study of unitary connections,
 which will give a gauge-theoretical approach to holomorphic vector bundles. This will allow us to give another analytical construction of the moduli space, this time as the space of solutions (up to gauge equivalence) to some differential equation.
 
 Let $\ve{E}=(E,\delbar_{\ve{E}})$ be a holomorphic vector bundle on $X$ and let $h$ be a Hermitian metric on $E$. Recall that for any connection $\nabla:\Gamma(E) \rightarrow \Omega^1(X,E)=\Omega^{1,0}(X,E) \oplus \Omega^{0,1}(X,E)$ on $E$ there is a natural splitting $\nabla=\nabla^{1,0}+\nabla^{0,1}$, where
