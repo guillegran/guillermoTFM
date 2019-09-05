@@ -1,26 +1,26 @@
 \contentsline {chapter}{Notation}{7}{chapter*.1}
 \contentsline {chapter}{Introduction}{7}{chapter*.1}
-\contentsline {chapter}{\numberline {I}Vector bundles on Riemann surfaces}{13}{chapter.1}
-\contentsline {section}{\numberline {1}Topological classification of vector bundles}{13}{section.1.1}
-\contentsline {section}{\numberline {2}The problem of classification of holomorphic vector bundles}{15}{section.1.2}
-\contentsline {section}{\numberline {3}Holomorphic structures as Dolbeaut operators}{17}{section.1.3}
-\contentsline {section}{\numberline {4}Deformations of holomorphic structures}{18}{section.1.4}
-\contentsline {section}{\numberline {5}Holomorphic structures and unitary connections}{19}{section.1.5}
-\contentsline {chapter}{\numberline {II}Momentum maps and symplectic quotients}{23}{chapter.2}
-\contentsline {section}{\numberline {1}Banach manifolds}{23}{section.2.1}
-\contentsline {section}{\numberline {2}Symplectic manifolds and the momentum map}{24}{section.2.2}
-\contentsline {section}{\numberline {3}Symplectic reduction}{27}{section.2.3}
-\contentsline {section}{\numberline {4}The moduli space as a symplectic quotient}{29}{section.2.4}
-\contentsline {chapter}{\numberline {III}Higgs bundles and the Hitchin system}{31}{chapter.3}
-\contentsline {section}{\numberline {1}The Hitchin system}{31}{section.3.1}
-\contentsline {section}{\numberline {2}The spectral correspondence}{33}{section.3.2}
-\contentsline {section}{\numberline {3}Hitchin's equations}{37}{section.3.3}
-\contentsline {section}{\numberline {4}Higgs bundles}{40}{section.3.4}
-\contentsline {section}{\numberline {5}Deformations of Higgs bundles}{42}{section.3.5}
-\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{44}{section.3.6}
-\contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{47}{section.3.7}
-\contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{49}{chapter.4}
-\contentsline {section}{\numberline {1}Generalized Hitchin's equations}{49}{section.4.1}
-\contentsline {section}{\numberline {2}The generalized Hitchin system}{53}{section.4.2}
-\contentsline {section}{\numberline {3}The generalized spectral correspondence}{55}{section.4.3}
-\contentsline {section}{\numberline {4}Open questions and further directions}{57}{section.4.4}
+\contentsline {chapter}{\numberline {I}Vector bundles on Riemann surfaces}{15}{chapter.1}
+\contentsline {section}{\numberline {1}Topological classification of vector bundles}{15}{section.1.1}
+\contentsline {section}{\numberline {2}The problem of classification of holomorphic vector bundles}{17}{section.1.2}
+\contentsline {section}{\numberline {3}Holomorphic structures as Dolbeaut operators}{19}{section.1.3}
+\contentsline {section}{\numberline {4}Deformations of holomorphic structures}{20}{section.1.4}
+\contentsline {section}{\numberline {5}Holomorphic structures and unitary connections}{21}{section.1.5}
+\contentsline {chapter}{\numberline {II}Momentum maps and symplectic quotients}{25}{chapter.2}
+\contentsline {section}{\numberline {1}Banach manifolds}{25}{section.2.1}
+\contentsline {section}{\numberline {2}Symplectic manifolds and the momentum map}{26}{section.2.2}
+\contentsline {section}{\numberline {3}Symplectic reduction}{29}{section.2.3}
+\contentsline {section}{\numberline {4}The moduli space as a symplectic quotient}{31}{section.2.4}
+\contentsline {chapter}{\numberline {III}Higgs bundles and the Hitchin system}{33}{chapter.3}
+\contentsline {section}{\numberline {1}The Hitchin system}{33}{section.3.1}
+\contentsline {section}{\numberline {2}The spectral correspondence}{35}{section.3.2}
+\contentsline {section}{\numberline {3}Hitchin's equations}{39}{section.3.3}
+\contentsline {section}{\numberline {4}Higgs bundles}{42}{section.3.4}
+\contentsline {section}{\numberline {5}Deformations of Higgs bundles}{44}{section.3.5}
+\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{46}{section.3.6}
+\contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{49}{section.3.7}
+\contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{51}{chapter.4}
+\contentsline {section}{\numberline {1}Generalized Hitchin's equations}{51}{section.4.1}
+\contentsline {section}{\numberline {2}The generalized Hitchin system}{55}{section.4.2}
+\contentsline {section}{\numberline {3}The generalized spectral correspondence}{57}{section.4.3}
+\contentsline {section}{\numberline {4}Open questions and further directions}{59}{section.4.4}
