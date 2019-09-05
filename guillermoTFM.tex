@@ -251,7 +251,7 @@ ser llamado bobo, díganlo vuestras grandezas.}}{Don Quijote de la Mancha}
 \newpage\null\thispagestyle{empty}
 
 \chapter*{Introduction}
-\subsubsection*{A very short history of the topic}
+\subsection*{A very short history of the topic}
 
 The term \textit{moduli space} was first introduced by Riemann in the study of the classification of compact Riemann surfaces to describe the set $\mathcal{M}_g$ of isomorphism classes of complex structures on a certain compact surface of genus $g$. In modern times, although precise definitions exist (\textit{moduli stacks}, \textit{coarse moduli space}, \textit{fine moduli space}), the term moduli space roughly refers to some set of isomorphism classes of a certain geometric structure.
 
@@ -275,18 +275,27 @@ Since then, the theory of Higgs bundles has evolved in a lot of directions, has 
 
 The main inspiration of this dissertation comes from a very recent development made by D. Xie and K. Yonekura in the context of $\mathcal{N}=1$ supersymmetric gauge theories. In their paper \cite{xieyonekura}, Xie and Yonekura study what they call \textit{generalized Hitchin equations} and relate it with pairs $(E,\varphi)$, where $E$ is a vector bundle on a Riemann surface $X$ and $\varphi:E\rightarrow E\otimes V$ is an endomorphism twisted by another vector bundle $V$ on $X$ of arbitrary rank. Here we are interested in generalizing the well known notions of Higgs bundles to this more general case. In particular, we are interested in constructing a ``generalized spectral correspondance'' that extends the result of Beauville, Narasimhan and Ramanan \cite{bnr} to this context.
 
-\subsubsection*{Structure of the text}
-This dissertation consists on four chapters (apart from this introduction and the notation section). The first three chapters are intended to give a survey of an already well known topic, the study of the moduli spaces of vector bundles and of (classical) Higgs bundles. The last chapter gives new results.
+\subsection*{Structure of the text}
+This dissertation consists on four chapters (apart from this introduction and the notation section). The first three chapters are intended to give a survey of an already well known topic, the study of the moduli spaces of vector bundles and of (classical) Higgs bundles. The last chapter gives new original results.
 
-The first chapter starts explaining why knowing the rank and the degree of a vector bundle on a Riemann surface suffices to determine its topological isomorphism class. Later, we approach the problem of classifying vector bundles up to holomorphic isomorphism. We study the different forms that exist of regarding an holomorphic structure on a vector bundle, define the notion of stability and the moduli space of stable vector bundles and state the theorem of Narasimhan-Seshadri. We also use deformation theory to obtain the dimension of the moduli space.
+The first chapter starts explaining why knowing the rank and the degree of a vector bundle on a Riemann surface suffices to determine its topological isomorphism class. Later, we approach the problem of classifying vector bundles up to holomorphic isomorphism. We study the different forms of regarding an holomorphic structure on a vector bundle, define the notion of stability and the moduli space of stable vector bundles and state the theorem of Narasimhan-Seshadri. We also use deformation theory to obtain the dimension of the moduli space.
 
 The second chapter serves as an interlude between the first and third chapter. In this chapter we give the basic notions of analysis and symplectic geometry necessary to understand part of the text. We introduce the concept of Banach manifold and develop symplectic geometry in an infinite-dimensional setting. We define momentum map and symplectic reduction, and give a proof of the Marsden-Weinstein theorem. At the end of the chapter, we use the concepts defined to obtain the moduli space of stable vector bundle as a symplectic quotient.
 
-The third chapter consists essentialy in a review of parts of the papers \cite{hitchinselfduality}, \cite{hitchinsystem} and \cite{bnr}.
+The third chapter consists essentialy in a review of parts of the papers \cite{hitchinselfduality}, \cite{hitchinsystem} and \cite{bnr}. In this chapter we study the Hitchin system and the spectral correspondence of Beauville-Narasimhan-Ramanan. We define Higgs bundles and the notion of stability, introduce the Hitchin equations and state the Hitchin correspondence. We also explore the same concepts from the algebraic point of view, which yields a different perspective on the same results and settles the main ideas used in the results of chapter IV. Finally, we introduce the generalization of Higgs bundles to the case of $G$-principal bundles, for $G$ a complex semi-simple Lie group, considering in detail the case of $G=\SL(n,\CC)$.
 
-%\subsubsection*{Aknowledgements}
+The last chapter covers all the new topics that are being introduced in this dissertation. We start by defining Higgs bundles twisted by a vector bundle and writing a generalization of Hitchin's equation. We also study the generalization of the Hitchin system and of the Beauville-Narasimhan-Ramanan spectral correspondence to this case. In the last section we discuss some further directions and open questions that remain unanswered.
 
-%Bla
+\subsection*{Aknowledgements}
+First of all, I want to thank my advisor Óscar García Prada for all the help, kindness and attention that he has given me during this year and for teaching this problem to me. I also need to thank professors Nigel Hitchin and Tony Pantev for discussing this problem with me and giving me a lot of ideas and further tangents that this problem could take. Thank you all for being such great professionals and for treating Mathematics with such love and respect.
+
+I want to thank all the members of the ``Representation Theory Seminar'' andof the ``Clandestine Kodaira Seminar''. In particular I want to thank Edu Fernández and Ángel González for leading these seminars and for giving me special help and references.
+
+All of this would not have been possible without the help and support of my family and friends, thank you all for being there. Laura, thanks for travelling this journey by my side, this is just a milestone, but we have so much kilometers ahead. 
+
+Finally, I would like to give special thanks to my dear friend and partner, Miguel Moya, who has shared with me the experience of getting introduced in a new area of Mathematics. Thank you for your help and for all those rides to ICMAT.
+
+\newpage\null\thispagestyle{empty}
 
 \chapter{Vector bundles on Riemann surfaces}
 \section{Topological classification of vector bundles}
@@ -649,6 +658,7 @@ Now, $\tr(\beta\beta^\dagger)$ is precisely $- \norm{\beta}^2 \omega_X$. Thus we
 The connection $\nabla$ is irreducible, so $\norm{\beta}\neq 0$ and $\mu(E')< \mu(E)$. That is, $E$ is stable.
 \end{proof}
 
+\newpage\null\thispagestyle{empty}
 \chapter{Momentum maps and symplectic quotients}
 \section{Banach manifolds}
 For the purpose of this text it is necessary to work on an infinite-dimensional context, so we can construct the moduli spaces as quotients of infinite-dimensional manifolds. To do this, we need to consider an infinite-dimensional analogous to differential calculus and the notion of an infinite-dimensional smooth manifold. Here we just state the basic definitions and results, which are a direct generalization of the classical ones, and refer to \cite{abrahammarsdenratiu,lang} for more details.
@@ -2013,6 +2023,7 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
 
   [\textbf{FURTHER DIRECTIONS}] Decir algo de Donaldson-Thomas, Calabi-Yau, etc.
 
+\newpage\null\thispagestyle{empty}
 \nocite{*}
 \bibliographystyle{alpha}
 \bibliography{biblio}
