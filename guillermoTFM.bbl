@@ -22,6 +22,12 @@ M.~F. Atiyah.
 \newblock {\em Proceedings of the London Mathematical Society}, 3(1):414--452,
   1957.
 
+\bibitem[Bir09]{birkhoff}
+G.~D. Birkhoff.
+\newblock Singular points of ordinary linear differential equations.
+\newblock {\em Transactions of the American Mathematical Society},
+  10(4):436--470, 1909.
+
 \bibitem[BNR89]{bnr}
 A.~Beauville, M.~S. Narasimhan, and S.~Ramanan.
 \newblock Spectral curves and the generalised theta divisor.
@@ -47,6 +53,12 @@ S.K. Donaldson.
 P.~Griffiths and J.~Harris.
 \newblock {\em Principles of Algebraic Geometry}.
 \newblock Wiley Classics Library. Wiley, 2014.
+
+\bibitem[Gro57]{grothendieck}
+A.~Grothendieck.
+\newblock Sur la classification des fibr{\'e}s holomorphes sur la sphere de
+  riemann.
+\newblock {\em American Journal of Mathematics}, 79(1):121--138, 1957.
 
 \bibitem[Har13]{hartshorne}
 R.~Hartshorne.
@@ -85,21 +97,55 @@ D.~Mumford, J.~Fogarty, and F.~Kirwan.
 \newblock Number v. 34 in Ergebnisse der Mathematik und ihrer Grenzgebiete : a
   series of modern surveys in mathematics. Springer Berlin Heidelberg, 1994.
 
+\bibitem[Nar10]{narasimhan}
+M.~S. Narasimhan.
+\newblock Algebraic geometry in {I}ndia.
+\newblock {\em Current Trends in Science: Platinum Jubilee special}, pages
+  635--637, 2010.
+
+\bibitem[Ng{\^o}10]{ngo}
+B.~C. Ng{\^o}.
+\newblock Le lemme fondamental pour les algebres de lie.
+\newblock {\em Publications math{\'e}matiques de l'IH{\'E}S}, 111(1):1--169,
+  2010.
+
 \bibitem[Nit91]{nitsure}
 N.~Nitsure.
 \newblock Moduli space of semistable pairs on a curve.
 \newblock {\em Proceedings of the London Mathematical Society}, 3(2):275--300,
   1991.
 
+\bibitem[NS65]{narasimhanseshadri}
+M.~S. Narasimhan and C.~S. Seshadri.
+\newblock Stable and unitary vector bundles on a compact riemann surface.
+\newblock {\em Annals of Mathematics}, pages 540--567, 1965.
+
 \bibitem[Sch14]{schaposnik}
 L.~P. Schaposnik.
 \newblock An introduction to spectral data for higgs bundles.
 \newblock {\em arXiv preprint arXiv:1408.0333}, 2014.
 
+\bibitem[Sim90]{simpsonnonabelian}
+C.~T. Simpson.
+\newblock Nonabelian hodge theory.
+\newblock In {\em Proceedings of the International Congress of Mathematicians},
+  volume~1, pages 747--756, 1990.
+
+\bibitem[Sim92]{Simpson}
+C.~T. Simpson.
+\newblock Higgs bundles and local systems.
+\newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 75:5--95, 1992.
+
 \bibitem[Uhl82]{uhlenbeck}
 K.~K. Uhlenbeck.
 \newblock Connections withl p bounds on curvature.
 \newblock {\em Communications in Mathematical Physics}, 83(1):31--42, 1982.
+
+\bibitem[Wei38]{weil}
+A.~Weil.
+\newblock Zur algebraischen theorie der algebraischen funktionen.
+\newblock {\em Journal f{\"u}r die reine und angewandte Mathematik},
+  179:129--133, 1938.
 
 \bibitem[WGP07]{wells}
 R.O. Wells and O.~Garcia-Prada.
