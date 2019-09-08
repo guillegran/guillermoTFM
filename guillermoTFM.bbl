@@ -56,8 +56,8 @@ P.~Griffiths and J.~Harris.
 
 \bibitem[Gro57]{grothendieck}
 A.~Grothendieck.
-\newblock Sur la classification des fibr{\'e}s holomorphes sur la sphere de
-  riemann.
+\newblock Sur la classification des fibr{\'e}s holomorphes sur la sphère de
+  {R}iemann.
 \newblock {\em American Journal of Mathematics}, 79(1):121--138, 1957.
 
 \bibitem[Har13]{hartshorne}
@@ -105,7 +105,7 @@ M.~S. Narasimhan.
 
 \bibitem[Ng{\^o}10]{ngo}
 B.~C. Ng{\^o}.
-\newblock Le lemme fondamental pour les algebres de lie.
+\newblock Le lemme fondamental pour les algèbres de {L}ie.
 \newblock {\em Publications math{\'e}matiques de l'IH{\'E}S}, 111(1):1--169,
   2010.
 
@@ -117,17 +117,17 @@ N.~Nitsure.
 
 \bibitem[NS65]{narasimhanseshadri}
 M.~S. Narasimhan and C.~S. Seshadri.
-\newblock Stable and unitary vector bundles on a compact riemann surface.
+\newblock Stable and unitary vector bundles on a compact {R}iemann surface.
 \newblock {\em Annals of Mathematics}, pages 540--567, 1965.
 
 \bibitem[Sch14]{schaposnik}
 L.~P. Schaposnik.
-\newblock An introduction to spectral data for higgs bundles.
+\newblock An introduction to spectral data for {H}iggs bundles.
 \newblock {\em arXiv preprint arXiv:1408.0333}, 2014.
 
 \bibitem[Sim90]{simpsonnonabelian}
 C.~T. Simpson.
-\newblock Nonabelian hodge theory.
+\newblock Nonabelian {H}odge theory.
 \newblock In {\em Proceedings of the International Congress of Mathematicians},
   volume~1, pages 747--756, 1990.
 
@@ -138,7 +138,7 @@ C.~T. Simpson.
 
 \bibitem[Uhl82]{uhlenbeck}
 K.~K. Uhlenbeck.
-\newblock Connections withl p bounds on curvature.
+\newblock Connections with ${L}^p$ bounds on curvature.
 \newblock {\em Communications in Mathematical Physics}, 83(1):31--42, 1982.
 
 \bibitem[Wei38]{weil}
