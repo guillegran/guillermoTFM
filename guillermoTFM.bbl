@@ -39,6 +39,11 @@ I.~Biswas and S.~Ramanan.
 \newblock {\em Journal of the London Mathematical Society}, 49(2):219--231, 04
   1994.
 
+\bibitem[Cor88]{corlette}
+Kevin Corlette.
+\newblock Flat $ g $-bundles with canonical metrics.
+\newblock {\em Journal of differential geometry}, 28(3):361--382, 1988.
+
 \bibitem[DK90]{donaldson4manifolds}
 S.K. Donaldson and P.B. Kronheimer.
 \newblock {\em The Geometry of Four-manifolds}.
@@ -48,6 +53,12 @@ S.K. Donaldson and P.B. Kronheimer.
 S.K. Donaldson.
 \newblock A new proof of a theorem of {N}arasimhan and {S}eshadri.
 \newblock {\em Journal of Differential Geometry}, 18(2):269--277, 1983.
+
+\bibitem[Don87]{donaldsontwisted}
+Simon~K Donaldson.
+\newblock Twisted harmonic maps and the self-duality equations.
+\newblock {\em Proceedings of the London Mathematical Society}, 3(1):127--131,
+  1987.
 
 \bibitem[GH14]{griffithsharris}
 P.~Griffiths and J.~Harris.
@@ -125,16 +136,29 @@ L.~P. Schaposnik.
 \newblock An introduction to spectral data for {H}iggs bundles.
 \newblock {\em arXiv preprint arXiv:1408.0333}, 2014.
 
+\bibitem[Sim88]{simpsonthesis}
+Carlos~T Simpson.
+\newblock Constructing variations of hodge structure using yang-mills theory
+  and applications to uniformization.
+\newblock {\em Journal of the American Mathematical Society}, 1(4):867--918,
+  1988.
+
 \bibitem[Sim90]{simpsonnonabelian}
 C.~T. Simpson.
 \newblock Nonabelian {H}odge theory.
 \newblock In {\em Proceedings of the International Congress of Mathematicians},
   volume~1, pages 747--756, 1990.
 
-\bibitem[Sim92]{Simpson}
+\bibitem[Sim92]{simpson}
 C.~T. Simpson.
 \newblock Higgs bundles and local systems.
 \newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 75:5--95, 1992.
+
+\bibitem[Sim94]{simpsonmoduli}
+Carlos~T Simpson.
+\newblock Moduli of representations of the fundamental group of a smooth
+  projective variety.
+\newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 1994.
 
 \bibitem[Uhl82]{uhlenbeck}
 K.~K. Uhlenbeck.
