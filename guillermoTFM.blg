@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: guillermoTFM.aux
 The style file: alpha.bst
 Database file #1: biblio.bib
-You've used 33 entries,
+You've used 34 entries,
             2543 wiz_defined-function locations,
-            746 strings with 8474 characters,
-and the built_in function-call counts, 11627 in all, are:
-= -- 1195
-> -- 392
+            753 strings with 8662 characters,
+and the built_in function-call counts, 12083 in all, are:
+= -- 1242
+> -- 417
 < -- 28
-+ -- 121
-- -- 115
-* -- 784
-:= -- 1901
-add.period$ -- 109
-call.type$ -- 33
-change.case$ -- 168
-chr.to.int$ -- 32
-cite$ -- 33
-duplicate$ -- 523
-empty$ -- 922
-format.name$ -- 171
-if$ -- 2388
++ -- 130
+- -- 124
+* -- 823
+:= -- 1979
+add.period$ -- 112
+call.type$ -- 34
+change.case$ -- 175
+chr.to.int$ -- 33
+cite$ -- 34
+duplicate$ -- 537
+empty$ -- 952
+format.name$ -- 181
+if$ -- 2477
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 43
-newline$ -- 168
-num.names$ -- 99
-pop$ -- 154
+missing$ -- 44
+newline$ -- 173
+num.names$ -- 102
+pop$ -- 158
 preamble$ -- 1
-purify$ -- 211
+purify$ -- 219
 quote$ -- 0
-skip$ -- 406
+skip$ -- 417
 stack$ -- 0
-substring$ -- 707
-swap$ -- 63
+substring$ -- 739
+swap$ -- 64
 text.length$ -- 28
 text.prefix$ -- 23
 top$ -- 0
-type$ -- 224
+type$ -- 232
 warning$ -- 0
-while$ -- 118
-width$ -- 35
-write$ -- 430
+while$ -- 123
+width$ -- 37
+write$ -- 443

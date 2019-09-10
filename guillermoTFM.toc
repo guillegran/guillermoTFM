@@ -17,7 +17,7 @@
 \contentsline {section}{\numberline {3}Hitchin's equations}{39}{section.3.3}
 \contentsline {section}{\numberline {4}Higgs bundles}{42}{section.3.4}
 \contentsline {section}{\numberline {5}Deformations of Higgs bundles}{44}{section.3.5}
-\contentsline {section}{\numberline {6}An algebraic view of the spectral correspondence}{46}{section.3.6}
+\contentsline {section}{\numberline {6}An algebraic point of view of the spectral correspondence}{46}{section.3.6}
 \contentsline {section}{\numberline {7}$\mathrm {SL}(n,\mathbf {C})$-Higgs bundles}{49}{section.3.7}
 \contentsline {chapter}{\numberline {IV}Higgs bundles twisted by a vector bundle}{51}{chapter.4}
 \contentsline {section}{\numberline {1}Generalized Hitchin's equations}{51}{section.4.1}

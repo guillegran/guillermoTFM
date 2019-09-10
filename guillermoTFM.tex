@@ -72,10 +72,13 @@
 \def\SL{\mathrm{SL}}
 \def\uu{\mathfrak{u}}
 \def\Hom{\mathrm{Hom}}
-\def\Bun{\mathbf{M}_{\mathrm{Bun}}}
-\def\Hig{\mathbf{M}_{\mathrm{Higgs}}}
-\def\MV{\mathbf{M}_{V}}
-\def\SLHig{\mathbf{M}_{\mathrm{\SL(n,\CC)-Higgs}}}
+%\def\Bun{\mathbf{M}_{\mathrm{Bun}}}
+\def\Bun{\mathscr{N}}
+%\def\Hig{\mathbf{M}_{\mathrm{Higgs}}}
+\def\Hig{\mathscr{M}}
+%\def\MV{\mathbf{M}_{V}}
+\def\MV{\mathscr{M}_{V}}
+\def\SLHig{\mathscr{M}_{\SL(n,\CC)}}
 \def\Sym{\mathrm{Sym}}
 \def\Pic{\mathrm{Pic}}
 \def\Spec{\mathrm{Spec}}
@@ -171,11 +174,11 @@ Enrique \textsc{Arrondo Esteban}
 \begin{center}
   \textbf{Abstract}
 \end{center}
-  In this dissertation we explore a generalization of the theory of Higgs bundles over compact Riemann surfaces, in which the canonical line bundle is replaced by a vector bundle of arbitrary rank. This kind of situation appears naturally in the study of supersymmetric gauge theories. From the mathematical point of view, we study several topics: analogous of Hitchin's equations, stability and a generalization of the spectral correspondence.
+  In this dissertation we explore a generalization of the theory of Higgs bundles over compact Riemann surfaces, in which the canonical line bundle is replaced by a vector bundle of arbitrary rank. This kind of situation appears naturally in the study of supersymmetric gauge theories. From the mathematical point of view, we study several topics: analogous of Hitchin's equations, stability, Hitchin--Kobayashi correspondence and a generalization of the spectral curve.
 
   \vspace{.5 cm}
 
-  \noindent \textbf{Keywords}: \textit{Moduli space, vector bundle, Higgs bundle, Hitchin's equations, Hitchin fibration, spectral curve}
+  \noindent \textbf{Keywords}: \textit{Moduli space, vector bundle, Higgs bundle, Hitchin's equations, Hitchin--Kobayashi correspondence, Hitchin fibration, spectral curve}
 
 
 \begin{center}
@@ -186,11 +189,11 @@ Enrique \textsc{Arrondo Esteban}
   El objetivo de este trabajo es explorar una generalización de la
  % teoría de Hitchin
  teoría de fibrados de Higgs sobre superficies de Riemann compactas,
-  en la que se sustituye el fibrado canónico por un fibrado vectorial de rango arbitrario. Este tipo de situación aparece de modo natural en el estudio de teorías gauge supersimétricas. Desde el punto de vista matemático, nos centramos en varios temas: ecuaciones análogas a las de Hitchin, estabilidad y generalización de la correspondencia espectral.
+  en la que se sustituye el fibrado canónico por un fibrado vectorial de rango arbitrario. Este tipo de situación aparece de modo natural en el estudio de teorías gauge supersimétricas. Desde el punto de vista matemático, nos centramos en varios temas: ecuaciones análogas a las de Hitchin, estabilidad, correspondencia de Hitchin--Kobayashi y generalización de la curva espectral.
 
   \vspace{.5 cm}
 
-  \noindent \textbf{Palabras clave}: \textit{Espacio de móduli, fibrado vectorial, fibrado de Higgs, ecuaciones de Hitchin, fibración de Hitchin, curva espectral}
+  \noindent \textbf{Palabras clave}: \textit{Espacio de móduli, fibrado vectorial, fibrado de Higgs, ecuaciones de Hitchin, correspondencia de Hitchin--Kobayashi, fibración de Hitchin, curva espectral}
 
 \unmarkedfntext{2010 \textit{Mathematics Subject Classification.} Primary 14D20, 14D21, 14H60}
 
@@ -217,6 +220,7 @@ ser llamado bobo, díganlo vuestras grandezas.}}{Don Quijote de la Mancha}
   \item[$\ZZ$] The ring of integer numbers.
   \item[$\RR$] The field of real numbers.
   \item[$\CC$] The field of complex numbers.
+  \item[$\CC^*$] The group of nonzero complex numbers with the product.
   \item[$\PP(V)$] The projectivization of $V$.
   \item[$\PP^n_k$] The $n$-dimensional projective space over the field $k$.
 
@@ -226,9 +230,10 @@ ser llamado bobo, díganlo vuestras grandezas.}}{Don Quijote de la Mancha}
 
   \item[$C^\infty(X,\CC)$]  The set of smooth functions $X\rightarrow \CC$.
 
-  \item[$C^\infty_X$]  The sheaf of smooth functions on $X$.
+  \item[$C^\infty_X$]  The sheaf of smooth functions on $X$. That is, $C^\infty_X(U)=C^\infty(U,\CC)$.
 
-  \item[$C^{\infty,*}_X$]  The sheaf of nonzero smooth functions on $X$.
+  \item[$C^{\infty,*}_X$]  The sheaf of nonzero smooth functions on $X$. That is, $C^{\infty,*}_X(U)=C^\infty(U,\CC^*)$.
+
 
   \item[$\OO_X$] The sheaf of holomorphic functions on $X$, if we regard $X$ as a compact Riemann surface, or the algebraic structure sheaf of $X$ if we regard $X$ as an algebraic projective curve.
 
@@ -282,7 +287,7 @@ The first chapter starts explaining why knowing the rank and the degree of a vec
 
 The second chapter serves as an interlude between the first and third chapter. In this chapter we give the basic notions of analysis and symplectic geometry necessary to understand part of the document. We introduce the concept of Banach manifold and develop symplectic geometry in an infinite-dimensional setting. We define momentum map and symplectic reduction, and give a proof of the Marsden-Weinstein theorem. At the end of the chapter, we use the concepts defined to obtain the moduli space of stable vector bundle as a symplectic quotient.
 
-The third chapter consists essentialy in a review of parts of the papers \cite{hitchinselfduality}, \cite{hitchinsystem} and \cite{bnr}. In this chapter we study the Hitchin system and the spectral correspondence of Beauville-Narasimhan-Ramanan. We define Higgs bundles and the notion of stability, introduce the Hitchin equations and state the Hitchin correspondence. We also explore the same concepts from the algebraic point of view, which yields a different perspective on the same results and settles the main ideas used in the results of chapter IV. Finally, we introduce the generalization of Higgs bundles to the case of principal $G$-bundles, for $G$ a complex semi-simple Lie group, considering in detail the case of $G=\SL(n,\CC)$.
+The third chapter consists essentialy in a review of parts of the papers \cite{hitchinselfduality}, \cite{hitchinsystem} and \cite{bnr}. In this chapter we study the Hitchin system and the spectral correspondence of Beauville-Narasimhan-Ramanan. We define Higgs bundles and the notion of stability, introduce the Hitchin equations and state the Hitchin--Kobayashi correspondence. We also explore the same concepts from the algebraic point of view, which yields a different perspective on the same results and settles the main ideas used in the results of chapter IV. Finally, we introduce the generalization of Higgs bundles to the case of principal $G$-bundles, for $G$ a complex semi-simple Lie group, considering in detail the case of $G=\SL(n,\CC)$.
 
 The last chapter covers all the new topics that are being introduced in this dissertation. We start by defining Higgs bundles twisted by a vector bundle and writing a generalization of Hitchin's equation. We also study the generalization of the Hitchin system and of the Beauville-Narasimhan-Ramanan spectral correspondence to this case. In the last section we discuss some further directions and open questions that remain unanswered.
 
@@ -332,7 +337,7 @@ The first step towards the classification of vector bundles on Riemann surfaces 
      Thus, we have shown that $E\cong E'\oplus (X\times \CC)$. Now, applying the induction hypothesis, $E'\cong \det E' \oplus (X\times \CC^{n-2})$, so $E\cong \det E' \oplus (X\times \CC^{n-1})$. Finally, via transition functions it can be easily shown that $\det E \cong \det E'$.
 \end{proof}
 
-This last theorem says that vector bundles can be topologically classified by their rank and their determinant, which is a line bundle. Let us proceed then with the classification of line bundles. Recall that all the data of a vector bundle can be recovered by the transition functions $\{g_{\alpha \beta}\in C^\infty(U_\alpha \cap U_\beta , \CC)\}$ defining it, where $\left\{ U_\alpha \right\}$ is an open cover of $X$. These functions verify the cocycle condition $$g_{\alpha \beta}=g_{\gamma \beta}\cdot g_{\alpha \gamma}.$$ Also recall that an isomorphism of vector bundles induces a coboundary on the transition functions
+This last theorem says that vector bundles can be topologically classified by their rank and their determinant, which is a line bundle. Let us proceed then with the classification of line bundles. Recall that all the data of a line bundle can be recovered by the transition functions $\{g_{\alpha \beta}\in C^\infty(U_\alpha \cap U_\beta , \CC^*)\}$ defining it, where $\left\{ U_\alpha \right\}$ is an open cover of $X$. These functions verify the cocycle condition $$g_{\alpha \beta}=g_{\gamma \beta}\cdot g_{\alpha \gamma}.$$ Also recall that an isomorphism of vector bundles induces a coboundary on the transition functions
 \begin{equation*}
   \tilde{g}_{\alpha\beta}=f^{-1}_{\delta\beta}\cdot g_{\gamma\delta} \cdot f_{\gamma\alpha}.
 \end{equation*}
@@ -342,7 +347,7 @@ Therefore, topological ($C^\infty$) isomorphism classes of vector bundles are pa
 \end{equation*}
 To obtain more information about this cohomology group we are going to introduce a very powerful tool: the first Chern class of a vector bundle.
 
-Recall from Chern-Weil theory \cite{griffithsharris,wells} that for any complex vector bundle $E$ over $X$ and for any connection $\nabla$ on $E$ with associated curvature form $F$, the $2$-form $\tr F$ is closed and its de Rham cohomology class $[\tr F]\in H_{\mathrm{dR}}^2(X)$ does not depend on the choice of the connection, so it is an invariant of the vector bundle $E$. If we normalize this form to get an integer cohomology class, we can define the \emph{first Chern class} of $E$ as the cohomology class:
+Recall from Chern--Weil theory \cite{griffithsharris,wells} that for any complex vector bundle $E$ over $X$ and for any connection $\nabla$ on $E$ with associated curvature form $F$, the $2$-form $\tr F$ is closed and its de Rham cohomology class $[\tr F]\in H_{\mathrm{dR}}^2(X)$ does not depend on the choice of the connection, so it is an invariant of the vector bundle $E$. If we normalize this form to get an integer cohomology class, we can define the \emph{first Chern class} of $E$ as the cohomology class:
 \begin{equation*}
   c_1(E)=\left[ \frac{i}{2\pi} \tr F \right] \in H_{\mathrm{dR}}^2(X).
 \end{equation*}
@@ -391,7 +396,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	   H^1(X,C_X^{\infty,*}) \arrow{r}{c_1} \arrow[bend right]{rr}{\deg}& H^2_{\mathrm{dR}}(X,\ZZ) \arrow{r}{\int_X} & \ZZ.
 	 \end{tikzcd}
        \end{center}
-       That is, the degree gives an isomorphism between the set isomorphism classes of smooth line bundles and $\ZZ$. This concludes the topological classification of vector bundles, which we can gather in the next theorem
+       That is, the degree gives an isomorphism between the set of isomorphism classes of smooth line bundles and $\ZZ$. This concludes the topological classification of vector bundles, which we can gather in the next theorem
        \begin{thm}
 	 Smooth complex vector bundles over a compact Riemann surfaces are classified, up to $C^\infty$ isomorphism by their rank and their degree.
        \end{thm}
@@ -404,7 +409,7 @@ This last property will be crucial in the classification of line bundles. Let us
 	 H^1(X,\OO_X^*).
        \end{equation*}
        This cohomology group is called the \emph{Picard group} of $X$ and we denote it by $\Pic(X)$.
-       Now, as before, we can consider the exponential sheaf sequence
+       Now, as above, we can consider the exponential sheaf sequence
       \begin{center}
 	\begin{tikzcd}
 	  0\arrow{r}&	  \ZZ \arrow{r} & \OO_X \arrow{r}{\exp} & \OO_X^* \arrow{r} & 0,
@@ -456,9 +461,9 @@ This last property will be crucial in the classification of line bundles. Let us
 	     \delbar_{\ve{E}}^2=0.
 	   \end{equation*}
 
-	   Conversely, if $E$ is a complex vector bundle, any operator $\delbar_{\ve{E}}:\Omega^{p,q}(X,E)\rightarrow \Omega^{p,q+1}(X,E)$ which satisfies the conditions above induces on $E$ the structure of a holomorphic vector bundle. The idea here is that $\delbar_{\ve{E}}^2=0$ is the \emph{integrability condition} for the PDE $\delbar_{\ve{E}} s=0$ (check out \cite{donaldson4manifolds}  for a proof of this fact). The solutions of this PDE are the holomorphic vector functions, so the sheaf of local solutions is locally free over $\OO_X$ and therefore it is an holomorphic vector bundle supported on $E$. In conclusion, if we define $\AA_{\delbar}$ as the set of all such $\delbar_{\ve{E}}$ operators satisfying the previous conditions, this set is in bijection with the set of all holomorphic structures on $E$.
+	   Conversely, if $E$ is a $C^\infty$ complex vector bundle, any operator $\delbar_{\ve{E}}:\Omega^{p,q}(X,E)\rightarrow \Omega^{p,q+1}(X,E)$ which satisfies the conditions above induces on $E$ the structure of a holomorphic vector bundle. The idea here is that $\delbar_{\ve{E}}^2=0$ is the \emph{integrability condition} for the PDE $\delbar_{\ve{E}} s=0$ (check out \cite{donaldson4manifolds}  for a proof of this fact). The solutions of this PDE are the holomorphic vector functions, so the sheaf of local solutions is locally free over $\OO_X$ and therefore it is an holomorphic vector bundle supported on $E$. In conclusion, if we define $\AA_{\delbar}$ to be the set of all such $\delbar_{\ve{E}}$ operators satisfying the previous conditions, this set is in bijection with the set of all holomorphic structures on $E$.
 
-	   Now let us consider the group $\GG^c$ of \emph{gauge transformations} of a complex vector bundle $E$, that is, diffeomorphisms $g:E\rightarrow E$ such that the diagram
+	   Now let us consider the group $\GG^c$ of \emph{gauge transformations} of the $C^\infty$ complex vector bundle $E$, that is, diffeomorphisms $g:E\rightarrow E$ such that the diagram
 	   \begin{center}
 	     \begin{tikzcd}
 	       E \arrow{rr}{g} \arrow{rd} && E \arrow{ld}	       \\ 
@@ -586,7 +591,7 @@ Let us consider then the set $\AA_h^s$ of all $h$-unitary irreducible connection
 
 Now, Donaldson's version of the theorem of Narasimhan-Seshadri relates this moduli space with the moduli space of stable holomorphic vector bundles.
 
-\begin{thm}[Donaldson-Narasimhan-Seshadri]\label{narasimhanseshadri}
+\begin{thm}[Donaldson--Narasimhan--Seshadri]\label{narasimhanseshadri}
   Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$. An irreducible unitary connection $\nabla$ has constant central curvature if and only if the associated holomorphic vector bundle $(E,\nabla^{0,1})$ is stable.
 \end{thm}
 This can be reformulated in terms of moduli spaces:
@@ -673,7 +678,7 @@ For the purpose of this text it is necessary to work on an infinite-dimensional 
     where $L(E,F)$ denotes the set of bounded linear maps $E\rightarrow F$. If $df$ is continuous, we say that $f$ is \emph{of class} $C^1$. Inductively, we define maps of class $C^p$, for $p\in \mathbf{N} \cup \left\{ \infty \right\}$. If $f$ is of class $C^{\infty}$, we say that it is \emph{smooth}. If $f$ is a bijective map of class $C^p$ such that its inverse is also of class $C^p$, we say that $f$ is a $C^p$-\emph{diffeomorphism}. If we do not specify, by a \emph{diffeomorphism} we just mean a $C^\infty$-diffeomorphism.
 \end{defn}
 
-As we said before, all the basic definitions and results of classical differential calculus (the chain rule, Taylor's formula, inverse and implicit function theorems etc.) can be generalized to the infinite-dimensional context. 
+As we said above, all the basic definitions and results of classical differential calculus (the chain rule, Taylor's formula, inverse and implicit function theorems etc.) can be generalized to the infinite-dimensional context. 
 %\begin{thm}[Inverse function theorem]
 %  Let $X$, $Y$ be Banach spaces, $U\subset X$ open and $f:U\rightarrow Y$ a map of class $C^p$, for some $p\in \mathbf{N}\cup \{\infty\}$. Assume that for some point $x_0 \in U$ the derivative $d_{x_0}f:X\rightarrow Y$ is a bounded linear isomorphism. Then $f$ is a local $C^p$-diffeomorphism at $x_0$.
 %\end{thm}
@@ -949,7 +954,7 @@ Therefore we have
 so $\mu$ is a momentum map for the action of $\GG$ in $\AA_h$. 
 \end{proof}
 
-The $\GG$-action can be shown to verify all the technical conditions for it to define a symplectic structure on the symplectic quotient $\mu^{-1}(0)/\GG$. In general, this quotient will classify \emph{polystable} holomorphic vector bundles. To get stable vector bundles we consider the submanifold $\AA^s_h$ of irreducible $h$-unitary connections and the same method can be applied to construct the moduli space $\Bun(n,d)=\AA^s_h/\GG$ as a symplectic quotient $\mu^{-1}(0)/\GG$. All the good properties of the action guarantee that $\Bun(n,d)$ is indeed a smooth manifold.
+The $\GG$-action can be shown to verify all the technical conditions for it to define a symplectic structure on the symplectic quotient $\mu^{-1}(0)/\GG$. In general, this quotient will classify \emph{polystable} holomorphic vector bundles. To get stable vector bundles we consider the submanifold $\AA^s_h$ of irreducible $h$-unitary connections and the same method can be applied to construct the moduli space $\AA^s_h/\GG$ as a symplectic quotient $\mu^{-1}(0)/\GG$, that via the Donaldson--Narasimhan--Seshadri theorem can be identified with the moduli space $\Bun(n,d)$. All the good properties of the action guarantee that this moduli space is indeed a smooth manifold.
 
 \chapter{Higgs bundles and the Hitchin system}
 \section{The Hitchin system}
@@ -1035,10 +1040,10 @@ We now define the momentum map
       &= 1+ (2g-2)\frac{n(n+1)}{2} - n(g-1) = 1+(g-1)(n^2+n) - n(g-1) \\
       &= n^2(g-1)+1.
     \end{align*}
-    To finish the proof of Hitchin's theorem it remains to check that the fibers are open sets in $n^2(g-1)+1$-dimensional complex tori. In order to prove this, we are going to need a very powerful tool that will be introduced in the following section.
+    To finish the proof of Hitchin's theorem it remains to check that the fibres are open sets in $n^2(g-1)+1$-dimensional complex tori. In order to prove this, we are going to need a very powerful tool that will be introduced in the following section.
 
     \section{The spectral correspondence}
-    In this section we are going to study the spectral data of ``twisted'' endomorphisms on vector bundles. We are going to work in a more general setting than the previous section, in which we were only considering pairs $(\ve{E},\varphi)$ where $\varphi\in H^0(X,\End\ \ve{E} \otimes K_X)$ was an endomorphism ``twisted'' by the canonical line bundle $K_X$. We are now going to allow twisting by any holomorphic line bundle $L$.
+    In this section we are going to study the spectral data of ``twisted'' endomorphisms on vector bundles. We are going to work in a more general setting than the previous section, in which we were only considering pairs $(\ve{E},\varphi)$ where $\varphi\in H^0(X,\End\ \ve{E} \otimes K_X)$ was an endomorphism ``twisted'' by the canonical line bundle $K_X$. We are now going to allow twisting by any holomorphic line bundle $L$. The results of this section were first proven by Hitchin in \cite{hitchinsystem} for the case $L=K_X$ and then for general $L$ by Beauville, Narasimhan and Ramanan in \cite{bnr}.
 
     \begin{defn}
       Let $X$ be a compact Riemann surface and let $\ve{E}\rightarrow X$ be a holomorphic vector bundle of rank $n$ and degree $d$. Let us fix a holomorphic line bundle $L\rightarrow X$. A \emph{$L$-twisted endomorphism} is a bundle homomorphism $\varphi:\ve{E}\rightarrow \ve{E}\otimes L$, or equivalently, a holomorphic section $\varphi \in H^0(X,\End\ \ve{E} \otimes L)$.
@@ -1087,12 +1092,12 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
        \begin{equation*}
 	 \left\{ (x,\lambda) \in U\times \CC: \det(\lambda \id - \varphi)=0 \right\}
        \end{equation*}
-       That is, fiberwise, over some point $x \in X$ the points of the spectral curve are precisely the ``eigenvalues'' $\lambda_1(x),\dots,\lambda_n(x) \in L_x$ of the twisted endomorphism $\varphi_x:E_x \rightarrow E_x \otimes L_x$; hence the name \textit{spectral curve}.
+       That is, fibrewise, over some point $x \in X$ the points of the spectral curve are precisely the ``eigenvalues'' $\lambda_1(x),\dots,\lambda_n(x) \in L_x$ of the twisted endomorphism $\varphi_x:E_x \rightarrow E_x \otimes L_x$; hence the name \textit{spectral curve}.
 
        \begin{figure}[h]
 	 \centering
 	 \includegraphics[width=0.5\textwidth]{curvaespectral.png}
-	 \caption{The spectral curve on its ambient space $L$. The elements $\left\{ \lambda_{1,x},\dots,\lambda_{4,x} \right\}$ are the ``eigenvalues'' of $\varphi_x$.}
+	 \caption{The spectral curve in its ambient space $L$. The elements $\left\{ \lambda_{1,x},\dots,\lambda_{4,x} \right\}$ are the ``eigenvalues'' of $\varphi_x$.}
 	 \label{fig:spectral}
        \end{figure}
 
@@ -1118,7 +1123,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	    && X.
 	  \end{tikzcd}
 	\end{center}
-	Since $\pi:S_b\rightarrow X$ is a morphism of Riemann surfaces it defines a branched covering of $S_b$ over $X$. Note that at a point $x$ where this morphism is étale the fiber has exactly $n$ points, the $n$ eigenvalues of $\varphi_x$. Therefore the degree of the map $\pi$ is $\deg \pi = n$. Similarly, the \emph{branch locus} will be given precisely by those points $x\in X$ where some eigenvalues of $\varphi_x$ have algebraic multiplicity $>1$. By the same reason, the \emph{ramification divisor} $R$ on $S_b$ is defined as the zero divisor of $\Disc(s_b)\in H^0(X,p^*L^{n(n-1)})$, which is the discriminant of $s_b$, or equivalently, the resultant of $s_b$ and its derivative
+	Since $\pi:S_b\rightarrow X$ is a morphism of Riemann surfaces it defines a branched covering of $S_b$ over $X$. Note that at a point $x$ where this morphism is étale the fibre has exactly $n$ points, the $n$ eigenvalues of $\varphi_x$. Therefore the degree of the map $\pi$ is $\deg \pi = n$. Similarly, the \emph{branch locus} will be given precisely by those points $x\in X$ where some eigenvalues of $\varphi_x$ have algebraic multiplicity $>1$. By the same reason, the \emph{ramification divisor} $R$ on $S_b$ is defined as the zero divisor of $\Disc(s_b)\in H^0(X,p^*L^{n(n-1)})$, which is the discriminant of $s_b$, or equivalently, the resultant of $s_b$ and its derivative
 	\begin{equation*}
 	  \Disc(s_b)=\Res\left(s_b, \frac{\partial}{\partial \lambda} s_b\right).
 	\end{equation*}
@@ -1134,9 +1139,9 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  g_{S_b}= 1+n(g-1)+ \frac{n(n-1)}{2}\deg L.
 	\end{equation*}
 
-	We are now in position to prove the spectral correspondence:
-	\begin{thm}[Beauville-Narasimhan-Ramanan, \cite{bnr}]
-	  Take $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ such that the spectral curve $S_b$ is irreducible and smooth. We have a bijective correspondence, up to isomorphism, between holomorphic line bundles over $S_b$ of degree $\delta$ and pairs $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ of rank $n$ and degree $d$, and $\varphi$ is a $L$-twisted endomorphism with characteristic polynomial
+	We are now in a position to prove the spectral correspondence:
+	\begin{thm}[Beauville--Narasimhan--Ramanan, \cite{bnr}]
+	  Take $b \in \bigoplus_{i=1}^n H^0(X,L^i)$ such that the spectral curve $S_b$ is irreducible and smooth. There is a bijective correspondence, up to isomorphism, between holomorphic line bundles over $S_b$ of degree $\delta$ and pairs $(\ve{E},\varphi)$, where $\ve{E}$ is a holomorphic vector bundle over $X$ of rank $n$ and degree $d$, and $\varphi$ is a $L$-twisted endomorphism with characteristic polynomial
 	  \begin{equation*}
 	    P_\varphi(T)=P_b(T):=T^n + \sum_{i=1}^n b_i T^{n-i}.   
 	  \end{equation*}
@@ -1198,13 +1203,13 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  H:T^*\Bun(n,d)& \longrightarrow \BB = \bigoplus_{i=1}^n H^0(X,K_X^i) \\
 	  (\ve{E},\varphi) &\longmapsto (\sigma_1(\varphi),\dots,\sigma_n(\varphi)). 
 	  \end{align*}
-	  The fiber of some point $b=(b_1,\dots,b_n)\in \BB$ by this map is formed precisely by (isomorphism classes of) that pairs $(\ve{E},\varphi)$ such that $\ve{E}$ is a holomorphic \textit{stable} vector bundle of rank $n$ and degree $d$ and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ is a $K_X$-twisted endomorphism with $P_\varphi(T)=P_b(T)$. Moreover, $K_X^n$ is base point free, so for generic $b\in \BB$ the spectral curve $S_b$ will be irreducible and smooth. Stability is an open condition, so in this case the Beauville-Narasimhan-Ramanan theorem says that the fiber of a generic $b$ is an open subset of the set of isomorphism classes of holomorphic line bundles over $S_b$ of degree 
+	  The fibre of some point $b=(b_1,\dots,b_n)\in \BB$ by this map is formed precisely by (isomorphism classes of) that pairs $(\ve{E},\varphi)$ such that $\ve{E}$ is a holomorphic \textit{stable} vector bundle of rank $n$ and degree $d$ and $\varphi:\ve{E}\rightarrow \ve{E}\otimes K_X$ is a $K_X$-twisted endomorphism with $P_\varphi(T)=P_b(T)$. Moreover, $K_X^n$ is base point free, so for generic $b\in \BB$ the spectral curve $S_b$ will be irreducible and smooth. Stability is an open condition, so in this case the Beauville-Narasimhan-Ramanan theorem says that the fibre of a generic $b$ is an open subset of the set of isomorphism classes of holomorphic line bundles over $S_b$ of degree 
 	  $$\delta=d+\frac{n(n-1)}{2}\deg K_X=d+n(n-1)(g-1).$$
 	  But this set of isomorphism classes is precisely the component $\Pic^\delta (S_b)$ of the Picard group, which is isomorphic to the Jacobian $J(S_b)$; so it is indeed a complex torus! Moreover, the dimension of this complex torus is the genus of the spectral curve, and if we compute it the \textit{miracle} occurs:
 	  \begin{equation*}
 	    g_{S_b}=1+n(g-1)+\frac{n(n-1)}{2}\deg K_X=1+n^2(g-1).
 	  \end{equation*}
-	  Summing up, we have proven that for some point $b\in \BB$, the fiber of the Hitchin map $H^{-1}(b)$ is an open set of $\Pic^{\delta}(S_b)$, a complex torus of dimension $n^2(g-1)+1$. This completes the proof of Hitchin's theorem \ref{hitchinsystem}.
+	  Summing up, we have proven that for some point $b\in \BB$, the fibre of the Hitchin map $H^{-1}(b)$ is an open set of $\Pic^{\delta}(S_b)$, a complex torus of dimension $n^2(g-1)+1$. This completes the proof of Hitchin's Theorem \ref{hitchinsystem}.
 
 	  A natural question to ask now is what happens to the remaining elements of the Jacobian: if they do not yield elements of $T^*\Bun(n,d)$, what do they correspond to? This suggest the existence of a wider symplectic manifold, of which $T^*\Bun(n,d)$ is a subset. 
 
@@ -1215,7 +1220,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  where $A_i \in \Omega^{1}(X,\mathfrak{u}_h(E))$ and $\varphi_i \in \Omega^{1,0}(X,\End E)$.
 
 	  \begin{rem}\label{obsproducto}
-	    Let us see explicitly what we mean by $\varphi_1\varphi_2^\dagger$. $\varphi$ is an element of $\Omega^{1,0}(X,\End E)=\Gamma(\Lambda^{1,0}(X)\otimes\End E)$, thus, locally it can be seen as $\varphi=\phi \otimes \alpha$, with $\phi: X \rightarrow \End E$ and $\alpha:X\rightarrow \Lambda^{1,0}(X)$. By $\varphi^\dagger$ then we mean an element of $\Omega^{0,1}(X,\End E)$ which locally looks like $\varphi^\dagger=\phi^{\dagger} \otimes \bar{\alpha}$ with $\phi^{\dagger}$ the transpose conjugate (globally the adjoint, given by $h$) of $\phi$ and $\bar{\alpha}:X\rightarrow \Lambda^{0,1}(X)$ the conjugate of $\alpha$. By $\varphi_1 \varphi_2^\dagger$ we mean an element of $\Omega^{1,1}(X,\End E)$, which locally looks like
+	    Let us see explicitly what we mean by $\varphi_1\varphi_2^\dagger$. The section $\varphi$ is an element of $\Omega^{1,0}(X,\End E)=\Gamma(\Lambda^{1,0}(X)\otimes\End E)$, thus, locally it can be seen as $\varphi=\phi \otimes \alpha$, with $\phi: X \rightarrow \End E$ and $\alpha:X\rightarrow \Lambda^{1,0}(X)$. By $\varphi^\dagger$ then we mean an element of $\Omega^{0,1}(X,\End E)$ which locally looks like $\varphi^\dagger=\phi^{\dagger} \otimes \bar{\alpha}$ with $\phi^{\dagger}$ the transpose conjugate (globally the adjoint, given by $h$) of $\phi$ and $\bar{\alpha}:X\rightarrow \Lambda^{0,1}(X)$ the conjugate of $\alpha$. By $\varphi_1 \varphi_2^\dagger$ we mean an element of $\Omega^{1,1}(X,\End E)$, which locally looks like
 	    \begin{equation*}
 	      \varphi_1 \varphi_2^\dagger=(\phi_1\phi_2^{\dagger})\otimes \alpha_1 \wedge \bar{\alpha}_2.
 	    \end{equation*}
@@ -1315,9 +1320,9 @@ Therefore
 
 	  \section{Higgs bundles}
 	  \begin{defn}
-	    A pair $(\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ is called \emph{irreducible} if there exist no subbundles $E'\subset E$ which are preserved by both $\nabla$ and $\varphi$. 
+	    A pair $(\nabla,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ is called \emph{irreducible} if there exist no proper subbundles $E'\subset E$ which are preserved by both $\nabla$ and $\varphi$. 
 	  \end{defn}
-	  \begin{thm}[Hitchin correspondence] \label{Hitchin correspondence}
+	  \begin{thm}[Hitchin--Kobayashi correspondence] \label{Hitchin correspondence}
 	    Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$.
 	    An irreducible pair $(\nabla ,\varphi) \in \AA_h \times \Omega^{1,0}(X,\End\ E)$ is a solution to the Hitchin equations if and only if for every proper subbundle $E'\subset E$ which is invariant by $\nabla^{0,1}$ and $\varphi$,
 	    \begin{equation*}
@@ -1385,7 +1390,7 @@ Therefore
 	    The moduli space $\Hig(n,d)$ is a complex manifold of dimension $2+2n^2(g-1)$, where $g$ is the genus of $X$.
 	  \end{thm}
 
-	  The Hitchin correspondence \ref{Hitchin correspondence} can be now reinterpreted as follows
+	  The Hitchin--Kobayashi correspondence \ref{Hitchin correspondence} can be now reinterpreted as follows
 	  \begin{corol}
 	    Let $(E,h)$ be a smooth Hermitian vector bundle of rank $n$ and degree $d$. The moduli space of solutions to the Hitchin equations on $E$ is homeomorphic to the moduli space of stable Higgs bundles $\Hig(n,d)$.
 	  \end{corol}
@@ -1403,7 +1408,7 @@ Therefore
 	      Suppose that $\ve{E}'\subset \ve{E}$ is a proper holomorphic subbundle invariant by $\varphi$. Then we can take the characteristic polynomial of $\varphi|_{\ve{E}'}$ and it must divide the characteristic polynomial of $\varphi$, thus contradicting that the spectral curve is irreducible.
 	    \end{proof}
 
-	    As a conclusion, we get that generic fibers of the Hitchin map $H:\Hig(n,d) \rightarrow \BB$ are whole Jacobians of the spectral curve
+	    As a conclusion, we get that generic fibres of the Hitchin map $H:\Hig(n,d) \rightarrow \BB$ are whole Jacobians of the spectral curve
 
 	    \section{Deformations of Higgs bundles}
 	    In this section we are going to compute the dimension of $\Hig(n,d)$, stated in Theorem \ref{thm:higgs}, using deformation theory. As in the case for vector bundles, the idea is to identify the tangent space of $\Hig(n,d)$ at some point $(\delbar_{\ve{E}},\varphi)$ and find its dimension.
@@ -1506,8 +1511,8 @@ Therefore
 		\dim \Hig(n,d)=\dim H^1(C^\bullet)=2+2n^2(g-1).
 	      \end{equation*}
 
-	      \section{An algebraic view of the spectral correspondence}
-	      Up until right now we have been working in the holomorphic category, $X$ being a compact Riemann surface and working with holomorphic vector bundles on $X$. However the classical result of embedding of Riemann surfaces in projective spaces (which can be stated in modern terms as a consequence of the Kodaira embedding theorem) and the not-so-classical Serre's GAGA theorems indicate that we could as well have worked all the time in the algebraic category. That is, we could consider $X$ to be a proyective algebraic curve and work with (algebraic) vector bundles over $X$, that is, with locally free sheaves of $\OO_X$-modules. This has been the point of view adopted by many people working in Higgs bundles, since working with the powerful tools that algebra offers can sometimes be very useful. In fact, the original paper of Beauville, Narasimhan and Ramanan $\cite{bnr}$ was written in this fashion. Let us now take a look at what we can say about the spectral correspondence from the algebraic point of view. But first consider the following example:
+	      \section{An algebraic point of view of the spectral correspondence}
+	      Until now we have been working in the holomorphic category, $X$ being a compact Riemann surface and working with holomorphic vector bundles on $X$. However the classical result of embedding of Riemann surfaces in projective spaces (which can be stated in modern terms as a consequence of the Kodaira embedding theorem) and the not-so-classical Serre's GAGA theorems indicate that we could as well have worked all the time in the algebraic category. That is, we could consider $X$ to be a proyective algebraic curve and work with (algebraic) vector bundles over $X$, that is, with locally free sheaves of $\OO_X$-modules. This has been the point of view adopted by many people working in Higgs bundles, since working with the powerful tools that algebra offers can sometimes be very useful. In fact, the original paper of Beauville, Narasimhan and Ramanan $\cite{bnr}$ was written in this fashion. Let us now take a look at what we can say about the spectral correspondence from the algebraic point of view. But first consider the following example:
 	      \begin{ejemplo}
 		Let $V$ be a finite dimensional complex vector space and $A:V\rightarrow V$ an endomorphism. $A$ induces the following ring morphism
 		\begin{align*}
@@ -1597,7 +1602,7 @@ The sum of these embeddings gives a homomorphism $\LL^{-n}\rightarrow \Sym(\LL^{
     \Nm_\pi :\Pic(S_{\varphi})&\longrightarrow \Pic(X)\\ 
     \sum_{i} n_ip_i &\longmapsto \sum_i n_i \pi(p_i). 
     \end{align*}
-    Note that here we are seeing the Picard group as equivalence classes of Cartier divisors. In particular, note that $\deg M = \deg \Nm_\pi M$. Note too that
+    Note that here we are seeing the Picard group as equivalence classes of Cartier divisors. In particular, note that $\deg M = \deg \Nm_\pi M$. Note also that
     \begin{equation*}
       \det \pi_* \OO_{S_\varphi} = \det\left( \bigoplus_{i=1}^{n-1} \LL^{-i}\right) = \LL^{-\frac{n(n-1)}{2}}.
     \end{equation*}
@@ -1661,7 +1666,7 @@ To understand these conditions let us consider the norm map
     \begin{defn}
       The \emph{Prym variety} $P(S_b,X)$ associated to a morphism $\pi:S_b \rightarrow X$ is the kernel of the norm map $\Nm_\pi:\Pic(S_b) \rightarrow \Pic(X)$.
     \end{defn}
-    Summing up, we have that the fiber $H^{-1}(b)$ of the Hitchin map corresponds to the Prym variety $P(S_b,X)$. Since the norm map preserves degrees, the Prym variety can be seen as the kernel of the restriction
+    Summing up, we have that the fibre $H^{-1}(b)$ of the Hitchin map corresponds to the Prym variety $P(S_b,X)$. Since the norm map preserves degrees, the Prym variety can be seen as the kernel of the restriction
     \begin{equation*}
       \Nm_\pi |_{J(S_b)}: J(S_b) \longrightarrow J(X).
     \end{equation*}
@@ -1690,7 +1695,7 @@ To understand these conditions let us consider the norm map
     \end{defn}
 
     \begin{rem}
-      What this last condition is telling us is that, if locally, in some open subset $U\subset X$, we can decompose $V|_U=\bigoplus_{i=1}^r L_i|_U$ and 
+      What this last condition is telling us is that, if locally, in some open subset $U\subset X$, we decompose $V|_U=\bigoplus_{i=1}^r L_i|_U$ and 
       \begin{equation*}
 	\varphi= \sum_{i=1}^r \phi^i \otimes v_i,
       \end{equation*}
@@ -1701,7 +1706,7 @@ To understand these conditions let us consider the norm map
       for all $i,j=1,\dots,r$.
     \end{rem}
 
-    In this section we are going to conjecture a notion of stability for $V$-twisted Higgs bundles by writing a momentum map that will give us ``generalized'' Hitchin equations. In order to do this, fix $E$ a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and fix a Hermitian metric $h$ on $E$. Moreover, in this case we also need to fix a Hermitian metric $h_V$ on the holomorphic vector bundle $V$. We can then endow the space $\Gamma(\End E \otimes V)$ with a Hermitian metric $\tilde{h}$, that locally looks like
+    In this section we are going to give a notion of stability for $V$-twisted Higgs bundles by writing a momentum map that will give us ``generalized'' Hitchin equations. In order to do this, fix $E$ a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and fix a Hermitian metric $h$ on $E$. Moreover, in this case we also need to fix a Hermitian metric $h_V$ on the holomorphic vector bundle $V$. We can then endow the space $\Gamma(\End E \otimes V)$ with a Hermitian metric $\tilde{h}$, that locally looks like
     \begin{equation*}
       \tilde{h}(\varphi_1,\varphi_2)=\sum_{i,j} \tilde{h}(\phi_1^i\otimes v_i,\phi_2^j\otimes v_j)=\sum_{i,j} \tr(\phi_1^i\phi_2^{j,\dagger}) h(v_i,v_j)=\sum_{i,j}h_{ij} \tr(\phi_1^i\phi_2^{j,\dagger}).
     \end{equation*}
@@ -1813,15 +1818,15 @@ This finishes the proof of the lemma.
       \end{cases}
     \end{equation*}
 
-    As in the (classical) Higgs bundle case, we can say that a pair $(\nabla,\varphi)$ is \emph{irreducible} if there exist no subbundles $E'\subset E$ which are preserved by both $\nabla$ and $\varphi$. We can then conjecture a new notion of stability from the following result:
-    \begin{thm}\label{twistedhitchincorr}
+    As in the (classical) Higgs bundle case, we can say that a pair $(\nabla,\varphi)$ is \emph{irreducible} if there exist no subbundles $E'\subset E$ which are preserved by both $\nabla$ and $\varphi$. We can then give a new notion of stability from the following result:
+    \begin{prop}\label{twistedhitchincorr}
       Let $(E,h)$ be a Hermitian complex vector bundle of rank $n$ and degree $d$ on a compact Riemann surface $X$. If $(\nabla,\varphi)$ is a solution to the generalized Hitchin equations then for every proper subbundle $E'\subset E$ which is invariant by $\nabla^{0,1}$ and $\varphi$,
       \begin{equation*}
 	\mu(E')<\mu(E).
       \end{equation*}
-    \end{thm}
+    \end{prop}
     \begin{proof}
-      The proof is exactly that of (the easy direction of) the Hitchin correspondence, Theorem \ref{Hitchin correspondence}.
+      The proof is exactly that of (the easy direction of) the Hitchin--Kobayashi correspondence, Theorem \ref{Hitchin correspondence}.
     \end{proof}
 
     \begin{defn}
@@ -1831,7 +1836,7 @@ This finishes the proof of the lemma.
       \end{equation*}
     \end{defn}
 
-    We expect that a GIT construction of the moduli space of stable $V$-twisted Higgs bundle can be constructed as well as a proof of the converse of Theorem \ref{twistedhitchincorr}. This would yield an isomorphism between this moduli space and the moduli space of solutions to the generalized Hitchin equations. However, none of this has been yet done and we leave it as an open problem.
+    We expect that a GIT construction of the moduli space of stable $V$-twisted Higgs bundle can be constructed as well as a proof of the converse of Proposition \ref{twistedhitchincorr}. This would yield an isomorphism between this moduli space and the moduli space of solutions to the generalized Hitchin equations. Presumably, the proof of the ``hard part'' of this Hitchin--Kobayashi type correspondence is a particular case of the results by Bradlow, García-Prada and Mundet i Riera in \cite{oscar}. Anyway, an explicit proof of this result is desirable.
 
     For the rest of this work we will assume that the \emph{moduli space of stable $V$-twisted Higgs bundles of rank $n$ and degree $d$} exists and we will denote it by $\MV(n,d)$. The problem of the computation of the expected dimension of this moduli space using deformation theory will be approached in further work. In fact, the problem of computing the dimension of the deformation space of a Higgs bundle twisted by a vector bundle of arbitrary rank has already been studied by Biswas and Ramanan \cite{biswasramanan}. However, they did not consider the condition $\varphi \wedge \varphi=0$, so the dimension that we are looking for should be lower than the one they computed in their paper.
 
@@ -1845,7 +1850,7 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
   H_V :\MV(n,d)&\longrightarrow \bigoplus_{i=1}^n H^0(X,\Sym^i V)\\ 
   (\ve{E},\varphi) &\longmapsto (\sigma_1(\varphi),\dots,\sigma_n(\varphi)). 
   \end{align*}
-  Unlike in the case in which $V$ is a line bundle, the generalized Hitchin map is in general \textit{not surjective}. The reason behind this is that the condition $\varphi \wedge \varphi = 0$ gives precise restrictions on the possible values of $H_V(\ve{E},\varphi)$. We call $\BB_V= \im H_V$ the (generalized) \emph{Hitchin base}.
+  Unlike in the case in which $V$ is a line bundle, the generalized Hitchin map is \textit{not surjective} in general. The reason behind this is that the condition $\varphi \wedge \varphi = 0$ gives precise restrictions on the possible values of $H_V(\ve{E},\varphi)$. We call $\BB_V= \im H_V$ the (generalized) \emph{Hitchin base}.
 
   Let $p:V\rightarrow X$ be the natural projection. Associated to the vector bundle $V$ we have a tautological section $\lambda \in H^0(X,p^*V)$. Locally, we can think of this section as ``coordinates'' $\lambda(x)=(\lambda_1(x),\dots,\lambda_r(x)) \in V_x$ of the points of $V$, where $x\in X$. Now, to every $b=(b_1,\dots,b_n) \in \bigoplus_{i=1}^n H^0(X,\Sym^i V)$ we can associate the section
   \begin{equation*}
@@ -1860,15 +1865,15 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
   \begin{equation*}
     S_b = \left\{(x,\lambda(x)) \in V: \lambda^n + \sum_{i=1}^n b_i \lambda^{n-i}=0\right\},
   \end{equation*}
-  which is a set in a $r+1$-dimensional space $V$ determined by ${r+n-1 \choose n}$ equations, so it is in general overdetermined. For example, if $r=2$, $S_b$ is determined by $n+1$ equations in a $3$-dimensional space. However, in the case in which $b=H(\ve{E},\varphi)$ for some Higgs field $\varphi$, $S_b$ locally is precisely 
+  which is a set in a $r+1$-dimensional space $V$ determined by ${r+n-1 \choose n}$ equations, so it is in general overdetermined. For example, if $r=2$, $S_b$ is determined by $n+1$ equations in a $3$-dimensional space. However, in the case in which $b=H(\ve{E},\varphi)$ for some Higgs field $\varphi$, $S_b$ is locally precisely 
   \begin{equation*}
     S_b=\left\{ (x,\lambda(x) \in V : \det(\lambda- \varphi)=0 \right\}.
   \end{equation*}
-  That is, in each fiber $V_x$, the possible values of $\lambda(x)$ are the eigenvalues of $\varphi_x$. The key now is the following well known result from linear algebra,
+  That is, in each fibre $V_x$, the possible values of $\lambda(x)$ are the eigenvalues of $\varphi_x$. The key now is the following well known result from linear algebra,
   \begin{lema}\label{commuting}
     Let $A$ be a $n\times n$ matrix with complex coefficients such that its eigenvalues are all distinct.
     \begin{enumerate}
-      \item Every other matrix $B$ that commutes with $A$ must be simultaneously diagonalizable with $A$.
+      \item Every other matrix $B$ that commutes with $A$ is simultaneously diagonalizable with $A$.
       \item Every other matrix $B$ that commutes with $A$ can be written as a polynomial of $A$. That is, there exists a polynomial $f(T) \in \CC[T]$ such that $B=f(A)$.
     \end{enumerate}
   \end{lema}
@@ -1887,7 +1892,7 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
     Indeed, $\left\{ \id,A,\dots,A^{n-1} \right\}$ is linearly independent since $A$ has distint eigenvalues, so its minimal polynomial must have degree $n$.
  \end{proof}
 
- What this lemma implies for our case of study is that, if we decompose $\varphi_x=(\varphi_{x,1},\dots,\varphi_{x,r})$ and $\lambda_1^{(j)}(x)$, $j=1,\dots,n$ are the eigenvalues of $\varphi_{x,1}$ the other eigenvalues are related by 
+ What this lemma implies in our case of study is that, if we decompose $\varphi_x=(\varphi_{x,1},\dots,\varphi_{x,r})$ and $\lambda_1^{(j)}(x)$, $j=1,\dots,n$ are the eigenvalues of $\varphi_{x,1}$ the other eigenvalues are related by 
  \begin{equation*}
    \lambda^{(j)}_i(x)= f(x,\lambda^{(j)}_1(x)),
  \end{equation*}
@@ -1919,7 +1924,7 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
        \left\{ (s_1,s_2,s_3) \in H^0(X,\Sym^2 V) : s_3^2 = s_1s_2 \right\}.
      \end{equation*}
      
-     The spectral curve can be seen as the zero locus of the characteristic polynomial in the total space of $V$. In principle, this is a set defined by 3 equations in a 3-dimensional space $V$. However, of course these equations are not independent.
+     The spectral curve can be regarded as the zero locus of the characteristic polynomial in the total space of $V$. In principle, this is a set defined by 3 equations in a 3-dimensional space $V$. However, of course these equations are not independent.
    \qed
  \end{ejemplo}
 
@@ -2004,12 +2009,12 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
 
   \section{Open questions and further directions}
 
+  \subsection*{Open questions}
   After this discussion, some \textbf{questions} remain open for future attacks to the problem:
   \begin{enumerate}
-    \item A proof of the ``hard part'' of a ``\textbf{generalized Hitchin correspondence}'', that is, a proof the converse of Theorem \ref{twistedhitchincorr}.
+    \item A proof of the ``hard part'' of a ``\textbf{generalized Hitchin--Kobayashi correspondence}'', that is, a proof the converse of Proposition \ref{twistedhitchincorr}. As we mentioned above, this is presumably already proven implicitly in \cite{oscar}. However, we would like to have an explicit proof.
     \item A \textbf{GIT construction of the moduli space} of stable $V$-twisted Higgs bundles.
     \item A computation of the expected \textbf{dimension of the moduli space} of stable $V$-twisted Higgs bundles, using deformation theory.
-    \item Illustrate the theory with more \textbf{examples}
     \item Computation of the \textbf{genus} of the spectral curve and the relationship between the \textbf{degrees} of the bundles in the spectral correspondence.
     \item Find conditions for the spectral curve to be \textbf{smooth}. Unlike in the case of twisting by a line bundle, the spectral curve is not a divisor and the argument using Bertini's theorem is no longer valid.
     \item Study the \textbf{ramification divisor}.
@@ -2017,8 +2022,8 @@ The condition $\varphi \wedge \varphi = 0$ implies that the coefficients of the 
 
   We can shed some light on the last question. If we consider the simple case in which $V$ is decomposable, $V=L_1 \oplus \cdots \oplus L_r$, $\varphi$ globally looks like $\varphi=(\varphi_1,\dots,\varphi_r)$, with $\varphi_i: E\rightarrow E\otimes L_i$. For any $x\in X$, if any of the $\varphi_{i,x}$ has distinct eigenvalues, the whole $\varphi_x$ has distinct eigenvalues and therefore $x$ is not a branch point. Therefore, if $\varphi$ has ramification locus $\Delta$ on $V$ and the $\varphi_i$ have ramification loci $\Delta_i$ on $L_i$, the branch locus $\pi(\Delta)$ is contained in the intersection of the branch loci $\pi(\Delta_i)$. However, note that in principle the commutation relation does not give a condition on the relation between the $\Delta_i$, since what we know is that if one of the $\varphi_i$ has distinct eigenvalues the others must be diagonalizable, but not necessarily have distinct eigenvalues.
 
-
-  [\textbf{FURTHER DIRECTIONS}] Decir algo de Donaldson-Thomas, Calabi-Yau, etc.
+  \subsection*{Further directions}
+ Decir algo de Donaldson-Thomas, Calabi-Yau, etc. Hablar de los ejemplos que comentaron Hitchin y Pantev y de theta-characteristics.
 
 \newpage\null\thispagestyle{empty}
 \nocite{*}

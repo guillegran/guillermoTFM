@@ -1,4 +1,4 @@
-\begin{thebibliography}{WGP07}
+\begin{thebibliography}{BGPR03}
 
 \bibitem[AB83]{atiyahbott}
 M.~F. Atiyah and R.~Bott.
@@ -21,6 +21,11 @@ M.~F. Atiyah.
 \newblock Vector bundles over an elliptic curve.
 \newblock {\em Proceedings of the London Mathematical Society}, 3(1):414--452,
   1957.
+
+\bibitem[BGPR03]{oscar}
+Steven~B Bradlow, Oscar Garc{\'\i}a-Prada, and Ignasi Mundet~I Riera.
+\newblock Relative hitchin--kobayashi correspondences for principal pairs.
+\newblock {\em Quarterly Journal of Mathematics}, 54(2):171--208, 2003.
 
 \bibitem[Bir09]{birkhoff}
 G.~D. Birkhoff.
