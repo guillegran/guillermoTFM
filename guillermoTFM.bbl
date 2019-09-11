@@ -1,8 +1,8 @@
-\begin{thebibliography}{BGPR03}
+\begin{thebibliography}{BGPMiR03}
 
 \bibitem[AB83]{atiyahbott}
 M.~F. Atiyah and R.~Bott.
-\newblock The {Y}ang-{M}ills equations over {R}iemann surfaces.
+\newblock The {Y}ang--{M}ills equations over {R}iemann surfaces.
 \newblock {\em Philosophical Transactions of the Royal Society of London.
   Series A, Mathematical and Physical Sciences}, 308(1505):523--615, 1983.
 
@@ -22,9 +22,9 @@ M.~F. Atiyah.
 \newblock {\em Proceedings of the London Mathematical Society}, 3(1):414--452,
   1957.
 
-\bibitem[BGPR03]{oscar}
-Steven~B Bradlow, Oscar Garc{\'\i}a-Prada, and Ignasi Mundet~I Riera.
-\newblock Relative hitchin--kobayashi correspondences for principal pairs.
+\bibitem[BGPMiR03]{oscar}
+S.~B. Bradlow, O.~Garc{\'\i}a-Prada, and I.~Mundet~i Riera.
+\newblock Relative {H}itchin--{K}obayashi correspondences for principal pairs.
 \newblock {\em Quarterly Journal of Mathematics}, 54(2):171--208, 2003.
 
 \bibitem[Bir09]{birkhoff}
@@ -44,9 +44,14 @@ I.~Biswas and S.~Ramanan.
 \newblock {\em Journal of the London Mathematical Society}, 49(2):219--231, 04
   1994.
 
+\bibitem[CDP10]{diaconescu}
+W.~Chuang, D.~E. Diaconescu, and G.~Pan.
+\newblock Wallcrossing and cohomology of the moduli space of {H}itchin pairs.
+\newblock {\em arXiv preprint arXiv:1004.4195}, 2010.
+
 \bibitem[Cor88]{corlette}
-Kevin Corlette.
-\newblock Flat $ g $-bundles with canonical metrics.
+K.~Corlette.
+\newblock Flat $ {G} $-bundles with canonical metrics.
 \newblock {\em Journal of differential geometry}, 28(3):361--382, 1988.
 
 \bibitem[DK90]{donaldson4manifolds}
@@ -60,7 +65,7 @@ S.K. Donaldson.
 \newblock {\em Journal of Differential Geometry}, 18(2):269--277, 1983.
 
 \bibitem[Don87]{donaldsontwisted}
-Simon~K Donaldson.
+S.~K. Donaldson.
 \newblock Twisted harmonic maps and the self-duality equations.
 \newblock {\em Proceedings of the London Mathematical Society}, 3(1):127--131,
   1987.
@@ -69,6 +74,12 @@ Simon~K Donaldson.
 P.~Griffiths and J.~Harris.
 \newblock {\em Principles of Algebraic Geometry}.
 \newblock Wiley Classics Library. Wiley, 2014.
+
+\bibitem[GP07]{oscarhiggs}
+O.~Garcia-Prada.
+\newblock {M}oduli {S}paces and {G}eometric {S}tructures \rm (appendix to
+  \cite{wells}).
+\newblock 2007.
 
 \bibitem[Gro57]{grothendieck}
 A.~Grothendieck.
@@ -142,9 +153,9 @@ L.~P. Schaposnik.
 \newblock {\em arXiv preprint arXiv:1408.0333}, 2014.
 
 \bibitem[Sim88]{simpsonthesis}
-Carlos~T Simpson.
-\newblock Constructing variations of hodge structure using yang-mills theory
-  and applications to uniformization.
+C.~T. Simpson.
+\newblock Constructing variations of {H}odge structure using {Y}ang--{M}ills
+  theory and applications to uniformization.
 \newblock {\em Journal of the American Mathematical Society}, 1(4):867--918,
   1988.
 
@@ -160,7 +171,7 @@ C.~T. Simpson.
 \newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 75:5--95, 1992.
 
 \bibitem[Sim94]{simpsonmoduli}
-Carlos~T Simpson.
+C.~T. Simpson.
 \newblock Moduli of representations of the fundamental group of a smooth
   projective variety.
 \newblock {\em Publications Math{\'e}matiques de l'IH{\'E}S}, 1994.
@@ -176,8 +187,8 @@ A.~Weil.
 \newblock {\em Journal f{\"u}r die reine und angewandte Mathematik},
   179:129--133, 1938.
 
-\bibitem[WGP07]{wells}
-R.O. Wells and O.~Garcia-Prada.
+\bibitem[Wel07]{wells}
+R.O. Wells.
 \newblock {\em Differential Analysis on Complex Manifolds}.
 \newblock Graduate Texts in Mathematics. Springer New York, 2007.
 

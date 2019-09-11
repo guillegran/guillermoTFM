@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: guillermoTFM.aux
 The style file: alpha.bst
 Database file #1: biblio.bib
-You've used 34 entries,
+Warning--empty journal in oscarhiggs
+You've used 36 entries,
             2543 wiz_defined-function locations,
-            753 strings with 8662 characters,
-and the built_in function-call counts, 12083 in all, are:
-= -- 1242
-> -- 417
-< -- 28
-+ -- 130
-- -- 124
-* -- 823
-:= -- 1979
-add.period$ -- 112
-call.type$ -- 34
-change.case$ -- 175
-chr.to.int$ -- 33
-cite$ -- 34
-duplicate$ -- 537
-empty$ -- 952
-format.name$ -- 181
-if$ -- 2477
+            759 strings with 8876 characters,
+and the built_in function-call counts, 12648 in all, are:
+= -- 1296
+> -- 439
+< -- 30
++ -- 137
+- -- 131
+* -- 855
+:= -- 2080
+add.period$ -- 118
+call.type$ -- 36
+change.case$ -- 186
+chr.to.int$ -- 35
+cite$ -- 37
+duplicate$ -- 565
+empty$ -- 992
+format.name$ -- 191
+if$ -- 2586
 int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 44
-newline$ -- 173
-num.names$ -- 102
-pop$ -- 158
+missing$ -- 46
+newline$ -- 183
+num.names$ -- 108
+pop$ -- 170
 preamble$ -- 1
-purify$ -- 219
+purify$ -- 232
 quote$ -- 0
-skip$ -- 417
+skip$ -- 438
 stack$ -- 0
-substring$ -- 739
-swap$ -- 64
-text.length$ -- 28
-text.prefix$ -- 23
+substring$ -- 753
+swap$ -- 65
+text.length$ -- 30
+text.prefix$ -- 24
 top$ -- 0
-type$ -- 232
-warning$ -- 0
-while$ -- 123
-width$ -- 37
-write$ -- 443
+type$ -- 248
+warning$ -- 1
+while$ -- 127
+width$ -- 40
+write$ -- 466
+(There was 1 warning)
