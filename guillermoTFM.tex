@@ -356,13 +356,13 @@ We define the \emph{degree} of a vector bundle $E$ as the pairing of $c_1(E)$ wi
   \deg E = \int_X\frac{i}{2\pi} \tr F. 
 \end{equation*}
 The next proposition \cite{wells} summarizes the most important properties about the degree that we are going to use:
-\begin{prop}[Propierties of the degree]
-  Let $E$ and $F$ be complex vector bundles over a compact Riemann surface $X$.
+\begin{prop}[Properties of the degree]
+  Let $E$ and $E'$ be complex vector bundles over a compact Riemann surface $X$.
   \begin{enumerate}
     \item $\deg(E)$ depends only on the isomorphism class of $E$.
     \item $\deg(E) \in \mathbf{Z}$.
-    \item $\deg(E\oplus F)=\deg(E)+ \deg(F)$.
-    \item $\deg(E\otimes F)=\rk F \deg E + \rk E \deg F.$
+    \item $\deg(E\oplus E')=\deg(E)+ \deg(E')$.
+    \item $\deg(E\otimes E')=\rk E' \deg E + \rk E \deg E'.$
     \item $\deg E=\deg(\det E) $.
     \item
       Let $\delta:H^1(X,C^{\infty,*}_X) \rightarrow H^2(X,\ZZ)$ be the connecting homomorphism of the long exact sequence in cohomology induced by the exponential sheaf exact sequence
@@ -398,7 +398,7 @@ This last property will be crucial in the classification of line bundles. Let us
        \end{center}
        That is, the degree gives an isomorphism between the set of isomorphism classes of smooth line bundles and $\ZZ$. This concludes the topological classification of vector bundles, which we can gather in the next theorem
        \begin{thm}
-	 Smooth complex vector bundles over a compact Riemann surfaces are classified, up to $C^\infty$ isomorphism by their rank and their degree.
+	 Smooth complex vector bundles over a compact Riemann surfaces are classified, up to $C^\infty$ isomorphism, by their rank and their degree.
        \end{thm}
   
        \section{The problem of classification of holomorphic vector bundles}
@@ -1211,7 +1211,7 @@ p^*L	  \arrow{rr}\arrow{dd} && L\arrow{dd}[anchor=west]{p} \\
 	  \end{equation*}
 	  Summing up, we have proven that for some point $b\in \BB$, the fibre of the Hitchin map $H^{-1}(b)$ is an open set of $\Pic^{\delta}(S_b)$, a complex torus of dimension $n^2(g-1)+1$. This completes the proof of Hitchin's Theorem \ref{hitchinsystem}.
 
-	  A natural question to ask now is what happens to the remaining elements of the Jacobian: if they do not yield elements of $T^*\Bun(n,d)$, what do they correspond to? This suggest the existence of a wider symplectic manifold, of which $T^*\Bun(n,d)$ is a subset. 
+	  A natural question to ask now is what happens to the remaining elements of the Jacobian: if they do not yield elements of $T^*\Bun(n,d)$, what do they correspond to? This suggests the existence of a wider symplectic manifold, of which $T^*\Bun(n,d)$ is a subset. 
 
 	  Recall that we constructed the space $T^*\Bun(n,d)$ by fixing a smooth vector bundle $E$ of rank $n$ and degree $d$ over $X$ and considering the action of $\GG^c$ on the space $\AA^c=\AA_{\delbar}^s \times \Omega^{1,0}(X,\End E)$. To get this wider space we will now consider the action of the real group $\GG$ on the space $\AA_h \times \Omega^{1,0}(X,\End E)$. Of course, to do this we first have to fix an Hermitian metric $h$ on $E$. We then get a symplectic structure on $\AA_h \times \Omega^{1,0}(X,\End E)$ given by
 	  \begin{equation*}
@@ -1838,7 +1838,7 @@ This finishes the proof of the lemma.
 
     We expect that a GIT construction of the moduli space of stable $V$-twisted Higgs bundle can be constructed as well as a proof of the converse of Proposition \ref{twistedhitchincorr}. This would yield an isomorphism between this moduli space and the moduli space of solutions to the generalized Hitchin equations. Presumably, the proof of the ``hard part'' of this Hitchin--Kobayashi type correspondence is a particular case of the results by Bradlow, García-Prada and Mundet i Riera in \cite{oscar}. Anyway, an explicit proof of this result is desirable.
 
-    For the rest of this work we will assume that the \emph{moduli space of stable $V$-twisted Higgs bundles of rank $n$ and degree $d$} exists and we will denote it by $\MV(n,d)$. The problem of the computation of the expected dimension of this moduli space using deformation theory will be approached in further work. In fact, the problem of computing the dimension of the deformation space of a Higgs bundle twisted by a vector bundle of arbitrary rank has already been studied by Biswas and Ramanan \cite{biswasramanan}. However, they did not consider the condition $\varphi \wedge \varphi=0$, so the dimension that we are looking for should be lower than the one they computed in their paper.
+    For the rest of this document we will assume that the \emph{moduli space of stable $V$-twisted Higgs bundles of rank $n$ and degree $d$} exists and we will denote it by $\MV(n,d)$. The problem of the computation of the expected dimension of this moduli space using deformation theory will be approached in further work. In fact, the problem of computing the dimension of the deformation space of a Higgs bundle twisted by a vector bundle of arbitrary rank has already been studied by Biswas and Ramanan \cite{biswasramanan}. However, they did not consider the condition $\varphi \wedge \varphi=0$, so the dimension that we are looking for should be lower than the one they computed in their paper.
 
 \section{The generalized Hitchin system}
 To every $V$-twisted Higgs bundle $(\ve{E},\varphi)$, with $\varphi \in H^0(X,\End \ve{E} \otimes V)$, we can associate its characteristic polynomial,
